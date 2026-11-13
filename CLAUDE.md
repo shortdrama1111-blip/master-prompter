@@ -65,26 +65,52 @@ Nëse konfirmohet, rregulli shkon te skill-i i modelit përkatës.
 
 ---
 
-## Struktura e një projekti
+## Procesi: main → thread/branch për çdo video → merge
+
+`main` është baza. Aty jetojnë vetëm rregullat, skill-et dhe mësimet e konfirmuara.
+Çdo video e re = **një thread i ri = një branch i veçantë**. Modeli kryesor: Seedance 2.5
+(mund të ndryshojë sipas projektit).
+
+### 1. Hapja e projektit (në thread-in e ri)
+- Krijo `projects/YYYY-MM-emri/` nga `projects/_template/`.
+- Plotëso `brief.md` sipas portave. Pyet për konfliktet e hapura dhe shkruaji te `decisions.md`.
+
+### 2. Gjatë punës: kap çdo feedback menjëherë
+Sa herë që përdoruesi thotë se diçka i pëlqen, nuk i pëlqen, ose zbulon diçka të re,
+shënoje **menjëherë** te `projects/<emri>/feedback.md`, pa pritur fundin. Shënimi përmban:
+- çfarë tha, sa më afër fjalëve të tij;
+- kontekstin (shot-i, prompti, modeli);
+- llojin: 👍 pëlqen / 👎 s'pëlqen / 💡 zbulim / 🔧 rregull i ri.
+
+Bëj commit dhe push në branch-in e projektit pas çdo shënimi ose grupi shënimesh. Container-i
+mund të zhduket, kurse branch-i mbetet. Gjatë projektit **mos prek** `CLAUDE.md`, `LESSONS.md`
+dhe skill-et: gjithçka qëndron te folderi i projektit.
+
+### 3. Mbyllja: kur përdoruesi thotë "kam mbaruar"
+1. **Përmbledh** te biseda çfarë ke kuptuar: çfarë i pëlqeu, çfarë jo, zbulimet, dhe ku
+   propozon ta çosh secilën (`CLAUDE.md` / skill-i X / `LESSONS.md`).
+2. **Pyet** nëse ka vërejtje ose feedback që s'i ka thënë ende. Prit përgjigjen.
+3. Pas konfirmimit, **përditëso skedarët** sipas këtij rregulli:
+   - Preferencë e qartë ose rregull që përdoruesi e thotë si të prerë → `CLAUDE.md` ose skill-i
+     i modelit.
+   - Teknikë specifike për një model → skill-i përkatës (p.sh. `seedance-clean`).
+   - Mësim nga një projekt i vetëm, ende i pakonfirmuar → `LESSONS.md`. Kur konfirmohet në
+     2+ projekte, propozo ta ngresh në skill.
+   - Kundërshton një rregull ekzistues → mos e mbishkruaj në heshtje, pyet.
+   - Zgjidh një konflikt të hapur → hiqe nga tabela dhe vendose rregullin te vendi i duhur.
+4. **Merge në `main`**: rebase mbi `main`-in më të fundit, merge, push. Folderi i projektit
+   shkon edhe ai në `main` si arkivë.
+5. Thuaj shkurt çfarë ndryshoi te secili skedar.
+
+`CLAUDE.md` mbahet i shkurtër. Detajet shkojnë te skill-et.
+
+### Struktura e një projekti
 
 ```
 projects/YYYY-MM-emri/
 ├── brief.md        # briefi origjinal + përgjigjet e pyetjeve
 ├── decisions.md    # bota e ngulitur: blloku i dritës, paleta, Elementet, formati
+├── feedback.md     # pëlqen / s'pëlqen / zbulime, të kapura gjatë punës
 ├── prompts/        # një skedar për çdo shot/bllok, me versionet
 └── log.md          # çfarë u gjenerua, çfarë doli keq, pse
 ```
-
-Fillo nga `projects/_template/`.
-
----
-
-## Rutina në fund të çdo projekti
-
-1. Lexo `log.md` dhe nxirr mësimet: çfarë funksionoi, çfarë dështoi, shkaku.
-2. Shtoji te `LESSONS.md` me datë dhe emrin e projektit.
-3. Mësim i konfirmuar në **2+ projekte** → propozo ta kalojmë në skill-in përkatës ose këtu.
-   Mësim që kundërshton një rregull ekzistues → ngrije si konflikt, mos e mbishkruaj.
-4. Commit + merge në `main`. Pa merge, thread-i tjetër nuk e sheh mësimin.
-
-`CLAUDE.md` mbahet i shkurtër. Detajet shkojnë te skill-et.
