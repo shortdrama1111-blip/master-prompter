@@ -36,6 +36,14 @@ teksti/logoja (vjen në montim). 37 s → 30 s.
 | Epoka | e sotmja |
 | Subjekti | personazh i ri femër + produktet e përdoruesit |
 | Energjia | lozonjare, ngjitje (si ref) |
-| Markimi | ? |
+| Markimi | étos (parfumeri, që nga 2004): çantat e blerjeve janë të markuara; logo/tekst final në montim |
 | Modeli (Seedance 2.5 / Kling / tjetër) | Seedance 2.5, punë manuale (pa MCP Higgsfield) |
 | Struktura | 2 × 15 s ose 3 × 10 s, për t'u vendosur |
+
+## Materialet e marka (2026-11-13)
+- `refs/bag-etos-ribbon.jpg`: çantë e vogël/mesme, letër e zezë mat, logo "étos" me ar në mes,
+  dorezat me litar të zi, fjongo saten ngjyrë shampanjë/nude e lidhur te dorezat.
+- `refs/bag-etos-large.jpg`: çantë e madhe horizontale, e zezë mat, logo "étos®" me fletë ari,
+  "PERFUMERY SINCE 2004", litar i zi i përdredhur, etiketë produkti e printuar në bardhë.
+- Përdoruesi: "produkti i par duhet me patjter", të tjerët i zgjedh Claude nga ato që do të dërgojë.
+- Pasojë: produktet janë parfumeri/kozmetikë, jo këpucë si në ref → harku i veprimit përshtatet.
