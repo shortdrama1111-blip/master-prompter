@@ -54,3 +54,8 @@ Shpinoret e përparme krem kornizojnë skajet majtas/djathtas (~18% secila), jas
 
 ### Blloku i dritës v2 (Lock what you got, plate v1): tavani doli taupe i errët, jo i zi → teksti u përditësua sipër.
 Mbështetësja qendrore: gjithmonë e ngritur, sedilja e mesit e lirë (aty ulet vajza).
+
+## PLATE FINAL (i ngulitur): `refs/plate-FINAL-916.jpg`
+9:16, kamera e ulët mes sediljeve të përparme, shpinoret krem kornizojnë majtas/djathtas (~22% secila),
+mbështetësja qendrore e mbyllur, ndenjësja e mesit e lirë, tapet i errët poshtë, konsola e përparme në skajin e poshtëm.
+Tri plane: shpinoret (afër) · vajza në mes · pemët pas xhamit.
