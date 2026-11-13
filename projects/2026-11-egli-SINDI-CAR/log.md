@@ -8,3 +8,4 @@
 | 2026-11-13 | Plate final | image (përdoruesi, edit zoom-out) | ✅ | — | — | ngulitur si @image1 |
 | 2026-11-13 | Akti 1 seated v1 | Nano Banana Pro | ✅ 👍 | syzet mbi kokë (sipas promptit); tekst i vogël i shtrembër te çantat ("PERFUNERY", Kérastase) | modeli s’e riprodhon tekstin e vogël | edit vetëm për syzet; teksti → vendim i përdoruesit |
 | 2026-11-13 | Akti 1 v1 | Seedance 2.5 | ✅ (përdoruesi e mban) | HARD CUT-et u injoruan → take i vazhdueshëm; në ~1.5 s ajo qëndron në këmbë brenda kabinës; te 5.5–8 s shishja del e vogël/portokalli, jo Eight & Bob | modeli preferon vazhdimësinë me kamerë të fiksuar; parfumi pa sheet → forma humbet kur është larg | prerjet në montim; akti 2 si take i vazhdueshëm; sheet parfumi |
+| 2026-11-13 | Akti 2 v1 (extend) | Seedance 2.5 | ✅ "perfect" | — | take i vazhdueshëm + @video1 si master funksionoi | ngulitur; extend për aktin 3 |
