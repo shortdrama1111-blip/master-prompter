@@ -28,3 +28,14 @@ Empty rear seat of a modern luxury sedan photographed from inside the car, verti
 Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the dark taupe headliner stays deep and shadowed. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
 The cabin is spotless and holds only the seats, headrests and belts; every leather surface is plain and unbranded. Unretouched photograph, true-to-life leather texture, fine natural grain.
 ```
+
+## v3 → Opsioni B (zgjedhur nga përdoruesi): zoom-out me shpinoret e përparme
+Rruga 1 (edit direkt mbi `refs/plate-v3-916.jpg`):
+```
+Keep the supplied image exactly — same rear bench, headrests, belts, windows, trees, lighting, grade and grain. Change ONE thing only: the camera moves 60 cm backward and sits low between the two front seats at seat-cushion height, widening the view to an ultra-wide 107-degree angle. The whole current scene becomes smaller in the centre of the frame, and the backs of the two front seats now frame the left and right edges, each filling about 18% of the frame width, softly out of focus, in the same smooth cream leather. Above, more of the dark taupe headliner; below, the front edge of the rear cushion and the dark carpeted footwell floor. Everything else untouched.
+```
+Rruga 2 (rezervë, nëse rruga 1 e ndryshon sediljen): outpaint mbi `refs/plate-v3-outpaint-canvas.png`
+(plate-i i zvogëluar 62% në qendër, kornizë gri për t'u mbushur):
+```
+Fill only the flat grey border around the supplied photo; keep the photo in the centre exactly as it is. The filled area continues the same car interior seen from low between the two front seats: the backs of the two front seats in smooth cream leather frame the left and right edges, softly out of focus; above, the dark taupe headliner with a grab handle on the right; below, the front edge of the cream rear cushion and the dark carpeted footwell floor; at the far left and right, the rear door panels in cream leather. Same soft 5600K daylight, same grade and grain, seamless edges.
+```
