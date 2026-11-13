@@ -55,3 +55,17 @@ teksti/logoja (vjen në montim). 37 s → 30 s.
 | – | Dior Backstage Rosy Glow 103 (blush) | `refs/p-dior-blush-rosyglow103.jpg` | kuti katrore e tejdukshme, kapak argjendi, pudër koral me monogram në reliev |
 | – | Dior Forever Skin Glow (fondatinë) | `refs/p-dior-foundation-forever-glow.jpg` | shishe drejtkëndëshe xhami, lëng bezhë, kapak i zi katror, "DIOR" vertikale argjendi |
 | – | Dior Iconic Overcurl (maskara) | `refs/p-dior-mascara-overcurl.jpg` | tub cilindrik argjendi pasqyrë, unazë e zezë me logo, furçë e lakuar |
+| – | Dior Addict Lip Glow 006 (balsam buzësh) | (pa skedar: imazhi s'u ruajt në disk) | tub rozë i tejdukshëm, kapak argjendi i rrumbullakët, shkop rozë-mjedër |
+| – | Clarins Bright Plus Advanced (serum) | (pa skedar) | shishe e bardhë perle, kapak rozë metalik |
+| – | Lancôme Butterglow 59 (buzëkuq) | (pa skedar) | tub ari-rozë pasqyrë, shkop i kuq i thellë |
+| – | Guerlain Lip Oil Plump 100 (vaj buzësh) | (pa skedar) | shishe xhami me lëng rozë me shkëlqim, kapak krem, kapak ari me bletë |
+
+Përdoruesi: "tani mbarova" = mbaroi dërgimin e produkteve (jo mbyllja e projektit).
+
+## Zgjedhja e produkteve (propozim i Claude, në pritje të konfirmimit)
+| Akti | Produkti | Pse |
+|---|---|---|
+| 1: 0–10 s | **Eight & Bob Belvedere** (#1, hero) + çantat étos | hapja e fjongos shampanjë dhe nxjerrja e parfumit; formë e madhe, lexohet nga larg |
+| 2: 10–20 s | Eight & Bob (spërkatje në kyç dhe qafë) + **Dior Rosy Glow** blush | spërkatja e parfumit është momenti kulmor; blush-i koral e ngjyros kuadrin |
+| 3: 20–30 s | **Lancôme Butterglow 59** + **Dior Overcurl** maskara → Eight & Bob në dorë në fund | buzëkuqi i kuq zëvendëson momentin e buzëkuqit në ref; maskara argjendi lexohet mirë; mbyll me heroin |
+Jashtë: fondatina (lëngu bezhë nuk lexohet në video), serumi Clarins, Lip Glow dhe Lip Oil (dublojnë buzët).
