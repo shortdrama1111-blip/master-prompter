@@ -24,3 +24,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 🔧 | "bej option b" | Plate: shpinoret e përparme si kornizë (stili i ref) mbi kuadrin e pastër | Konfirmon cinematic-ai-video §6 "tri plane thellësie" |
 | 2026-11-13 | 👎 | "jo jo cfare eshte kjo" | Reagim ndaj kanavacës gri për outpaint + dy rrugëve alternative | LESSONS.md / CLAUDE.md: një rrugë e vetme, pa skedarë ndihmës të pakërkuar; rezervën vetëm pasi dështon e para |
 | 2026-11-13 | 👍 | Dërgoi plate-in me zoom-out (opsioni B), pa vërejtje | Plate final | — |
+| 2026-11-13 | 🔧 | "me jepe canten e madhe me canten e vogel" | Kërkon një Element të vetëm me të dy çantat | Projekt: çantat si një referencë e vetme (kursen vende reference) |
