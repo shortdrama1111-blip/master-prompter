@@ -34,3 +34,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 👍 | Sheet i çantës doli 3 rreshta vertikal (close-up · front · back) — e pranoi | Product sheet, Nano Banana Pro | Lock what you got: sheet vertikal 9:16 OK për produkte |
 | 2026-11-13 | 🔧 | "dua te kete 2, 3 canta si kjo ne dore kur te futet ne makine" | Akti 1, Seedance | Projekt |
 | 2026-11-13 | 🔧 | Referencat: "@image1 vajza, @image2 makina, @image3 canta, dhe @image3 parfumi" (gabim shtypi → @image4) | Rendi i tag-eve | seedance-clean: tag-et sipas renditjes së përdoruesit |
+| 2026-11-13 | 🔧 | "ma jep dhe foton e parfumit" | Product sheet i parfumit, i njëjti format si çanta | Projekt |

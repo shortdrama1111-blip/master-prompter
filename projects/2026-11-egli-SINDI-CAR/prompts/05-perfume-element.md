@@ -1,0 +1,10 @@
+# Product sheet — Eight & Bob Belvedere — Nano Banana Pro, 9:16 (si sheet-i i çantës) — v1
+Input: @image1 = refs/p1-eightbob-belvedere.jpg
+```
+Product reference sheet photographed in a studio: one vertical 9:16 image divided into three equal horizontal panels stacked from top to bottom on one continuous seamless mid-grey backdrop, separated by thin even grey gaps. The same Eight & Bob Belvedere perfume bottle from @image1 appears in all three panels, identical shape, size, glass, liquid, cap and label.
+TOP PANEL: ultra-realistic close-up of the upper two thirds of the bottle front, filling the panel: the glossy black cylindrical cap with a soft reflection, the thick clear glass shoulders with fine vertical ribs, the amber liquid glowing where light passes through, and the white front label printed "EIGHT & BOB" over "BELVEDERE" in clean black capitals, crisp and sharp.
+MIDDLE PANEL: full front view of the whole bottle standing upright on the grey floor, about 11 cm tall and 7 cm wide, rectangular clear glass with fine vertical ribs, a thick clear glass base, amber liquid filling it to the shoulders, glossy black cylindrical cap, white front label, the whole bottle inside the panel with grey space around it.
+BOTTOM PANEL: full back view of the same bottle standing upright, the clear ribbed glass and amber liquid seen from behind, the back of the white label showing through the liquid as a plain pale rectangle, the black cap on top, the whole bottle inside the panel with grey space around it.
+Use @image1 for the bottle's shape, ribbed glass, amber liquid, black cap and label design; the beige backdrop and the caption text in @image1 stay out of this image. The only text in the image is "EIGHT & BOB" and "BELVEDERE" on the front label.
+Flat, even, diffused 5000K studio light from the front with a soft backlight that makes the amber liquid glow, soft contact shadow under the bottle, neutral white balance. Lens at f/11, every panel sharp edge to edge. Unretouched photograph with true-to-life glass, liquid and lacquer texture. The image holds only the bottle and the grey backdrop.
+```
