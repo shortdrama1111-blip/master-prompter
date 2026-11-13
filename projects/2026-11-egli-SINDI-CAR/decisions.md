@@ -30,3 +30,11 @@ Veshja e filmit pa ndryshim.
 Syze dielli të zeza "stylish": cat-eye acetat i zi me shkëlqim, lente të zeza, detaje ari te menteshat.
 Te close-up-i syzet janë ngritur mbi kokë (sytë duhen të dukshëm për identitetin); te trupi i plotë i ka në sy.
 Në video: i ka në sy në aktin 1, i heq për grimin (si te ref).
+
+## Personazhi — I NGULITUR (Lock what you got, sheet v4 i zgjedhur)
+Elementi: `refs/character-sheet-v4-masked.png` (fytyra e panelit të qendrës e mbuluar me katror gri 138,134,131).
+Ndryshimet nga prompti që bëhen standardi i ri:
+- Bluza: ivory **off-shoulder me volan/kapë të gjerë** (jo triko e hollë).
+- Flokët: champagne-blonde, të drejta te rrënjët, me kaçurrela të mëdha te majat, deri në mes.
+- Syzet: cat-eye të zeza me zinxhirë ari anash, **mbi kokë** në të tre panelet.
+- Xhinse të gjera blu të çelura, balerina/çizme krem me majë.
