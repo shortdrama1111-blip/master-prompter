@@ -19,3 +19,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 🔧 | "dite, interior krem, s'ka rendesi makina pak a shum si video e references" | Portat: koha, vendi | Projekt |
 | 2026-11-13 | 🔧 | "kjo hapesira ne mes te sediljes esht e hapur un e doja te mbyllur se aty do ulet goca" | Plate v1; shkaku: rreshti im "a folded centre armrest" | LESSONS.md: kur personazhi ulet në mes, shkruaj shprehimisht "armrest folded up flush, middle seat open" |
 | 2026-11-13 | 💡 | Plate doli 16:9 megjithëse prompti thoshte 9:16 | Raporti në UI e mbivendos tekstin | LESSONS.md / cinematic-ai-video §3: kujto përdoruesin të vendosë raportin në UI |
+| 2026-11-13 | 🔧 | "jo me jep promptin qe te jete e mbyllur qe ne fillim" | Plate: preferon rigjenerim me prompt të saktë mbi edit-in me 2 hapa | LESSONS.md: kur rregullimi kërkon 2+ edit-e, ofro edhe rigjenerimin me prompt të korrigjuar |
