@@ -59,3 +59,8 @@ Mbështetësja qendrore: gjithmonë e ngritur, sedilja e mesit e lirë (aty ulet
 9:16, kamera e ulët mes sediljeve të përparme, shpinoret krem kornizojnë majtas/djathtas (~22% secila),
 mbështetësja qendrore e mbyllur, ndenjësja e mesit e lirë, tapet i errët poshtë, konsola e përparme në skajin e poshtëm.
 Tri plane: shpinoret (afër) · vajza në mes · pemët pas xhamit.
+
+## Struktura e akteve: zinxhir start/end frame
+Akti 1: START = plate bosh → ajo hyn nga dera e djathtë e pasme, ulet → END = act1-seated (syzet në sy).
+Fundi i çdo akti = fillimi i aktit tjetër (prerje e padukshme).
+Lock what you got (act1-seated-v1): thonjtë dolën burgundy i errët (jo nude) → standardi i ri; këmbët e kryqëzuara.

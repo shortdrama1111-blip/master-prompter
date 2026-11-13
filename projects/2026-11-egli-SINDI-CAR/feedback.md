@@ -25,3 +25,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 👎 | "jo jo cfare eshte kjo" | Reagim ndaj kanavacës gri për outpaint + dy rrugëve alternative | LESSONS.md / CLAUDE.md: një rrugë e vetme, pa skedarë ndihmës të pakërkuar; rezervën vetëm pasi dështon e para |
 | 2026-11-13 | 👍 | Dërgoi plate-in me zoom-out (opsioni B), pa vërejtje | Plate final | — |
 | 2026-11-13 | 🔧 | "me jepe canten e madhe me canten e vogel" | Kërkon një Element të vetëm me të dy çantat | Projekt: çantat si një referencë e vetme (kursen vende reference) |
+| 2026-11-13 | 👍 | "kjo duket shume e mire" | Start frame akti 1 (vajza ulur me çantat), Nano Banana Pro, 4 referenca | — |
+| 2026-11-13 | 🔧 | "dua sunglasses on, i vetmi ndryshim" | Syzet nga koka në sy | Projekt |
+| 2026-11-13 | 🔧 | "une dua qe ajo te futet nga dera e makines jo te filloj ulur" | Struktura e aktit 1: hyrja nga dera → imazhi ulur bëhet END frame, plate bosh = START frame | 💡 LESSONS.md: zinxhir start/end frame — fundi i një akti = fillimi i tjetrit |

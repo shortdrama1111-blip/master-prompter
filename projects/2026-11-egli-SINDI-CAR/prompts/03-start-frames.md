@@ -12,3 +12,10 @@ She sits in the centre of the rear bench on the flat middle cushion, back agains
 Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the dark taupe headliner stays deep and shadowed. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
 Unretouched photograph, true-to-life skin with visible pores, real fabric and paper texture, fine natural grain, vertical 9:16.
 ```
+
+## Rezultati v1 → `refs/act1-seated-v1.jpg` (👍). Ndryshimi i vetëm: syzet në sy.
+### Edit — syzet (input: act1-seated-v1.jpg, 9:16)
+```
+Keep the supplied image exactly — same camera, framing, car interior, woman, pose, bags, hands, lighting, grade and grain. Change ONE thing only: her black cat-eye sunglasses are lowered from the top of her head onto her eyes, worn normally on the bridge of her nose, the dark lenses covering both eyes, the frames sitting level with her brows; her hair falls exactly as before. Everything else untouched.
+```
+Ky imazh bëhet END frame i aktit 1 (dhe START frame i aktit 2). START frame i aktit 1 = refs/plate-FINAL-916.jpg (bosh).
