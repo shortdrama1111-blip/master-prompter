@@ -1,22 +1,20 @@
-# Seedance 2.5 — Akti 3 (20–30 s) — EXTEND nga akti 2 — v2 (më shumë produkte + kënde të ndryshme)
-v1 (kamerë e fiksuar, 2 produkte) zëvendësuar me kërkesë të përdoruesit; shih git.
+# Seedance 2.5 — Akti 3 (20–30 s) — EXTEND nga akti 2 — v3 (pa parfum; vetëm produkte të papërdorura)
+v2 (me Eight & Bob në fund) e refuzuar: "nuk e dua me parfumin ketu, dua te tjera qe s'i kemi perdorur".
 Referencat (rendi i ngarkimit):
-@video1 = renders/act2-v1.mp4 · @image1 = character sheet · @image2 = parfumi Eight & Bob ·
-@image3 = Lancôme Butterglow 59 (e prerë nga përdoruesi) · @image4 = Guerlain Lip Oil Plump 100 (e prerë nga përdoruesi) ·
-@image5 = refs/p-dior-mascara-CROP.png
-Plani i montimit pas tij: Claude bën prerjet e të tri akteve; mundësisht kënde të reja për aktet 1–2.
+@video1 = renders/act2-v1.mp4 · @image1 = character sheet ·
+@image2 = Lancôme Butterglow 59 (e prerë nga përdoruesi) · @image3 = Guerlain Lip Oil Plump 100 (e prerë nga përdoruesi) ·
+@image4 = refs/p-dior-mascara-CROP.png
 
 ```
 SCENE CONTEXT
-This video continues directly from the last frame of @video1: the same young woman sits in the middle of the cream rear bench of the parked car with an étos gift bag on her lap, holding a coral blush compact. She finishes her look with a red lipstick, a lip oil and mascara, seen from closer angles inside the car, then the view returns to the wide shot as she lifts her Eight & Bob perfume beside her face for a final smile. Daytime, the car stands still. 10 seconds, vertical 9:16.
+This video continues directly from the last frame of @video1: the same young woman sits in the middle of the cream rear bench of the parked car with an étos gift bag on her lap, holding a coral blush compact. She finishes her look with a red lipstick, a lip oil and mascara, seen from closer angles inside the car, then the view returns to the wide shot as she holds her new lipstick and lip oil beside her face and blows a kiss to the camera. Daytime, the car stands still. 10 seconds, vertical 9:16.
 
 ACTIVE REFERENCES
 @video1: master for the car interior, the woman's look, the étos gift bags, the light, the grade and the grain, and for the wide framing used in SHOT 1 and SHOT 5. SHOT 2, SHOT 3 and SHOT 4 build their own closer viewpoints inside the same car. The first frame matches the last frame of @video1 exactly.
 @image1: 25-year-old woman, long champagne-blonde hair in large glossy waves, light blue-green eyes, black cat-eye sunglasses, ivory off-shoulder top, gold hoop earrings, short dark burgundy nails. Her face and eyes come from the left close-up panel of @image1; the grey studio backdrop and the grey square belong to the sheet only. She is one single person. 100% matches the reference.
-@image2: Eight & Bob Belvedere perfume, a rectangular clear glass bottle about 11 cm tall with fine vertical ribs, amber liquid, glossy black cylindrical cap, white front label printed "EIGHT & BOB" over "BELVEDERE" in black capitals. 100% matches the reference.
-@image3: Lancôme Butterglow lipstick, a slim rose-gold mirror-finish tube with a clear rose-tinted cap and a deep cherry-red rounded bullet. 100% matches the reference.
-@image4: Guerlain lip oil, a small square clear glass bottle of shimmering pink oil with a cream square cap on a white wand with a pink doe-foot applicator, and a gold cap with an embossed bee. 100% matches the reference.
-@image5: Dior mascara, a long cylindrical mirror-polished silver tube with a black band, and a wand with a curved black brush. 100% matches the reference.
+@image2: Lancôme Butterglow lipstick, a slim rose-gold mirror-finish tube with a clear rose-tinted cap and a deep cherry-red rounded bullet. 100% matches the reference.
+@image3: Guerlain lip oil, a small square clear glass bottle of shimmering pink oil with a cream square cap on a white wand with a pink doe-foot applicator, and a gold cap with an embossed bee. 100% matches the reference.
+@image4: Dior mascara, a long cylindrical mirror-polished silver tube with a black band, and a wand with a curved black brush. 100% matches the reference.
 
 LOCATION MAP
 Foreground in the wide shots: the backs of the two cream front seats at the left and right edges, softly out of focus. Midground: the woman on the middle cushion of the cream rear bench, two black étos gift bags upright beside her on the left side of the frame, the opened étos gift bag on her lap. Background: the rear windscreen with a bright, softly blurred green tree-lined street. In the close shots, the cream leather headrests and the bright window glow sit softly blurred behind her.
@@ -39,10 +37,10 @@ SHOT 3 — 4.0s to 5.5s — EXTREME CLOSE-UP, 18°, her lips and the lower half 
 5.5s HARD CUT
 SHOT 4 — 5.5s to 7.5s — CLOSE-UP in profile, 29°, from the right rear window side, her right eye and cheek sharp, the bright rear windscreen glowing behind her. Mouth slightly open, she sweeps the curved Dior mascara wand up through her upper lashes twice, then blinks once, the lashes darker and fuller.
 7.5s HARD CUT
-SHOT 5 — 7.5s to 10.0s — WIDE, 107°, framing of @video1. She drops the mascara into the bag, lifts the Eight & Bob Belvedere bottle out with her right hand, lowers her sunglasses from her hair back onto her eyes with her left hand, and raises the bottle beside her right cheek, label facing the camera, head tilted 10° toward it, smiling with her red lips. From 8.5s she holds this pose completely still until the end.
+SHOT 5 — 7.5s to 10.0s — WIDE, 107°, framing of @video1. She drops the mascara into the bag and lowers her sunglasses from her hair back onto her eyes with her left hand. Her right hand lifts the rose-gold Lancôme lipstick and the Guerlain lip oil with its gold bee cap together beside her right cheek, both facing the camera. She blows a kiss to the lens with her glossy cherry-red lips, then settles into a smile, head tilted 10° toward the products. From 8.5s she holds this pose completely still until the end.
 
 PERFORMANCE
-Motive: she is ready to go out and loves how she looks. Goal: finish the look and show it off. Tactic: practised, quick, playful. At the lipstick her lips stretch flat for each stroke; at the lip oil they press and pop. At the mascara her mouth falls slightly open and her brows lift 3 mm. Lowering the sunglasses, one corner of her mouth rises first, then the full smile shows her top teeth. Living skin with visible pores and fine peach fuzz in the close-ups, natural blinks, real breath, hair moving with every turn of her head.
+Motive: she is ready to go out and loves how she looks. Goal: finish the look and show it off. Tactic: practised, quick, playful. At the lipstick her lips stretch flat for each stroke; at the lip oil they press and pop. At the mascara her mouth falls slightly open and her brows lift 3 mm. Lowering the sunglasses, one corner of her mouth rises first; the kiss is quick and light, lips pursing for half a second, then the full smile shows her top teeth. Living skin with visible pores and fine peach fuzz in the close-ups, natural blinks, real breath, hair moving with every turn of her head.
 
 PHYSICS
 The compact lid closes with a firm snap. The lipstick bullet glides with slight drag, leaving an even layer. The lip oil spreads as a clear wet shine that catches a sharp window highlight. The mascara wand flexes slightly against the lashes and the lashes spring back. Each product drops into the paper bag with a soft thud. Her hair shifts as the sunglasses slide up and back down.
@@ -60,5 +58,5 @@ OUTPUT SETTINGS
 Vertical 9:16, 10 seconds, real time throughout; the final 1.5 seconds are a still, held pose.
 
 POSITIVE LOCKS
-Exactly one person appears in every shot. SHOT 1 and SHOT 5 match the framing, light and grade of @video1 exactly; the close shots share the same light and grade. Her face and eyes match the close-up panel of @image1 whenever the sunglasses are up. Each product keeps its reference shape and colour: rose-gold lipstick with a cherry-red bullet, square Guerlain lip oil with the gold bee cap, polished silver mascara, rectangular ribbed Eight & Bob bottle with amber liquid and the white EIGHT & BOB / BELVEDERE label. The étos gift bags keep only their gold étos logo. Her nails stay dark burgundy and her outfit stays identical throughout.
+Exactly one person appears in every shot. SHOT 1 and SHOT 5 match the framing, light and grade of @video1 exactly; the close shots share the same light and grade. Her face and eyes match the close-up panel of @image1 whenever the sunglasses are up. Each product keeps its reference shape and colour: rose-gold lipstick with a cherry-red bullet, square Guerlain lip oil with the gold bee cap, polished silver mascara. The étos gift bags keep only their gold étos logo. Her nails stay dark burgundy and her outfit stays identical throughout.
 ```
