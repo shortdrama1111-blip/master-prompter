@@ -35,3 +35,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 🔧 | "dua te kete 2, 3 canta si kjo ne dore kur te futet ne makine" | Akti 1, Seedance | Projekt |
 | 2026-11-13 | 🔧 | Referencat: "@image1 vajza, @image2 makina, @image3 canta, dhe @image3 parfumi" (gabim shtypi → @image4) | Rendi i tag-eve | seedance-clean: tag-et sipas renditjes së përdoruesit |
 | 2026-11-13 | 🔧 | "ma jep dhe foton e parfumit" | Product sheet i parfumit, i njëjti format si çanta | Projekt |
+| 2026-11-13 | 👍 | "kjo esht video e pare [...] ne fund mesa shof paska nevoj x disa prerje, por do ti bejm ne fund ne editim" | Akti 1 v1, Seedance 2.5 | — |
+| 2026-11-13 | 💡 | Seedance 2.5 me kamerë të fiksuar i injoroi 3 HARD CUT-et dhe bëri take të vazhdueshëm | Akti 1 | LESSONS.md → seedance-clean: për jump-cut nga i njëjti kënd, shkruaj take të vazhdueshëm dhe pre në montim |
+| 2026-11-13 | 🔧 | "dua te bej extend video functionality te seedance 2.5, te vendos kete video reference dhe te vazhdoj me 10 sekondshin e dyte [...] qe te kete vibe e njejte" | Metoda: extend nga akti 1 | LESSONS.md / seedance-clean: zinxhiri i akteve me extend + video si referencë |
