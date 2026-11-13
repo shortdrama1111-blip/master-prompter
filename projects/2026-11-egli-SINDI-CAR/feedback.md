@@ -31,3 +31,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 🔧 | "ne aktin 1 ne tham qe do futet, do hapi fjongon, do nxjerri parfumin dhe ndoshta do ta afroj te kamera ose do ta sperkasi ne ajer [...] kete foto mund ta japesh si reference jo si hard shot" | Korrigjon propozimin tim për end frame | Projekt; 💡 imazhi i gjeneruar në kontekst = referencë, jo kuadër i detyruar |
 | 2026-11-13 | 🔧 | "do jap si input vetem makinen bosh, character sheet dhe ate bag me fjongo, dhe parfumin" | Inputet e Seedance për aktin 1 | Projekt |
 | 2026-11-13 | 🔧 | "me jep nje prompt per te krijuar character sheet te çantes me fjongo" | Product sheet me formatin 3-panelësh | CLAUDE.md: hard rule-i i sheet-it vlen edhe për produktet (close-up · front · back) — për t'u konfirmuar |
+| 2026-11-13 | 👍 | Sheet i çantës doli 3 rreshta vertikal (close-up · front · back) — e pranoi | Product sheet, Nano Banana Pro | Lock what you got: sheet vertikal 9:16 OK për produkte |
+| 2026-11-13 | 🔧 | "dua te kete 2, 3 canta si kjo ne dore kur te futet ne makine" | Akti 1, Seedance | Projekt |
+| 2026-11-13 | 🔧 | Referencat: "@image1 vajza, @image2 makina, @image3 canta, dhe @image3 parfumi" (gabim shtypi → @image4) | Rendi i tag-eve | seedance-clean: tag-et sipas renditjes së përdoruesit |
