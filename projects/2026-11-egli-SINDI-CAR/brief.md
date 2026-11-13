@@ -30,8 +30,8 @@ teksti/logoja (vjen në montim). 37 s → 30 s.
 ## Portat
 | Porta | Përgjigja |
 |---|---|
-| Vendi | interior makine, sedilja e pasme (makina: ? ) |
-| Koha | ditë (si ref), për t'u konfirmuar |
+| Vendi | interior makine e përgjithshme si te ref (marka s'ka rëndësi), sedilja e pasme, **lëkurë krem** |
+| Koha | **ditë**, dritë natyrale nga dritaret |
 | Formati | 9:16 Instagram Reel, 30 s total |
 | Epoka | e sotmja |
 | Subjekti | personazh i ri femër + produktet e përdoruesit |

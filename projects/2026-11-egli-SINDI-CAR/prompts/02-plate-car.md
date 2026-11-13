@@ -1,0 +1,8 @@
+# Plate i makinës — image, 9:16 — v1
+Model i rekomanduar: Nano Banana Pro ose Seedream (interiore pa njerëz). 4 variante.
+
+```
+Empty rear seat of a modern luxury sedan photographed from inside the car. The camera sits low between the two front seats at seat-cushion height, looking straight back at the rear bench, ultra-wide 107-degree view with gentle natural wide-angle stretch at the edges. Foreground: the backs of the two front seats frame the image on the left and right edges, each filling about 18% of the frame width, softly out of focus, cream quilted leather. Middle ground: the rear bench in smooth cream nappa leather with fine tonal stitching, three headrests, a folded centre armrest, seat belts resting in their holders, the seat cushion empty and clean with space for one person to sit in the centre. Above: black alcantara headliner. Background: both rear side windows and the rear windscreen show a bright, softly blurred green tree-lined street.
+Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the black headliner stays deep and dark. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
+The cabin is spotless and holds only the seats, belts and armrest. Unretouched photograph, true-to-life leather texture, fine natural grain, vertical 9:16.
+```

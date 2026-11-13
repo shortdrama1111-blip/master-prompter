@@ -38,3 +38,16 @@ Ndryshimet nga prompti që bëhen standardi i ri:
 - Flokët: champagne-blonde, të drejta te rrënjët, me kaçurrela të mëdha te majat, deri në mes.
 - Syzet: cat-eye të zeza me zinxhirë ari anash, **mbi kokë** në të tre panelet.
 - Xhinse të gjera blu të çelura, balerina/çizme krem me majë.
+
+## Blloku i dritës (v1, fjalë për fjalë në çdo plate dhe prompt)
+```
+Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the black headliner stays deep and dark. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
+```
+
+## Ngjyra 60:30:10
+60% krem/ivory (lëkura e sediljeve + bluza) · 30% blu e çelur xhinse + e zezë (tavani, çantat étos) ·
+10% ari/qelibar, **i rezervuar** për logon e artë étos, fjongon shampanjë dhe lëngun qelibar të Eight & Bob.
+
+## Plate-i i makinës
+Kamera e ulët midis dy sediljeve të përparme, në lartësinë e ndenjëses, sheh drejt mbrapa, 107°.
+Shpinoret e përparme krem kornizojnë skajet majtas/djathtas (~18% secila), jashtë fokusit.

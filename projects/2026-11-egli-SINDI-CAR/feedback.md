@@ -16,3 +16,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 👎→🔧 | "ne fakt un doja nje vajz bjodne por te bukur, kukull aktore filmi" | Personazhi, propozimi brune i Claude | Projekt. 💡 Mësim: pamja e personazhit pyetet e konfirmohet shprehimisht, jo merret si e pranuar nga "te besoj" → LESSONS.md |
 | 2026-11-13 | 🔧 | "dhe e dua me stylish syze te zeza dielli" | Personazhi, sheet v4 | Projekt |
 | 2026-11-13 | 👍 | Zgjodhi sheet v4 dhe: "me mbulo fytyren tek full body front" | Character sheet, Soul | Konfirmon hard rule-in e katrorit |
+| 2026-11-13 | 🔧 | "dite, interior krem, s'ka rendesi makina pak a shum si video e references" | Portat: koha, vendi | Projekt |
