@@ -22,3 +22,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 🔧 | "jo me jep promptin qe te jete e mbyllur qe ne fillim" | Plate: preferon rigjenerim me prompt të saktë mbi edit-in me 2 hapa | LESSONS.md: kur rregullimi kërkon 2+ edit-e, ofro edhe rigjenerimin me prompt të korrigjuar |
 | 2026-11-13 | 🔧 | "rregullo driten ketu" | Plate v2: qendra e sediljes kishte nuancë të verdhë-portokalli (RGB 117,95,51) kundrejt kremit neutral të sediljeve të përparme | Pass ngjyre nga Claude (`tools/grade.py`), jo rigjenerim → konfirmon cinematic-ai-video §3 |
 | 2026-11-13 | 🔧 | "bej option b" | Plate: shpinoret e përparme si kornizë (stili i ref) mbi kuadrin e pastër | Konfirmon cinematic-ai-video §6 "tri plane thellësie" |
+| 2026-11-13 | 👎 | "jo jo cfare eshte kjo" | Reagim ndaj kanavacës gri për outpaint + dy rrugëve alternative | LESSONS.md / CLAUDE.md: një rrugë e vetme, pa skedarë ndihmës të pakërkuar; rezervën vetëm pasi dështon e para |
