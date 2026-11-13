@@ -6,3 +6,18 @@ Empty rear seat of a modern luxury sedan photographed from inside the car. The c
 Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the black headliner stays deep and dark. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
 The cabin is spotless and holds only the seats, belts and armrest. Unretouched photograph, true-to-life leather texture, fine natural grain, vertical 9:16.
 ```
+
+## Rezultati v1 (16:9, mbështetësja e krahut poshtë) → rruga: crop + 2 edit-e
+Gabimi te prompti v1: rreshti "three headrests, a folded centre armrest" → modeli e uli mbështetësen.
+Formati 16:9: raporti në UI të platformës ishte 16:9; teksti "vertical 9:16" nuk e mbivendos.
+Claude preu katrorin qendror 1125×1125 → `refs/plate-v1-crop-square.png` (emblema e kokëmbajtëses mbetet jashtë).
+
+### Edit 1 — mbështetësja lart (input: plate-v1-crop-square.png, output 1:1)
+```
+Keep the supplied image exactly — same camera, framing, seats, belts, lighting, grade and grain. Change ONE thing only: the centre armrest of the rear bench is folded up and stored flush inside the backrest, so the middle seat back is one continuous smooth cream nappa leather surface with the same vertical stitching lines as the two outer seats, and the middle seat cushion is open, flat and empty, ready for one person to sit in the centre. Everything else untouched.
+```
+
+### Edit 2 — zgjerimi në 9:16 (input: rezultati i Edit 1, raporti 9:16 në UI)
+```
+Keep the supplied image exactly — same camera, seats, belts, lighting, grade and grain, with all existing content unchanged in the middle of the frame. Change ONE thing only: extend the canvas to vertical 9:16. Above, continue the dark taupe headliner and the grab handle on the right up to the top edge. Below, continue the front edge of the cream rear seat cushion, then the dark carpeted rear footwell floor, with the lower parts of the two cream front seatbacks still framing the left and right edges. Everything else untouched.
+```

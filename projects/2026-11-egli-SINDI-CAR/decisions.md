@@ -41,13 +41,16 @@ Ndryshimet nga prompti që bëhen standardi i ri:
 
 ## Blloku i dritës (v1, fjalë për fjalë në çdo plate dhe prompt)
 ```
-Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the black headliner stays deep and dark. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
+Soft natural daylight at 5600K enters through the left and right rear side windows and the rear windscreen, diffused by light cloud, wrapping the rear bench evenly from both sides. The cream leather bounces a warm soft fill upward; the dark taupe headliner stays deep and shadowed. Exposure is set for skin, so the window glass glows bright with the street outside softly overexposed. Neutral white balance 5600K, gentle contrast, clean whites, rich true blacks.
 ```
 
 ## Ngjyra 60:30:10
-60% krem/ivory (lëkura e sediljeve + bluza) · 30% blu e çelur xhinse + e zezë (tavani, çantat étos) ·
+60% krem/ivory (lëkura e sediljeve + bluza) · 30% blu e çelur xhinse + e errët (tavani taupe, rripat e zinj, çantat étos) ·
 10% ari/qelibar, **i rezervuar** për logon e artë étos, fjongon shampanjë dhe lëngun qelibar të Eight & Bob.
 
 ## Plate-i i makinës
 Kamera e ulët midis dy sediljeve të përparme, në lartësinë e ndenjëses, sheh drejt mbrapa, 107°.
 Shpinoret e përparme krem kornizojnë skajet majtas/djathtas (~18% secila), jashtë fokusit.
+
+### Blloku i dritës v2 (Lock what you got, plate v1): tavani doli taupe i errët, jo i zi → teksti u përditësua sipër.
+Mbështetësja qendrore: gjithmonë e ngritur, sedilja e mesit e lirë (aty ulet vajza).
