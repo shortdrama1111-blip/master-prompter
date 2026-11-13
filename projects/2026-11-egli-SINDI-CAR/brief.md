@@ -47,3 +47,11 @@ teksti/logoja (vjen në montim). 37 s → 30 s.
   "PERFUMERY SINCE 2004", litar i zi i përdredhur, etiketë produkti e printuar në bardhë.
 - Përdoruesi: "produkti i par duhet me patjter", të tjerët i zgjedh Claude nga ato që do të dërgojë.
 - Pasojë: produktet janë parfumeri/kozmetikë, jo këpucë si në ref → harku i veprimit përshtatet.
+
+## Produktet e marra (në pritje të të tjerave, "kam akoma")
+| # | Produkti | Skedari | Shënime vizuale |
+|---|---|---|---|
+| 1 (?) | Eight & Bob, Belvedere (parfum) | `refs/p1-eightbob-belvedere.jpg` | shishe katrore xhami me vija vertikale, lëng qelibar, kapak cilindrik i zi me shkëlqim, etiketë e bardhë |
+| – | Dior Backstage Rosy Glow 103 (blush) | `refs/p-dior-blush-rosyglow103.jpg` | kuti katrore e tejdukshme, kapak argjendi, pudër koral me monogram në reliev |
+| – | Dior Forever Skin Glow (fondatinë) | `refs/p-dior-foundation-forever-glow.jpg` | shishe drejtkëndëshe xhami, lëng bezhë, kapak i zi katror, "DIOR" vertikale argjendi |
+| – | Dior Iconic Overcurl (maskara) | `refs/p-dior-mascara-overcurl.jpg` | tub cilindrik argjendi pasqyrë, unazë e zezë me logo, furçë e lakuar |
