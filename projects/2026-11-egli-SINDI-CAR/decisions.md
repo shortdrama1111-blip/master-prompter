@@ -27,3 +27,6 @@ trupit; e vetmja fytyrë që lexohet është close-up-i.
 Bionde, "e bukur, kukull, aktore filmi". 25 vjeç, flokë champagne-blonde me valë të mëdha, sy të
 çelur blu-jeshilë, mollëza të theksuara, buzë të plota rozë. Lëkurë e çelur e ngrohtë me pore të dukshme.
 Veshja e filmit pa ndryshim.
+Syze dielli të zeza "stylish": cat-eye acetat i zi me shkëlqim, lente të zeza, detaje ari te menteshat.
+Te close-up-i syzet janë ngritur mbi kokë (sytë duhen të dukshëm për identitetin); te trupi i plotë i ka në sy.
+Në video: i ka në sy në aktin 1, i heq për grimin (si te ref).
