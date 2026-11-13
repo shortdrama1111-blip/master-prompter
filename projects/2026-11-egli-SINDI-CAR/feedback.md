@@ -28,3 +28,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 👍 | "kjo duket shume e mire" | Start frame akti 1 (vajza ulur me çantat), Nano Banana Pro, 4 referenca | — |
 | 2026-11-13 | 🔧 | "dua sunglasses on, i vetmi ndryshim" | Syzet nga koka në sy | Projekt |
 | 2026-11-13 | 🔧 | "une dua qe ajo te futet nga dera e makines jo te filloj ulur" | Struktura e aktit 1: hyrja nga dera → imazhi ulur bëhet END frame, plate bosh = START frame | 💡 LESSONS.md: zinxhir start/end frame — fundi i një akti = fillimi i tjetrit |
+| 2026-11-13 | 🔧 | "ne aktin 1 ne tham qe do futet, do hapi fjongon, do nxjerri parfumin dhe ndoshta do ta afroj te kamera ose do ta sperkasi ne ajer [...] kete foto mund ta japesh si reference jo si hard shot" | Korrigjon propozimin tim për end frame | Projekt; 💡 imazhi i gjeneruar në kontekst = referencë, jo kuadër i detyruar |
+| 2026-11-13 | 🔧 | "do jap si input vetem makinen bosh, character sheet dhe ate bag me fjongo, dhe parfumin" | Inputet e Seedance për aktin 1 | Projekt |
+| 2026-11-13 | 🔧 | "me jep nje prompt per te krijuar character sheet te çantes me fjongo" | Product sheet me formatin 3-panelësh | CLAUDE.md: hard rule-i i sheet-it vlen edhe për produktet (close-up · front · back) — për t'u konfirmuar |

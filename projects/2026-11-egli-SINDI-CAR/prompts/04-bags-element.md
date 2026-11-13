@@ -1,11 +1,15 @@
-# Elementi i çantave étos (e madhe + e vogël bashkë) — Nano Banana Pro, 4:3
-@image1 = refs/bag-etos-ribbon.jpg (e vogla) · @image2 = refs/bag-etos-large.jpg (e madhja)
+# Elementet e çantave
 
-## v1
+## Product sheet — çanta e vogël me fjongo — Nano Banana Pro, 16:9 — v1
+Input: @image1 = refs/bag-etos-ribbon.jpg
+Formati sipas hard rule-it të sheet-eve: MAJTAS close-up · QENDËR front i plotë · DJATHTAS back i plotë.
 ```
-Studio product photograph of two black étos shopping bags standing side by side on a plain seamless mid-grey floor and backdrop, both facing the camera straight on, horizontal 4:3.
-LEFT: the large horizontal bag from @image2, about 45 cm wide and 35 cm tall, matte black paper, twisted black rope handles standing up, a large gold-foil "étos" logo with the registered mark centred on the front and one thin gold line beneath it.
-RIGHT: the small square gift bag from @image1, about 25 cm wide and 25 cm tall, matte black paper, thin black rope handles standing up, a champagne satin ribbon tied in a neat bow around both handles with two tails falling 10 cm down the front, a gold-foil "étos" logo centred on the front.
-Use @image1 and @image2 for each bag's shape, paper finish, logo style, handles and bow; the street, hand and printed product label in the reference photos stay out of this image. Each bag carries only its gold étos logo. The bags stand 15 cm apart, their bases resting on the floor with soft contact shadows.
-Flat, even, diffused 5000K studio light from the front, a soft sheen on the gold foil and satin, neutral white balance. 50mm lens at f/11, both bags sharp edge to edge. Unretouched photograph with true-to-life paper and satin texture. The frame holds only the two bags and the grey backdrop.
+Product reference sheet photographed in a studio: one 16:9 image divided into three equal vertical panels standing side by side on one continuous seamless mid-grey backdrop, separated by thin even grey gaps. The same small black étos gift bag from @image1 appears in all three panels, identical shape, size, paper, handles, logo and bow.
+LEFT PANEL: ultra-realistic close-up of the top half of the bag front, filling the panel: the champagne satin ribbon tied in a neat bow around the two thin black rope handles, the satin showing soft sheen and fine weave, two ribbon tails falling 10 cm down the front, and below them the gold-foil "étos" logo with its thin gold line, the foil catching a soft highlight, the matte black paper showing its fine grain and crisp folded edges.
+CENTRE PANEL: full front view of the whole bag standing upright on the grey floor, about 25 cm wide and 25 cm tall with a 10 cm gusset, thin black rope handles standing up and tied together with the champagne satin bow, the gold-foil "étos" logo centred on the front, the whole bag inside the panel with grey space around it.
+RIGHT PANEL: full back view of the same bag standing upright, plain matte black back panel, the rope handles and the back of the champagne bow visible at the top, the whole bag inside the panel with grey space around it.
+Use @image1 for the bag's shape, matte black paper, rope handles, logo style and the champagne satin bow; the street and the hand in @image1 stay out of this image. The bag carries only the gold "étos" logo with its thin gold line, on the front.
+Flat, even, diffused 5000K studio light from the front, soft contact shadow under the bag, neutral white balance. Lens at f/11, every panel sharp edge to edge. Unretouched photograph with true-to-life paper, foil and satin texture. The image holds only the bag and the grey backdrop.
 ```
+
+## (v0) dy çantat bashkë, 4:3 — e zëvendësuar: përdoruesi do vetëm çantën me fjongo në aktin 1. Shih git.

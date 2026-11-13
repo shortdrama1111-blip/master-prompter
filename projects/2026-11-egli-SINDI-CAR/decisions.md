@@ -64,3 +64,10 @@ Tri plane: shpinoret (afër) · vajza në mes · pemët pas xhamit.
 Akti 1: START = plate bosh → ajo hyn nga dera e djathtë e pasme, ulet → END = act1-seated (syzet në sy).
 Fundi i çdo akti = fillimi i aktit tjetër (prerje e padukshme).
 Lock what you got (act1-seated-v1): thonjtë dolën burgundy i errët (jo nude) → standardi i ri; këmbët e kryqëzuara.
+
+## KORRIGJIM i strukturës (përdoruesi): akti 1 mbetet si plani origjinal
+Akti 1 (0–10 s): hyn nga dera → zgjidh fjongon → nxjerr parfumin → e afron te kamera OSE e spërkat në ajër.
+`refs/act1-seated-v1.jpg` = vetëm REFERENCË (stili, identiteti në kontekst), JO end frame / JO hard shot.
+Input për Seedance akti 1: plate bosh · character sheet · product sheet i çantës me fjongo · parfumi Eight & Bob.
+Çanta e madhe del jashtë aktit 1.
+Drejtimi i prompteve: video → `seedance-clean` (përdoruesi: "po"); imazhe → gjuhë fotografike pohore.
