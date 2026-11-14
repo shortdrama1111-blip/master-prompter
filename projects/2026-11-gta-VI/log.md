@@ -28,3 +28,5 @@
 | 2026-11-14 | Montimi skena 4 v1 + bashkimi 3→4 | ffmpeg | — | kabrioleti mbetet i errët te kurthi | ngjyrim selektiv s'u bë (rrezik për policinë/dritat) | `scenes_3-4_v1.mp4` 25.7 s; kalimi: ekrani → ura → drone, zoom 1.15→1.0 + shkrirje 0.6 s; HUD 4→5 yje, fiket me prozhektorin (10.0–10.6) |
 | 2026-11-14 | Montimi 1–4 v1 | `edit/join_all.sh` (1-2 v3 + 3-4 v2) | — | — | — | `gta_scenes_1-4_v1.mp4` 61.9 s, 112 MB |
 | 2026-11-14 | Montimi 1–4 v2 | `edit/join_2_3_switch.sh` | — | — | — | `gta_scenes_1-4_v2.mp4` 62.2 s; kalimi 2→3 te ~34.8–36.0 s |
+| 2026-11-14 | Skena 5a (heronjtë) | Seedance 2.5 + blockout 5a, 8 s, 14 ref | ✅ | shumë e shpejtë | — | rreshti me saktësisht 5 heronj ✓, Tommy + zari ✓ |
+| 2026-11-14 | Skena 5b (varka) | Seedance 2.5 + blockout 5b, 9 s | ✅ | shumë e shpejtë; objekt i çuditshëm në qoshen lart djathtas te shot 2; Egli bie në ujë dhe Jason e nxjerr (jo direkt në varkë) | — | pranohet; shot 2 me crop 1.4x |
