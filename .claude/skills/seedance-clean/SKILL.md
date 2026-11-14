@@ -195,6 +195,25 @@ CUT 2 — [description]
 
 Across internal cuts hold: same character set, same geometry, screen direction, gaze, light, wardrobe, prop state.
 
+**When HARD CUTs are honoured (field-tested):**
+- **Fixed camera + HARD CUT → ignored.** With one locked-off framing, 2.5 renders a continuous take and drops the cuts. For jump-cut style from one angle, write ONE continuous shot with timed beats and cut it in the edit.
+- **Clearly different angles → honoured.** Wide → 29° close-up → 18° extreme close-up → profile → wide gave every cut on the stated second. Choose per scene: when the scene wants fixed-camera continuity, write the continuous take; when it wants energy, change the angle at each cut.
+
+---
+
+## EXTEND — CHAINING SEGMENTS
+
+Extend is the strongest tool for a multi-segment piece with one look. Pattern:
+- `@video1` = the previous segment, declared **master** for interior, camera, the character's look, props already in the scene, light, grade and grain; "the first frame matches the last frame of @video1 exactly".
+- Add image references **only for things new to this segment** (a new product, the character sheet for the face). Anything already visible in `@video1` (location, bags, props) is not re-added: an empty-location plate as a new reference can pull the shot back to an empty frame.
+- Describe only the new seconds. The last frame of each segment becomes the first frame of the next, so the joins are invisible.
+
+## PRODUCT REFERENCES
+
+- Crop promo/advert images down to the product before using them: remove headlines, prices, captions and retailer logos around it, since the model can pull that text into the frame.
+- **Change nothing on the product itself**: its own logo, label, shape, colour and finish stay exactly as photographed.
+- A product without a clean reference loses its shape when it is small in frame. For the hero product, build a product sheet (close-up · front · back) on grey.
+
 ---
 
 ## DIRECTING

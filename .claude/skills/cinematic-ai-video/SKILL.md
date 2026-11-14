@@ -198,6 +198,19 @@ Pa këtë, modeli e tërheq kamerën te fytyra dhe ambienti humbet.
 - Korniza e fundit ngrihet 1–2 sekonda nëse mbi të vjen tekst.
 - Muzika zgjidhet pas montimit; prompti shkruhet me `no music`.
 
+### Montimi (i testuar, pëlqyer nga përdoruesi)
+- **Dy versione:** A = segmentet të plota njëri pas tjetrit; B = me prerje. Përdoruesi zgjedh.
+- **Segmente nga një kënd i fiksuar:** pri momentet e dobëta (gabime fizike, produkt i deformuar)
+  dhe jep **punch-in 1.2–1.8×** në copat që mbeten. Copa e fundit e një segmenti kthehet te
+  kuadri i gjerë, që lidhja me segmentin tjetër të jetë e padukshme.
+- **Ritmi i produkteve në reel:** ~2 s për produkt.
+- **Hook me tekst** në 1.5 s e para, mbi kuadrin bosh/hyrjen; teksti i plotë i ofertës në fund.
+- **Muzika:** gjenerohet me gjatësinë e montimit dhe zhvendoset që "button"-i i fundit të bjerë
+  mbi tekstin e ofertës; tingujt e videos ~-5 dB nën muzikë; final -14 LUFS.
+- **Mbyllje që s'e mbush kuadrin:** zoom i butë (smoothstep) mbi objektin + slow 1.5–1.6× në
+  pjesën e mbajtur. Kurrë freeze-frame.
+- Skriptet: `tools/montage/` (`edit.sh`, `final.sh`, `grade.py`).
+
 ---
 
 ## 9. SI TË SILLESH

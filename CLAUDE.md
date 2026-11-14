@@ -42,6 +42,20 @@ dhe skill-i i modelit (p.sh. `seedance-clean`) vendos **formatin e promptit**.
     Nëse diçka s'bëhet me modelin, thuaje **para** se të harxhohen kredite.
 12. **Lock what you got:** nëse rezultati ndryshon nga prompti, por duket mirë, ai bëhet
     standardi i ri dhe blloku i dritës rishkruhet sipas tij.
+13. **Character sheet (hard rule):** një imazh me 3 panele: **majtas** fytyra close-up ultra
+    realiste · **qendër** full body front · **djathtas** full body back. Pas gjenerimit Claude
+    vendos një katror të sheshtë gri (ngjyra e sfondit) mbi fytyrën e vogël te paneli i qendrës,
+    që e vetmja fytyrë e lexueshme të jetë close-up-i. Veshja në sheet = veshja e filmit.
+14. **Kurrë freeze-frame.** Lexohet si gabim ("creepy"). Kur duhet hapësirë për tekst/logo, ajo
+    gjenerohet si objekt real në lëvizje (p.sh. çanta e zezë mbush kuadrin), ose shtrihet me
+    slow-motion të lehtë, kurrë me kuadër të ngrirë.
+15. **Rrjedha standarde: me MCP.** Claude i ngarkon Elementet në Higgsfield dhe nis vetë
+    gjenerimet. Puna manuale (përdoruesi gjeneron, Claude jep promptet) është përjashtim, p.sh.
+    kur plani është unlimited. Në fillim të projektit konfirmo cilën rrugë ndjekim; kur është
+    manuale, dorëzo paketën e plotë në një mesazh: referencat e prera gati për shkarkim, rendi i
+    ngarkimit dhe prompti.
+16. **Pamja e personazhit pyetet shprehimisht** (flokë, moshë, stil). "Të besoj" nuk është
+    pranim i një pamjeje të propozuar.
 
 ---
 
@@ -62,6 +76,10 @@ ndjekim dhe shënoje te `decisions.md` e projektit.
 Hipoteza ime (për t'u konfirmuar): dallimet varen nga **modeli**. Seedance 2.5 punon mirë me
 pohore dhe take të gjata; modelet image/Kling kanë nevojë për negative dhe shot-e të shkurtra.
 Nëse konfirmohet, rregulli shkon te skill-i i modelit përkatës.
+
+Të dhëna deri tani (1/2 projekte): **2026-11-egli-SINDI-CAR** — video → `seedance-clean`
+(vetëm pohore, pa emra pajisjesh, take të gjata/extend), imazhe → gjuhë fotografike pohore pa
+bllok NEGATIVE. Funksionoi. Përdoruesi: "presim dhe një projekt" para se ta mbyllim konfliktin.
 
 ---
 
