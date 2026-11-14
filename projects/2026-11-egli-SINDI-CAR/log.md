@@ -22,6 +22,6 @@
 | Imazhe (plate, sheet-e, start frame) | Nano Banana Pro | 8 të regjistruara | 16 |
 | Character sheet | Soul | — (asnjë transaksion në dritare) | 0 |
 | **Totali i projektit** | | | **16** |
-Në të njëjtën dritare, jashtë pipeline-it tonë: Wan 3.0 Prime Video ×15 = 438, MiniMax H3 = 24, Gemini Omni Flash 1.2 = 22.5 (gjithsej 484.5) — për t'u konfirmuar nga përdoruesi.
+Në të njëjtën dritare, jashtë pipeline-it tonë: Wan 3.0 Prime Video ×15 = 438, MiniMax H3 = 24, Gemini Omni Flash 1.2 = 22.5 (gjithsej 484.5) — përdoruesi konfirmoi: NUK janë të tij/të projektit ("un nuk perdora minimax ose dicka tjeter ketu").
 ElevenLabs: connector-i kërkon rilidhje me leje shtesë → kostoja e muzikës s'u lexua.
 Bilanci Higgsfield pas projektit: 5782.1 kredite (plan Ultra).
