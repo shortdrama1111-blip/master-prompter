@@ -3,3 +3,4 @@
 | Data | Shot | Modeli | Rezultati | Problemi | Shkaku | Veprimi |
 |---|---|---|---|---|---|---|
 | 2026-11-14 | analiza | ffmpeg | 4 look-e, 3 ndërrime wipe; frame-t 3.5/7.5/11.0/14.0s nxjerrë te `frames/` | — | — | pret konfirmimin e përdoruesit |
+| 2026-11-14 | v2 take1 | Genjutsu (manual), prompt 04 v4 | `results/genjutsu-v2-take1.mp4`: lëvizja, 3 wipe-t, koha, drita ✓; teksti u hoq ✓; 4 veshjet në rendin e duhur ✓; mansheta me gur të zi duket te kyçi i majtë në 9.5s ✓ | (1) e zeza humbet në sfondin e natës; (2) fytyra në fund më e rrumbullakët/më e re se ref-et, buzëqeshja e thekson; (3) mansheta e djathtë del e thjeshtë | (1) zgjedhja e look-ut D, jo rresht i promptit; (2) ref-et e trupit me fytyrë ~140px, pa close-up si ref | v5 (blu në fund) + v6 (@Image6 close-up fytyre) |
