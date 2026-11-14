@@ -33,9 +33,9 @@ T=$(ffprobe -v error -show_entries format=duration -of csv=p=0 cut.mov)
 # kohët në montim, nga kohëzgjatjet reale të copave
 DUR=$(for f in S01 S02 S03 S04 S05 S06 M1 M2 M3 M4 M5 M6 M7 S07 S08; do ffprobe -v error -show_entries format=duration -of csv=p=0 $f.mov; done | tr '\n' ',')
 t(){ python3 -c "d=[$DUR];print(round(sum(d[:$1]),3))"; }
-TB=$(t 2); TM=$(t 6); TS=$(t 14)
+TB=$(t 2); TM=$(t 6); TME=$(t 13); TS=$(t 14)
 # zëri: jehona e kujtimeve + një ton i mbajtur (akord i butë) nga zari deri në fund
-ffmpeg -v error -y -f lavfi -i "aevalsrc='0.06*(sin(2*PI*220*t)+0.8*sin(2*PI*261.63*t)+0.7*sin(2*PI*329.63*t)+0.4*sin(2*PI*440*t))*min(t/2,1)*if(gt(t,$(echo "$T-$(t 5)-1.5" | bc)),max(0,($T-$(t 5)-t)/1.5),1)':s=48000:d=$(echo "$T-$(t 5)" | bc)" -af "lowpass=f=2500,aecho=0.8:0.7:120|240:0.3|0.2,aformat=channel_layouts=stereo" pad.wav
+ffmpeg -v error -y -f lavfi -i "aevalsrc='0.06*(sin(2*PI*220*t)+0.8*sin(2*PI*261.63*t)+0.7*sin(2*PI*329.63*t)+0.4*sin(2*PI*440*t))*min(t/2,1)*if(gt(t,$(echo "$T-$TME-1.5" | bc)),max(0,($T-$TME-t)/1.5),1)':s=48000:d=$(echo "$T-$TME" | bc)" -af "lowpass=f=2500,aecho=0.8:0.7:120|240:0.3|0.2,aformat=channel_layouts=stereo" pad.wav
 ffmpeg -v error -y -ss 9.8 -to 11.2 -i $SRC/s1c/v.mp4 -vn -af "aresample=48000,highpass=f=200,aecho=0.8:0.6:180|360:0.4|0.25,volume=0.7,aformat=channel_layouts=stereo" e1.wav
 ffmpeg -v error -y -ss 6.6 -to 8.06 -i $SRC/s5/x1.mp4 -vn -af "aresample=48000,highpass=f=200,aecho=0.8:0.6:180|360:0.4|0.25,volume=0.7,aformat=channel_layouts=stereo" e2.wav
 FT=$HERE/fonts/TitanOne-Regular.ttf; F1=/usr/share/fonts/opentype/inter/Inter-Light.otf
@@ -47,9 +47,9 @@ colorbalance=rh=0.03:bh=-0.03:rs=-0.01:bs=0.03,split[a][b];[b]curves=all='0/0 0.
 [g]drawtext=fontfile=$FT:text='busted':fontsize=230:fontcolor=0xC81E1E:borderw=10:bordercolor=black:x=(w-text_w)/2:y=(h-text_h)/2-120:alpha='if(lt(t,$TB),0,if(lt(t,$TB+0.15),(t-$TB)/0.15,if(lt(t,$(t 3)-0.25),1,max(0,($(t 3)-t)/0.25))))',
 drawtext=fontfile=$F1:text='1 9 8 6   ·   1 9 9 2   ·   2 0 1 3   ·   2 0 2 6':fontsize=40:fontcolor=white:x=(w-text_w)/2:y=h*0.20:alpha='if(lt(t,$TS+0.4),0,if(lt(t,$TS+0.8),(t-$TS-0.4)/0.4,if(lt(t,$TS+2.2),1,max(0,($TS+2.6-t)/0.4))))',
 drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x=(w-text_w)/2:y=h*0.20:alpha='if(lt(t,$TS+2.8),0,if(lt(t,$TS+3.4),(t-$TS-2.8)/0.6,1))',format=yuv420p[v];
-[0:a]highpass=f=35,acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=3dB[o];
-[1:a]adelay=$(MS $(t 5))|$(MS $(t 5)),volume=0.9[p];[2:a]adelay=$(MS $TM)|$(MS $TM)[x];[3:a]adelay=$(MS "$TM+2.6")|$(MS "$TM+2.6")[y];
-[o][p][x][y]amix=inputs=4:normalize=0:duration=first,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
+[0:a]volume='if(between(t,$TM-0.08,$TME),0,1)':eval=frame,highpass=f=35,acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=3dB[o];
+[1:a]adelay=$(MS $TME)|$(MS $TME),volume=0.9[p];
+[o][p]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -c:v libx264 -preset ${PRESET:-fast} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
-  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene6_edit_v2.mp4
-ffprobe -v error -show_entries format=duration -of csv=p=0 scene6_edit_v2.mp4
+  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene6_edit_v3.mp4
+ffprobe -v error -show_entries format=duration -of csv=p=0 scene6_edit_v3.mp4

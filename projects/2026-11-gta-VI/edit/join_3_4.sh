@@ -12,7 +12,7 @@ ffmpeg -v error -y -i "$A" -i "$B" -i $WD/whoosh.wav -filter_complex "
 [1:v]trim=0.45,setpts=PTS-STARTPTS,format=yuv420p[b2];
 [a1][a2][b1][b2]concat=n=4:v=1:a=0,setsar=1[v];
 [0:a]atrim=0:$C,asetpts=PTS-STARTPTS[x];[1:a]asetpts=PTS-STARTPTS[y];
-[x][y]acrossfade=d=0.12[xy];[2:a]adelay=$(echo "($C0-0.05)*1000/1" | bc)|$(echo "($C0-0.05)*1000/1" | bc),volume=0.7[w];
+[x]afade=t=out:st=$(printf "%.3f" $(echo "$C-0.06" | bc)):d=0.06[x2];[y]afade=t=in:d=0.06[y2];[x2][y2]concat=n=2:v=0:a=1[xy];[2:a]adelay=$(echo "($C0-0.05)*1000/1" | bc)|$(echo "($C0-0.05)*1000/1" | bc),volume=0.7[w];
 [xy][w]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -c:v libx264 -preset ${PRESET:-fast} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart "$OUT"
