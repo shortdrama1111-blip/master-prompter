@@ -82,3 +82,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "pse nuk i perfshive dhe Franklin dhe te tjeret, po vetem CJ dhe Tommy" | Memory beat, skena 6 | Rregull: kujtimi përfshin TË GJITHË heronjtë që e sollën (Tommy, CJ, Michael, Franklin, Trevor), një flash për secilin, në rend kronologjik |
 | 2026-11-14 | 👍 | "po me pelqen, por do ta ridiskutojme kur te jemi aty ... thjesht keep it in mind" | Memory beat i skenës 6 | Parkuar te `scenes/scene-6.md`; rihapet kur të punojmë skenën 6 |
 | 2026-11-14 | 👎 | "provoje pa pjesen time, sepse me ka nxjerre shume keq floket" / "ose perfshije nje here, ska gje" | Patch C, Egli 22 profil | Rregull: Egli del vetëm aty ku duhet (max 1 herë për skenë); shot-et e konvojit pa të. Flokët e Egli 22 në profil = pikë e dobët |
+| 2026-11-14 | 🔧 | "nise montimin me keto sepse nuk dua te gjeneroj prap" | Skena 3 pa patch C | Montohet me atë që kemi; s'propozoj rigjenerime të reja për këtë skenë |
