@@ -14,3 +14,14 @@
 | 2026-11-14 | Muzika "Velvet Bloom" | ElevenLabs Music | ✅ | 26 s, mbaron te 25.0 s (button + reverb) ndërsa videoja finale ~30 s | prompti kërkoi 26 s para mbylljes | muzika fillon te ~3.2 s që button-i të bjerë kur çanta mbulon kuadrin |
 | 2026-11-14 | Mbyllja v1 | Seedance 2.5 | 🟡 përdoruesi: "i dont really like this" | 0–2.2 s statike; çanta nuk mbuloi gjithë kuadrin (duar lart, sedilje anash), logoja në mes jo lart | modeli e ndali çantën te ~85% e kuadrit | montim: prerë nga 2.3 s, zoom i butë 1→2.0 mbi logon, 3.4–5 s slow 1.6×; tekst Inter |
 | 2026-11-14 | FINAL v1 (28.9 s) | ffmpeg `tools/final.sh` | ✅ | — | — | hook "BLACK FRIDAY" 0.15–1.7 s; tekst final @26.3 s; muzika nga 1.3 s, button-i bie te teksti; -14 LUFS |
+
+## Kostoja (lexuar nga transaksionet Higgsfield, 2026-11-14; dritarja e projektit 13.11 22:21 → 14.11 00:45 UTC)
+| Çfarë | Model | Gjenerime | Kredite |
+|---|---|---|---|
+| Akti 1, 2, 3, mbyllja (përputhen me emrat e skedarëve hf_…) | Seedance 2.5 Flash | 4 | 0 |
+| Imazhe (plate, sheet-e, start frame) | Nano Banana Pro | 8 të regjistruara | 16 |
+| Character sheet | Soul | — (asnjë transaksion në dritare) | 0 |
+| **Totali i projektit** | | | **16** |
+Në të njëjtën dritare, jashtë pipeline-it tonë: Wan 3.0 Prime Video ×15 = 438, MiniMax H3 = 24, Gemini Omni Flash 1.2 = 22.5 (gjithsej 484.5) — për t'u konfirmuar nga përdoruesi.
+ElevenLabs: connector-i kërkon rilidhje me leje shtesë → kostoja e muzikës s'u lexua.
+Bilanci Higgsfield pas projektit: 5782.1 kredite (plan Ultra).
