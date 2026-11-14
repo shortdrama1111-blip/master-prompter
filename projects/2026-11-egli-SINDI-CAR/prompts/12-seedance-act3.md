@@ -2,8 +2,8 @@
 Kërkesa: "rreth 4,5 produkte cdo 2 sekonda njeri qe te shkojne 10-12 sekonda", produkte që s'janë përdorur.
 v1–v3 në git. Referencat (rendi i ngarkimit):
 @video1 = renders/act2-v1.mp4 · @image1 = refs/character-sheet-v4-masked.png ·
-@image2 = Clarins Bright Plus (foto nga përdoruesi → crop) · @image3 = refs/p-dior-foundation-CROP.png ·
-@image4 = refs/p-dior-mascara-CROP.png · @image5 = Lancôme Butterglow 59 (→ crop) · @image6 = Guerlain Lip Oil Plump 100 (→ crop)
+@image2 = refs/p-clarins-brightplus-CROP.png · @image3 = refs/p-dior-foundation-CROP.png ·
+@image4 = refs/p-dior-mascara-CROP.png · @image5 = refs/p-lancome-butterglow59-CROP.png · @image6 = refs/p-guerlain-lipoil100-CROP.png
 
 ```
 SCENE CONTEXT
