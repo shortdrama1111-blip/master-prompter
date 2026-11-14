@@ -27,22 +27,52 @@ def weapon_box():
     return im
 WEAPON=weapon_box()
 
-def radar(angle):
-    R=135; S=2*R+30; im=Image.new('RGBA',(S,S),(0,0,0,0))
-    m=Image.new('RGBA',(S,S),(0,0,0,0)); d=ImageDraw.Draw(m); c=S//2
-    d.ellipse((c-R,c-R,c+R,c+R),fill=(20,45,40,215))
-    d.polygon([(c-R,c-30),(c-20,c-R),(c+40,c-R),(c-R+10,c+60)],fill=(40,120,70,200))     # park
-    d.polygon([(c+R,c+20),(c+60,c+R),(c+R,c+R)],fill=(60,140,200,200))                    # ujë
-    for x in range(-R,R,46): d.line((c+x,c-R,c+x+30,c+R),fill=(235,235,235,230),width=7)
-    for y in range(-R,R,58): d.line((c-R,c+y,c+R,c+y-18),fill=(235,235,235,230),width=7)
-    d.line((c-R,c+R//2,c+R,c-R//3),fill=(255,230,120,240),width=10)                        # bulevardi
-    m=m.rotate(angle,resample=Image.BICUBIC,center=(c,c))
-    mask=Image.new('L',(S,S),0); ImageDraw.Draw(mask).ellipse((c-R,c-R,c+R,c+R),fill=255)
-    im.paste(m,(0,0),mask); d=ImageDraw.Draw(im)
-    d.ellipse((c-R,c-R,c+R,c+R),outline=(255,110,200,255),width=9)
-    d.ellipse((c-R-4,c-R-4,c+R+4,c+R+4),outline=OUTL,width=3)
-    d.polygon([(c,c-16),(c+11,c+12),(c,c+5),(c-11,c+12)],fill=(255,255,255,255),outline=OUTL)  # lojtari
-    na=math.radians(-angle-90); nx=c+R*math.cos(na); ny=c+R*math.sin(na)
+# ---- harta e lëvizshme (stil radar i viteve '80): qyteti bregdetar, bulevardi drejt veriut ----
+import random
+SC=1.6   # px për metër
+def build_map():
+    random.seed(7); MW,MH=1600,4200; m=Image.new('RGBA',(MW,MH),(126,168,104,255)); d=ImageDraw.Draw(m)
+    d.rectangle((1060,0,MW,MH),fill=(59,111,182,255))            # oqeani në lindje
+    d.rectangle((990,0,1060,MH),fill=(232,217,160,255))           # rëra
+    for y in range(0,MH,120):                                     # blloqet e ndërtesave
+        for x in range(60,880,140):
+            if random.random()<0.85: d.rectangle((x+18,y+18,x+122,y+102),fill=(156,191,134,255))
+    for y in range(0,MH,120): d.rectangle((0,y,990,y+18),fill=(70,70,70,255)); d.rectangle((0,y+3,990,y+15),fill=(205,205,205,255))
+    for x in range(60,900,140): d.rectangle((x,0,x+18,MH),fill=(70,70,70,255)); d.rectangle((x+3,0,x+15,MH),fill=(205,205,205,255))
+    d.rectangle((880,0,990,MH),fill=(60,60,60,255))               # bulevardi bregdetar (2 karrexhata)
+    d.rectangle((886,0,930,MH),fill=(215,215,215,255)); d.rectangle((940,0,984,MH),fill=(215,215,215,255))
+    d.rectangle((930,0,940,MH),fill=(90,150,80,255))              # mediana me palma
+    for y in range(400,MH,520): d.rectangle((930,y,940,y+40),fill=(215,215,215,255))   # hapjet e medianës
+    d.rectangle((886,120,984,230),fill=(40,40,40,255))            # tuneli në veri (fundi i rrugës)
+    return m
+MAP=build_map()
+def player_pos(t):
+    hud_on=T['hud_on']; v=95                                        # px/s në hartë (~40 px/s në radar)
+    y=3500-max(0,t-hud_on)*v
+    tr0,tr1=T['radar'][2],T['radar'][3]
+    k=max(0,min(1,(t-tr0)/(tr1-tr0)))
+    x=962-50*(3*k*k-2*k*k*k)                                      # kalon nga karrexhata e djathtë në të majtën
+    head=0 if (t<tr0 or t>tr1+0.4) else (-T['radar'][1]*math.sin(math.pi*min(1,(t-tr0)/(tr1-tr0+0.4))))
+    return x,y,head
+def radar(t):
+    R=135; S=2*R+30; c=S//2
+    px,py,head=player_pos(t)
+    Z=2.4; Rz=int(R*Z)
+    crop=MAP.crop((int(px-Rz*1.5),int(py-Rz*1.5),int(px+Rz*1.5),int(py+Rz*1.5))).rotate(head,resample=Image.BICUBIC)
+    cs=crop.size[0]; crop=crop.crop((cs//2-Rz,cs//2-Rz,cs//2+Rz,cs//2+Rz)).resize((2*R,2*R),Image.LANCZOS)
+    im=Image.new('RGBA',(S,S),(0,0,0,0)); mask=Image.new('L',(2*R,2*R),0); ImageDraw.Draw(mask).ellipse((0,0,2*R-1,2*R-1),fill=255)
+    im.paste(crop,(c-R,c-R),mask); d=ImageDraw.Draw(im)
+    # policia: pika që pulsojnë kuq/blu prapa lojtarit
+    pol=[p for p in T.get('police',[]) if p[0]<=t<p[1]]
+    blink=(int(t*8)%2==0)
+    for i,(a,b,dist) in enumerate(pol):
+        col=(230,40,40,255) if (blink^(i%2==1)) else (50,90,255,255)
+        bx=c+(5 if i%2 else -5); by=c+dist*0.7
+        d.rectangle((bx-7,by-7,bx+7,by+7),fill=col,outline=OUTL)
+    d.ellipse((c-R,c-R,c+R,c+R),outline=(20,20,20,255),width=10)
+    d.ellipse((c-R+4,c-R+4,c+R-4,c+R-4),outline=(255,120,200,255),width=4)
+    d.polygon([(c,c-17),(c+12,c+13),(c,c+6),(c-12,c+13)],fill=(255,255,255,255),outline=OUTL)
+    na=math.radians(-head-90); nx=c+(R-2)*math.cos(na); ny=c+(R-2)*math.sin(na)
     d.ellipse((nx-17,ny-17,nx+17,ny+17),fill=(20,20,30,255),outline=(255,255,255,255),width=3)
     d.text((nx,ny),'N',font=f_small.font_variant(size=24),fill=(255,255,255),anchor='mm')
     return im
@@ -76,8 +106,7 @@ for i in range(N):
             d.polygon(p,fill=(235,245,255,255) if filled else NAVY+(230,),outline=OUTL)
             d.line(p+[p[0]],fill=(200,225,255,255) if not filled else (255,255,255,255),width=2)
         im.alpha_composite(WEAPON,(W-46-150,60))
-        ang=T['radar'][0]+(T['radar'][1]-T['radar'][0])*max(0,min(1,(t-T['radar'][2])/(T['radar'][3]-T['radar'][2])))
-        rd=radar(ang); im.alpha_composite(rd,(40,H-rd.size[1]-300))
+        rd=radar(t); im.alpha_composite(rd,(40,H-rd.size[1]-300))
     if mp[0]<=t<mp[1]:
         k=min(1,(t-mp[0])/0.15); sc=1.18-0.18*k
         a=1.0 if t<mp[1]-0.3 else (mp[1]-t)/0.3
