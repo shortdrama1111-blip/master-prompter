@@ -145,3 +145,10 @@ Vertical 9:16, real-time speed, 24 fps motion cadence, 5 seconds.
 POSITIVE LOCKS
 He falls straight down under real gravity and hits the water. The bridge stays still in the frame; only he moves.
 ```
+
+---
+
+## WH · Parkimi + heronjtë dalin, një gjenerim · 11 s (zëvendëson W dhe H)
+**Rendi:** `@image1` tommy · `@image2` cj · `@image3` michael · `@image4` franklin · `@image5` trevor · `@image6` car_vi · `@image7` car_86 · `@image8` lowrider · `@image9` sedani gri · `@image10` motori jeshil · `@image11` truck_trevor · `@image12` loc_vi_deck
+End frame (opsional, nëse ka fushë): `refs/frame_s5_H_end_row.jpg`
+Prompti: shih bisedën (WH), i njëjti tekst.
