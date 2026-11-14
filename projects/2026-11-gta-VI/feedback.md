@@ -22,3 +22,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 💡 | Dërgoi sheet-et e Franklin dhe Trevor | Trevor ka tatuazhin "CUT HERE" në qafë (tekst) | Projekt: lock what you got; teksti mund të shtrembërohet në video |
 | 2026-11-14 | 🔧 | "this was trevor car, michael car and the bike of jason" + 3 screenshote nga loja | Mjetet: motori jeshil (bagger), sedani gri, pikapi i kuq me arush | Projekt: mjetet e heronjve bazohen te referencat e lojës (@image1), jo te përshkrimi im. Motori u mor si i Franklin-it (pret konfirmim) |
 | 2026-11-14 | 💡 | Dërgoi 5 product sheet (makina '86, pikapi, kabrioleti VI, kupeja e zezë, varka), "i have more" | Mjetet | — |
+| 2026-11-14 | 💡 | Dërgoi 4 sheet-et e fundit (motori jeshil, çelësi me zar, lowrider, sedani gri) | Elementet e personazheve dhe mjeteve të plota | — |

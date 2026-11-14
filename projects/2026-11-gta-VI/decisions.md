@@ -31,7 +31,7 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 | CJ · Tommy · Lucia · Michael · Jason | `refs/<emri>-sheet-masked.png` | ✅ v1 |
 | Franklin · Trevor | `refs/<emri>-sheet-masked.png` | ✅ v1 |
 | car_86 · truck_trevor · car_vi · car_now · airboat | `refs/<emri>-sheet.jpg` | ✅ v1 |
-| lowrider (CJ) · sedani (Michael) · motori (Franklin) · çelësi me zar | prompte: `prompts/03-vehicles-props.md` | në pritje |
+| car_92 (lowrider 2 dyer) · car_michael · bike_franklin · dice_keys | te përdoruesi (s'janë në repo) | ✅ v1 |
 | lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
