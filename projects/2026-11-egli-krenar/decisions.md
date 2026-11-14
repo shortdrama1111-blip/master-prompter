@@ -10,6 +10,13 @@
 - Character sheet: paneli i pasmë ndërtohet nga Claude (mungon foto nga mbrapa; pamja nga pas
   pothuajse s'shihet në film).
 
+## Koncepti
+- Scripti mbetet baza. Shtesë: Krenari si "doktori i Meta-s": dëgjon telefonin/panelet me
+  stetoskop (humor + paralelizëm). `ref-doctor-instagram.jpg` = referencë për gjestin, jo për ngjyrat.
+
+## Stili
+- Sipas scriptit: blu e errët, dritë e bardhë, theks turkez. Plate-t gjenerohen nga e para.
+
 ## Zëri dhe lip-sync
 - Zëri i Krenarit krijohet me AI. Lip-sync shqip, "perfect". Hibrid: disa momente voice-over,
   pjesa tjetër lip-sync në kamerë.

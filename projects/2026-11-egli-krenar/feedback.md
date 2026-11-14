@@ -11,3 +11,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "Do krijojme zerin me ai dhe lipsync duhet perfect, shqip duhet ta bejm skemi ct bejme" | Zëri dhe lip-sync-u | Projekti; nëse funksionon → skill i ri / seedance-clean (lip-sync shqip) |
 | 2026-11-14 | 🔧 | "ndoshta jo gjith kohes lipsync, ne disa raste mund t jete voiceover por perseri duht dhe lipsync" | Struktura e zërit | Projekti |
 | 2026-11-14 | 🔧 | "PO si ne foto por duhet ta vesh si doktor" | Pamja e Krenarit: flokë/mjekër si në foto, veshje doktori (si ref-doctor-instagram) | Projekti (decisions.md) |
+| 2026-11-14 | 🔧 | "ndjekim scriptin dhe e gjenerojme dhe njehere fotot nga fillimi s'esht problem" | Stili: scripti (blu e errët, dritë e bardhë, theks turkez), jo ngjyrat rozë/portokalli të ref-doctor | Projekti (decisions.md) |
+| 2026-11-14 | 👍 | "mund t besh dhe disa adjustment psh ti degjoj me stetoskop e keshtu sepse esht funny dhe mendoj se shkon paralellizmi" | Koncepti "doktori i Meta-s": stetoskopi mbi panele/telefon | 💡 Metafora vizuale e profesionit + humori lejohen kur e forcojnë mesazhin → LESSONS.md |
