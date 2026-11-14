@@ -27,7 +27,9 @@ OUT=${OUT:-edit/etos-FINAL.mp4}
 FB=/usr/share/fonts/opentype/inter/InterDisplay-SemiBold.otf
 FL=/usr/share/fonts/opentype/inter/Inter-Light.otf
 GOLD=0xD4B072
-VF="drawtext=fontfile=$FB:text='BLACK FRIDAY':fontcolor=white:fontsize=46:x=(w-tw)/2:y=h*0.13:enable='between(t,0.15,1.7)':alpha='if(lt(t,0.4),(t-0.15)/0.25,if(gt(t,1.45),(1.7-t)/0.25,1))',"
+HOOK=${HOOK:-0}   # tekst "BLACK FRIDAY" në fillim: 0 = hequr (klienti), 1 = me tekst
+VF=""
+if [ "$HOOK" = "1" ]; then VF+="drawtext=fontfile=$FB:text='BLACK FRIDAY':fontcolor=white:fontsize=46:x=(w-tw)/2:y=h*0.13:enable='between(t,0.15,1.7)':alpha='if(lt(t,0.4),(t-0.15)/0.25,if(gt(t,1.45),(1.7-t)/0.25,1))',"; fi
 VF+="drawtext=fontfile=$FB:text='BLACK FRIDAY':fontcolor=$GOLD:fontsize=78:x=(w-tw)/2:y=h*0.70:enable='gte(t,$TT)':alpha='min(1,(t-$TT)/0.3)',"
 VF+="drawtext=fontfile=$FL:text='Ulje deri në 50%':expansion=none:fontcolor=white:fontsize=50:x=(w-tw)/2:y=h*0.70+105:enable='gte(t,$TT+0.35)':alpha='min(1,(t-$TT-0.35)/0.3)'"
 ffmpeg -v error -y -i $T/joined.mp4 -i audio/music-velvet-bloom.wav -filter_complex \
