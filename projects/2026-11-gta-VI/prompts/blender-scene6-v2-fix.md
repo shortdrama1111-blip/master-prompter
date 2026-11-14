@@ -9,6 +9,7 @@ Update the existing Scene 6 blockout (720x1280, 24 fps, 14 s, frames 1–336). K
 2) THE HEROES ON THE BRIDGE · frames 49–108 (2–4.5 s), the long-lens shot toward the bridge
 - On the bridge deck, in the centre of the frame, place the five heroes standing in a row, facing the boat: AQUAMARINE Tommy (middle), PURPLE CJ, NAVY Michael, LIME Franklin, BROWN Trevor, each with both arms raised above the head (hands up), except Tommy.
 - Around them, a ring of 8 BLACK police cars with the red/blue light bars, parked at angles on the deck, and 4 DARK GREY officer capsules.
+- "BUSTED" BEAT: from frame 49 the 4 DARK GREY officers walk in from the police cars toward the heroes and stop 2 m from them by frame 85, arms extended forward (aiming). The heroes keep both hands up the whole time and do not move.
 - Tommy raises one hand to his brow (two-finger salute) between frames 75 and 95 and holds it to frame 108.
 - The heroes must be readable: scale the shot so the five capsules together fill about one third of the frame width (adjust the camera's focal length if needed, up to 200 mm).
 
