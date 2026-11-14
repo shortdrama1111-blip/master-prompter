@@ -33,3 +33,14 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
 Propozim (si te SINDI-CAR, pret konfirmim): video → `seedance-clean` (vetëm pohore, pa emra pajisjesh,
 blloqe ~10 s); imazhe → gjuhë fotografike pohore, pa bllok NEGATIVE.
+
+## Kush është kush (në bisedë me emra, në prompte vetëm tag-et)
+| Tag në prompt | Në bisedë |
+|---|---|
+| `@hero_86` | Tommy (Vice City) |
+| `@hero_92` | CJ (San Andreas) |
+| `@hero_v_suit` | Michael (GTA V) |
+| `@hero_v_young` | Franklin (GTA V) |
+| `@hero_v_wild` | Trevor (GTA V) |
+| `@duo_vi_her` | Lucia (GTA VI) |
+| `@duo_vi_him` | Jason (GTA VI) |
