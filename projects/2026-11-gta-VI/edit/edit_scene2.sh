@@ -20,7 +20,7 @@ ffmpeg -v error -y -f lavfi -i "aevalsrc=0.95*sin(2*PI*(52-12*t)*t)*exp(-2.0*t):
   -filter_complex "[1]lowpass=f=180,volume='exp(-6*t)':eval=frame[n];[0][n]amix=2:normalize=0,aformat=channel_layouts=stereo" boom.wav
 F1=/usr/share/fonts/opentype/inter/Inter-Light.otf; F2=/usr/share/fonts/opentype/inter/Inter-Regular.otf
 AL="if(lt(t,0.50),0,if(lt(t,0.80),(t-0.50)/0.3,if(lt(t,1.75),1,if(lt(t,2.05),(2.05-t)/0.3,0))))"
-ffmpeg -v error -y -i cut.mov -framerate 24 -i hud/hud_%04d.png -i jingle.wav -i boom.wav -filter_complex "
+ffmpeg -v error -y -i cut.mov -framerate 24 -i hud/hud_%04d.png -i $HERE/audio/mission_passed_sa.mp3 -i boom.wav -filter_complex "
 [0:v]scale=1080:1920:flags=lanczos,eq=contrast=1.07:saturation=1.04:brightness=-0.008,
 curves=master='0/0.015 0.25/0.21 0.6/0.62 1/0.975',
 colorbalance=rs=-0.02:bs=0.035:rh=0.025:bh=-0.02,split[a][b];
@@ -30,7 +30,7 @@ colorbalance=rs=-0.02:bs=0.035:rh=0.025:bh=-0.02,split[a][b];
 [s]drawtext=fontfile=$F1:text='L O S   A N G E L E S':fontsize=66:fontcolor=white:x=(w-text_w)/2:y=(h/2)-90:alpha='$AL',
 drawtext=fontfile=$F2:text='1 9 9 2':fontsize=50:fontcolor=white:x=(w-text_w)/2:y=(h/2)+4:alpha='$AL',format=yuv420p[v];
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=5dB[o];
-[2:a]adelay=13900|13900,volume=1.4[j];[3:a]adelay=16160|16160[bm];
+[2:a]aresample=48000,atrim=0:2.3,afade=t=out:st=1.8:d=0.5,adelay=13900|13900,volume=0.9[j];[3:a]adelay=16160|16160[bm];
 [o][j][bm]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -t 16.56 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene2_edit_v1.mp4
