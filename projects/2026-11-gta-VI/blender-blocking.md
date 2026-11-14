@@ -103,7 +103,7 @@ For reference, as you built it:
 **In the scene:** 🟡 Egli 22 · 🔵 Michael · 🟢 Franklin · 🟤 Trevor · 🟨 Egli's car · 🟦 sedan · 🟩 bike · 🟫 truck · ⬜ coupe + 🟪 lowrider (in the mirror only) · ⬛ 4 police cars · ⚫ helicopter · 🔴 die
 **Set A (PCH):** a cliff on the left (big grey sloped block 25 m high), a ramp descending along the cliff onto a wide 6-lane road, palms on top of the cliff, a traffic gantry.
 **Set B (freeway):** a straight 5-lane concrete freeway, concrete barriers, two on-ramps joining from the right at 60 m and 120 m, an overpass, skyline boxes far ahead.
-**Production note:** 9 references max per Seedance generation, so this scene will likely be generated as **3a (shots 1–3)** and **3b (shots 4–8)**. One blockout is fine; I'll split it.
+**Production note:** many references in one scene; Seedance 2.5 accepts more than 9, so we try it as one generation.
 
 | # | Frames | Sec | Camera | Action |
 |---|---|---|---|---|
@@ -136,7 +136,7 @@ For reference, as you built it:
 ## SCENE 5 · "One Seat" · same night · 12 s (frames 1–288)
 **In the scene:** 🟡 Egli · 🩵 Tommy · 🟣 CJ · 🔵 Michael · 🟢 Franklin · 🟤 Trevor · 🩷 Lucia · 🫒 Jason · airboat · their cars · ⬛ police wall · 🔴 die
 **Set:** the same bridge deck at the top of the arch, plus the water plane 8 m below and a bridge pillar.
-**Production note:** too many references for one generation, so this will be **5a (shots 1–3)** and **5b (shots 4–5)**. Build it as one blockout; I'll split it.
+**Production note:** many references; we try it as one generation (Seedance 2.5 accepts more than 9).
 **Weapons (version A):** the heroes hold small black boxes (pistols) low at their sides in shot 3.
 
 | # | Frames | Sec | Camera | Action |
