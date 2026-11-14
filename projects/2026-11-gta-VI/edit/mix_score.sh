@@ -18,7 +18,7 @@ F1=/usr/share/fonts/opentype/inter/Inter-Light.otf
 TH="between(t,14.6,23.2)+between(t,27.3,37.0)"
 DL="between(t,6.5,11.7)+between(t,21.9,24.0)+between(t,55.3+$O,57.8+$O)+between(t,76.6+$O,79.8+$O)"
 VOL="${MV:-0.95}*if(gt($TH,0),0.18,if(gt($DL,0),0.22,1))"
-FXV="if(gt($TH,0),0.95,if(gt($DL,0),0.95,${FXB:-0.4}))"
+FXV="if(gt($TH,0),${THV:-0.7},if(gt($DL,0),0.95,${FXB:-0.4}))"
 ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
 [0:v]fade=t=out:st=$(printf "%.3f" $(echo "$DF-1.0" | bc)):d=1.0,tpad=stop_mode=add:stop_duration=$END:color=black,drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x=(w-text_w)/2:y=h*0.20:enable='gte(t,$DF-1.0)':alpha='if(lt(t,$DT-1.2),1,max(0,($DT-t)/1.2))',format=yuv420p[v];
 [1:a]aresample=48000,asplit=4[m1][m2][m3][m4];
@@ -28,7 +28,7 @@ ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
 [m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=0.4,adelay=$(MS $TM)|$(MS $TM)[d];
 [a][b][c][d]amix=inputs=4:normalize=0:duration=longest,volume='$VOL':eval=frame,apad=whole_dur=$DT[mus];
 [0:a]volume='$FXV':eval=frame,apad=whole_dur=$DT[fx];
-[fx][mus]amix=inputs=2:normalize=0:duration=longest,atrim=0:$DT,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=11[aout]" \
+[fx][mus]amix=inputs=2:normalize=0:duration=longest,atrim=0:$DT,acompressor=threshold=-24dB:ratio=3:attack=25:release=350:makeup=5dB,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=8[aout]" \
   -map "[v]" -map "[aout]" -t $DT -c:v libx264 -preset ${PRESET:-fast} -b:v 12M -maxrate 16M -bufsize 24M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart "$OUT"
 ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT"
