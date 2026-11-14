@@ -2,7 +2,7 @@
 # Bashkon skenën 1 + 2 me kalim "drita e fenerëve": fenerët e kupesë mbushin kuadrin → e bardhë →
 # tuneli i 1992. Përdorim: bash join_1_2.sh <scene1_edit.mp4> <scene2_edit.mp4> <out.mp4>
 set -euo pipefail
-S1=$1; S2=$2; OUT=$3; HERE=$(cd "$(dirname "$0")" && pwd); MP1=${MP1:-14.67}; MP2=${MP2:-13.90}; T1=17.15; XD=0.7; OFF=$(python3 -c "print($T1-$XD)")
+S1=$1; S2=$2; OUT=$3; HERE=$(cd "$(dirname "$0")" && pwd); MP1=${MP1:-14.67}; MP2=${MP2:-10.0}; L2=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$S2"); T1=17.15; XD=0.7; OFF=$(python3 -c "print($T1-$XD)")
 WH=$(mktemp -d)
 ffmpeg -v error -y -f lavfi -i "anoisesrc=c=white:r=48000:a=0.35:d=1.4" \
   -af "bandpass=f=1800:w=3000,volume='min(1,t/0.9)*if(lt(t,0.95),1,exp(-6*(t-0.95)))':eval=frame,afade=t=in:d=0.3,aformat=channel_layouts=stereo" $WH/whoosh.wav
@@ -18,7 +18,7 @@ ffmpeg -v error -y -i "$S1" -i "$S2" -i $WH/whoosh.wav -i $HERE/audio/mission_pa
 [4:a]aresample=48000,adelay=$(python3 -c "print(int(($OFF+$MP2)*1000))")|$(python3 -c "print(int(($OFF+$MP2)*1000))")[m2];
 [m1][m2]amix=inputs=2:normalize=0,volume=0.85[mus];
 [mus][sc]sidechaincompress=threshold=0.06:ratio=4:attack=20:release=300[duck];
-[mainA][duck]amix=inputs=2:normalize=0:duration=first,afade=t=out:st=$(python3 -c "print(round($T1-$XD+16.56-1.0,2))"):d=1.0,loudnorm=I=-14:TP=-1.5:LRA=9[a]" \
-  -map "[v]" -map "[a]" -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
+[mainA][duck]amix=inputs=2:normalize=0:duration=first,afade=t=out:st=$(python3 -c "print(round($T1-$XD+$L2-1.2,2))"):d=1.2,loudnorm=I=-14:TP=-1.5:LRA=9[a]" \
+  -map "[v]" -map "[a]" -c:v libx264 -preset ${PRESET:-medium} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart "$OUT"
 ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT"

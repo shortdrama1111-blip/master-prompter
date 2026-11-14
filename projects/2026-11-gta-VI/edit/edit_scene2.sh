@@ -2,15 +2,16 @@
 # Montimi i skenës 2 (LA 1992). Përdorim: bash edit_scene2.sh <skena2.mp4> <extend.mp4> <folder_pune>
 set -euo pipefail
 S2=$1; EX=$2; W=$3; HERE=$(cd "$(dirname "$0")" && pwd); mkdir -p $W; cd $W
-ENC="-c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -r 24"; AUD="-c:a pcm_s16le -ar 48000 -ac 2"
+ENC="-c:v libx264 -preset ${PRESET:-medium} -crf 16 -pix_fmt yuv420p -r 24"; AUD="-c:a pcm_s16le -ar 48000 -ac 2"
 seg(){ ffmpeg -v error -y -ss $3 -to $4 -i "$2" -vf "scale=720:1280,setsar=1" -af "aresample=48000" $ENC $AUD $1.mov; }
 seg A "$S2" 0.00 10.00          # tuneli → djali te xhami i pasmë
 seg B "$EX" 2.75 4.79           # drifti nga ajri
 seg C "$EX" 4.79 7.20           # tri të shtëna në qiell
 seg D1 "$S2" 10.00 11.25        # hidraulika ngrihet
 seg D2 "$S2" 11.55 12.06        # maja e kërcimit (pa shiritin e zi)
+seg E "$EX" 0.00 2.75           # ulja dhe ikja (fundi, që tema e SA të luhet e plotë)
 ffmpeg -v error -y -f lavfi -i color=black:s=720x1280:r=24:d=0.40 -f lavfi -i anullsrc=r=48000:cl=stereo -t 0.40 $ENC $AUD K9.mov
-printf "file '%s'\n" A.mov B.mov C.mov D1.mov D2.mov K9.mov > list.txt
+printf "file '%s'\n" A.mov B.mov C.mov D1.mov D2.mov E.mov K9.mov > list.txt
 ffmpeg -v error -y -f concat -safe 0 -i list.txt $ENC $AUD cut.mov
 python3 $HERE/hud_sa.py hud $HERE/timeline_scene2.json >/dev/null
 # xhingël "mission passed" (i sintetizuar, ton bronzi)
@@ -30,8 +31,8 @@ colorbalance=rs=-0.02:bs=0.035:rh=0.025:bh=-0.02,split[a][b];
 [s]drawtext=fontfile=$F1:text='L O S   A N G E L E S':fontsize=66:fontcolor=white:x=(w-text_w)/2:y=(h/2)-90:alpha='$AL',
 drawtext=fontfile=$F2:text='1 9 9 2':fontsize=50:fontcolor=white:x=(w-text_w)/2:y=(h/2)+4:alpha='$AL',format=yuv420p[v];
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=5dB[o];
-[2:a]aresample=48000,atrim=0:2.3,afade=t=out:st=1.8:d=0.5,adelay=13900|13900,volume=${JV:-0.9}[j];[3:a]adelay=16160|16160[bm];
+[2:a]aresample=48000,atrim=0:2.3,afade=t=out:st=1.8:d=0.5,adelay=13900|13900,volume=${JV:-0.9}[j];[3:a]adelay=18910|18910[bm];
 [o][j][bm]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
-  -map "[v]" -map "[aout]" -t 16.56 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
+  -map "[v]" -map "[aout]" -t 19.31 -c:v libx264 -preset ${PRESET:-medium} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene2_edit_v1.mp4
 ffprobe -v error -show_entries format=duration -of csv=p=0 scene2_edit_v1.mp4

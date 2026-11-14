@@ -25,6 +25,6 @@ drawtext=fontfile=$F2:text='1 9 8 6':fontsize=50:fontcolor=white:x=(w-text_w)/2:
 [4:a]adelay=5450|5450[t1];[5:a]adelay=8200|8200[t2];
 [6:a]aresample=48000,atrim=0:2.55,afade=t=out:st=2.05:d=0.5,adelay=14670|14670,volume=${JV:-0.9}[j];[7:a]adelay=17160|17160[bm];
 [o][h][r][t1][t2][j][bm]amix=inputs=7:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
-  -map "[v]" -map "[aout]" -t 17.81 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
+  -map "[v]" -map "[aout]" -t 17.81 -c:v libx264 -preset ${PRESET:-medium} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene1_edit_v2.mp4
 ffprobe -v error -show_entries format=duration -of csv=p=0 scene1_edit_v2.mp4

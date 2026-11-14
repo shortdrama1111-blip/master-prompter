@@ -3,7 +3,7 @@
 set -euo pipefail
 SRC=$1; W=$2; mkdir -p $W; cd $W
 HERE=$(cd "$(dirname "$0")" 2>/dev/null && pwd || echo .)
-ENC="-c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -r 24"
+ENC="-c:v libx264 -preset ${PRESET:-medium} -crf 16 -pix_fmt yuv420p -r 24"
 AUD="-c:a pcm_s16le -ar 48000 -ac 2"
 
 # 1. Segmentet (burimi → timeline). Droni shkurtohet në 2.0 s (pjesa më pak reale).
@@ -53,6 +53,6 @@ format=yuv420p[v];
 [10:a]adelay=16880|16880[bm];
 [o][h][r][t1][t2][t3][bm]amix=inputs=7:normalize=0:duration=first,
 loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
-  -map "[v]" -map "[aout]" -t 17.81 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
+  -map "[v]" -map "[aout]" -t 17.81 -c:v libx264 -preset ${PRESET:-medium} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene1_edit.mp4
 ffprobe -v error -show_entries format=duration -of csv=p=0 scene1_edit.mp4
