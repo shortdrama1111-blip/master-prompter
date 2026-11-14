@@ -23,13 +23,13 @@ Teksti/titujt në montim. Pa dhunë eksplicite me armë: ndjekje me makinë, pol
 |---|---|
 | Vendi | 4 epoka (Miami '86 · LA '92 · LA sot · Florida sot) |
 | Koha | — |
-| Formati | ❓ 9:16 / 16:9 |
+| Formati | 9:16 (propozim i regjisorit, pret konfirmim) |
 | Epoka | 4 epoka që bashkohen |
 | Subjekti | Egli (+ versionet e tij sipas epokës?) |
-| Energjia / toni | ❓ epik / nostalgjik / humor |
+| Energjia / toni | nostalgji → ngjitje → kulm epik (propozim) |
 | Markimi | asnjë logo; tekst në montim |
-| Muzika | ❓ në montim? |
-| Referencat video | ❓ 3–5 |
-| Rruga (MCP / manuale) | ❓ |
+| Muzika | në montim (propozim: ndryshon zhanër me epokën, 96 BPM) |
+| Referencat video | ✅ 5 video (shih `refs-analysis.md`) |
+| Rruga (MCP / manuale) | Asnjë gjenerim tani: skenari → promptet (personazhe, lokacione, video) |
 | Pamja e Eglit | ❓ foto fytyre, flokë, moshë, stil (rregulli 16) |
 | Modeli | Seedance 2.5 |
