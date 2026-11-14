@@ -30,7 +30,7 @@ colorbalance=rs=-0.02:bs=0.035:rh=0.025:bh=-0.02,split[a][b];
 [s]drawtext=fontfile=$F1:text='L O S   A N G E L E S':fontsize=66:fontcolor=white:x=(w-text_w)/2:y=(h/2)-90:alpha='$AL',
 drawtext=fontfile=$F2:text='1 9 9 2':fontsize=50:fontcolor=white:x=(w-text_w)/2:y=(h/2)+4:alpha='$AL',format=yuv420p[v];
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=5dB[o];
-[2:a]aresample=48000,atrim=0:2.3,afade=t=out:st=1.8:d=0.5,adelay=13900|13900,volume=0.9[j];[3:a]adelay=16160|16160[bm];
+[2:a]aresample=48000,atrim=0:2.3,afade=t=out:st=1.8:d=0.5,adelay=13900|13900,volume=${JV:-0.9}[j];[3:a]adelay=16160|16160[bm];
 [o][j][bm]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -t 16.56 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene2_edit_v1.mp4
