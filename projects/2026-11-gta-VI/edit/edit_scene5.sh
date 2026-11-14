@@ -4,7 +4,7 @@
 set -euo pipefail
 X=$1; Y=$2; BOAT=$3; WH=$4; W=$5; mkdir -p $W; cd $W
 ENC="-c:v libx264 -preset ${PRESET:-fast} -crf 16 -pix_fmt yuv420p -r 24"; AUD="-c:a pcm_s16le -ar 48000 -ac 2"
-seg(){ ffmpeg -v error -y -ss $3 -to $4 -i "$2" -vf "scale=720:1280,setsar=1" -af "aresample=48000,afade=t=in:d=0.03,afade=t=out:st=$(echo "$4-$3-0.04" | bc):d=0.04" $ENC $AUD $1.mov; }
+seg(){ ffmpeg -v error -y -ss $3 -to $4 -i "$2" -vf "scale=720:1280,setsar=1" -af "aresample=48000,afade=t=in:d=0.03,afade=t=out:st=$(printf "%.3f" $(echo "$4-$3-0.04" | bc)):d=0.04" $ENC $AUD $1.mov; }
 # A · varka: zëri i Seedance ulet dhe pastrohet; mbi të një helikë e sintetizuar që afrohet + spërkatje uji
 ffmpeg -v error -y -f lavfi -i "aevalsrc='0.5*(sin(2*PI*46*t)+0.6*sin(2*PI*92*t)+0.35*sin(2*PI*138*t)+0.2*sin(2*PI*184*t))*(0.35+0.65*t/3.21)':s=48000:d=3.21" \
   -f lavfi -i "anoisesrc=c=brown:r=48000:a=0.6:d=3.21" -f lavfi -i "anoisesrc=c=pink:r=48000:a=0.35:d=3.21" -filter_complex "
