@@ -36,11 +36,9 @@ seg b07 $R/act2-v1.mp4 3.00 4.80 1.8 360 420    # nuhat kyçin
 seg b08 $R/act2-v1.mp4 5.20 6.80 1.6 360 450    # spërkat qafën
 seg b09 $R/act2-v1.mp4 7.20 9.00 1.5 360 480    # blush
 seg b10 $R/act2-v1.mp4 9.00 10.00 1 0 0         # kthim në të gjerë (lidhet me aktin 3)
-# Akti 3 (i ka prerjet vetë) + 2 s kuadër i ngrirë për logon
+# Akti 3 (i ka prerjet vetë), pa kuadër të ngrirë
 seg b11 $R/act3-v1.mp4 0 10.0 1 0 0
-ffmpeg -v error -y -sseof -0.05 -i $R/act3-v1.mp4 -frames:v 1 $T/last.png
-ffmpeg -v error -y -loop 1 -t 2.0 -i $T/last.png -f lavfi -t 2.0 -i anullsrc=r=48000:cl=stereo \
-  -vf "scale=720:1280,setsar=1" -shortest $ENC $T/b12.mp4
-printf "file '%s'\n" b01.mp4 b02.mp4 b03.mp4 b04.mp4 b05.mp4 b06.mp4 b07.mp4 b08.mp4 b09.mp4 b10.mp4 b11.mp4 b12.mp4 > $T/listB.txt
+# (kuadri i ngrirë 2 s u hoq me kërkesë të përdoruesit)
+printf "file '%s'\n" b01.mp4 b02.mp4 b03.mp4 b04.mp4 b05.mp4 b06.mp4 b07.mp4 b08.mp4 b09.mp4 b10.mp4 b11.mp4 > $T/listB.txt
 ffmpeg -v error -y -f concat -safe 0 -i $T/listB.txt $ENC edit/etos-cut-B.mp4
 for f in edit/etos-full-A.mp4 edit/etos-cut-B.mp4; do echo "$f $(ffprobe -v error -show_entries format=duration -of csv=p=0 $f)s"; done
