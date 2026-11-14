@@ -10,7 +10,8 @@ seg(){ ffmpeg -v error -y -ss $3 -to $4 -i "$2" -vf "scale=720:1280,setsar=1" -a
 hold(){ ffmpeg -v error -y -f lavfi -i color=black:s=720x1280:r=24:d=$2 -f lavfi -i anullsrc=r=48000:cl=stereo -t $2 \
   -vf "drawtext=fontfile=$FT:text='$3':fontsize=34:fontcolor=white@0.85:x=(w-text_w)/2:y=(h-text_h)/2" $ENC $AUD $1.mov; }
 seg A "$BOAT" 0 3.21                            # varka (0.6x)
-seg B "$X" 1.60 2.45                            # muri mbyllet
+# muri mbyllet: figura 0.75x me interpolim, zëri me shpejtësi normale (merret 0.28 s më herët që të mbushë kohën)
+ffmpeg -v error -y -i "$X" -filter_complex "[0:v]trim=1.60:2.45,setpts=PTS-STARTPTS,scale=720:1280,setsar=1,setpts=PTS/0.75,minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1[v];[0:a]atrim=1.317:2.45,asetpts=PTS-STARTPTS,aresample=48000,afade=t=in:d=0.03[a]" -map "[v]" -map "[a]" -t 1.133 $ENC $AUD B.mov
 if [ "$H" = "-" ]; then hold C 5.0 'H  ·  heronjte dalin (5 s)'; else seg C "$H" 0 5.0; fi
 seg D "$X" 4.50 8.06                            # Tommy + zari
 if [ "$J" = "-" ]; then hold E 3.5 'J  ·  kercimi ne uje (3.5 s)'; else seg E "$J" 1.0 4.5; fi
@@ -26,5 +27,5 @@ colorbalance=rs=0.02:bs=0.04:rm=0.02:bm=0.03,split[a][b];
 [a][bl]blend=all_mode=screen:all_opacity=0.28,vignette=angle=PI/4.5,noise=alls=7:allf=t+u,format=yuv420p[v];
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=4dB,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -c:v libx264 -preset ${PRESET:-fast} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
-  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene5_edit_v2.mp4
-ffprobe -v error -show_entries format=duration -of csv=p=0 scene5_edit_v2.mp4
+  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene5_edit_v3.mp4
+ffprobe -v error -show_entries format=duration -of csv=p=0 scene5_edit_v3.mp4
