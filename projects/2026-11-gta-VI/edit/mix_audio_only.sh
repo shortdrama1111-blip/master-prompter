@@ -16,17 +16,28 @@ F1=/usr/share/fonts/opentype/inter/Inter-Light.otf
 # Dritaret (në kohën e filmit final, pas +1.0 s të skenës 1):
 #   TEMAT e lojës (mission passed VC + SA): zhurmat/temat lart, muzika poshtë
 #   DIALOGU (radio e policisë, Tommy '86, CJ, megafoni, Tommy te ura): zëri lart, muzika poshtë
-TH="between(t,14.6,23.2)+between(t,27.3,37.0)"
-DL="between(t,6.5,11.7)+between(t,21.9,24.0)+between(t,55.3+$O,57.8+$O)+between(t,76.6+$O,79.8+$O)"
-VOL="${MV:-0.95}*if(gt($TH,0),0.18,if(gt($DL,0),0.22,1))"
-FXV="if(gt($TH,0),${THV:-0.7},if(gt($DL,0),0.95,${FXB:-0.4}))"
+# Automatizim i butë (rampa R s në hyrje/dalje të çdo dritareje, jo me "thikë"), kohët në filmin final.
+#   tema e lojës: muzika 0.18 · dialogu: muzika 0.15 · ndjekja: zhurmat pak më lart
+EXPR=$(python3 - "$O" <<'PY'
+import sys
+O=float(sys.argv[1]); R=0.8
+def k(a,b): return f"clip(min((t-({a-R}))/{R},(({b+R})-t)/{R}),0,1)"
+TH=[(14.6,23.2),(27.3,37.0)]
+DL=[(6.5,11.7),(21.9,24.0),(55.0+O,59.2+O),(76.6+O,79.8+O)]
+CH=[(36.5+O,59.2+O)]
+mus="0.95"+"".join(f"*(1-{1-0.18}*{k(a,b)})" for a,b in TH)+"".join(f"*(1-{1-0.15}*{k(a,b)})" for a,b in DL)
+fx="min(1,0.25"+"".join(f"+0.7*{k(a,b)}" for a,b in TH+DL)+"".join(f"+0.15*{k(a,b)}" for a,b in CH)+")"
+print(mus); print(fx)
+PY
+)
+VOL=$(echo "$EXPR" | sed -n 1p); FXV=$(echo "$EXPR" | sed -n 2p)
 ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
 
 [1:a]aresample=48000,equalizer=f=2500:t=q:w=1:g=3,equalizer=f=900:t=q:w=1:g=2,asplit=4[m1][m2][m3][m4];
-[m1]atrim=$(python3 -c "print(max(0,0.96-$O))"):61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=$(echo "59.7+$O" | bc):d=0.3[a];
-[m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=0.8,afade=t=out:st=21.8:d=1.0,adelay=$(MS 62.25+$O)|$(MS 62.25+$O)[b];
-[m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.0,afade=t=out:st=12.9:d=0.3,adelay=$(MS 85.99+$O)|$(MS 85.99+$O)[c];
-[m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=0.4,adelay=$(MS $TM)|$(MS $TM)[d];
+[m1]atrim=$(python3 -c "print(max(0,0.96-$O))"):61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=$(echo "58.8+$O" | bc):d=1.2[a];
+[m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=2.0,afade=t=out:st=20.8:d=2.0,adelay=$(MS 62.25+$O)|$(MS 62.25+$O)[b];
+[m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=2.0,afade=t=out:st=11.7:d=1.5,adelay=$(MS 85.99+$O)|$(MS 85.99+$O)[c];
+[m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,adelay=$(MS $TM)|$(MS $TM)[d];
 [a][b][c][d]amix=inputs=4:normalize=0:duration=longest,volume='$VOL':eval=frame,apad=whole_dur=$DT[mus];
 [0:a]volume='$FXV':eval=frame,apad=whole_dur=$DT[fx];
 [fx][mus]amix=inputs=2:normalize=0:duration=longest,atrim=0:$DT,acompressor=threshold=-24dB:ratio=3:attack=25:release=350:makeup=5dB,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=8[aout]" \
