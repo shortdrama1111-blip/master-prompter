@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Prova të kokrrës së filmit: 5 pamje × 2 shot-e, me etiketë, në një video krahasimi.
-# Përdorim: bash grain_tests.sh <shot1.mp4> <nga> <shot2.mp4> <nga> <folder> 
+# Përdorim: bash grain_tests.sh <folder> <etiketa:shot.mp4:nga> [...]  (sa shot-e të duash)
 set -euo pipefail
-A=$1; TA=$2; B=$3; TB=$4; W=$5; mkdir -p $W; cd $W
+W=$1; shift; SHOTS=("$@"); mkdir -p $W; cd $W
 FT=/usr/share/fonts/opentype/inter/Inter-Regular.otf
 ENC="-c:v libx264 -preset fast -crf 14 -pix_fmt yuv420p -r 24 -an"
 declare -A L; declare -A G
@@ -13,9 +13,9 @@ L[3]="C - 500T nate (halation)";     G[3]="split[a][b];[b]curves=all='0/0 0.75/0
 L[4]="D - Super 8 (kujtim)";         G[4]="crop=iw-12:ih-12:6+3*sin(n*2.3):6+3*cos(n*1.9),scale=1080:1920,eq=saturation=0.8:contrast=0.92:brightness=0.03,colorbalance=rs=0.06:bs=-0.05,gblur=sigma=1,noise=c0s=28:c0f=t+u:c1s=10:c1f=t:c2s=10:c2f=t,vignette=angle=PI/3.5"
 L[5]="E - kokerr organike vetem drite"; G[5]="noise=c0s=12:c0f=t+u,unsharp=3:3:0.3"
 i=0
-for SRC in "$A:$TA" "$B:$TB"; do F=${SRC%%:*}; T=${SRC##*:}
+for SRC in "${SHOTS[@]}"; do N=${SRC%%:*}; R=${SRC#*:}; F=${R%%:*}; T=${R##*:}
   for k in 0 1 2 3 4 5; do
-    ffmpeg -v error -y -ss $T -t 2.5 -i "$F" -filter_complex "[0:v]scale=1080:1920:flags=lanczos,${G[$k]},drawtext=fontfile=$FT:text='${L[$k]}':fontsize=44:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=14:x=(w-text_w)/2:y=h-220[v]" -map "[v]" $ENC c_${i}_$k.mp4
+    ffmpeg -v error -y -ss $T -t ${DUR:-1.6} -i "$F" -filter_complex "[0:v]scale=1080:1920:flags=lanczos,${G[$k]},drawtext=fontfile=$FT:text='$N  ·  ${L[$k]}':fontsize=44:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=14:x=(w-text_w)/2:y=h-220[v]" -map "[v]" $ENC c_${i}_$k.mp4
   done; i=$((i+1)); done
 ls c_*.mp4 | sort -V | sed "s/.*/file '&'/" > list.txt
 ffmpeg -v error -y -f concat -safe 0 -i list.txt -c:v libx264 -preset fast -b:v 14M -pix_fmt yuv420p -movflags +faststart grain_tests.mp4
