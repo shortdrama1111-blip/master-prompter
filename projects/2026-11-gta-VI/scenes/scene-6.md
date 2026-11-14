@@ -35,3 +35,6 @@ Pyetje të hapura: jehona e zërave (po/jo); replika për Michael/Franklin/Trevo
 
 ## ⏸ Ideja e përdoruesit: "BUSTED" për heronjtë (për t'u diskutuar te skena 6)
 "for heroes I was thinking a shot of all of them busted." Sakrifica lexohet si ekrani i arrestimit të lojës: nga varka shohim heronjtë mbi urë, duart lart, të rrethuar nga policia, dhe në montim shfaqet "BUSTED" me fontin/stilin e lojës. Kandidati: shot 2 (lente e gjatë nga varka drejt urës), ose një shot i veçantë më afër.
+
+## ⏸ Shtesë nga përdoruesi: heronjtë arrestohen / futen në makinat e policisë
+"me duhet dhe ndonje shot qe jane ata duke u kapur ose duke u futur ne makina policie, per 6". Propozim: shot i veçantë (pa Blender), afër mbi urë në agim, pas shot-it 2 (pamja e largët "busted"): prangat, çdo hero me reagimin e vet, futen në makinat e policisë; Tommy i fundit, kthen kokën nga uji dhe buzëqesh; "BUSTED" në montim.
