@@ -20,7 +20,7 @@ OFFSET=1.0 bash mix_score.sh $S/gta_full_v4_nomusic.mp4 audio/score_v1.wav $S/GT
 F=$S/GTA_They_Brought_Me_Here_FINAL.mp4; DF=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $F)
 B1=18.15; B2=$(python3 -c "print(round($D12-0.4,3))"); B3=$S6; B4=$TM; B5=$TME; B6=$(python3 -c "print(round($DF-4.4,3))")
 GA="noise=c0s=9:c0f=t+u:c1s=3:c1f=t:c2s=3:c2f=t"
-GC="split[x][y];[y]curves=all='0/0 0.75/0 1/1',gblur=sigma=18,colorchannelmixer=rr=1:gg=0.25:bb=0.1[h];[x][h]blend=all_mode=screen:all_opacity=0.45,noise=c0s=13:c0f=t+u:c1s=4:c1f=t:c2s=4:c2f=t"
+GC="split[x][y];[y]curves=all='0/0 0.88/0 1/1',gblur=sigma=14,colorchannelmixer=rr=1:gg=0.35:bb=0.2[h];[x][h]blend=all_mode=screen:all_opacity=0.16,noise=c0s=13:c0f=t+u:c1s=4:c1f=t:c2s=4:c2f=t"
 GD="eq=saturation=0.8:contrast=0.92:brightness=0.03,colorbalance=rs=0.06:bs=-0.05,gblur=sigma=1,noise=c0s=28:c0f=t+u:c1s=10:c1f=t:c2s=10:c2f=t,vignette=angle=PI/3.5"
 GE="noise=c0s=12:c0f=t+u,unsharp=3:3:0.3"
 ffmpeg -v error -y -i $F -filter_complex "
