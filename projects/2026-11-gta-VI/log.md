@@ -20,3 +20,4 @@
 | 2026-11-14 | Skena 1 final (blockout v2) | Seedance 2.5 + @video1 | ✅ aprovuar | drone nga lart pak jo-realist | — | mbulim në montim me grafikë wanted level |
 | 2026-11-14 | Skena 3 (blockout v2) | Seedance 2.5 + @video1, 12 s | ⚠️ 50% | shih feedback: shot 4–8 | POV pa trup/automjet; "live stream of a bridge at night" → natë | patch-et A–E (4 s secili) |
 | 2026-11-14 | Skena 4 (blockout v2) | Seedance 2.5 + @video1, 12 s | ✅ aprovuar | kabrioleti i errët në kurth; zari fuzzy | — | ngjyrim në montim |
+| 2026-11-14 | Skena 3 patch A (Franklin) | Seedance 2.5, single-shot 4 s, pa blockout | ✅ | — | rreshti "his own forearms … gloved hands gripping both handlebar grips" + POSITIVE LOCK e zgjidhën motorin pa duar | në montim: ~1.9–3.7 s (afrimi + kalimi mes policëve) |
