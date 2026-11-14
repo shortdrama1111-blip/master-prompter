@@ -17,3 +17,4 @@
 | 2026-11-14 | Skena 1 v1 | Seedance 2.5 | 👎 | pa hook, pa histori | prompti: shot 1 pa ngjarje; lock "police far behind"; shot 3 statik | v2: hook me ngjarje në 0.0 s, ndjekje me konflikt, 7 prerje |
 | 2026-11-14 | Skena 1 v3 | Seedance 2.5, 20 s | ⚠️ 60% | kupeja → makinë policie; brenda policisë duket mbrapsht; zari pa çelës; policia përpara në pasqyrë; drone me pozicione të tjera; prekje pa reagim | shih feedback | mbahen shot 1, 2, 8; rigjenerohet mesi (shot 3–7) si një bllok 11 s |
 | 2026-11-14 | Skena 1 me blockout | Seedance 2.5 + @video1 blockout, 20 s | ✅ 90% | shot 2 (2.75–6.3 s) pa fëmijën; 18.4–20 s e zezë | rrahja e shot-it 2 pa pozicion kamere/plan të parë | patch 4 s për shot 2; e zeza e fundit pritet në montim |
+| 2026-11-14 | Skena 1 final (blockout v2) | Seedance 2.5 + @video1 | ✅ aprovuar | drone nga lart pak jo-realist | — | mbulim në montim me grafikë wanted level |

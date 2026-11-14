@@ -75,3 +75,7 @@ Vice City dhe San Andreas: plate-t gati te përdoruesi.
 | `@loc_vi_aerial` | `refs/loc_vi_aerial.jpg` | 4, 5 |
 | `@loc_vi_deck` | `refs/loc_vi_deck.jpg` | 4, 5 |
 | `@loc_dawn_deck` | `refs/loc_dawn_deck.jpg` | 6 |
+
+## Rrjedha e prodhimit (e konfirmuar te skena 1)
+Skenar → blockout Blender (`blender-blocking.md`, ngjyrat fikse) → Seedance me blockout si `@video1` (master i kamerës, prerjet në frame-t e matura) → montim + dizajn (grafikë wanted level).
+Skena 1: ✅ e aprovuar.
