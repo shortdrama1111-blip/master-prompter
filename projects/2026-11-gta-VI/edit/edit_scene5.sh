@@ -14,7 +14,12 @@ seg A "$BOAT" 0 3.21                            # varka (0.6x)
 ffmpeg -v error -y -i "$X" -filter_complex "[0:v]trim=1.60:2.45,setpts=PTS-STARTPTS,scale=720:1280,setsar=1,setpts=PTS/0.75,minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1[v];[0:a]atrim=1.317:2.45,asetpts=PTS-STARTPTS,aresample=48000,afade=t=in:d=0.03[a]" -map "[v]" -map "[a]" -t 1.133 $ENC $AUD B.mov
 if [ "$H" = "-" ]; then hold C 5.0 'H  ·  heronjte dalin (5 s)'; else seg C "$H" 0 5.0; fi
 seg D "$X" 4.50 8.06                            # Tommy + zari
-if [ "$J" = "-" ]; then hold E 3.5 'J  ·  kercimi ne uje (3.5 s)'; else seg E "$J" 1.0 4.5; fi
+if [ "$J" = "-" ]; then hold E 3.5 'J  ·  kercimi ne uje (3.5 s)'
+elif [ "$J" = "5b" ]; then   # kërcimi nga gjenerimi 5b: nga varka lart (crop pa objektin në qoshe) + kërcimi
+  ffmpeg -v error -y -ss 2.00 -to 3.00 -i "$Y" -vf "scale=1008:1792,crop=720:1280:0:250,setsar=1" -af "aresample=48000,afade=t=in:d=0.03" $ENC $AUD E1.mov
+  seg E2 "$Y" 3.00 4.00
+  printf "file '%s'\n" E1.mov E2.mov > le.txt; ffmpeg -v error -y -f concat -safe 0 -i le.txt $ENC $AUD E.mov
+else seg E "$J" 1.0 4.5; fi
 seg F "$Y" 4.00 7.00                            # Jason e nxjerr
 seg G "$Y" 7.00 9.05                            # në varkë, ikin
 printf "file '%s'\n" A.mov B.mov C.mov D.mov E.mov F.mov G.mov > list.txt
