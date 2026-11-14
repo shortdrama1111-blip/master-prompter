@@ -39,3 +39,4 @@
 | 2026-11-14 | Skena 6 patch TE6 (Tommy → Egli) | Seedance 2.5, 4 s, 2 shot-e | ⚠️ | Tommy ✓ (0–1.92); Egli me këmishën turkeze të Tommy-t; lëkura e pastër ✓ | dy personazhe me veshje të dallueshme në një gjenerim → veshja e njërit "rrjedh" te tjetri te close-up-i | mbahet Tommy; Egli rigjenerohet vetëm (E6) |
 | 2026-11-14 | Skena 6 patch E6 (Egli close-up) | Seedance 2.5, 4 s, vetëm ref e Eglit | ✅ | — | — | xhaketa e zezë ✓, lëkurë më e pastër; lëmim i lehtë 0.6; përdoret 0.8–2.8 |
 | 2026-11-14 | Filmi i plotë v1 | 1-5 v3 + skena 6 v2 (fadeblack 0.8 s) | — | — | — | `gta_full_v1.mp4` 110.6 s, 170 MB (master); `gta_full_v1_preview.mp4` 6 Mbps, 87 MB |
+| 2026-11-14 | Filmi i plotë v3 (me muzikë) | `mix_score.sh` mbi full v2 (sinkronizim zëri, kujtim pa zë, kalimi i agimit, mission passed 2013) | — | drone → e zezë me prerje të fortë (mund të bëhet fade) | — | `gta_full_v3.mp4` 114.5 s; kujtimi 99.38–102.97 i heshtur ✓ |
