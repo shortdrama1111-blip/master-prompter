@@ -10,7 +10,7 @@ ffmpeg -v error -y -f lavfi -i "aevalsrc='0.22*(sin(2*PI*523*t)+0.3*sin(2*PI*156
 F1=/usr/share/fonts/opentype/inter/Inter-Light.otf; F2=/usr/share/fonts/opentype/inter/Inter-Regular.otf
 AL="if(lt(t,4.80),0,if(lt(t,5.10),(t-4.80)/0.3,if(lt(t,6.15),1,if(lt(t,6.45),(6.45-t)/0.3,0))))"
 ffmpeg -v error -y -i cut.mov -framerate 24 -i hud/hud_%04d.png \
-  -i hum.wav -i riser.wav -i tick.wav -i tick.wav -i jingle.wav -i boom.wav -filter_complex "
+  -i hum.wav -i riser.wav -i tick.wav -i tick.wav -i $HERE/audio/mission_passed_vc.mp3 -i boom.wav -filter_complex "
 [0:v]scale=1080:1920:flags=lanczos,eq=contrast=1.07:saturation=1.06:brightness=-0.008,
 curves=master='0/0.015 0.25/0.21 0.6/0.62 1/0.975',
 colorbalance=rs=-0.02:bs=0.035:rh=0.025:bh=-0.02,split[a][b];
@@ -23,7 +23,7 @@ drawtext=fontfile=$F2:text='1 9 8 6':fontsize=50:fontcolor=white:x=(w-text_w)/2:
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=6dB[o];
 [2:a]adelay=0|0[h];[3:a]adelay=1590|1590[r];
 [4:a]adelay=5450|5450[t1];[5:a]adelay=8200|8200[t2];
-[6:a]adelay=14670|14670,volume=1.4[j];[7:a]adelay=17160|17160[bm];
+[6:a]aresample=48000,atrim=0:2.55,afade=t=out:st=2.05:d=0.5,adelay=14670|14670,volume=0.9[j];[7:a]adelay=17160|17160[bm];
 [o][h][r][t1][t2][j][bm]amix=inputs=7:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -t 17.81 -c:v libx264 -preset slow -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
   -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene1_edit_v2.mp4
