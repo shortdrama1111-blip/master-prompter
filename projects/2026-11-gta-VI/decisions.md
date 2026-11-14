@@ -28,7 +28,9 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 | `@egli_teen` | `refs/egli_teen-sheet-masked.png` | ✅ v1 |
 | `@egli_young` | `refs/egli_young-sheet-masked.png` | ✅ v1 (mjekra e plotë pranohet nga përdoruesi) |
 | `@egli_now` | `refs/egli_now-sheet-masked.png` | ✅ v1 |
-| heronjtë ×7, lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
+| CJ · Tommy · Lucia · Michael · Jason | `refs/<emri>-sheet-masked.png` | ✅ v1 |
+| Franklin · Trevor | | në pritje |
+| lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
 Propozim (si te SINDI-CAR, pret konfirmim): video → `seedance-clean` (vetëm pohore, pa emra pajisjesh,
