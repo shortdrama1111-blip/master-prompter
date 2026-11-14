@@ -21,3 +21,6 @@
 | 2026-11-14 | Skena 3 (blockout v2) | Seedance 2.5 + @video1, 12 s | ⚠️ 50% | shih feedback: shot 4–8 | POV pa trup/automjet; "live stream of a bridge at night" → natë | patch-et A–E (4 s secili) |
 | 2026-11-14 | Skena 4 (blockout v2) | Seedance 2.5 + @video1, 12 s | ✅ aprovuar | kabrioleti i errët në kurth; zari fuzzy | — | ngjyrim në montim |
 | 2026-11-14 | Skena 3 patch A (Franklin) | Seedance 2.5, single-shot 4 s, pa blockout | ✅ | — | rreshti "his own forearms … gloved hands gripping both handlebar grips" + POSITIVE LOCK e zgjidhën motorin pa duar | në montim: ~1.9–3.7 s (afrimi + kalimi mes policëve) |
+| 2026-11-14 | Skena 3 patch B (Trevor) | Seedance 2.5, 4 s | ✅ | arushi dhe Trevor nuk duken (vetëm parafango e kuqe) | kamera anash te qoshja e përparme mbulon push bar-in | goditja + rrotullimi lexohen shumë mirë; mbahet ~0.8–3.6 s |
+| 2026-11-14 | Skena 3 patch C (konvoji) | Seedance 2.5, 4 s | 👎 | profil anash, xhami anësor, konvoji s'lexohet; flokët e Eglit dalin keq | modeli preferon fytyrën kur ka sheet personazhi + "driver turns his head" | C2: kamera te parakolpi i pasmë i kupesë, pa Eglin |
+| 2026-11-14 | Skena 3 patch D (billbordet) | Seedance 2.5, 4 s | ✅ | billbordet si portale sipër rrugës, jo anash | — | dita ✓, ura brenda ekranit ✓, mbush kuadrin ✓ |

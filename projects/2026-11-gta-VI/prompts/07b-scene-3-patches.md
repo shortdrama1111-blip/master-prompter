@@ -263,3 +263,46 @@ Vertical 9:16, real-time speed, 24 fps motion cadence, 4 seconds.
 POSITIVE LOCKS
 The sedan is graphite grey. Both vehicles drive forward in the same direction. The cruiser ends up behind the sedan.
 ```
+
+---
+
+## Patch C2 · Konvoji pa Eglin, nga parakolpi i pasmë · 4 s
+
+**Rendi:** `@image1` car_now-sheet.jpg · `@image2` sedani gri · `@image3` motori jeshil · `@image4` truck_trevor-sheet.jpg · `@image5` car_86-sheet.jpg · `@image6` lowrider-i · `@image7` loc_now_freeway.jpg
+
+```
+SCENE CONTEXT
+Los Angeles today, hard midday sun, on a wide concrete freeway. Behind a matte-black sports coupe, five vehicles follow it in a single line like an escort: a grey saloon, a green motorbike, a red pickup with a teddy bear, a white 1980s coupe and a green lowrider; far behind them, the police. Vertical 9:16, live-action, photoreal, one continuous shot.
+
+ACTIVE REFERENCES
+@image1: the matte-black modern two-door sports coupe, satin black paint, graphite wheels. 100% matches the reference.
+@image2 @image3 @image4 @image5 @image6: the convoy, in this order from nearest to farthest: the graphite-grey sport saloon, the green touring motorbike, the faded red pickup with a worn yellow teddy bear strapped to its push bar, the white 1980s wedge coupe, the candy-green lowrider with gold wire wheels. Each 100% matches its reference.
+@image7: the freeway: concrete lanes, barriers, overpasses, blank green gantry signs, palms. Reference defines architecture, geography and dressing ONLY — not a keyframe.
+
+OPTICS
+35 mm equivalent, 63° field of view, deep focus from the coupe's bodywork to the far end of the convoy.
+
+CAMERA
+Mounted low on the coupe's rear bumper, 0.5 m above the asphalt, looking straight back down the freeway, moving with the coupe at 120 km/h, a slight road vibration; a slow rise from 0.5 m to 1.5 m over the 4 seconds.
+
+ACTION
+The satin-black rear deck, spoiler edge and one red tail light of the coupe run across the bottom of the frame. Behind it, in the same lane, the five vehicles follow in a single line 10 m apart at the same speed, each one sharp and readable: the grey saloon nearest, its honeycomb grille filling a third of the frame, then the green motorbike leaning slightly, then the red pickup with the teddy bear on its push bar, then the white wedge coupe, then the green lowrider. 80 m behind them, a row of police cruisers with red and blue light bars, falling back.
+
+PHYSICS
+Real weight: the convoy's vehicles rock gently on their suspensions, the bike's rider shifts his weight, heat shimmer bends the road between the vehicles, the coupe's bodywork vibrates.
+
+LIGHTING
+LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock, post and palm, bleached sandstone cliff, heat shimmer rising from the asphalt over the first 30 m, deep clean blue sky with a few white clouds, high contrast, clean modern digital look.
+
+AUDIO
+No music. Five engines in harmony, wind roar, sirens falling away far behind.
+
+STYLE
+Photorealistic live-action film footage, present-day Los Angeles at midday, crisp colour, fine grain, cinematic contrast.
+
+OUTPUT SETTINGS
+Vertical 9:16, real-time speed, 24 fps motion cadence, 4 seconds.
+
+POSITIVE LOCKS
+All five vehicles are visible in one line for the whole shot, in the stated order, driving toward the camera. The police stay far behind the convoy.
+```
