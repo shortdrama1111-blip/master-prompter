@@ -105,6 +105,7 @@ shot-i në shot. Rregulli: `@tag` hyn vetëm në bllokun ku personazhi është i
 ### SEKUENCA I: "KUJTIMI" · 0:00–0:20
 
 #### G1: Hook + '86 · 0:00–0:10.5
+> **v2.2 (pas testit):** v1 doli pa hook dhe pa histori. Rregull i ri për çdo skenë: **një ngjarje konflikti** dhe hook = ngjarje në kuadrin e parë. Skena 1 tani: policia sulmon nga kuadri 0, Tommy var zarin "për fat" në mes të rrezikut, policia përjashtohet në median, dy makina të reja si eskalim. Prompti: `prompts/05-scene-1-vice-city-v2.md`. **Hook-u i videos në montim:** 1–1.5 s flash-forward nga kurthi në urë (skena 4) para '86.
 `[REF: @egli_kid]` `[REF: @hero_86]` `[REF: @loc_86]` `[REF: @car_86]` `[REF: @dice_keys]`
 
 **SHOT 1 · 0:00–0:02 · HOOK: syri i fëmijës**
