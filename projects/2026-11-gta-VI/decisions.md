@@ -64,3 +64,14 @@ Pacific Coast Highway te California Incline (Santa Monica) → autostrada. Zëve
 ## Lokacioni GTA VI (v2)
 Ura me hark mbi gji me ishuj mangrove, qyteti në horizont (sipas trailerit; analog real Rickenbacker Causeway). Zëvendëson kënetën. Plate: aerial natën, mbi urë natën, aerial në agim (edit).
 Vice City dhe San Andreas: plate-t gati te përdoruesi.
+
+## Plate-t e lokacioneve: TË NGULITURA
+| Tag | Skedari | Skena |
+|---|---|---|
+| `@loc_86` | `refs/loc_86.jpg` | 1 |
+| `@loc_92` | `refs/loc_92.jpg` | 2 |
+| `@loc_now_pch` | `refs/loc_now_pch.jpg` | 3 |
+| `@loc_now_freeway` | `refs/loc_now_freeway.jpg` | 3 |
+| `@loc_vi_aerial` | `refs/loc_vi_aerial.jpg` | 4, 5 |
+| `@loc_vi_deck` | `refs/loc_vi_deck.jpg` | 4, 5 |
+| `@loc_dawn_deck` | `refs/loc_dawn_deck.jpg` | 6 |
