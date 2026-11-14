@@ -11,3 +11,4 @@
 | 2026-11-13 | Akti 2 v1 (extend) | Seedance 2.5 | ✅ "perfect" | — | take i vazhdueshëm + @video1 si master funksionoi | ngulitur; extend për aktin 3 |
 | 2026-11-14 | Akti 3 v1 (extend, 7 shot-e) | Seedance 2.5 | ✅ | doli 10 s (jo 12); fondatina vetëm 0.6 s; shot-i i fundit i gjerë 0.4 s | gjatësia e gjenerimit 10 s | ngrirje 2 s e kuadrit të fundit në montim |
 | 2026-11-14 | Montimi A (30.0 s) + B (27.2 s) | ffmpeg `tools/edit.sh` | ✅ | aktet 1–2 nga një kënd i vetëm | — | B: prerje + punch-in 1.2–1.8×; insert-e I1–I3 të propozuara |
+| 2026-11-14 | Muzika "Velvet Bloom" | ElevenLabs Music | ✅ | 26 s, mbaron te 25.0 s (button + reverb) ndërsa videoja finale ~30 s | prompti kërkoi 26 s para mbylljes | muzika fillon te ~3.2 s që button-i të bjerë kur çanta mbulon kuadrin |
