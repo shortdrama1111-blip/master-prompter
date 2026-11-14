@@ -22,5 +22,6 @@ Reel 9:16 ~29 s për étos (Black Friday), rikrijim i një video reference: vajz
 - [funksionoi] Product sheet (close-up · front · back) për çantën → logoja doli e saktë. Parfumi pa sheet → shishe e deformuar kur ishte larg. Statusi: i ri (kandidat për ta zgjeruar rregullin e sheet-it te produktet).
 - [funksionoi] Mbyllja ku objekti s'e mbushi kuadrin u shpëtua me zoom smoothstep + slow 1.6× në montim. Statusi: i ri.
 - [dështoi] Shumë pyetje-përgjigje për referencat ("më lodhe") → në punë manuale dorëzo paketën e plotë njëherësh. Statusi: kaluar te CLAUDE.md (#15).
+- [funksionoi] Feedback i klientit "pak më shpejt" → segmentet me kamerë të fiksuar ×1.25 (setpts + atempo), segmenti me prerje të shpejta pa ndryshim. Statusi: i ri.
 - Konflikti i skill-eve: video → seedance-clean, imazhe → fotografike pohore. 1/2 projekte, presim konfirmimin.
 
