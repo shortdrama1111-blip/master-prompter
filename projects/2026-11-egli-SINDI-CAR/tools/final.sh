@@ -20,7 +20,10 @@ DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $T/joined.mp4)
 B=$(ffprobe -v error -show_entries format=duration -of csv=p=0 edit/etos-cut-B.mp4)
 TT=$(python3 -c "print(round($B+1.1,2))")          # teksti hyn kur zoom-i mbaron
 MOFF=$(python3 -c "print(round($TT-25.0,2))")      # button-i i këngës (25.0 s) bie te teksti
+# offset negativ = videoja më e shkurtër se kënga → presim fillimin e këngës
+MSKIP=$(python3 -c "print(max(0,-$MOFF))"); MOFF=$(python3 -c "print(max(0,$MOFF))")
 MOFFMS=$(python3 -c "print(int($MOFF*1000))")
+OUT=${OUT:-edit/etos-FINAL.mp4}
 FB=/usr/share/fonts/opentype/inter/InterDisplay-SemiBold.otf
 FL=/usr/share/fonts/opentype/inter/Inter-Light.otf
 GOLD=0xD4B072
@@ -28,7 +31,7 @@ VF="drawtext=fontfile=$FB:text='BLACK FRIDAY':fontcolor=white:fontsize=46:x=(w-t
 VF+="drawtext=fontfile=$FB:text='BLACK FRIDAY':fontcolor=$GOLD:fontsize=78:x=(w-tw)/2:y=h*0.70:enable='gte(t,$TT)':alpha='min(1,(t-$TT)/0.3)',"
 VF+="drawtext=fontfile=$FL:text='Ulje deri në 50%':expansion=none:fontcolor=white:fontsize=50:x=(w-tw)/2:y=h*0.70+105:enable='gte(t,$TT+0.35)':alpha='min(1,(t-$TT-0.35)/0.3)'"
 ffmpeg -v error -y -i $T/joined.mp4 -i audio/music-velvet-bloom.wav -filter_complex \
- "[0:v]$VF[v];[0:a]volume=0.55[s];[1:a]adelay=${MOFFMS}|${MOFFMS},volume=0.9,afade=t=in:st=$MOFF:d=0.4[m];[s][m]amix=inputs=2:duration=first:normalize=0,afade=t=out:st=$(python3 -c "print(round($DUR-0.4,2))"):d=0.4,loudnorm=I=-14:TP=-1.5:LRA=11[a]" \
- -map "[v]" -map "[a]" $ENC edit/etos-FINAL.mp4
-echo "final $(ffprobe -v error -show_entries format=duration -of csv=p=0 edit/etos-FINAL.mp4)s  tekst@$TT  muzika@$MOFF"
+ "[0:v]$VF[v];[0:a]volume=0.55[s];[1:a]atrim=start=$MSKIP,asetpts=PTS-STARTPTS,adelay=${MOFFMS}|${MOFFMS},volume=0.9,afade=t=in:st=$MOFF:d=0.4[m];[s][m]amix=inputs=2:duration=first:normalize=0,afade=t=out:st=$(python3 -c "print(round($DUR-0.4,2))"):d=0.4,loudnorm=I=-14:TP=-1.5:LRA=11[a]" \
+ -map "[v]" -map "[a]" $ENC $OUT
+echo "final $(ffprobe -v error -show_entries format=duration -of csv=p=0 $OUT)s  tekst@$TT  muzika@$MOFF  prerë-nga-kënga $MSKIP s"
 rm -rf $T

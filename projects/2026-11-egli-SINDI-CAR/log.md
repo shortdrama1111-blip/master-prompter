@@ -30,3 +30,4 @@ Bilanci Higgsfield pas projektit: 5782.1 kredite (plan Ultra).
 Video: 10+10+10+5 = 35 s → 35/5 × 30 = **210 kredite**. Me imazhet (16): 226 kredite.
 Çmimi/kredit (burime publike, të pakonfirmuara): $0.043 (Ultra $129/3000) – $0.0625 (paketa e vogël).
 210 kredite ≈ $9.0–13.1 ≈ 730–1,060 lek (1 USD ≈ 81 lek, nëntor 2026).
+| 2026-11-14 | FINAL v2 (26.6 s) | ffmpeg | ✅ | — | — | aktet 1–2 ×1.25 (setpts+atempo); kënga e prerë 0.98 s në fillim që button-i të bjerë te teksti @24.0 s |
