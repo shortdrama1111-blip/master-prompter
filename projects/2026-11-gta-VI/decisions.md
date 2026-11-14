@@ -26,7 +26,7 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 | `refs/egli-sheet-masked.png` | sheet-i origjinal i Eglit, fytyrat e vogla të mbuluara (katror 241,238,235) | ✅ |
 | `@egli_kid` | `refs/egli_kid-sheet-masked.png` | ✅ v1 |
 | `@egli_teen` | `refs/egli_teen-sheet-masked.png` | ✅ v1 |
-| `@egli_young` | `refs/egli_young-sheet-masked.png` | ✅ v1, por doli me mjekër të plotë, jo stubble (shih log) |
+| `@egli_young` | `refs/egli_young-sheet-masked.png` | ✅ v1 (mjekra e plotë pranohet nga përdoruesi) |
 | `@egli_now` | `refs/egli_now-sheet-masked.png` | ✅ v1 |
 | heronjtë ×7, lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
 
