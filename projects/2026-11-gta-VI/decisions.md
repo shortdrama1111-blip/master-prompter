@@ -24,7 +24,10 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 | Tag | Çfarë është | Statusi |
 |---|---|---|
 | `refs/egli-sheet-masked.png` | sheet-i origjinal i Eglit, fytyrat e vogla të mbuluara (katror 241,238,235) | ✅ |
-| `@egli_kid` `@egli_teen` `@egli_young` `@egli_now` | sheet-et e moshave | prompte gati: `prompts/01-character-sheets-egli.md` |
+| `@egli_kid` | `refs/egli_kid-sheet-masked.png` | ✅ v1 |
+| `@egli_teen` | `refs/egli_teen-sheet-masked.png` | ✅ v1 |
+| `@egli_young` | `refs/egli_young-sheet-masked.png` | ✅ v1, por doli me mjekër të plotë, jo stubble (shih log) |
+| `@egli_now` | `refs/egli_now-sheet-masked.png` | ✅ v1 |
 | heronjtë ×7, lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
