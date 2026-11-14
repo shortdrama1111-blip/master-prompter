@@ -12,3 +12,5 @@
 | 2026-11-14 | Akti 3 v1 (extend, 7 shot-e) | Seedance 2.5 | ✅ | doli 10 s (jo 12); fondatina vetëm 0.6 s; shot-i i fundit i gjerë 0.4 s | gjatësia e gjenerimit 10 s | ngrirje 2 s e kuadrit të fundit në montim |
 | 2026-11-14 | Montimi A (30.0 s) + B (27.2 s) | ffmpeg `tools/edit.sh` | ✅ | aktet 1–2 nga një kënd i vetëm | — | B: prerje + punch-in 1.2–1.8×; insert-e I1–I3 të propozuara |
 | 2026-11-14 | Muzika "Velvet Bloom" | ElevenLabs Music | ✅ | 26 s, mbaron te 25.0 s (button + reverb) ndërsa videoja finale ~30 s | prompti kërkoi 26 s para mbylljes | muzika fillon te ~3.2 s që button-i të bjerë kur çanta mbulon kuadrin |
+| 2026-11-14 | Mbyllja v1 | Seedance 2.5 | 🟡 përdoruesi: "i dont really like this" | 0–2.2 s statike; çanta nuk mbuloi gjithë kuadrin (duar lart, sedilje anash), logoja në mes jo lart | modeli e ndali çantën te ~85% e kuadrit | montim: prerë nga 2.3 s, zoom i butë 1→2.0 mbi logon, 3.4–5 s slow 1.6×; tekst Inter |
+| 2026-11-14 | FINAL v1 (28.9 s) | ffmpeg `tools/final.sh` | ✅ | — | — | hook "BLACK FRIDAY" 0.15–1.7 s; tekst final @26.3 s; muzika nga 1.3 s, button-i bie te teksti; -14 LUFS |
