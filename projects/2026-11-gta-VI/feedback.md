@@ -71,3 +71,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 💡 | "kjo eshte skena 5, sa te rregulloj 3 dhe 4" | Blockout skena 5 v1: varka ✓, muri i makinave ✓, Tommy-Egli ✓; mungojnë Franklin/Trevor te rreshti, Jason që kap Eglin, armët e heronjve | Shënime për v2 |
 | 2026-11-14 | 🔧 | "me san andreas them qe te jete kolona zanore e plote" | Muzika e fundit të skenës 2 | Paqartësi: tema 9.4 s e "mission passed" (tani e plotë) apo tema kryesore e San Andreas? Pyetur përdoruesi |
 | 2026-11-14 | 🔧 | "me jep promptin per te rregulluar dhe 5" | Blockout skena 5 | `prompts/blender-scene5-v2-fix.md` |
+| 2026-11-14 | 💡 | "kjo eshte skena 6" | Blockout skena 6 v1: varka, fytyra, zari, drone ✓; mungojnë heronjtë + policia mbi urë (shot 2), Jason, kopje të përsëritura te two-shot, ura te drone | Brief v2: `prompts/blender-scene6-v2-fix.md` |
