@@ -12,3 +12,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "this color and the black one it has menget e kemishave si kjo, me kete detaj dhe kete design esht e rendesishme t duket n video" | Ref mënge signature (bordo, manshetë me 3 pala, përdredhje, gur rubin) | Detaji i produktit = prioritet; në plan të gjerë s'lexohet → propozim insert close-up në montim |
 | 2026-11-14 | 🔧 | "vetem ngjyra e zeze e ka detajin te menga" | Mënga signature, prompt 04 | Mënga vetëm te këmisha e zezë; Claude propozon të zezën te segmenti D (plani i afërt) |
 | 2026-11-14 | 💡 | "guri eshte i zi" · "rendi ska rendesi" | Mënga signature te këmisha e zezë | Guri i zi; rendi bordo→blu→bordo→e zezë mbetet |
+| 2026-11-14 | 🔧 | "mund ta zevendesojme te zezen me keto qe jan me t dukshme menget" | 2 foto seti blu me butona, manshetë të gjata që hapen | Kriteri i përdoruesit: detaji i produktit duhet të lexohet në kuadër → zgjidh veshjen që e tregon më mirë |
