@@ -38,3 +38,4 @@
 | 2026-11-14 | Montimi skena 6 v1 | `edit/edit_scene6.sh` | — | kujtimi pa dorën e fëmijës (s'është gjeneruar) | — | 25.7 s: kujtimi 7 flash-e (Tommy '86, CJ '92, Michael, Franklin, Trevor, konvoji, Tommy+zari) + jehona e zërave + akord i butë; titujt 1986·1992·2013·2026 → "They brought me here." |
 | 2026-11-14 | Skena 6 patch TE6 (Tommy → Egli) | Seedance 2.5, 4 s, 2 shot-e | ⚠️ | Tommy ✓ (0–1.92); Egli me këmishën turkeze të Tommy-t; lëkura e pastër ✓ | dy personazhe me veshje të dallueshme në një gjenerim → veshja e njërit "rrjedh" te tjetri te close-up-i | mbahet Tommy; Egli rigjenerohet vetëm (E6) |
 | 2026-11-14 | Skena 6 patch E6 (Egli close-up) | Seedance 2.5, 4 s, vetëm ref e Eglit | ✅ | — | — | xhaketa e zezë ✓, lëkurë më e pastër; lëmim i lehtë 0.6; përdoret 0.8–2.8 |
+| 2026-11-14 | Filmi i plotë v1 | 1-5 v3 + skena 6 v2 (fadeblack 0.8 s) | — | — | — | `gta_full_v1.mp4` 110.6 s, 170 MB (master); `gta_full_v1_preview.mp4` 6 Mbps, 87 MB |

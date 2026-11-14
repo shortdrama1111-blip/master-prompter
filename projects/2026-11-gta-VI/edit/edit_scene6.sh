@@ -15,8 +15,8 @@ MEM="eq=saturation=0.55:brightness=0.03:contrast=0.92,colorbalance=rs=0.08:gs=0.
 seg S01 "$B" 0.00 1.95                                  # varka, kthen kokën
 seg S02 "$A" 0.30 2.48                                  # ura nga larg në agim
 slow S03 "$A" 2.52 6.56 0.8 "eq=saturation=0.3:contrast=1.05"   # arrestimet, gri si ekrani "busted" i lojës
-seg S04 "$A" 6.62 9.40                                  # Tommy, i fundit
-seg S05 "$B" 1.98 3.44                                  # Egli nga afër
+seg S04 "$SRC/s6/te6.mp4" 0.00 1.90                    # Tommy, i fundit (patch TE6)
+seg S05 "$SRC/s6/e6_smooth.mp4" 0.80 2.80               # Egli nga afër (patch E6, lëkurë e lëmuar)
 seg S06 "$B" 3.48 4.94                                  # zari në pëllëmbë
 seg M1 "$SRC/s1c/v.mp4" 9.80 10.30 "$MEM"               # Tommy varet zarin (1986)
 seg M2 "$SRC/s2/v.mp4" 4.40 4.85 "$MEM"                 # CJ (1992)
@@ -51,5 +51,5 @@ drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x
 [1:a]adelay=$(MS $(t 5))|$(MS $(t 5)),volume=0.9[p];[2:a]adelay=$(MS $TM)|$(MS $TM)[x];[3:a]adelay=$(MS "$TM+2.6")|$(MS "$TM+2.6")[y];
 [o][p][x][y]amix=inputs=4:normalize=0:duration=first,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -c:v libx264 -preset ${PRESET:-fast} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
-  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene6_edit_v1.mp4
-ffprobe -v error -show_entries format=duration -of csv=p=0 scene6_edit_v1.mp4
+  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene6_edit_v2.mp4
+ffprobe -v error -show_entries format=duration -of csv=p=0 scene6_edit_v2.mp4
