@@ -25,3 +25,10 @@
 **Text in the edit:** `1986 · 1992 · 2013 · 2026` → `They brought me here.`
 
 *Legend: CAM camera · ACT action · SND sound · DLG dialogue · TR transition · WHY reason. Full bible: `../script-full.md`.*
+
+## ⏸ Memory beat (aprovuar si ide, diskutohet kur të arrijmë te skena 6)
+Pas shot-it 4 (zari në pëllëmbë), ~4 s:
+1. Match cut: pëllëmba e rritur → pëllëmba e 10-vjeçarit me të njëjtin zar, e njëjta dritë (1 gjenerim i ri, 1.2 s, pa fytyrë).
+2. Flash-e ~0.4 s nga footage-i, kronologjikisht: Tommy varet zarin (S1) · CJ në pasqyrë (S2) · Michael anash (S3) · Franklin mes policëve (patch A) · Trevor godet (patch B) · konvoji (patch C) · Tommy ia shtyp zarin në pëllëmbë (S5).
+3. Dora mbyllet → shot 5.
+Pyetje të hapura: jehona e zërave (po/jo); replika për Michael/Franklin/Trevor apo vetëm tingujt e tyre (rekomandim: tingujt).
