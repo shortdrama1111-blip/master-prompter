@@ -26,3 +26,5 @@
 **Weapons** version A: the heroes hold pistols low at their sides in the standoff, nobody fires. Version B: empty hands.
 
 *Legend: CAM camera · ACT action · SND sound · DLG dialogue · TR transition · WHY reason. Full bible: `../script-full.md`.*
+
+> **v3 (rendi logjik):** shot 2 = nga lart, heronjtë ende në makina i kthejnë anash në mur; shot 3 = dalin, qëndrojnë para murit me fytyrë nga policia, kthejnë kokën nga varka, Tommy pohon me kokë. Asnjë hero në këmbë para se të ngrihet muri.
