@@ -4,8 +4,7 @@
 #   A  muzika 0.96–61.0  → filmi 0.00   (prerja e saj në heshtje bie kur fiket prozhektori, filmi 60.04)
 #   B  muzika 62.0–84.8  → filmi 62.25  (skena 5)
 #   C  muzika 84.8–98.0  → filmi 85.99  (agimi; mbaron kur nis kujtimi)
-#   —  kujtimi pa zë                     (filmi TM–TME)
-#   D  muzika 99.6–112   → filmi TME    (two-shot, drone, karta e zezë)
+#   D  muzika 99.6–112   → filmi TM     (rritja finale nis me kujtimin: kujtimi pa zhurma, vetëm muzikë)
 # Ulje: nën temat e lojës (14.5–36.0), nën megafonin (55.3–57.8), nën Tommy-n (76.6–79.8).
 # Përdorim: bash mix_score.sh <filmi.mp4> <muzika.wav> <dalja.mp4> <TM> <TME>
 set -euo pipefail
@@ -20,8 +19,8 @@ ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
 [m1]atrim=$(python3 -c "print(max(0,0.96-$O))"):61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=$(echo "59.7+$O" | bc):d=0.3[a];
 [m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=0.8,afade=t=out:st=21.8:d=1.0,adelay=$(MS 62.25+$O)|$(MS 62.25+$O)[b];
 [m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.0,afade=t=out:st=12.9:d=0.3,adelay=$(MS 85.99+$O)|$(MS 85.99+$O)[c];
-[m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=0.4,adelay=$(MS $TME)|$(MS $TME)[d];
-[a][b][c][d]amix=inputs=4:normalize=0:duration=longest,volume='$VOL':eval=frame,volume='if(between(t,$TM,$TME),0,1)':eval=frame,apad=whole_dur=$DT[mus];
+[m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=0.4,adelay=$(MS $TM)|$(MS $TM)[d];
+[a][b][c][d]amix=inputs=4:normalize=0:duration=longest,volume='$VOL':eval=frame,apad=whole_dur=$DT[mus];
 [0:a]volume=${FXV:-0.7},apad=whole_dur=$DT[fx];
 [fx][mus]amix=inputs=2:normalize=0:duration=longest,atrim=0:$DT,alimiter=limit=0.89,loudnorm=I=-14:TP=-1.5:LRA=11[aout]" \
   -map "[v]" -map "[aout]" -t $DT -c:v libx264 -preset ${PRESET:-fast} -b:v 12M -maxrate 16M -bufsize 24M -pix_fmt yuv420p -r 24 \
