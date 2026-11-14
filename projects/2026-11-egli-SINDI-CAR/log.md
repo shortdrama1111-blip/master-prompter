@@ -9,3 +9,5 @@
 | 2026-11-13 | Akti 1 seated v1 | Nano Banana Pro | ✅ 👍 | syzet mbi kokë (sipas promptit); tekst i vogël i shtrembër te çantat ("PERFUNERY", Kérastase) | modeli s’e riprodhon tekstin e vogël | edit vetëm për syzet; teksti → vendim i përdoruesit |
 | 2026-11-13 | Akti 1 v1 | Seedance 2.5 | ✅ (përdoruesi e mban) | HARD CUT-et u injoruan → take i vazhdueshëm; në ~1.5 s ajo qëndron në këmbë brenda kabinës; te 5.5–8 s shishja del e vogël/portokalli, jo Eight & Bob | modeli preferon vazhdimësinë me kamerë të fiksuar; parfumi pa sheet → forma humbet kur është larg | prerjet në montim; akti 2 si take i vazhdueshëm; sheet parfumi |
 | 2026-11-13 | Akti 2 v1 (extend) | Seedance 2.5 | ✅ "perfect" | — | take i vazhdueshëm + @video1 si master funksionoi | ngulitur; extend për aktin 3 |
+| 2026-11-14 | Akti 3 v1 (extend, 7 shot-e) | Seedance 2.5 | ✅ | doli 10 s (jo 12); fondatina vetëm 0.6 s; shot-i i fundit i gjerë 0.4 s | gjatësia e gjenerimit 10 s | ngrirje 2 s e kuadrit të fundit në montim |
+| 2026-11-14 | Montimi A (30.0 s) + B (27.2 s) | ffmpeg `tools/edit.sh` | ✅ | aktet 1–2 nga një kënd i vetëm | — | B: prerje + punch-in 1.2–1.8×; insert-e I1–I3 të propozuara |
