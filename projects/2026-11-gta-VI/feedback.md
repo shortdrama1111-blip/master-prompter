@@ -23,3 +23,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "this was trevor car, michael car and the bike of jason" + 3 screenshote nga loja | Mjetet: motori jeshil (bagger), sedani gri, pikapi i kuq me arush | Projekt: mjetet e heronjve bazohen te referencat e lojës (@image1), jo te përshkrimi im. Motori u mor si i Franklin-it (pret konfirmim) |
 | 2026-11-14 | 💡 | Dërgoi 5 product sheet (makina '86, pikapi, kabrioleti VI, kupeja e zezë, varka), "i have more" | Mjetet | — |
 | 2026-11-14 | 💡 | Dërgoi 4 sheet-et e fundit (motori jeshil, çelësi me zar, lowrider, sedani gri) | Elementet e personazheve dhe mjeteve të plota | — |
+| 2026-11-14 | 🔧 | "ti me zgjidh me te miren" (formati) | Porta e formatit | Projekt: Claude vendos 9:16 për videon |
+| 2026-11-14 | 💡🔧 | "kam kuptuar qe ndoshta per vendet eshte me mire te perdorim wide env shot jo sheet, le ta provojm ketu nje here" | Lokacionet | Projekt: plate i gjerë mjedisi, jo sheet. LESSONS.md: lokacion = wide env shot (për t'u konfirmuar pas testit) |

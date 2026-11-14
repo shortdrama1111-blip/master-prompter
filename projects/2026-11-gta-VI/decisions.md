@@ -1,7 +1,7 @@
 # Vendimet e ngulitura: gta VI
 
 ## Historia
-Skenari v2 "Ata më sollën deri këtu", 60 s, 9:16 (pret konfirmim formati). Shih `script.md`.
+Skenari v2 "Ata më sollën deri këtu", 60 s, **9:16** (vendim i regjisorit, përdoruesi: "zgjidh ti"). Plate-t e lokacioneve 16:9 si referenca. Shih `script.md`.
 
 ## Ndarja në skena (blloqe gjenerimi)
 | Skena | Koha | Gjatësia | Përmbajtja |
@@ -17,8 +17,17 @@ Skenari v2 "Ata më sollën deri këtu", 60 s, 9:16 (pret konfirmim formati). Sh
 ## Armët
 Version A me armë (heronjtë mbajnë armë, pa qitje drejt njerëzve) → nëse modeli e bllokon/shtrembëron, version B pa armë.
 
-## Blloqet e dritës
-Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
+## Blloqet e dritës (fjalë për fjalë në çdo prompt të epokës)
+**'86:** `LIGHTING: Night, 1986. Magenta neon from the hotel facades on the left, cyan neon from the beach-side signs on the right at 8000K, warm 3200K sodium streetlamps every 25 m along the median. The asphalt is wet after rain and mirrors every light source in long vertical streaks. Deep navy sky, rich blacks, fine film grain.`
+
+**'92:** `LIGHTING: Late golden hour, 1992. The sun sits 4° above the horizon at the far end of the street, 3200K, throwing shadows ten times longer than the objects that cast them. Warm smog haze at 30% density, palms and power lines in silhouette against an orange-to-peach sky, a soft horizontal lens flare, shadows lifted to warm brown.`
+
+**Sot:** `LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock and post, bleached dry grass, heat shimmer rising from the asphalt over the first 30 m, pale blue sky, the city below in 40% heat haze, high contrast, clean modern digital look.`
+
+**VI:** `LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the water, reflected in the swamp in long trembling streaks; cool white 6500K LED streetlights along the causeway every 30 m; humid air with low mist at 20% density hugging the water; deep violet-black sky; crisp modern digital look.`
+
+**Agimi:** `LIGHTING: First light, present day. The sun sits on the horizon just to the right of the skyline, 3500K gold on every surface that faces it, shadows cool blue 7000K, the streetlights switched off, the swamp mist at 40% density glowing gold, the sky graded from gold at the horizon to pale blue overhead.`
+(Drejtimi "left/right" ndryshon sipas kuadrit në promptet e videos; temperaturat, dendësitë dhe paleta mbeten fjalë për fjalë.)
 
 ## Elementet / referencat
 | Tag | Çfarë është | Statusi |
