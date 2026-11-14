@@ -1,5 +1,5 @@
 # Skena 2 · extend (8 s) · drift nga lart + salute me armë + kërcimi final
-Referencat: `@video1` = skena 2 e gjeneruar (master) · `@image1` CJ · `@image2` Egli 15. UI: Extend, 9:16, 8 s.
+Referencat: `@video1` = skena 2 e gjeneruar (master) · `@image1` CJ · `@image2` Egli 15 · `@image3` loc_92 (rruga). UI: Extend, 9:16, 8 s.
 Rezervë (B) nëse armët bllokohen: te shot-i 3, CJ i bie borisë tri herë dhe bën tri kërcime të shkurtra me hidraulikë si përshëndetje.
 
 ```
@@ -10,6 +10,7 @@ ACTIVE REFERENCES
 @video1: the master for the street, the lowrider, the boy, the driver, the light, the grade and the grain. The first frame of this continuation matches the last frame of @video1 exactly: the side view of the lowrider with its nose high at the peak of the jump.
 @image1: the driver, twenty-five, buzz cut, thin moustache, white ribbed tank top, thin gold chain. Face 100% matches the reference.
 @image2: the boy in the back seat, fifteen, black cap worn backwards, oversized white t-shirt. Face 100% matches the reference.
+@image3: the neighbourhood. Reference defines architecture, geography and dressing ONLY — not a keyframe, sets no camera position; every shot builds its own viewpoint: single-storey stucco bungalows in faded peach, mint and cream, chain-link fences, small dry lawns, tall thin palms, wooden power poles and sagging lines, 1990s cars parked at the kerb, an arched viaduct in the distance. The aerial shot shows this same neighbourhood from above: its flat roofs, yards, palm crowns and the cross-street intersection.
 
 FORMAT MODE
 Timed multishot, four shots, each from a clearly different camera position. Cuts only at the specified points, the camera does not cut on its own.
@@ -20,7 +21,7 @@ Shot 1: 84° side view at wheel height. Shot 2: 63° aerial, 40 m up, looking do
 ACTION
 0.0s to 1.5s — Same side view as the end of @video1, tracking with the car: the lowrider's nose drops from the peak, the car lands and bounces twice on its springs, the rear tyres spin and smoke as it accelerates away along the street.
 1.5s HARD CUT
-1.5s to 4.5s — Aerial view over the bungalow neighbourhood, the drone 40 m up and drifting slowly forward: rows of flat roofs, chain-link yards and tall palms throwing long shadows across the street; the green lowrider enters the intersection at 50 km/h and drifts through a full 90° left turn, a curl of white tyre smoke glowing orange in the low sun behind it, then straightens and drives on.
+1.5s to 4.5s — Aerial view over the bungalow neighbourhood of @image3, the drone 40 m up and drifting slowly forward: rows of flat roofs, chain-link yards and tall palms throwing long shadows across the street; the green lowrider enters the intersection at 50 km/h and drifts through a full 90° left turn, a curl of white tyre smoke glowing orange in the low sun behind it, then straightens and drives on.
 4.5s HARD CUT
 4.5s to 6.5s — Low from the street beside the driver's window as the lowrider rolls slowly past: the driver extends his right arm out of the window, a black pistol pointed straight up at the empty sky, and fires three shots into the air, three short muzzle flashes, the brass casings tumbling onto the asphalt; his eyes look back down the street toward where the man stayed behind, jaw set, a nod. In the back seat the boy turns around to look back through the rear window.
 6.5s HARD CUT
