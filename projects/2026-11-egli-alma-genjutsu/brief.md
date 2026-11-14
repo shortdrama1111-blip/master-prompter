@@ -13,6 +13,11 @@ Dorëzimet:
 
 Rregull bazë: identiteti i Almës i paprekur. Ndryshon VETËM veshja.
 
+## Ndryshim drejtimi (2026-11-14)
+Përdoruesi: Alma zëvendësohet me një vajzë të re (`refs/char-ref-1.jpg`, + 4–5 ref të tjera që do dërgojë).
+Fytyra e saj duhet të jetë 100% e njëjtë. Rrjedha: character sheet → 4 frame me 4 veshjet → Genjutsu.
+Nga videoja ruhen: lëvizja, kamera, kohët, ndërrimet wipe, sfondi, drita.
+
 ## Portat
 | Porta | Përgjigja |
 |---|---|
