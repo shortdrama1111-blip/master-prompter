@@ -25,3 +25,8 @@
 Në të njëjtën dritare, jashtë pipeline-it tonë: Wan 3.0 Prime Video ×15 = 438, MiniMax H3 = 24, Gemini Omni Flash 1.2 = 22.5 (gjithsej 484.5) — përdoruesi konfirmoi: NUK janë të tij/të projektit ("un nuk perdora minimax ose dicka tjeter ketu").
 ElevenLabs: connector-i kërkon rilidhje me leje shtesë → kostoja e muzikës s'u lexua.
 Bilanci Higgsfield pas projektit: 5782.1 kredite (plan Ultra).
+
+## Kostoja hipotetike pa planin unlimited (sipas përdoruesit: 5 s video = 30 kredite)
+Video: 10+10+10+5 = 35 s → 35/5 × 30 = **210 kredite**. Me imazhet (16): 226 kredite.
+Çmimi/kredit (burime publike, të pakonfirmuara): $0.043 (Ultra $129/3000) – $0.0625 (paketa e vogël).
+210 kredite ≈ $9.0–13.1 ≈ 730–1,060 lek (1 USD ≈ 81 lek, nëntor 2026).
