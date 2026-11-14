@@ -102,8 +102,8 @@ take him. There is one seat. The old ones stay behind.
 Legend: **CAM** camera · **ACT** action · **SND** sound (music comes in the edit) · **DLG** dialogue · **TR** transition out · **WHY** the director's reason.
 
 ### COLD OPEN · "The Bridge" · 0:00–0:03 · cut from Scene 4 in the edit
-- **CAM** extreme close-up on a fist, then a 0.5 s tilt up to the face.
-- **ACT** White knuckles, red-blue strobe across them; through the fingers the red die. Today's Egli, a police spotlight on his face, a wall of sirens. He closes his eyes.
+- **CAM** extreme close-up on his hands on the steering wheel, then a 0.5 s tilt up to the face.
+- **ACT** White knuckles on the wheel, red-blue strobe across them; the red die swings hard from the mirror above. Today's Egli, a police spotlight on his face, a wall of sirens. He closes his eyes.
 - **SND** sirens at maximum → hard cut to silence → the faint whine of an old TV switching on.
 - **TR** smash to black.
 - **WHY** The audience gets the question in 3 seconds: *how did he end up here?* The film answers it.
