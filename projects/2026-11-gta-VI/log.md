@@ -26,3 +26,4 @@
 | 2026-11-14 | Skena 3 patch D (billbordet) | Seedance 2.5, 4 s | ✅ | billbordet si portale sipër rrugës, jo anash | — | dita ✓, ura brenda ekranit ✓, mbush kuadrin ✓ |
 | 2026-11-14 | Montimi skena 3 v1 | ffmpeg: origjinali 0–5.958 + A 1.9–3.7 + B 0.8–3.6 + D 0–4.064 = 14.7 s | — | konvoji (C) mungon | përdoruesi s'do të rigjenerojë | HUD i ri `edit/hud_v.py` (radar drejtkëndësh që pulson kuq/blu, 5 yje të bardhë 2→3→4, paratë jeshile, shiritat), titulli LOS ANGELES 2013, riser drejt ekranit; render 70 s me preset fast |
 | 2026-11-14 | Montimi skena 4 v1 + bashkimi 3→4 | ffmpeg | — | kabrioleti mbetet i errët te kurthi | ngjyrim selektiv s'u bë (rrezik për policinë/dritat) | `scenes_3-4_v1.mp4` 25.7 s; kalimi: ekrani → ura → drone, zoom 1.15→1.0 + shkrirje 0.6 s; HUD 4→5 yje, fiket me prozhektorin (10.0–10.6) |
+| 2026-11-14 | Montimi 1–4 v1 | `edit/join_all.sh` (1-2 v3 + 3-4 v2) | — | — | — | `gta_scenes_1-4_v1.mp4` 61.9 s, 112 MB |
