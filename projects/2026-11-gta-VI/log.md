@@ -15,3 +15,4 @@
 | 2026-11-14 | Plate loc_now_pch, loc_now_freeway | me foto ref | ✅ | — | — | tabelat bosh |
 | 2026-11-14 | Plate loc_vi_aerial, loc_vi_deck, loc_dawn_deck | me foto ref + edit | ✅ | agimi u bë mbi kuvertën, jo aerial | — | aerial-i i agimit opsional (edit i loc_vi_aerial) |
 | 2026-11-14 | Skena 1 v1 | Seedance 2.5 | 👎 | pa hook, pa histori | prompti: shot 1 pa ngjarje; lock "police far behind"; shot 3 statik | v2: hook me ngjarje në 0.0 s, ndjekje me konflikt, 7 prerje |
+| 2026-11-14 | Skena 1 v3 | Seedance 2.5, 20 s | ⚠️ 60% | kupeja → makinë policie; brenda policisë duket mbrapsht; zari pa çelës; policia përpara në pasqyrë; drone me pozicione të tjera; prekje pa reagim | shih feedback | mbahen shot 1, 2, 8; rigjenerohet mesi (shot 3–7) si një bllok 11 s |
