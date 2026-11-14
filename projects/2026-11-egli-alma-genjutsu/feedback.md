@@ -13,3 +13,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "vetem ngjyra e zeze e ka detajin te menga" | Mënga signature, prompt 04 | Mënga vetëm te këmisha e zezë; Claude propozon të zezën te segmenti D (plani i afërt) |
 | 2026-11-14 | 💡 | "guri eshte i zi" · "rendi ska rendesi" | Mënga signature te këmisha e zezë | Guri i zi; rendi bordo→blu→bordo→e zezë mbetet |
 | 2026-11-14 | 🔧 | "mund ta zevendesojme te zezen me keto qe jan me t dukshme menget" | 2 foto seti blu me butona, manshetë të gjata që hapen | Kriteri i përdoruesit: detaji i produktit duhet të lexohet në kuadër → zgjidh veshjen që e tregon më mirë |
+| 2026-11-14 | 👎 | "nuk me plq prap. ma lio bluene qe te dali n fund ndoshta duket me mire meq i lash mengen n anesore" | Pas prompt 04 (v4/v5?), rezultati s'u pa nga Claude | Blu me butona në fund (= v5). Shkaku i "s'më pëlqen" i panjohur derisa të shohim videon |
