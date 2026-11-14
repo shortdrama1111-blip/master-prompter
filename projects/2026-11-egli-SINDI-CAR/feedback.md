@@ -44,3 +44,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-13 | 👎→🔧 | "nuk e dua me parfumin ketu, dua te tjera qe s'i kemi perdorur" | Akti 3 v2 → v3 | Projekt; 💡 çdo akt shfaq produkte të reja, heroi nuk përsëritet |
 | 2026-11-13 | 🔧 | "rreth 4,5 produkte cdo 2 sekonda njeri qe te shkojne 10-12 sekonda" + "un thash me jep disa produkte qe s'i kemi perdorur" | Akti 3 v4: 5 produkte × 2 s, 12 s | 💡 LESSONS.md: ritmi i produkteve në reel = ~2 s/produkt |
 | 2026-11-14 | 💡 | Ridërgoi produktet ("kam dhe disa te tjera") | Crop-et pa tekst për Clarins, Lancôme, Guerlain, Lip Glow | — |
+| 2026-11-14 | 👎🔧 | "zgjidh ti se ke do perdorim dhe mi jep te gjitha njeheresh se me lodhe" | Shumë mesazhe pyetje-përgjigje për referencat e aktit 3 | **CLAUDE.md** (rregull i ri): kur përdoruesi ka dhënë materialet, Claude zgjedh vetë dhe dorëzon paketën e plotë (skedarët + promptin) në një mesazh |
