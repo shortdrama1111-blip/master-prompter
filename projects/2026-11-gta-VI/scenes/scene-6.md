@@ -32,3 +32,6 @@ Pas shot-it 4 (zari në pëllëmbë), ~4 s:
 2. Flash-e ~0.4 s nga footage-i, kronologjikisht: Tommy varet zarin (S1) · CJ në pasqyrë (S2) · Michael anash (S3) · Franklin mes policëve (patch A) · Trevor godet (patch B) · konvoji (patch C) · Tommy ia shtyp zarin në pëllëmbë (S5).
 3. Dora mbyllet → shot 5.
 Pyetje të hapura: jehona e zërave (po/jo); replika për Michael/Franklin/Trevor apo vetëm tingujt e tyre (rekomandim: tingujt).
+
+## ⏸ Ideja e përdoruesit: "BUSTED" për heronjtë (për t'u diskutuar te skena 6)
+"for heroes I was thinking a shot of all of them busted." Sakrifica lexohet si ekrani i arrestimit të lojës: nga varka shohim heronjtë mbi urë, duart lart, të rrethuar nga policia, dhe në montim shfaqet "BUSTED" me fontin/stilin e lojës. Kandidati: shot 2 (lente e gjatë nga varka drejt urës), ose një shot i veçantë më afër.
