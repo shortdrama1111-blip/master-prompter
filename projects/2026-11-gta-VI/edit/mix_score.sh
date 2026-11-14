@@ -21,7 +21,7 @@ VOL="${MV:-0.95}*if(gt($TH,0),0.18,if(gt($DL,0),0.22,1))"
 FXV="if(gt($TH,0),${THV:-0.7},if(gt($DL,0),0.95,${FXB:-0.4}))"
 ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
 [0:v]fade=t=out:st=$(printf "%.3f" $(echo "$DF-1.0" | bc)):d=1.0,tpad=stop_mode=add:stop_duration=$END:color=black,drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x=(w-text_w)/2:y=h*0.20:enable='gte(t,$DF-1.0)':alpha='if(lt(t,$DT-1.2),1,max(0,($DT-t)/1.2))',format=yuv420p[v];
-[1:a]aresample=48000,asplit=4[m1][m2][m3][m4];
+[1:a]aresample=48000,equalizer=f=2500:t=q:w=1:g=3,equalizer=f=900:t=q:w=1:g=2,asplit=4[m1][m2][m3][m4];
 [m1]atrim=$(python3 -c "print(max(0,0.96-$O))"):61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=$(echo "59.7+$O" | bc):d=0.3[a];
 [m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=0.8,afade=t=out:st=21.8:d=1.0,adelay=$(MS 62.25+$O)|$(MS 62.25+$O)[b];
 [m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.0,afade=t=out:st=12.9:d=0.3,adelay=$(MS 85.99+$O)|$(MS 85.99+$O)[c];
