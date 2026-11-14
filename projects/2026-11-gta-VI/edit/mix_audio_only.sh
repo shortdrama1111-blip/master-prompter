@@ -11,7 +11,7 @@
 set -euo pipefail
 F=$1; M=$2; OUT=$3; TM=$4; TME=$5; END=4.4; O=${OFFSET:-0}
 DF=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$F"); DT=$(printf "%.3f" $(echo "$DF+$END" | bc))
-MS(){ python3 -c "print(int(round($1*1000)))"; }
+MS(){ python3 -c "print(int(round(($1)*1000)))"; }
 F1=/usr/share/fonts/opentype/inter/Inter-Light.otf
 # Dritaret (në kohën e filmit final, pas +1.0 s të skenës 1):
 #   TEMAT e lojës (mission passed VC + SA): zhurmat/temat lart, muzika poshtë
