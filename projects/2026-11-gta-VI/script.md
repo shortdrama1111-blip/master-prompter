@@ -171,6 +171,7 @@ shot-i në shot. Rregulli: `@tag` hyn vetëm në bllokun ku personazhi është i
 ### SEKUENCA II: "NGJITJA" · 0:20–0:40
 
 #### G3: sot · 0:20–0:30
+> **v2.1 (vendim i përdoruesit):** lokacioni = Pacific Coast Highway, Santa Monica (`refs/ref-loc_now-pch.jpg`) → autostrada. Shot 10: kupeja e zezë zbret me shpejtësi rampën e shkëmbit (jo kreshtën e kodrës) dhe ulet në PCH. Shot 12: konvoji hyn në autostradë, Michael, Franklin dhe Trevor bashkohen nga rampat. Shot 13 (telefoni) mbetet.
 `[REF: @egli_young]` `[REF: @hero_v_suit]` `[REF: @hero_v_young]` `[REF: @hero_v_wild]` `[REF: @loc_now]` `[REF: @car_now]` `[REF: @dice_keys]`
 
 **SHOT 10 · 0:20–0:21.5 · Ulja**

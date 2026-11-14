@@ -22,7 +22,7 @@ Version A me armë (heronjtë mbajnë armë, pa qitje drejt njerëzve) → nëse
 
 **'92:** `LIGHTING: Late golden hour, 1992. The sun sits 4° above the horizon at the far end of the street, 3200K, throwing shadows ten times longer than the objects that cast them. Warm smog haze at 30% density, palms and power lines in silhouette against an orange-to-peach sky, a soft horizontal lens flare, shadows lifted to warm brown.`
 
-**Sot:** `LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock and post, bleached dry grass, heat shimmer rising from the asphalt over the first 30 m, pale blue sky, the city below in 40% heat haze, high contrast, clean modern digital look.`
+**Sot (v2, PCH):** `LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock, post and palm, bleached sandstone cliff, heat shimmer rising from the asphalt over the first 30 m, deep clean blue sky with a few white clouds, high contrast, clean modern digital look.`
 
 **VI:** `LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the water, reflected in the swamp in long trembling streaks; cool white 6500K LED streetlights along the causeway every 30 m; humid air with low mist at 20% density hugging the water; deep violet-black sky; crisp modern digital look.`
 
@@ -57,3 +57,6 @@ blloqe ~10 s); imazhe → gjuhë fotografike pohore, pa bllok NEGATIVE.
 | `@hero_v_wild` | Trevor (GTA V) |
 | `@duo_vi_her` | Lucia (GTA VI) |
 | `@duo_vi_him` | Jason (GTA VI) |
+
+## Lokacioni GTA V (v2)
+Pacific Coast Highway te California Incline (Santa Monica) → autostrada. Zëvendëson rrugën malore. Plate-t me foto reference.

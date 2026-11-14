@@ -54,3 +54,28 @@ The causeway is empty and quiet, the scene ready for action to be staged in it.
 ```
 Keep the supplied image exactly — same camera, framing, causeway, railing, streetlights, swamp, mangroves, palms and skyline. Change ONE thing only: the time of day becomes first light. The sun sits on the horizon just to the right of the skyline, 3500K gold on every surface that faces it, shadows cool blue 7000K, the streetlights switched off, the swamp mist at 40% density glowing gold, the sky graded from gold at the horizon to pale blue overhead, the water a calm mirror of the sky. Everything else untouched.
 ```
+
+---
+# v2: lokacionet me foto reference
+
+## 3b · `@loc_now`: Pacific Coast Highway, Santa Monica (GTA V) · `@image1` = `refs/ref-loc_now-pch.jpg`
+```
+@image1 is the location reference: the road layout, the curving ramp climbing the bluff, the sandstone cliff, the palms on top, the traffic-light gantry, the streetlight and the distant towers follow @image1 exactly, 100% matches the reference. Rebuild it as a photorealistic wide environment plate in 16:9, camera at the edge of the near lanes, height 1.6 m, 84° wide field of view, the ramp and the cliff on the left, the open lanes running into depth on the right.
+
+The road, the ramp and the sidewalks are empty of cars and people; the asphalt is clean with crisp white lane lines. The overhead street sign is a plain green panel. The traffic lights glow green.
+
+LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock, post and palm, bleached sandstone cliff, heat shimmer rising from the asphalt over the first 30 m, deep clean blue sky with a few white clouds, high contrast, clean modern digital look.
+
+The scene is quiet and ready for action to be staged in it.
+```
+
+## 3c · `@loc_now_freeway`: autostrada (GTA V) · me referencë, kur ta gjesh
+```
+@image1 is the location reference: the freeway layout, lanes, barriers, overpasses, signs, palms and skyline follow @image1 exactly, 100% matches the reference. Rebuild it as a photorealistic wide environment plate in 16:9, camera on the shoulder at height 1.6 m, 84° wide field of view, the lanes running straight into depth toward the city.
+
+All lanes are empty of vehicles; the concrete is clean with crisp lane lines; every overhead sign is a plain green panel.
+
+LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every barrier, post and palm, heat shimmer rising from the concrete over the first 30 m, deep clean blue sky with a few white clouds, the city towers ahead in 30% heat haze, high contrast, clean modern digital look.
+
+The scene is quiet and ready for action to be staged in it.
+```
