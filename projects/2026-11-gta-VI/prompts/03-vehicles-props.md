@@ -119,3 +119,45 @@ RIGHT PANEL: the key ring lying flat on the grey surface, seen from above.
 
 The same single object in all three panels, identical colour and details. Neutral grey background in all three panels.
 ```
+
+---
+# v2: mjetet e heronjve sipas referencave të lojës (zëvendësojnë 5, 6, 7)
+
+## 5b · Sedani i Michael-it (GTA V) · `@image1` = `refs/ref-car-michael.webp`
+```
+A three-panel product reference sheet in one 16:9 image, three equal vertical panels side by side on a seamless light grey studio floor and backdrop, flat even 5000K softbox light from above and front, soft contact shadow under the object, crisp photographic realism, the object photographed like a real vehicle in a studio.
+
+@image1 is the shape reference: body shape, proportions, colour, wheels and details follow @image1 exactly, 100% matches the reference, rebuilt as a real physical vehicle with real paint, metal, rubber and glass. The object: a modern four-door sport saloon in metallic graphite grey with a soft silver sheen, a wide black honeycomb grille framed in chrome, projector headlights with round fog lamps below, dark ten-spoke alloy wheels with thin tyres, dark grey leather interior.
+
+LEFT PANEL: close-up of the front grille and the right headlight, low angle.
+CENTRE PANEL: the full car, front three-quarter view from the left at eye level 1.2 m, the whole car inside the frame.
+RIGHT PANEL: the full car, rear three-quarter view from the right.
+
+The same single object in all three panels, identical colour, condition and details. Neutral grey background in all three panels, plain unbadged bodywork with smooth surfaces where a maker's emblem would sit, licence plate holders empty and plain.
+```
+
+## 6b · Motori i Franklin-it (GTA V) · `@image1` = `refs/ref-bike-franklin.jpg`
+```
+A three-panel product reference sheet in one 16:9 image, three equal vertical panels side by side on a seamless light grey studio floor and backdrop, flat even 5000K softbox light from above and front, soft contact shadow under the object, crisp photographic realism, the object photographed like a real vehicle in a studio.
+
+@image1 is the shape reference: body shape, proportions, colour, wheels and details follow @image1 exactly, 100% matches the reference, rebuilt as a real physical vehicle with real paint, metal, rubber and glass. The object: a large touring cruiser motorcycle, gloss metallic green paint on the batwing front fairing, the fuel tank, the front fender and the two hard saddlebags, a low brown leather two-step seat, a chrome V-twin engine and chrome exhausts, wide handlebars, spoked black wheels.
+
+LEFT PANEL: close-up of the batwing fairing and the headlight.
+CENTRE PANEL: the full motorcycle on its side stand, left side profile at eye level 0.9 m, the whole bike inside the frame.
+RIGHT PANEL: the full motorcycle, rear three-quarter view from the right, showing the green saddlebags.
+
+The same single object in all three panels, identical colour, condition and details. Neutral grey background in all three panels, plain unbadged bodywork with smooth surfaces where a maker's emblem would sit, licence plate holders empty and plain.
+```
+
+## 7b · Pikapi i Trevor-it (GTA V) · `@image1` = `refs/ref-truck-trevor.webp`
+```
+A three-panel product reference sheet in one 16:9 image, three equal vertical panels side by side on a seamless light grey studio floor and backdrop, flat even 5000K softbox light from above and front, soft contact shadow under the object, crisp photographic realism, the object photographed like a real vehicle in a studio.
+
+@image1 is the shape reference: body shape, proportions, colour, wheels and details follow @image1 exactly, 100% matches the reference, rebuilt as a real physical vehicle with real paint, metal, rubber and glass. The object: a 1960s utility off-road pickup truck, faded brick-red paint that has turned matte and chalky, dust streaks and rust along the lower doors and wheel arches, a rusted steel push bar on the front with a small worn yellow teddy bear strapped to it, a red tubular roll bar over the cab with four round off-road lamps on top, tan bench seats, chunky off-road tyres on plain steel wheels, an open flat-sided bed.
+
+LEFT PANEL: close-up of the push bar with the strapped teddy bear and the round headlight.
+CENTRE PANEL: the full truck, front three-quarter view from the left at eye level 1.2 m, the whole truck inside the frame.
+RIGHT PANEL: the full truck, rear three-quarter view from the right, showing the open bed and the roll bar lamps.
+
+The same single object in all three panels, identical colour, condition and details. Neutral grey background in all three panels, plain unbadged bodywork with smooth surfaces where a maker's emblem would sit, licence plate holders empty and plain.
+```
