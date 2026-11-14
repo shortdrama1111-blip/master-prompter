@@ -29,7 +29,8 @@ Do shkruhen fjalë për fjalë kur të nisin promptet e lokacioneve.
 | `@egli_young` | `refs/egli_young-sheet-masked.png` | ✅ v1 (mjekra e plotë pranohet nga përdoruesi) |
 | `@egli_now` | `refs/egli_now-sheet-masked.png` | ✅ v1 |
 | CJ · Tommy · Lucia · Michael · Jason | `refs/<emri>-sheet-masked.png` | ✅ v1 |
-| Franklin · Trevor | | në pritje |
+| Franklin · Trevor | `refs/<emri>-sheet-masked.png` | ✅ v1 |
+| Mjetet ×8 + çelësi me zar | prompte: `prompts/03-vehicles-props.md` | në pritje |
 | lokacionet ×5, mjetet ×6, çelësi me zar | | në pritje |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
