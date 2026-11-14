@@ -9,7 +9,9 @@ AUD="-c:a pcm_s16le -ar 48000 -ac 2"
 # 1. Segmentet (burimi → timeline). Droni shkurtohet në 2.0 s (pjesa më pak reale).
 seg(){ ffmpeg -v error -y -ss $2 -to $3 -i "$SRC" -vf "setsar=1" $ENC $AUD $1.mov; }
 seg A 0.00 2.29; seg B 2.29 4.21; seg C 4.21 6.21; seg D 6.21 8.71
-seg E 8.71 11.21; seg F 11.21 12.71; seg G 13.10 15.10; seg H 15.25 17.05
+seg E 8.71 11.21; seg F 11.21 12.71; seg H 15.25 17.05
+# G: patch-i P1 (U-turn + përplasja te palma), 3 s, në vend të drone-it të vjetër
+ffmpeg -v error -y -ss 1.00 -to 4.00 -i "${P1:?vendos P1=<patch.mp4>}" -vf "scale=720:1280,setsar=1" $ENC $AUD G.mov
 blk(){ ffmpeg -v error -y -f lavfi -i color=black:s=720x1280:r=24:d=$2 -f lavfi -i anullsrc=r=48000:cl=stereo -t $2 $ENC $AUD $1.mov; }
 blk K0 0.40; blk K9 0.90
 printf "file '%s'\n" K0.mov A.mov B.mov C.mov D.mov E.mov F.mov G.mov H.mov K9.mov > list.txt

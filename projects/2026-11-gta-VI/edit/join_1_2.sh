@@ -2,7 +2,7 @@
 # Bashkon skenën 1 + 2 me kalim "drita e fenerëve": fenerët e kupesë mbushin kuadrin → e bardhë →
 # tuneli i 1992. Përdorim: bash join_1_2.sh <scene1_edit.mp4> <scene2_edit.mp4> <out.mp4>
 set -euo pipefail
-S1=$1; S2=$2; OUT=$3; HERE=$(cd "$(dirname "$0")" && pwd); MP1=${MP1:-14.67}; MP2=${MP2:-10.0}; L2=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$S2"); T1=17.15; XD=0.7; OFF=$(python3 -c "print($T1-$XD)")
+S1=$1; S2=$2; OUT=$3; HERE=$(cd "$(dirname "$0")" && pwd); MP1=${MP1:-14.71}; MP2=${MP2:-10.0}; L2=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$S2"); T1=${T1:-18.15}; XD=0.7; OFF=$(python3 -c "print($T1-$XD)")
 WH=$(mktemp -d)
 ffmpeg -v error -y -f lavfi -i "anoisesrc=c=white:r=48000:a=0.35:d=1.4" \
   -af "bandpass=f=1800:w=3000,volume='min(1,t/0.9)*if(lt(t,0.95),1,exp(-6*(t-0.95)))':eval=frame,afade=t=in:d=0.3,aformat=channel_layouts=stereo" $WH/whoosh.wav

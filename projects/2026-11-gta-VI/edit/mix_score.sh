@@ -9,17 +9,17 @@
 # Ulje: nën temat e lojës (14.5–36.0), nën megafonin (55.3–57.8), nën Tommy-n (76.6–79.8).
 # Përdorim: bash mix_score.sh <filmi.mp4> <muzika.wav> <dalja.mp4> <TM> <TME>
 set -euo pipefail
-F=$1; M=$2; OUT=$3; TM=$4; TME=$5; END=4.4
+F=$1; M=$2; OUT=$3; TM=$4; TME=$5; END=4.4; O=${OFFSET:-0}
 DF=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$F"); DT=$(printf "%.3f" $(echo "$DF+$END" | bc))
 MS(){ python3 -c "print(int(round($1*1000)))"; }
 F1=/usr/share/fonts/opentype/inter/Inter-Light.otf
-VOL="0.45*if(between(t,14.5,36.0),0.18,1)*if(between(t,55.3,57.8),0.45,1)*if(between(t,76.6,79.8),0.3,1)"
+VOL="0.45*if(between(t,14.5,36.0+$O),0.18,1)*if(between(t,55.3+$O,57.8+$O),0.45,1)*if(between(t,76.6+$O,79.8+$O),0.3,1)"
 ffmpeg -v error -y -i "$F" -i "$M" -filter_complex "
-[0:v]tpad=stop_mode=add:stop_duration=$END:color=black,drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x=(w-text_w)/2:y=h*0.20:enable='gte(t,$DF)':alpha='if(lt(t,$DT-1.2),1,max(0,($DT-t)/1.2))',format=yuv420p[v];
+[0:v]fade=t=out:st=$(printf "%.3f" $(echo "$DF-1.0" | bc)):d=1.0,tpad=stop_mode=add:stop_duration=$END:color=black,drawtext=fontfile=$F1:text='They brought me here.':fontsize=64:fontcolor=white:x=(w-text_w)/2:y=h*0.20:enable='gte(t,$DF-1.0)':alpha='if(lt(t,$DT-1.2),1,max(0,($DT-t)/1.2))',format=yuv420p[v];
 [1:a]aresample=48000,asplit=4[m1][m2][m3][m4];
-[m1]atrim=0.96:61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=59.7:d=0.3[a];
-[m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=0.8,afade=t=out:st=21.8:d=1.0,adelay=$(MS 62.25)|$(MS 62.25)[b];
-[m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.0,afade=t=out:st=12.9:d=0.3,adelay=$(MS 85.99)|$(MS 85.99)[c];
+[m1]atrim=$(python3 -c "print(max(0,0.96-$O))"):61.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.5,afade=t=out:st=$(echo "59.7+$O" | bc):d=0.3[a];
+[m2]atrim=62.0:84.8,asetpts=PTS-STARTPTS,afade=t=in:d=0.8,afade=t=out:st=21.8:d=1.0,adelay=$(MS 62.25+$O)|$(MS 62.25+$O)[b];
+[m3]atrim=84.8:98.0,asetpts=PTS-STARTPTS,afade=t=in:d=1.0,afade=t=out:st=12.9:d=0.3,adelay=$(MS 85.99+$O)|$(MS 85.99+$O)[c];
 [m4]atrim=99.6:112.0,asetpts=PTS-STARTPTS,afade=t=in:d=0.4,adelay=$(MS $TME)|$(MS $TME)[d];
 [a][b][c][d]amix=inputs=4:normalize=0:duration=longest,volume='$VOL':eval=frame,volume='if(between(t,$TM,$TME),0,1)':eval=frame,apad=whole_dur=$DT[mus];
 [0:a]apad=whole_dur=$DT[fx];
