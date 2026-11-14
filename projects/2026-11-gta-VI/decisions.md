@@ -24,9 +24,9 @@ Version A me armë (heronjtë mbajnë armë, pa qitje drejt njerëzve) → nëse
 
 **Sot (v2, PCH):** `LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right, short crisp shadows under every rock, post and palm, bleached sandstone cliff, heat shimmer rising from the asphalt over the first 30 m, deep clean blue sky with a few white clouds, high contrast, clean modern digital look.`
 
-**VI:** `LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the water, reflected in the swamp in long trembling streaks; cool white 6500K LED streetlights along the causeway every 30 m; humid air with low mist at 20% density hugging the water; deep violet-black sky; crisp modern digital look.`
+**VI (v2, ura mbi gji):** `LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the bay, reflected in the water in long trembling streaks; cool white 6500K LED streetlights along the bridge every 30 m; humid air with low mist at 20% density hugging the water around the mangrove islands; deep violet-black sky; crisp modern digital look.`
 
-**Agimi:** `LIGHTING: First light, present day. The sun sits on the horizon just to the right of the skyline, 3500K gold on every surface that faces it, shadows cool blue 7000K, the streetlights switched off, the swamp mist at 40% density glowing gold, the sky graded from gold at the horizon to pale blue overhead.`
+**Agimi (v2):** `LIGHTING: First light, present day. The sun sits on the horizon just to the right of the skyline, 3500K gold on every surface that faces it, shadows cool blue 7000K, the streetlights switched off, the mist over the water at 40% density glowing gold, the sky graded from gold at the horizon to pale blue overhead.`
 (Drejtimi "left/right" ndryshon sipas kuadrit në promptet e videos; temperaturat, dendësitë dhe paleta mbeten fjalë për fjalë.)
 
 ## Elementet / referencat
@@ -60,3 +60,7 @@ blloqe ~10 s); imazhe → gjuhë fotografike pohore, pa bllok NEGATIVE.
 
 ## Lokacioni GTA V (v2)
 Pacific Coast Highway te California Incline (Santa Monica) → autostrada. Zëvendëson rrugën malore. Plate-t me foto reference.
+
+## Lokacioni GTA VI (v2)
+Ura me hark mbi gji me ishuj mangrove, qyteti në horizont (sipas trailerit; analog real Rickenbacker Causeway). Zëvendëson kënetën. Plate: aerial natën, mbi urë natën, aerial në agim (edit).
+Vice City dhe San Andreas: plate-t gati te përdoruesi.

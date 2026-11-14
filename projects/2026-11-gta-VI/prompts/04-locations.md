@@ -79,3 +79,33 @@ LIGHTING: Midday, present day. Hard sun high overhead at 5600K from camera right
 
 The scene is quiet and ready for action to be staged in it.
 ```
+
+---
+# v2: GTA VI, ura me hark mbi gji (zëvendëson kënetën)
+
+## 4a · `@loc_vi_aerial`: ura natën, nga lart · `@image1` = foto reference e urës
+```
+@image1 is the location reference: the long arched bridge, the causeway road leading onto it, the mangrove islands, the open bay and the city skyline on the horizon follow @image1 exactly, 100% matches the reference, rebuilt as a real photograph of a real place with real water, foliage, concrete and glass. A photorealistic wide aerial environment plate in 16:9, camera 60 m above the water beside the causeway, 84° wide field of view, the bridge arching from the lower left toward the skyline at the centre of the horizon.
+
+The bridge and the causeway road are empty of vehicles; the water around the mangroves is shallow and calm.
+
+LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the bay, reflected in the water in long trembling streaks; cool white 6500K LED streetlights along the bridge every 30 m; humid air with low mist at 20% density hugging the water around the mangrove islands; deep violet-black sky; crisp modern digital look.
+
+The scene is quiet and ready for action to be staged in it.
+```
+
+## 4b · `@loc_vi_deck`: mbi urë natën, në nivelin e rrugës · `@image1` = plate-i 4a i zgjedhur
+```
+@image1 is the location reference: the same bridge, causeway, mangrove islands, bay and skyline as @image1, 100% matches the reference. A photorealistic wide environment plate in 16:9 from the road deck at the top of the bridge arch, camera in the middle of the two lanes at height 1.6 m, 84° wide field of view, looking along the bridge as it descends toward the city skyline 3 km away. A waist-high concrete railing on both sides, LED streetlights every 30 m, the bay and the dark mangrove islands below on both sides.
+
+The road deck is empty of vehicles and people.
+
+LIGHTING: Night, present day. Purple-magenta and teal LED light from the city skyline across the bay, reflected in the water in long trembling streaks; cool white 6500K LED streetlights along the bridge every 30 m; humid air with low mist at 20% density hugging the water around the mangrove islands; deep violet-black sky; crisp modern digital look.
+
+The scene is quiet and ready for action to be staged in it.
+```
+
+## 5b · `@loc_dawn`: e njëjta urë në agim, EDIT i 4a · `@image1` = plate-i 4a i zgjedhur
+```
+Keep the supplied image exactly — same camera, framing, bridge, causeway, mangrove islands, bay and skyline. Change ONE thing only: the time of day becomes first light. The sun sits on the horizon just to the right of the skyline, 3500K gold on every surface that faces it, shadows cool blue 7000K, the streetlights switched off, the mist over the water at 40% density glowing gold, the sky graded from gold at the horizon to pale blue overhead, the bay a calm mirror of the sky. Everything else untouched.
+```
