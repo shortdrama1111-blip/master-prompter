@@ -5,11 +5,14 @@ S3=$1; PA=$2; PB=$3; PD=$4; W=$5; HERE=$(cd "$(dirname "$0")" && pwd); mkdir -p 
 ENC="-c:v libx264 -preset ${PRESET:-fast} -crf 16 -pix_fmt yuv420p -r 24"; AUD="-c:a pcm_s16le -ar 48000 -ac 2"
 seg(){ D=$(echo "$4-$3" | bc); ffmpeg -v error -y -ss $3 -to $4 -i "$2" -vf "scale=720:1280,setsar=1" \
   -af "aresample=48000,afade=t=in:d=0.03,afade=t=out:st=$(echo "$D-0.04" | bc):d=0.04" $ENC $AUD $1.mov; }
-seg A "$S3" 0.000 5.958        # PCH → pasqyra → helikopteri → Michael
+seg A1 "$S3" 0.000 3.000       # PCH → pasqyra
+# helikopteri: pritet në 3.80 (pas kësaj një makinë policie hyn nga përpara e rrotullohet keq), 0.8x slow-mo
+ffmpeg -v error -y -ss 3.000 -to 3.800 -i "$S3" -vf "scale=720:1280,setsar=1,setpts=1.25*PTS" -af "aresample=48000,atempo=0.8,afade=t=in:d=0.03,afade=t=out:st=0.96:d=0.04" $ENC $AUD A2.mov
+seg A3 "$S3" 4.500 5.958       # Michael
 seg B "$PA" 1.900 3.700        # Franklin mes policëve
 seg C "$PB" 0.800 3.600        # Trevor godet
 seg D "$PD" 0.000 4.064        # billbordet → ura brenda ekranit
-printf "file '%s'\n" A.mov B.mov C.mov D.mov > list.txt
+printf "file '%s'\n" A1.mov A2.mov A3.mov B.mov C.mov D.mov > list.txt
 ffmpeg -v error -y -f concat -safe 0 -i list.txt $ENC $AUD cut.mov
 [ -d hud ] || python3 $HERE/hud_v.py hud $HERE/timeline_scene3.json >/dev/null
 # riser drejt ekranit (kalimi te skena 4)
@@ -26,8 +29,8 @@ colorbalance=rs=-0.015:bs=0.03:rh=0.02:bh=-0.015,split[a][b];
 [s]drawtext=fontfile=$F1:text='L O S   A N G E L E S':fontsize=66:fontcolor=white:x=(w-text_w)/2:y=(h/2)-90:alpha='$AL',
 drawtext=fontfile=$F2:text='2 0 1 3':fontsize=50:fontcolor=white:x=(w-text_w)/2:y=(h/2)+4:alpha='$AL',format=yuv420p[v];
 [0:a]acompressor=threshold=-24dB:ratio=3:attack=8:release=180:makeup=4dB[o];
-[2:a]adelay=12200|12200,volume=0.8[r];
+[2:a]adelay=11700|11700,volume=0.8[r];
 [o][r]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[aout]" \
   -map "[v]" -map "[aout]" -c:v libx264 -preset ${PRESET:-fast} -b:v 14M -maxrate 18M -bufsize 28M -pix_fmt yuv420p -r 24 \
-  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene3_edit_v1.mp4
-ffprobe -v error -show_entries format=duration -of csv=p=0 scene3_edit_v1.mp4
+  -c:a aac -b:a 256k -ar 48000 -movflags +faststart scene3_edit_v2.mp4
+ffprobe -v error -show_entries format=duration -of csv=p=0 scene3_edit_v2.mp4
