@@ -30,6 +30,11 @@
 - Zëri dizajnohet në ElevenLabs (Voice Design), jo klon. Audio gjenerohet e para, për çdo skenë veç. Lip-sync shqip, "perfect". Hibrid: disa momente voice-over,
   pjesa tjetër lip-sync në kamerë.
 
+## Audiot (Higgsfield media)
+| Linja | Skedari | Media ID | Gjatësia |
+|---|---|---|---|
+| 01 | `audio/krenar-audio-1.mp3` (eleven_v4) | `ac6eb12d-4399-4000-bd4e-c5b5f1703633` | 4.52 s |
+
 ## Finali
 - Kuadri final qëndron i ngrirë 2 s, sipas scriptit (kërkesa e klientit ka përparësi; shih feedback.md).
 
