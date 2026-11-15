@@ -6,7 +6,8 @@
 
 ## Personazhi: Krenar
 - Fytyra, flokët, mjekra: si në fotot `references/IMG_88*.jpg` (konfirmuar).
-- Veshja: **doktor** (kërkesë e përdoruesit). Detajet e veshjes: në pritje të konfirmimit.
+- Veshja (konfirmuar 2026-11-15): triko blu e errët me qafë gjysmë të lartë, përparëse e bardhë
+  doktori sipër, stetoskop i zi në qafë, pantallona të zeza, orë e zezë.
 - Character sheet: paneli i pasmë ndërtohet nga Claude (mungon foto nga mbrapa; pamja nga pas
   pothuajse s'shihet në film).
 
@@ -17,8 +18,13 @@
 ## Stili
 - Sipas scriptit: blu e errët, dritë e bardhë, theks turkez. Plate-t gjenerohen nga e para.
 
+## Stetoskopi (konfirmuar)
+- 01: stetoskopi mbi ekranin e telefonit → ngre sytë te kamera (hook).
+- 03: stetoskopi mbi panelin e sigurisë, "kontroll", pastaj panel tjetër.
+- 06: stetoskopi në qafë, tregon butonin = "diagnoza".
+
 ## Zëri dhe lip-sync
-- Zëri i Krenarit krijohet me AI. Lip-sync shqip, "perfect". Hibrid: disa momente voice-over,
+- Zëri dizajnohet në ElevenLabs (Voice Design), jo klon. Audio gjenerohet e para, për çdo skenë veç. Lip-sync shqip, "perfect". Hibrid: disa momente voice-over,
   pjesa tjetër lip-sync në kamerë.
 
 ## Finali

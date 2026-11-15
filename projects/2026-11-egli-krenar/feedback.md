@@ -13,3 +13,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-14 | 🔧 | "PO si ne foto por duhet ta vesh si doktor" | Pamja e Krenarit: flokë/mjekër si në foto, veshje doktori (si ref-doctor-instagram) | Projekti (decisions.md) |
 | 2026-11-14 | 🔧 | "ndjekim scriptin dhe e gjenerojme dhe njehere fotot nga fillimi s'esht problem" | Stili: scripti (blu e errët, dritë e bardhë, theks turkez), jo ngjyrat rozë/portokalli të ref-doctor | Projekti (decisions.md) |
 | 2026-11-14 | 👍 | "mund t besh dhe disa adjustment psh ti degjoj me stetoskop e keshtu sepse esht funny dhe mendoj se shkon paralellizmi" | Koncepti "doktori i Meta-s": stetoskopi mbi panele/telefon | 💡 Metafora vizuale e profesionit + humori lejohen kur e forcojnë mesazhin → LESSONS.md |
+| 2026-11-15 | 🔧 | "zerin do ta krijoj me eleven labs, me jep nje ze te pershtatshem" | Zëri: i dizajnuar në ElevenLabs (jo klon i Krenarit) | Projekti |
+| 2026-11-15 | 👍 | "po mendoj esht mire" | 3 momentet e stetoskopit (01 hook, 03 paneli i sigurisë, 06 diagnoza) | Projekti |
+| 2026-11-15 | 🔧 | "veshja po si propozon ti" | Triko blu e errët me qafë gjysmë të lartë + përparëse e bardhë doktori + stetoskop i zi + pantallona të zeza + orë e zezë | Projekti (decisions.md) |
