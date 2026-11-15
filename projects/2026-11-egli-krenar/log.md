@@ -28,3 +28,4 @@
 | 2026-11-15 | Blockout A v4 | Blender lokal (përdoruesi), skripti v4 | 🟡 shot 1 makro + tërheqje me hark ✓; gjesti i duarve që hap botën te shot 4 ✓ | shot 3b del përsëri pothuajse frontal dhe koka zë kuadrin; gjysma e dytë e shot 4: figura pothuajse e palëvizur, panelet të vogla dhe lart | — | kompensim në prompt (3/4 shprehimisht, ecën gjatë gjithë shot 4) |
 | 2026-11-15 | Blloku A v5 | Seedance 2.5 (përdoruesi) | ✅ **APROVUAR** | heqja e stetoskopit (rregullohet në fund) | — | `renders/blockA-v5-APROVUAR.mp4`; kuadri i fundit → `references/blockA-lastframe.jpg` |
 | 2026-11-15 | Audio 03 + 04 | ElevenLabs eleven_v4, zëri Nikola (MCP, Claude) | ✅ 03: 8.96 s / 8.56 s · 04: 7.12 s / (take 2 në pritje) · 452 kredite | — | — | flow VCsVJZqQ23Y3ko7yaAbA; përdoruesi zgjedh take-un |
+| 2026-11-15 | Audio 03 + 04 të zgjedhura | përdoruesi (nga take-t e Claude) | ✅ 03: 8.91 s · 04: 7.08 s | — | — | `audio/krenar-audio-3.mp3`, `audio/krenar-audio-4.mp3` |
