@@ -68,3 +68,6 @@ Ky është projekti i dytë i provës për konfliktin.
 
 ## Rruga e videos (2026-11-15)
 - Reference-to-video në Seedance: @krenar v2 + plate i kabinetit bosh. Seedance zgjedh këndet brenda drejtimit të promptit. Pa kuadër fillestar.
+
+## TODO për fund
+- Blloku A: heqja e stetoskopit (3.0–4.0 s) — rregullim i veçantë.
