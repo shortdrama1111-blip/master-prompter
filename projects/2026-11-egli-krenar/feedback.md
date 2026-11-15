@@ -29,3 +29,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-15 | 💡 | "ndoshta mund ti vendosim nje badge" | Kartë identifikimi doktori në përparëse | Projekti (veshja) |
 | 2026-11-15 | 🔧 | "me radhe, me radhe, mos mi jep te gjitha keshtu" | Claude dha badge + audio + video në një mesazh | **Kandidat për CLAUDE.md:** në rrugën manuale, një hap në një mesazh; hapi tjetër vetëm pas rezultatit (bie ndesh me rregullin 15 "paketa e plotë në një mesazh" → pyet te mbyllja) |
 | 2026-11-15 | 🔧 | "te badge a nuk duhet shkruar emri" + "me jep vetem prompt per badge dhe pastaj ta vendosim te perparesja" | Badge si imazh më vete, me emër, pastaj edit mbi përparëse | Projekti; 💡 tekst i vogël: gjenero objektin veç, kontrollo shkronjat, pastaj vendose |
+| 2026-11-15 | 👎 | "duket shume e madhe" | Edit badge mbi përparëse, aplikuar te figura e plotë në sfond gri | Projekti: badge ~6×4 cm |
