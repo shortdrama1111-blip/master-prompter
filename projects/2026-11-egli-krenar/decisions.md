@@ -40,6 +40,7 @@
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
 |---|---|---|
+| @krenar | `references/krenar-sheet-v1.jpg` | Sheet me 3 panele, fytyra e qendrës e mbuluar. Ora në dorën e djathtë: kjo është standardi tani |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
 Përdoruesi: "të njëjtën ndjekim, e provojmë". I njëjti drejtim si te 2026-11-egli-SINDI-CAR:

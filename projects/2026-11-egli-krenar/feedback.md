@@ -18,3 +18,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-15 | 🔧 | "veshja po si propozon ti" | Triko blu e errët me qafë gjysmë të lartë + përparëse e bardhë doktori + stetoskop i zi + pantallona të zeza + orë e zezë | Projekti (decisions.md) |
 | 2026-11-15 | 🔧 | "kabinet hapsir digjitale" | Vendi: fillon në kabinet doktori → shkrihet në hapësirë digjitale abstrakte | Projekti |
 | 2026-11-15 | 💡 | "e provojm me logot e vertera, po u shtremeruan i vendosim n montim" | Logot reale (Instagram, WhatsApp, Meta) në panele | Rezultati → LESSONS.md (a i mban modeli logot e njohura?) |
+| 2026-11-15 | 👍 | (pranoi variantin dhe e dërgoi pa komente) | Character sheet v1, prompti `prompts/01-character-sheet.md`, Nano Banana Pro/GPT Image | Prompti i sheet-it funksionoi me 4 foto reference në rendin fytyrë → 3/4 → profil → trup |
