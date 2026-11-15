@@ -13,7 +13,7 @@ Meta nuk është vetëm të postosh një foto apo të bësh një reklamë. Ësht
 ## Teksti për çdo skenë (me diakritikë, numrat me fjalë)
 01: Meta nuk është vetëm të postosh një foto apo të bësh një reklamë.
 02: Është përmbajtje, komunikim me klientët, reklamim dhe siguri. Dhe këto pjesë lidhen me njëra-tjetrën.
-03: Në trajnimin tim mëson për Instagram dhe Reels, WhatsApp për biznes, reklamat, audiencat, privatësinë dhe rregullat e Meta-s.
+03: Në trajnimin tim mëson për Instagram dhe Reels, WhatsApp për biznes, reklamat, audiencat, privatësinë dhe rregullat e Meta.
 04: Plus, gjashtëmbëdhjetë leksione bonus për sigurinë. Me akses përgjithmonë, që të mësosh me ritmin tënd.
-05: Si asnjëherë më parë: Gjithçka që duhet të dish rreth Meta-s, me tetëdhjetë përqind zbritje. Vetëm për katër ditë!
+05: Si asnjëherë më parë: Gjithçka që duhet të dish rreth Meta, me tetëdhjetë përqind zbritje. Vetëm për katër ditë!
 06: Regjistrohu tani. Oferta zgjat katër ditë. Njohuritë mbeten me ty.
