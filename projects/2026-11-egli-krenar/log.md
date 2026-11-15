@@ -24,3 +24,4 @@
 | 2026-11-15 | Dizajni i paneleve v2 (edit) | përdoruesi | ✅ etiketat → pika e shirita, logot të paprekura | — | — | referenca e paneleve |
 | 2026-11-15 | Blockout A v3 | Blender lokal (përdoruesi), skripti v3 | ✅ 16 s, 6 kënde, figura ecën, kran te shot 4 me panelet brenda kuadrit, ndjekje anash + dora te paneli te shot 5 | shot 2 nga lart: koka zë gjysmën e kuadrit; shot 3b del pothuajse frontal | — | @video1 për Seedance |
 | 2026-11-15 | Blloku A v4 | Seedance 2.5 (përdoruesi), blockout v3 + panelet v2 | 🟡 shot 5 "okayish" | shot 1–2 statike; heqja e stetoskopit jo natyrale; shot 4 figura e palëvizur, panelet nga mbrapa | blockout: figura pa veprim në shot 1 dhe 4 | blockout v4 + dizajn bote |
+| 2026-11-15 | Dizajni i botës v1 | përdoruesi | ✅ rrjetë dyshemeje, kolona drite, grupe panelesh me rrjet fijesh, mjegull, zonë e ndriçuar përpara | — | — | `references/world-design-v1-user.jpg` |
