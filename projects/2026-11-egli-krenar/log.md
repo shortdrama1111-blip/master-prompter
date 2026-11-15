@@ -12,3 +12,4 @@
 | 2026-11-15 | Zëri: Voice Design | ElevenLabs (eleven_ttv_v3 + multilingual_ttv_v2) | ❌ | "'sq' is not a supported language code" | Voice Design s'e pranon shqipen | Kalim te zë ekzistues + eleven_v3 (TTS) |
 | 2026-11-15 | Audio 01 test | ElevenLabs eleven_v3, zëri "Nikola – Balkan Pro" (s'ka zë shqip në librari) | ⏳ 2 take, 3.84 s / 4.08 s, 130 kredite | duhet dëgjuar: shqiptimi shqip + theksi ballkanik | — | flow: https://elevenlabs.io/app/flows/VCsVJZqQ23Y3ko7yaAbA |
 | 2026-11-15 | Audio 01 | ElevenLabs eleven_v4 (përdoruesi) | ✅ 4.52 s | — | — | `audio/krenar-audio-1.mp3` · Higgsfield media `ac6eb12d-4399-4000-bd4e-c5b5f1703633` (krenar-audio-1-v4). Versioni i vjetër (v3, 3.87 s) → media `0bb22141-…`, nuk përdoret |
+| 2026-11-15 | Audio 02 | ElevenLabs eleven_v4 (përdoruesi) | ✅ 7.39 s | — | — | `audio/krenar-audio-2.mp3` · Higgsfield media `e0773c4e-4692-4bc6-bbfe-c3e09f905657` |

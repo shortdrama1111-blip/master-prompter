@@ -34,6 +34,9 @@
 | Linja | Skedari | Media ID | Gjatësia |
 |---|---|---|---|
 | 01 | `audio/krenar-audio-1.mp3` (eleven_v4) | `ac6eb12d-4399-4000-bd4e-c5b5f1703633` | 4.52 s |
+| 02 | `audio/krenar-audio-2.mp3` (eleven_v4) | `e0773c4e-4692-4bc6-bbfe-c3e09f905657` | 7.39 s |
+
+Blloku A me audiot reale: 3.0 s pa fjalë + 4.5 s (01) + 0.3 s pauzë + 7.4 s (02) ≈ **15.5 s → gjenerim 16 s** (brief-i v1 ishte 13 s, përditësohet pas blockout-it v1).
 
 ## Finali
 - Kuadri final qëndron i ngrirë 2 s, sipas scriptit (kërkesa e klientit ka përparësi; shih feedback.md).
