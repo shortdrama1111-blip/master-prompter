@@ -10,7 +10,7 @@
   doktori sipër, stetoskop i zi në qafë, pantallona të zeza, orë e zezë.
 - Shtesë (2026-11-15): kartë identifikimi e bardhë në xhepin e gjoksit (ana e majtë e tij) me ikonë
   turkeze zemër-puls, pa shkrim (emri, nëse duhet, në montim).
-- Ora: dora e djathtë (standard nga sheet-i).
+- Ora: **dora e majtë**, byzylyk i hollë i artë në të djathtën (standard nga sheet-i v2, zëvendëson v1).
 - Character sheet: paneli i pasmë ndërtohet nga Claude (mungon foto nga mbrapa; pamja nga pas
   pothuajse s'shihet në film).
 
@@ -45,7 +45,8 @@ Status: në përdorim (përdoruesi vazhdoi pa kundërshtim, 2026-11-15).
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
 |---|---|---|
-| @krenar | `references/krenar-sheet-v1.jpg` | Sheet me 3 panele, fytyra e qendrës e mbuluar. Ora në dorën e djathtë: kjo është standardi tani |
+| @krenar (v2, aktiv) | `references/krenar-sheet-v2.jpg` | Sheet v2 me badge, nga fotot reale, fytyra e qendrës e mbuluar |
+| @krenar v1 (i vjetër) | `references/krenar-sheet-v1.jpg` | Sheet me 3 panele, fytyra e qendrës e mbuluar. Ora në dorën e djathtë: kjo është standardi tani |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
 Përdoruesi: "të njëjtën ndjekim, e provojmë". I njëjti drejtim si te 2026-11-egli-SINDI-CAR:
@@ -55,3 +56,6 @@ Ky është projekti i dytë i provës për konfliktin.
 
 ## Kamera
 - Dinamike: kënde qartë të ndryshme brenda çdo blloku, prerje mbi lëvizje, asnjë kuadër statik (përveç freeze-it final të kërkuar).
+
+## Rruga e videos (2026-11-15)
+- Reference-to-video në Seedance: @krenar v2 + plate i kabinetit bosh. Seedance zgjedh këndet brenda drejtimit të promptit. Pa kuadër fillestar.
