@@ -8,6 +8,9 @@
 - Fytyra, flokët, mjekra: si në fotot `references/IMG_88*.jpg` (konfirmuar).
 - Veshja (konfirmuar 2026-11-15): triko blu e errët me qafë gjysmë të lartë, përparëse e bardhë
   doktori sipër, stetoskop i zi në qafë, pantallona të zeza, orë e zezë.
+- Shtesë (2026-11-15): kartë identifikimi e bardhë në xhepin e gjoksit (ana e majtë e tij) me ikonë
+  turkeze zemër-puls, pa shkrim (emri, nëse duhet, në montim).
+- Ora: dora e djathtë (standard nga sheet-i).
 - Character sheet: paneli i pasmë ndërtohet nga Claude (mungon foto nga mbrapa; pamja nga pas
   pothuajse s'shihet në film).
 
@@ -49,3 +52,6 @@ Përdoruesi: "të njëjtën ndjekim, e provojmë". I njëjti drejtim si te 2026-
 - Video → `seedance-clean`: vetëm pohore, pa emra pajisjesh/filmi, take të gjata/extend.
 - Imazhe → gjuhë fotografike pohore, pa bllok NEGATIVE.
 Ky është projekti i dytë i provës për konfliktin.
+
+## Kamera
+- Dinamike: kënde qartë të ndryshme brenda çdo blloku, prerje mbi lëvizje, asnjë kuadër statik (përveç freeze-it final të kërkuar).
