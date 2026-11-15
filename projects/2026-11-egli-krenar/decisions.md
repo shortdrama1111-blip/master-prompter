@@ -34,7 +34,7 @@
 ```
 Lighting: one large soft cool-white key light at 5600K from the front, slightly above eye level and a little to the left, giving low-contrast, even light on his face and the white lab coat. The floating holographic panels glow turquoise and add a cyan edge light on his cheeks, beard and hands. The room behind him falls off into deep navy-blue darkness at 8% brightness, with medical equipment readable only as dark silhouettes. Blacks hold a deep navy tint, fine natural film grain, a soft halo around every glowing panel.
 ```
-Status: propozim, në pritje të miratimit.
+Status: në përdorim (përdoruesi vazhdoi pa kundërshtim, 2026-11-15).
 
 ## Ngjyra: 60:30:10, aksenti i rezervuar
 - 60% navy e errët (sfondi, hijet) · 30% e bardhë (përparësja, drita kryesore) · 10% turkez = vetëm panelet.
