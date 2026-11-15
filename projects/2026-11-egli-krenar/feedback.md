@@ -16,3 +16,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-15 | 🔧 | "zerin do ta krijoj me eleven labs, me jep nje ze te pershtatshem" | Zëri: i dizajnuar në ElevenLabs (jo klon i Krenarit) | Projekti |
 | 2026-11-15 | 👍 | "po mendoj esht mire" | 3 momentet e stetoskopit (01 hook, 03 paneli i sigurisë, 06 diagnoza) | Projekti |
 | 2026-11-15 | 🔧 | "veshja po si propozon ti" | Triko blu e errët me qafë gjysmë të lartë + përparëse e bardhë doktori + stetoskop i zi + pantallona të zeza + orë e zezë | Projekti (decisions.md) |
+| 2026-11-15 | 🔧 | "kabinet hapsir digjitale" | Vendi: fillon në kabinet doktori → shkrihet në hapësirë digjitale abstrakte | Projekti |
+| 2026-11-15 | 💡 | "e provojm me logot e vertera, po u shtremeruan i vendosim n montim" | Logot reale (Instagram, WhatsApp, Meta) në panele | Rezultati → LESSONS.md (a i mban modeli logot e njohura?) |

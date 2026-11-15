@@ -31,12 +31,14 @@ Montazhi: tekstet, titrat, kopertina reale, data/ora e mbarimit dhe linku shtohe
 ## Portat
 | Porta | Përgjigja |
 |---|---|
-| Vendi | e hapur (hapësirë digjitale abstrakte? studio? zyrë?) |
-| Koha | e hapur (brendësi: varet nga blloku i dritës) |
-| Formati | 9:16 (script); gjatësia 40 s, për t'u konfirmuar |
+| Vendi | kabinet doktori i errët → shkrihet në hapësirë digjitale abstrakte |
+| Koha | brendësi, pa dritë dite; drita vjen nga blloku i fiksuar |
+| Formati | 9:16, ~40 s (gjatësia përfundimtare sipas audiove) |
 | Epoka | e sotmja |
 | Subjekti | Krenar (personazh, i vetmi) |
 | Energjia | e qetë dhe e besueshme → ngjitje te oferta (05–06) |
-| Markimi | kopertina reale, −80%, tekstet në montim; si shfaqen ikonat e Meta: e hapur |
+| Markimi | logot reale provohen në gjenerim, po u shtrembëruan → montim; kopertina, −80%, tekstet në montim |
 | Modeli (Seedance 2.5 / Kling / tjetër) | Seedance 2.5 (video), i paracaktuar; imazhet: të hapura |
 | Rruga | manuale (përdoruesi gjeneron, Claude jep paketën) |
+
+**Portat: të mbyllura (2026-11-15).**
