@@ -19,3 +19,13 @@ Te sekonda 5 ai bën një hap përpara drejt kamerës. Me këtë hap kabineti fi
 Nga sekonda 6 deri në 12 ai flet ndërsa panelet hapen: "Është përmbajtje, komunikim me klientët, reklamim dhe siguri." Gjysma e parë e fjalisë mbetet me lip-sync, sepse ai shikon kamerën. Te "Dhe këto pjesë lidhen me njëra-tjetrën" ai kthen kokën nga panelet dhe zëri vazhdon si voice-over. Në të njëjtin moment fije të holla drite turkeze lidhin panelet njërin me tjetrin, si një rrjet. Blloku mbyllet me Krenarin në mes të rrjetit, me trupin pak të kthyer anash. Kjo lëvizje vazhdon në hapjen e bllokut B, ku kamera e ndjek anash.
 
 Zëri: rrahja e zemrës nga telefoni, një zhurmë e butë elektronike kur ngrihen panelet, një hap mbi dysheme dhe zëri i Krenarit. Pa muzikë, sepse ajo vjen në montim.
+
+# Skena 2 — Blloku B (16–32 s), v1 (në pritje të miratimit)
+
+Blloku B nis aty ku mbaroi blloku A: Krenari ecën në hapësirën digjitale dhe kamera e ndjek anash, pa asnjë kërcim, sikur të ishte e njëjta xhirim. Rreth tij panelet tani janë rreshtuar si në një ekspozitë, njëri pas tjetrit, në lartësinë e syve. Ai flet drejt kamerës ndërsa ecën: "Në trajnimin tim mëson për Instagram dhe Reels, WhatsApp për biznes, reklamat, audiencat, privatësinë dhe rregullat e Meta." Sa herë që përmend diçka, dora e tij kalon mbi panelin përkatës dhe paneli ndizet: te Instagrami luhet një Reel i vogël, te WhatsApp-i shfaqen flluska mesazhesh, te reklamat grafiku ngrihet lart. Kamera ndryshon kënd me ritmin e fjalëve: një herë nga përpara ndërsa ai ecën, një herë nga mbrapa paneleve, me Krenarin që shihet përmes xhamit, një herë nga poshtë.
+
+Kur arrin te paneli i fundit, ai i sigurisë me mburojën, ndalet. Ky është momenti i dytë i humorit. Si doktor, merr stetoskopin nga qafa, e vendos mbi mburojë dhe e "dëgjon", me vetullat të ngritura dhe me sy nga kamera, sikur të thoshte "këtu duhet kontroll". Mburoja i përgjigjet me një puls drite.
+
+Pastaj mburoja ndahet në gjashtëmbëdhjetë karta të vogla drite, secila një leksion, që fluturojnë dhe rrotullohen rreth tij në një unazë, ndërsa kamera rrotullohet në drejtim të kundërt. Ai thotë: "Plus, gjashtëmbëdhjetë leksione bonus për sigurinë." Kartat e unazës shtrëngohen dhe bashkohen në një simbol të madh infiniti prej drite, që qëndron pezull pas tij. Krenari kthehet nga kamera dhe, i qetë e me një buzëqeshje, mbyll: "Me akses përgjithmonë, që të mësosh me ritmin tënd." Blloku mbaron me kamerën që i afrohet ngadalë, me infinitin që ndriçon pas kokës së tij. Nga ky moment nis blloku C dhe oferta.
+
+Nga zërat: hapat mbi dyshemenë prej xhami, tinguj të butë elektronikë kur ndizet çdo panel, rrahja e zemrës kur stetoskopi prek mburojën, fëshfërima e kartave që rrotullohen dhe zëri i Krenarit. Pa muzikë.
