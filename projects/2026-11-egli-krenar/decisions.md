@@ -54,6 +54,7 @@ Status: në përdorim (përdoruesi vazhdoi pa kundërshtim, 2026-11-15).
 | Tag | Çfarë është | Shënime |
 |---|---|---|
 | @krenar-doctor-v2 (aktiv) | `references/krenar-sheet-v2.jpg` · Higgsfield Element `7c3598f0-6cd0-4035-8ad8-e89eb3ca3561` | Sheet v2 me badge, nga fotot reale, fytyra e qendrës e mbuluar |
+| kabineti (aktiv) | `references/kabinet-v3-user.jpg` | Ambienti i bllokut A, si @image1 (jo keyframe) |
 | @krenar v1 (i vjetër) | `references/krenar-sheet-v1.jpg` | Sheet me 3 panele, fytyra e qendrës e mbuluar. Ora në dorën e djathtë: kjo është standardi tani |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)

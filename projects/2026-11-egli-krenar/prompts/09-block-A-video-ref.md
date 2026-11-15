@@ -1,5 +1,5 @@
 # Blloku A — Seedance 2.5, reference-to-video pa blockout (v2), 16 s
-Ngarkimi: @krenar-doctor-v2 (Element) · @image1 = `references/kabinet-v1-crop.jpg` · @audio1 = krenar-audio-1-v4 · @audio2 = krenar-audio-2-v4
+Ngarkimi: @krenar-doctor-v2 (Element) · @image1 = `references/kabinet-v3-user.jpg` · @audio1 = krenar-audio-1-v4 · @audio2 = krenar-audio-2-v4
 Cilësimet: 16 s · 9:16 · audio on.
 
 ```
