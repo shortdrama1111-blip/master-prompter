@@ -37,3 +37,4 @@ Soft diffused daylight from a large source above the camera, about 5500 K, low c
 | @egli-leather | 92a62e69-38a3-4929-bf3f-da5632fd68f6 |
 | @egli-ivory | f9a73fd4-200c-41b1-8538-d47fc60e09fe |
 | @egli-brown | 52352da6-93aa-46f6-89d3-c55e35da7893 |
+| @egli-sheet | 791875a7-3d81-43a4-b555-bd32df21edf9 (sheet bazë v2, fytyra e qendrës e maskuar) |
