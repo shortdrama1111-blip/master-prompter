@@ -1,4 +1,4 @@
-# 05 — Genjutsu v3 (ashensori), v1
+# 05 — Genjutsu v3 (ashensori), v2 (pa asnjë tekst)
 
 Ngarkimi: @Video1 = refs/v3/reference-video-v3-trim.mp4 · @Image1 = fotoja e fytyrës (dërguar nga përdoruesi) · @Image2..@Image5 = refs/v3/outfit-1..4.jpg
 Cilësimet: replace / video edit · 12s (burimi 11.9s) · 9:16 · audio e gjeneruar OFF.
@@ -20,7 +20,7 @@ The woman walking out of the elevator in @Video1 is replaced for the whole clip 
 
 Each section opens with the elevator doors parting and her already in the new outfit. Her face and hair stay identical in all four sections, and in the final section, as she reaches the camera from 10 to 12 seconds, her face matches @Image1 exactly.
 
-The frame shows only the filmed scene: the yellow day-name captions of @Video1 are removed from every frame, with the elevator doors and the corridor continuing cleanly where the words were.
+The frame shows only the filmed scene, with no text of any kind: every overlaid caption and word of @Video1, including the yellow day names, is removed from every frame, from the first frame to the last, with the elevator doors, the corridor and her body continuing cleanly where the words were. The clothing, bags and walls carry no letters, logos or labels.
 
 Bright neutral daylight-balanced light at about 5000 K, a cool overhead light panel inside the elevator cab, soft even fill in the white corridor, crisp reflections on the brushed stainless-steel doors and walls, clean high-key exposure, exactly as in @Video1.
 ```
