@@ -20,3 +20,10 @@ Soft diffused daylight from a large source above the camera, about 5500 K, low c
 - Sheet me veshje neutrale të zezë (përjashtim nga rregulli #13, 4 veshje).
 - Hartimi: A→veshja 1, B→2, C→3, D→4.
 - Promptet: vetëm pohore, pa emra pajisjesh (si SINDI-CAR) — propozuar, pa kundërshtim.
+
+## Higgsfield media (ngarkuar nga Claude me kërkesë të përdoruesit, 2026-11-16; pa gjenerim)
+- outfit-1 pallto: 172b93c2-77fd-4d51-b714-04199f98411c
+- outfit-2 lëkurë: 65ae392b-8981-4834-9d8b-24bcd5f4842e
+- outfit-3 triko: e180e495-2def-49f0-bd5a-947b5a55d757
+- outfit-4 kafe: 427c94eb-5312-4dbf-b184-b3d6d9d1365d
+- fytyra: në pritje (skedari s'u ruajt në sesion)
