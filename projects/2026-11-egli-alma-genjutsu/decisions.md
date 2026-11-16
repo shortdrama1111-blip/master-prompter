@@ -27,3 +27,13 @@ Soft diffused daylight from a large source above the camera, about 5500 K, low c
 - outfit-3 triko: e180e495-2def-49f0-bd5a-947b5a55d757
 - outfit-4 kafe: 427c94eb-5312-4dbf-b184-b3d6d9d1365d
 - fytyra: në pritje (skedari s'u ruajt në sesion)
+- fytyra: ce236ff4-7e0a-4a57-99dd-7908399a5d96
+
+## Elementet Higgsfield (v3 ashensor)
+| Tag | ID |
+|---|---|
+| @egli-face | eebf415f-4981-4795-bc46-cf0a930f3385 |
+| @egli-coat | 7dc5f73e-f0f3-4794-aa79-2d1bbb55ad3a |
+| @egli-leather | 92a62e69-38a3-4929-bf3f-da5632fd68f6 |
+| @egli-ivory | f9a73fd4-200c-41b1-8538-d47fc60e09fe |
+| @egli-brown | 52352da6-93aa-46f6-89d3-c55e35da7893 |
