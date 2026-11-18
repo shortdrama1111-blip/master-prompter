@@ -44,3 +44,17 @@ Soft diffused daylight from a large source above the camera, about 5500 K, low c
 - Lokacioni: plate të fiksuara (4), jo zgjedhje e lirë e Seedance.
 - Drita: vjeshtë pasdite 4500 K (supozim, pret konfirmim); blloku te prompts/20.
 - Sheet-et: refs/v4/sheet-outfit-{1,2,3}-masked.jpg.
+- Veshjet: 3 veshje, ndërrim te kalimet (përdoruesi, AskUserQuestion). 1→Duomo, 2→butikët, 3→portiku+Arno.
+- Drita e ngulitur (lock what you got, plate-t dolën sipas bllokut): blloku i prompts/20, fjalë për fjalë.
+- Ambienti cloud "master-prompter" me upload.higgsfield.ai (Claude, me miratim).
+
+## Elementet Higgsfield v4 (ngarkuar nga Claude me kërkesë, pa gjenerim)
+| Tag | ID |
+|---|---|
+| @env-modele-1 butikët | f855c8d2-77a9-4c03-add7-37cdf7996ce6 |
+| @env-modele-2 Duomo | caf7cfd2-c321-4a29-8c36-dc61530a9d55 |
+| @env-modele-3 portiku | 6c1cda09-6775-4810-8e1b-e2ac30d58227 |
+| @env-modele-4 Arno | c0ea1441-3344-4b33-a032-bd73f13a5282 |
+| @model-firenze-1 pallto | 86c468ab-a099-4ca2-b0c4-9ea42bd01090 |
+| @model-firenze-2 kuadrata | bc1a6fb9-7080-46c2-a6dd-95bdb4e72a43 |
+| @model-firenze-3 e zezë | 9e892667-41a2-4891-a103-3f4fd6a4205f |
