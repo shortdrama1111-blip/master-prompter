@@ -38,3 +38,9 @@ Soft diffused daylight from a large source above the camera, about 5500 K, low c
 | @egli-ivory | f9a73fd4-200c-41b1-8538-d47fc60e09fe |
 | @egli-brown | 52352da6-93aa-46f6-89d3-c55e35da7893 |
 | @egli-sheet | 791875a7-3d81-43a4-b555-bd32df21edf9 (sheet bazë v2, fytyra e qendrës e maskuar) |
+
+## v4 Firence (2026-11-18)
+- Rruga: manuale, përdoruesi gjeneron.
+- Lokacioni: plate të fiksuara (4), jo zgjedhje e lirë e Seedance.
+- Drita: vjeshtë pasdite 4500 K (supozim, pret konfirmim); blloku te prompts/20.
+- Sheet-et: refs/v4/sheet-outfit-{1,2,3}-masked.jpg.
