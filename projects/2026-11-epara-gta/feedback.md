@@ -30,3 +30,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "Në makinë" | skena 2: transferta te semafori ndodh brenda makinës | projekt |
 | 2026-11-19 | 🔧 | "si mesazh por kurre sdo duket celi personazhi thjsht do ta shofi por ti do e editosh n ekran" | Arbi = vetëm mesazh; ekrani i telefonit s'duket kurrë, transferta shtohet si grafikë në montim | projekt; përputhet me rregullin 9 të CLAUDE.md (teksti në montim) |
 | 2026-11-19 | 💡 | 3 plate-e me radhë dolën foto-reale edhe me rreshta "game render"; propozim: bota foto-reale golden hour, ndjesia GTA nga personazhi plastik + HUD + kamera | prompts/05, 06, 07, 09 | projekt, në pritje të konfirmimit; kandidat për LESSONS |
+| 2026-11-19 | 💡 | dërgoi workflow-in e Arcads (GPT Image 2.6 + Seedance 2.5): "this might help for prompts for gta style video, focus only in prompts for the video" | promptet e videos | shënime te `refs/arcads-workflow_shenime.md`; timestamp, tag në çdo veprim, extend me drejtim kamere, maks 2 ref |
+| 2026-11-19 | 🔧 | "let me generate the rest of the images" | plate-et | përdoruesi gjeneron imazhet; unë fokusohem te promptet e videos |
