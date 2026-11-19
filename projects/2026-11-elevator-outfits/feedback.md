@@ -12,3 +12,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | "will change to this" | fytyra e modeles ndryshon te `refs/face-model.jpg`; prompti v2 mbetet i njëjtë, sepse fytyra vjen vetëm nga referenca | — |
 | 2026-11-19 | 👍 | "esht n t djatht ore si n t majt, esht mir logo aty ku duhet" | sheet v3: logoja në të djathtën e personit (majtas në kuadër) = e saktë; edit-i i logos anulohet. Sheet-i i zi = standardi | Pozicioni i produktit shkruhet nga ana e personit që e vesh |
 | 2026-11-19 | 🔧 | "remove the face in each of these images in the center shot" | 3 kartat para Seedance: fytyra hiqet te paneli i mesit, mbetet vetëm te close-up | `ai-narrative-film` (kurthi i personazheve të dyfishuar): një fytyrë për referencë |
+| 2026-11-19 | 👎 | "that thing at the hands moves like there are hands but they are open" | 04 v1: mëngët me zinxhir të hapur lëviznin si krahë | Kurthet (`cinematic-ai-video` §7): veshje me pjesë boshe → përshkruaj ndërtimin (bosh, i sheshtë, varet) + mos kërko lëvizje |
+| 2026-11-19 | 🔧 | "i want 4 shots, one where she has the hoodie on" | 04 v2: 4 segmente, i katërti me kapuç të ngritur | — |
