@@ -14,3 +14,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "remove the face in each of these images in the center shot" | 3 kartat para Seedance: fytyra hiqet te paneli i mesit, mbetet vetëm te close-up | `ai-narrative-film` (kurthi i personazheve të dyfishuar): një fytyrë për referencë |
 | 2026-11-19 | 👎 | "that thing at the hands moves like there are hands but they are open" | 04 v1: mëngët me zinxhir të hapur lëviznin si krahë | Kurthet (`cinematic-ai-video` §7): veshje me pjesë boshe → përshkruaj ndërtimin (bosh, i sheshtë, varet) + mos kërko lëvizje |
 | 2026-11-19 | 🔧 | "i want 4 shots, one where she has the hoodie on" | 04 v2: 4 segmente, i katërti me kapuç të ngritur | — |
+| 2026-11-19 | 👍 | (v2 pranuar pa vërejtje te mëngët/kapuçi) | 04 v2: blloku WARDROBE për mëngët boshe funksionoi | mëso: ndërtimi i veshjes në fjalë > referencë vetëm |
+| 2026-11-19 | 🔧 | "she should be in the phone like chatting and typing" | 04 v3: chat/typing në vend të selfie-t | — |
+| 2026-11-19 | 🔧 | "the elevator should have a full close and a full open" | 04 v3: cikël i plotë dere, prerja vetëm mbi derë të mbyllur e të palëvizur | `seedance-clean` CUTS: tranzicion me objekt kërkon kohë mbajtjeje para/pas HARD CUT |
