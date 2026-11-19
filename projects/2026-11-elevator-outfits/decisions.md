@@ -1,5 +1,19 @@
 # Vendimet e ngulitura
 
+## Rendi i punës (vendosur nga përdoruesi, 2026-11-19)
+1. Fytyra vjen në bisedë.
+2. Karta e karakterit (reference sheet) nga fytyra.
+3. E njëjta vajzë veshur me secilën nga 3 ngjyrat (outfit refs).
+4. Foto/plate në ashensor për secilën ngjyrë.
+5. Video (Seedance 2.5), image-to-video nga plate-t.
+
+## Këpucët (i propozon Claude)
+| Ngjyra | Këpucët |
+|---|---|
+| E zezë | çizme llastiku të zeza deri në gju, majë e mprehtë, takë stiletto 9 cm (si në foton e markës) |
+| Kafe çokollatë | çizme lëkure kafe deri në gju, majë e rrumbullakët, takë e trashë 6 cm (si në foton e markës) |
+| Blu kobalt | çizme lëkure të bardha krem deri në gju, majë bajame, takë e trashë 7 cm |
+
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
 ```
 ```

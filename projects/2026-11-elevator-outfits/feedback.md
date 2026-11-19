@@ -4,3 +4,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 
 | Data | Lloji | Çfarë tha | Konteksti (shot / prompt / model) | Propozim: ku shkon |
 |---|---|---|---|---|
+| 2026-11-19 | 🔧 | "shoes u will suggest… i will share only the face… then we create the reference sheet, then we wear the girl, then we do the pic" | rendi i punës: fytyrë → sheet → veshje → plate → video | Nëse përsëritet: `cinematic-ai-video` §5 (rendi i Elementeve për projekte me veshje) |
