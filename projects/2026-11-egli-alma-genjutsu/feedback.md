@@ -69,3 +69,9 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - Rregullimi (montage v5): pa këmbë, një plan i vetëm që ecën; shtuar detaji i duarve te rripi (B 10.2) dhe profili i afërt te vitrina (B 12.95).
 - 💡 Mësim: çdo veshje ka nevojë për ritëm të vetin; i njëjti rend shot-esh (ecje → këmbë → 3/4 …) i përsëritur për çdo veshje lexohet si monoton.
 - 👍 Veshja 3: "m pelqen hand thing dhe fundi qe rri ashtu, por asgje tjt". 👎 Veshja 2: pas detajit të rripit "ajo ecen prap" → 🔧 zëvendëso ecjen me material të ri. 🔧 Veshja 3: duart → kolona → 2–3 poza estetike me trick-un e referencës. Promptet 29, 30.
+
+## 2026-11-19 — zoom-i i montage v6
+- 👎 "u totally fucked ... u will see the difference between our zoom and how clean their zoom in the ref video". Krahasimi frame pas frame: refs/v5/compare-ref-vs-v6-zoom.png.
+- 💡 Gabimi im: analysis-v6-cut.md tha "zoom digital në montim". E gabuar. Te ref (frame 6–14) shtylla e zezë në plan të parë lëviz ndryshe nga ndërtesa (paralaks) → kamera lëviz fizikisht prapa/anash; vajza drejtohet nga përkulja gjatë lëvizjes (shumë shpejt) → xhirim real i përshpejtuar (speed ramp), jo crop. Mprehtësia mbetet e njëtrajtshme, pa zoom-blur.
+- Yni: crop 2D i një poze të palëvizur nga 720p (i butë) + blur radial me 8 nën-frame (njollë) + roll → duket i ndotur.
+- 🔧 Rruga e re: Seedance gjeneron lëvizjen reale të kamerës në kohë reale (tërhiqet 3–4 m ndërsa ajo ndryshon pozë), unë bëj vetëm speed ramp (3–4× në mes, normale në pozat). Pa crop, pa blur artificial.
