@@ -51,9 +51,9 @@ def env(kind):
         if kind=='street':
             bpy.ops.mesh.primitive_uv_sphere_add(radius=6, location=(0,60,14)); bpy.context.object.data.materials.append(wall)
     if kind=='portico':
-        for y in range(-40,41,4):
-            cyl((-1.6,y,2.6),0.25,5.2,wall)
-        box((-1.6,0,5.4),(0.8,90,0.4),wall); box((1.5,0,6.5),(6,90,0.4),wall); box((-6,0,4),(1,90,8),wall)
+        for y in range(-42,43,3):
+            cyl((-1.6,y+0.5,2.6),0.25,5.2,wall)
+        box((-1.6,0,5.4),(0.8,90,0.4),wall); box((1.5,0,6.5),(6,90,0.4),wall); box((-6,0,4),(1,90,8),wall); box((14,0,7),(4,90,14),wall)
     if kind=='arno':
         box((3.2,0,0.5),(0.5,120,1.0),wall)   # parapet right
         box((-6,0,5),(1,120,10),wall)
@@ -115,14 +115,14 @@ def wide(t,f,fig,c):      # 0–2.0 plan i gjerë, kamera ecën mbrapa 3 m para 
 def feet(t,f,fig,c):      # 2.0–3.4 këmbët, anash, 30 cm nga toka
     p=walkpos(8,t); fig.key(f,p,t*PH); fov(c,29); c.location=(1.7,p[1],0.3); look(c,(0,p[1],0.35))
 def three4(t,f,fig,c):    # 3.4–5.0 3/4 anash në të djathtën e saj
-    p=walkpos(8,t); fig.key(f,p,t*PH); fov(c,63); c.location=(-2.4,p[1]-1.6,1.4); look(c,(0,p[1],1.05))
+    p=walkpos(8,t); fig.key(f,p,t*PH); fov(c,63); c.location=(-3.0,p[1]-1.2,1.4); look(c,(0,p[1],1.05))
 def med(t,f,fig,c):       # 5.0–6.6 mesatar nga beli lart, kamera mbrapa
     p=walkpos(6,t,1.0); fig.key(f,p,t*PH*0.8); fov(c,29); c.location=(0,p[1]-2.6,1.3); look(c,(0,p[1],1.3))
 def med_cuff(t,f,fig,c):  # e njëjta, duart te gjoksi (menga me dantella)
     p=walkpos(6,t,1.0); k=min(1,t/0.4); fig.key(f,p,t*PH*0.8,arms=(-1.3*k,-1.1*k)); fov(c,29); c.location=(0,p[1]-2.6,1.3); look(c,(0,p[1],1.3))
 def window(t,f,fig,c):    # 6.6–8.0 profil te vitrina, hark 20° (1 km/h)
     y=0.3*max(0,0.6-t); fig.key(f,(0.4,y,0),t*PH*0.3,0.3,yaw=math.radians(90*min(1,t/0.5))); fov(c,29)
-    a=math.radians(-100+20*t/1.4); r=2.2; c.location=(0.4+r*math.cos(a)*-1,r*math.sin(a),1.55); look(c,(0.4,0,1.5))
+    a=math.radians(-100+20*t/1.4); r=2.6; c.location=(0.4+r*math.cos(a),r*math.sin(a),1.5); look(c,(0.4,0,1.42))
 def lean(t,f,fig,c):      # 6.6–8.0 e mbështetur te kolona, kamera fikse në lartësinë e ijeve
     fig.key(f,(-1.25,0,0),0,0.0,yaw=math.radians(-15*min(1,t/0.6))); fov(c,47); c.location=(0.6,-4.0,0.95); look(c,(-1.0,0,1.0))
 
