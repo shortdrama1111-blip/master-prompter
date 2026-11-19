@@ -63,3 +63,8 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 ## 2026-11-19 — montimi zoom-cut mbi take 27
 - 👎 "totally useles tbh, i dont like it ... look how aesthetic the clip i shared that i croped look when u comparing to this". `results/outfit2-3-zoomcut-v3.mp4`.
 - 💡 Diagnoza: zoom-i nuk e bën estetikën. Klipi ref është estetik nga përmbajtja e kuadrit: poza editoriale që ndryshojnë në çdo prerje (përkulet, ulet, dora te fytyra, dora në ije), kuadrim i ngushtë, teleobjektiv (sfond i kompresuar), grade filmi i ngrohtë me kontrast dhe grain, buzë të kuqe/ngjyra të forta. Take 27 = ecje katalogu, dritë e sheshtë, poza të njëjta → zoom-i sipër duket bosh.
+
+## 2026-11-19 — veshja 2 te montage v4
+- 👎 "skena 2 eshte ajo qe vetem ecen, nuk me pelqen dhe fakti qe kemi nje perseritje te se njejtes logjike, pamjen tek kembet and so on" · 💡 "ne nje nga klipet ... kishte disa detaje te burka beli ose rripi, mendoj se dhe ato mund te futen". 🔧 "rregullojme 2 njehere dhe pastaj shofim per 3".
+- Rregullimi (montage v5): pa këmbë, një plan i vetëm që ecën; shtuar detaji i duarve te rripi (B 10.2) dhe profili i afërt te vitrina (B 12.95).
+- 💡 Mësim: çdo veshje ka nevojë për ritëm të vetin; i njëjti rend shot-esh (ecje → këmbë → 3/4 …) i përsëritur për çdo veshje lexohet si monoton.
