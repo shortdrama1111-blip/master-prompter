@@ -114,9 +114,15 @@ def s1(t,f,fig,c):   # pallto: plan i gjerë, kamera ecën mbrapa
     p=walkpos(10,t); fig.key(f,p,t*PH); fov(c,47); c.location=(0,p[1]-6,1.4); look(c,(0,p[1],1.0))
 def s2(t,f,fig,c):   # këmbët, anash
     p=walkpos(8,t); fig.key(f,p,t*PH); fov(c,29); c.location=(1.6,p[1],0.3); look(c,(0,p[1],0.35))
-def s3(t,f,fig,c):   # kamera në tokë, ajo ecën mbi lente
-    p=walkpos(4.2,t); fig.key(f,p,t*PH); fov(c,110); c.location=(0,0,0.06)
-    look(c,(0,max(p[1],0.4),1.0+max(0,2-p[1])*0.5))
+def s3(t,f,fig,c):   # kamera në tokë, sheh lart; ajo ecën mbi lente; çizma mbulon kuadrin në fund
+    p=walkpos(2.0,t); fig.key(f,p,t*PH); fov(c,100); c.location=(0,0,0.06)
+    c.rotation_euler=(math.radians(118),0,0)
+    global OCC
+    if f==1:
+        OCC=box((0,0.6,0.5),(0.24,0.4,0.9),mat('boot',(0.12,0.1,0.09)))
+    k=min(1,max(0,(t-0.92)/0.2))
+    OCC.hide_render = k<=0; OCC.keyframe_insert('hide_render', frame=f)
+    OCC.location=(0, p[1]-0.1-(p[1]-0.15)*k, 0.5-0.3*k); OCC.keyframe_insert('location', frame=f)
 def s4(t,f,fig,c):   # plan mesatar, dora te jaka
     p=walkpos(6,t); fig.key(f,p,t*PH); fov(c,29); c.location=(0,p[1]-2.6,1.25); look(c,(0,p[1],1.2))
 def s5(t,f,fig,c):   # punch-in 3 hapa: gjerë → mesatar → afër
