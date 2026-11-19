@@ -18,3 +18,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "she should be in the phone like chatting and typing" | 04 v3: chat/typing në vend të selfie-t | — |
 | 2026-11-19 | 🔧 | "the elevator should have a full close and a full open" | 04 v3: cikël i plotë dere, prerja vetëm mbi derë të mbyllur e të palëvizur | `seedance-clean` CUTS: tranzicion me objekt kërkon kohë mbajtjeje para/pas HARD CUT |
 | 2026-11-19 | 🔧 | "look this for her movements" (videoja referencë) | 04 v3: telefoni me dy duar poshtë gjoksit, trupi pothuajse i palëvizur, sytë lart-anash herë pas here | — |
+
+| 👍 | "its better is 90%" | Seedance v3 (hf_20261119_181513) | Full door cycles, colours, hood-up finale and sleeves are all correct. This is now the standard (lock what you got). |
+| 👎 | "in every shot she is typing and does almost the same movements, lets alternate" | Seedance v3, all 4 segments | One PHONE ACTION block for all segments → identical gesture. Each segment gets its own action. |
