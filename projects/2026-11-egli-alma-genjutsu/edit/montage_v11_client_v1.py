@@ -10,7 +10,7 @@ def load(p):
         fr.append(cv2.resize(f,(W,H),interpolation=cv2.INTER_AREA))
     return fr,fps
 SRC={k:load(v) for k,v in {'V2':'results/firenze-v5-montage-v2.mp4','T27':'results/seedance-27-outfit2-3-take1.mp4',
-     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4','R':'results/seedance-34-outfit3-take1.mp4','PR':'results/seedance-35-profiles-take1.mp4','RT':sys.argv[3]}.items()}
+     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4','R':'results/seedance-34-outfit3-take1.mp4','PR':'results/seedance-35-profiles-take1.mp4','O':'results/seedance-36-opener-take1.mp4','RT':sys.argv[3]}.items()}
 def ramp(segs):
     out=[]
     for a,b,v0,v1 in segs:
@@ -32,6 +32,7 @@ PLAN=[
  ('P',  ramp([(6.25,6.50,4,6),(6.50,7.30,6,6),(7.30,7.70,6,1.5),(7.70,8.10,1.5,1.2)])),  # afrim → e përkulur
  ('Q',  ramp([(6.55,7.85,1.1,1.1)])),                        #   ulur në shkallë, dora te flokët
  ('Q',  ramp([(7.85,8.25,1.1,2.0),(8.25,9.05,2.5,2.5),(9.05,9.40,2.0,1.1)])),  # WIPE me kolonën → veshja 3
+ ('O',  ramp([(0.15,3.30,1.15,1.15)])),                     # veshja 3 hapja (take 36): gishtat te kolonat, kolona kalon, kthen kokën (pa fytyrën)
  ('R',  real(3.70,4.75)),                                    #   beli, dora në xhep
  ('R',  real(5.10,6.25)),                                    #   menga me dantella
  ('R',  real(6.70,7.85)),                                    #   xhinset mbi clogs, kryqëzon këmbët

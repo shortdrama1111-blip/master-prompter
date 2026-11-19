@@ -85,3 +85,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 👎 Take 34, rrotullimi: "s'me pelqen pa speedramp" → pastaj "duket shume plain dhe bllahhh thjesht rrotullimi". Pret videon e profileve (prompt 35) para se të vendosë çfarë krijojmë për hapjen e veshjes 3. Pjesët e tjera të take 34 (beli, menga, clogs, kolona) mbeten.
 - 🔧 RREGULL (përdoruesi): "mbaj shenim qe mos te me japesh keshtu plain shots anymore se jane pa pike emocioni". Shot-et "ekspozitë" (rrotullim në vend, ecje e thjeshtë, qëndrim pa qëllim) nuk propozohen më. Çdo shot ka një moment/emocion: shikim, gjest, lëvizje kamere me paralaks, pozë editoriale. Kandidat për CLAUDE.md/skill te mbyllja.
 - 👎 Rrotullimi me speed ramp: "eshte shume i keq, s'do e perdorim" → hequr nga V1.
+- 👎 Take 36 (hapja e veshjes 3): "i dont like how her face looks so try to not include that". Përdorur vetëm 0.15–3.30 (nga pas: gishtat te kolonat, kolona kalon, fillon të kthejë kokën), pa fytyrën.
