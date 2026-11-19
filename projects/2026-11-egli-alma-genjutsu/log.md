@@ -52,3 +52,7 @@
 - `results/CLIENT-V1-firenze.mp4` (17.8 s): profili i ri i pallto-s (PR 0.6–1.4) në vend të të vjetrit.
 - `edit/client_v2.py` → `results/CLIENT-V2-reel-origjinal-kalimet-fix.mp4` (20.8 s): reel-i i parë; pa zoom-blur/split; dy profilet e reja; kuadratat 2 s → ~6 s (A 6.92–9.0 + rripi B + T27 3/4 + T27 mesatar).
 - `results/seedance-36-opener-take1.mp4` (10 s): nga pas 0–3.3 (gishtat te kolonat, kolona mbulon kuadrin 1.5–2.1); fytyra 3.4–10 (nuk përdoret). CLIENT-V1 (20.5 s) = wipe 33 → 36 0.15–3.30 (1.15×) → beli/menga/clogs/kolona nga 34.
+
+## 2026-11-19 — Finalet me muzikë
+- `edit/add_music.sh`: muzika e videos së klientes (0–17.86 s, ~108 bpm), loop në takt (0–15.83 → 9.14…), fade-out 1.5 s, loudnorm -14 LUFS.
+- `results/FINAL-CLIENT-V2-me-muzike.mp4` (23.3 s) → për klienten. `results/FINAL-BONUS-V1-me-muzike.mp4` (20.5 s) → klipi bonus.
