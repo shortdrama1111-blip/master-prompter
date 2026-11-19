@@ -35,3 +35,7 @@
 ## 2026-11-19 — Take 32 (lëvizje reale) + montage v7 (speed ramp)
 - `results/seedance-32-realmoves-take1.mp4`: kamera tërhiqet/afrohet vërtet, pozat ndryshojnë gjatë lëvizjes. Prerja te 8.375. Veshja 2: close 0–2.4, tërheqje 2.4–4.0, wide 4.0–6.2, afrim poshtë 6.2–7.6, përkulur 7.6–8.37. Veshja 3: close me mëngën te nofulla 8.4–10.3, tërheqje 10.3–11.8, te kolona 11.8–13.6, afrim + ulur 13.6–15.3, ulur 15.3–16.
 - `edit/montage_v7.py` → `results/firenze-v9-montage-v7.mp4` (21.8 s): pa crop/zoom digital; speed ramp 1×→6× në lëvizje me mesatare frame-sh (shutter 180°).
+
+## 2026-11-19 — Montage v9 + take 33
+- `results/firenze-v11-montage-v9.mp4` (12.8 s): ritmi i references mbi take 32 (pozat ~0.25 s, prerje mbi lëvizje, P32 i interpoluar në 72 fps).
+- `results/seedance-33-continuous-take1.mp4`: kapësja e çantës 0–1.2, ngjitja te fytyra 1.2–2.75, ulet 2.75–3.75, WIPE nga shtylla 3.75–4.25, ulur në shkallë 4.25–7.9, WIPE nga kolona 8.0–9.1, shpina + shikim mbi sup me dantellën te kolona 9.25–11.25, te kolona 11.5–12.75, ulur 13–16.
