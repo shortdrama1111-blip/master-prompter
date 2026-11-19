@@ -26,3 +26,10 @@ Fleta sage e editiut të dytë (zemrat vertikale) është standardi. Çdo ngjyr�
 |---|---|---|---|---|---|
 | 1 | Sage green | ~#A3AC9E | e bardhë | blush-white | gri e errët |
 | 2 | Heather grey melange | ~#B9B9B7 | e bardhë, tone-on-tone | blush-white | gri pak më e errët |
+| 3 | Olive | ~#3B3F2E | e bardhë | blush-white | olive-black tonal |
+| 4 | Black | ~#1C1C1C | e bardhë | e bardhë | charcoal tonal |
+
+## Modelja (e-commerce)
+- Bjonde, leje e konfirmuar nga përdoruesi. Fleta e karakterit: prompts/05.
+- Për veshjen: identiteti vetëm nga close-up i fytyrës, silueta nga refs/fit-ref-sage-neck-down.jpg,
+  ngjyra/detajet nga fleta e ngjyrës. Një shot për imazh, format 4:5 nga UI.
