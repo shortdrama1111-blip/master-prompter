@@ -39,3 +39,6 @@ Reference image 4 sets pose, framing, backdrop and light only; the wardrobe come
 
 Hyperrealistic photography. Real skin texture with visible pores, subtle subsurface scattering, fine peach fuzz along the jawline. Hair strand by strand with natural flyaways and baby hairs. Fleece with real brushed texture and heavy drape, satin with a soft sheen, embroidery with raised thread, zipper teeth with real metal detail. Eyes with real moisture and depth. Fine film grain, neutral true-to-life color. Photographic, unretouched.
 ```
+
+## v3 — fytyrë e re
+I njëjti tekst si v2, pa asnjë ndryshim. Ndryshon vetëm reference image 1 → `refs/face-model.jpg`.

@@ -33,7 +33,9 @@ Në foton on-body: me çizme llastiku të zeza deri në gju.
 Fotot e zezës dhe kafes kanë të njëjtën modele: flokë të gjata, të drejta, gështenjë.
 Foto blu ka modele tjetër: flokë mjaltë me kaçurrela të mëdha.
 
-**Vendim (2026-11-19):** fytyra për të tria = modelja te `refs/face-model-black-fit.jpg`
+**Vendim i ri (2026-11-19):** fytyra për të tria = `refs/face-model.jpg` (zëvendëson foton më poshtë).
+
+~~Vendim i parë: fytyra = modelja te `refs/face-model-black-fit.jpg`~~
 (flokë të gjata të drejta, bazë gështenjë e lehtë me balayage biondë, sy blu-gri). E njëjta foto
 tregon si rri hoodie i zi në trup: mëngët të hapura bien si pelerinë, astari teal duket.
 
