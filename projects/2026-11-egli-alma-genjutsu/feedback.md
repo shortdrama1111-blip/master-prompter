@@ -47,3 +47,10 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 
 ## 2026-11-19 — klipi i prerë i referencës (0.9s)
 - 💡 Përdoruesi: "u need to check in more closes frame, bcs the camera is moving really faster". Analiza 27/27 frame me matje zoom-i: lëvizja e pëlqyer = zoom out që vazhdon përmes 4 prerjeve (match on motion), speed ramp 11%→2%/frame, shot-e 0.17–0.30s, zoom digital në montim. Shih analysis-v6-cut.md.
+
+## 2026-11-19 — Seedance me greybox Blender v6 (prompt 23), outfit 3
+- 👎 Përdoruesi: "look how bad is the previous clip that u gave me from blender". `results/seedance-23-outfit3-blendermoves-take1.mp4`.
+  - 0.0–1.4: këpuca shkel drejt lentes 3 herë + 2 frame blur abstrakt. Shkaku: blloku A i greybox-it (këmba ngrihet drejt lentes + whip-tilt 150°), që Seedance e lexoi si shkelm.
+  - 2.4–3.1: menga me dantella para fytyrës duket si dorezë e shkëputur.
+  - Të përdorshme: 1.4–2.0 (wide te kolona) dhe 3.25–4.0 (wide, ecën drejt kamerës).
+- 💡 Mësim: lëvizjet e references janë zoom-e në montim, jo kamerë fizike → greybox Blender me lëvizje ekstreme ishte rruga e gabuar për këtë stil. Kamera e palëvizur në gjenerim + zoom në montim.
