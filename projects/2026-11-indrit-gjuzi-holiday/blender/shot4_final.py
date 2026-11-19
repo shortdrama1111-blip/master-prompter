@@ -10,6 +10,9 @@ import final_common as F
 from final_common import bpy, Vector
 
 N = 64
+# belt deck: brushed champagne a step darker than the slats, so the belt reads as one conveyor
+M_BELT = F.flat("belt_champagne", (0.42, 0.33, 0.23), 0.45, metal=1.0)
+SLAT_GAP = 0.028
 rng = random.Random(7)
 
 F.box("floor", (8, 8, 0.02), (0, 0, -0.01), F.M_ROOM)
@@ -28,7 +31,7 @@ def W(y, z0, u):
 slats, items = [], []
 for bi, (y, z0, u0, u1) in enumerate(belts):
     L = u1 - u0
-    b = F.box("belt", (L, 0.32, 0.04), W(y, z0, (u0 + u1) / 2), F.M_DECK, root)
+    b = F.box("belt", (L, 0.32, 0.04), W(y, z0, (u0 + u1) / 2), M_BELT, root)
     b.rotation_euler = (0, -al, 0)
     for side in (-0.17, 0.17):
         r = F.box("rail", (L, 0.02, 0.06), W(y + side, z0, (u0 + u1) / 2) + nrm * 0.02, F.M_CHAMP, root)
@@ -41,10 +44,10 @@ for bi, (y, z0, u0, u1) in enumerate(belts):
         ro = F.mesh_obj("roller", bm, F.M_CHAMP, root)
         ro.location = W(y, z0, u0) - nrm * 0.005
         ro.rotation_euler = (math.radians(90), 0, 0)
-    for k in range(int(L / 0.05)):
-        s_ = F.box("slat", (0.012, 0.30, 0.008), (0, 0, 0), F.M_CHAMP, root)
+    for k in range(int(L / SLAT_GAP)):
+        s_ = F.box("slat", (0.018, 0.30, 0.006), (0, 0, 0), F.M_CHAMP, root)
         s_.rotation_euler = (0, -al, 0)
-        slats.append((s_, y, z0, u0, L, k * 0.05))
+        slats.append((s_, y, z0, u0, L, k * SLAT_GAP))
     for k in range(int((L - 0.2) / 0.22)):
         u = u0 + 0.28 + k * 0.22
         if k % 2 == 0:
@@ -66,7 +69,7 @@ def update(t):
         u = u0 + ((off - v * t) % L)
         s_.location = W(y, z0, u) + nrm * 0.024
     for o, y, z0, u, hh in items:
-        o.location = W(y, z0, u - v * t) + nrm * (0.02 + hh)
+        o.location = W(y, z0, u - v * t) + nrm * (0.0275 + hh)   # resting on the slat tops
     s = min(max(t / 2.667, 0), 1)
     s = s * s * (3 - 2 * s)
     F.aim((0.55 - 0.06 * s, -0.95, 1.80), (0.0, 0.0, 0.85), 29)
