@@ -30,7 +30,6 @@ PLAN=[
  ('P',  ramp([(6.25,6.50,4,6),(6.50,7.30,6,6),(7.30,7.70,6,1.5),(7.70,8.10,1.5,1.2)])),  # afrim → e përkulur
  ('Q',  ramp([(6.55,7.85,1.1,1.1)])),                        #   ulur në shkallë, dora te flokët
  ('Q',  ramp([(7.85,8.25,1.1,2.0),(8.25,9.05,2.5,2.5),(9.05,9.40,2.0,1.1)])),  # WIPE me kolonën → veshja 3
- ('RT', ramp([(0.20,0.70,1.2,3),(0.70,2.90,3,3),(2.90,3.40,3,1.2)])),  # veshja 3 (take 34): rrotullimi me speed ramp
  ('R',  real(3.70,4.75)),                                    #   beli, dora në xhep
  ('R',  real(5.10,6.25)),                                    #   menga me dantella
  ('R',  real(6.70,7.85)),                                    #   xhinset mbi clogs, kryqëzon këmbët
