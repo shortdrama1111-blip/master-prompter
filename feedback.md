@@ -1,0 +1,2 @@
+| 2026-11-20 | 🔧 | "the scene change from only him to a lot of people thats called an ai slop and never should be happening neverrrrrr" | video 22 v2, segmenti i fundit | 🔧 rregull i fortë: asnjë turmë/personazh i ri që s'është vendosur më parë në skenë; propozim për `CLAUDE.md` / `seedance-clean` në mbyllje |
+| 2026-11-20 | 💡 | "crop the video where he eats the last gështenja and zoom out with the stadium shot, 4 s" | 22 + 23 | projekt; u bë me ffmpeg pa kredite |
