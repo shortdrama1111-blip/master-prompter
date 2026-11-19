@@ -12,3 +12,4 @@
 | 2026-11-16 | v3 nga zero take3 | Seedance 2.5, prompt 08 v5 (kamera me fjalë, pa video) | `results/seedance-08v5-take1.mp4` — përdoruesi: "duket shumë më mirë"; prerjet te 4.04/6.79/9.13s | — | — | montazh: `results/egli-ashensor-final-v2-seedance.mp4` (kënga origjinale nga 0s + grafika Monday–Thursday) |
 | 2026-11-17 | final v3 | montazh | `results/egli-ashensor-final-v3-script.mp4`: Pinyon Script e bardhë, me hije | — | — | dorëzuar |
 | 2026-11-17 | final v4 | montazh | `results/egli-ashensor-final-v4-shein.mp4`: titull "SHEIN / 4 perfect / Autumn / looks 🍂" (Inter Display + Great Vibes, krem), 0.1–2.1s lart, pa ditë | — | — | dorëzuar |
+| 2026-11-19 | sheet v4 (3 panele, profil) | image (manual, prompt 13) | `refs/v3/sheet-v4-3panel.jpg`: përpara ✓, profil me hapësirë para fytyrës ✓, topuzi dhe balluket ✓ | sfondi i profilit pak më i çelët; paneli i trupit më i ngushtë | — | maskuar → `upload/12-sheet/sheet-v4-3panel-masked.jpg` |
