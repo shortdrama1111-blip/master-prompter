@@ -75,3 +75,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 💡 Gabimi im: analysis-v6-cut.md tha "zoom digital në montim". E gabuar. Te ref (frame 6–14) shtylla e zezë në plan të parë lëviz ndryshe nga ndërtesa (paralaks) → kamera lëviz fizikisht prapa/anash; vajza drejtohet nga përkulja gjatë lëvizjes (shumë shpejt) → xhirim real i përshpejtuar (speed ramp), jo crop. Mprehtësia mbetet e njëtrajtshme, pa zoom-blur.
 - Yni: crop 2D i një poze të palëvizur nga 720p (i butë) + blur radial me 8 nën-frame (njollë) + roll → duket i ndotur.
 - 🔧 Rruga e re: Seedance gjeneron lëvizjen reale të kamerës në kohë reale (tërhiqet 3–4 m ndërsa ajo ndryshon pozë), unë bëj vetëm speed ramp (3–4× në mes, normale në pozat). Pa crop, pa blur artificial.
+
+## 2026-11-19 — montage v7
+- 🔧 "hiq shotin te 3 qe eshte veshja e pare dhe ecen anesore" → hequr këmbët anash (v2 1.75–3.875). 🔧 Veshja 2: "hiq skenen qe eshte anesore tek sekonda 15" → hequr profili te vitrina. 👎 "Perpara se te nisi speed ramp duket sikur rri shume positioned" → pozat para ramp-it ~0.5 s, shpejtësia 1.3× që në pozë, ramp-i nis menjëherë. Montage v8 (15.8 s).
