@@ -1,8 +1,14 @@
 # TODO: shot-et 2 dhe 3 (Blender, etiketa reale)
 
-Gjendja më 2026-11-19, ora 18:15:
-- **Shot 1 v4:** i përfunduar, te `renders/shot1_final_v4.mp4`.
-- **Shot 2 dhe shot 3:** skriptet janë gati, por nuk janë renderuar ende.
+Gjendja më 2026-11-19, ora 20:40: **shot-et 1–4 janë të përfunduar** në Blender, me etiketa reale:
+- `renders/shot1_final_v4.mp4` (2.5 s; në montim pritet në 1.7 s)
+- `renders/shot2_final.mp4` (3.0 s)
+- `renders/shot3_final.mp4` (3.0 s)
+- `renders/shot4_final.mp4` (2.67 s)
+
+**Mbeten shot-et 5 dhe 6**, që përdorin çantën e kuqe (`refs/holiday-bag-red.jpg`). Për to s'ka ende skript
+final; bazë janë `previz.py` shot5/shot6 dhe `final_common.py`. Seksionet më poshtë për shot-et 2 dhe 3
+mbeten si udhëzim për ri-render.
 
 Pamja është e njëjtë me atë të shot-it 1 v4 dhe vjen nga `blender/final_common.py`. Produktet janë vetëm
 ato të `refs/`.
