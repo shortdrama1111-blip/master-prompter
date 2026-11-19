@@ -311,3 +311,35 @@ def render(update, n, tag):
             continue                     # RESUME=1: keep frames already on disk
         bpy.ops.render.render(write_still=True)
         print(f"[{tag}] frame {f}/{n - 1}", flush=True)
+
+
+# ---------------------------------------------------------------- shared for shots 2, 4: DreamDuo
+# carton 13 x 6 x 19 cm, front printed with tex/duo.png (cut from refs/dreamduo-box.jpg), sides the
+# photo's side-panel peach. Centred on its origin, front face = local -Y.
+M_DUO = textured("duo_print", "duo.png", 0.45)
+M_DUOSIDE = flat("duo_side", (0.49, 0.234, 0.13), 0.5)      # linear of photo sRGB (0.729, 0.52, 0.397)
+M_ROOM = flat("room_mocha", (0.10, 0.068, 0.050), 0.8)     # true mocha where no shelf LEDs tint the set
+M_DECK = flat("deck_dark", (0.05, 0.04, 0.035), 0.6, metal=0.6)
+
+
+def duo_box(parent=None):
+    w, d, h = 0.13, 0.06, 0.19
+    bm = bmesh.new()
+    bmesh.ops.create_cube(bm, size=1.0)
+    for v in bm.verts:
+        v.co = Vector((v.co.x * w, v.co.y * d, v.co.z * h))
+    uv = bm.loops.layers.uv.verify()
+    for f in bm.faces:
+        f.material_index = 0 if f.normal.y < -0.9 else 1
+        for l in f.loops:
+            l[uv].uv = ((l.vert.co.x + w / 2) / w, (l.vert.co.z + h / 2) / h)
+    return mesh_obj("duo", bm, [M_DUO, M_DUOSIDE], parent, smooth_sides=False)
+
+
+def oil_box_centred(parent=None):
+    """Hair Oil carton centred on an empty (half height 0.0675 m), for belts and rigs."""
+    e = link(bpy.data.objects.new("oilbox_c", None))
+    if parent:
+        e.parent = parent
+    oil_box((0, 0, -0.0675), e)
+    return e
