@@ -42,5 +42,18 @@ Keep the supplied image 1 exactly: same three panels, same woman, same face, ski
 ### C2: brown, double collar
 References: 1. `refs/sheet-brown.jpg`  2. `refs/double-collar-crop.jpg`
 ```
-Keep the supplied image 1 exactly: same three panels, same woman, same face, hair, skin, chocolate-brown hoodie dress, hood down, open sleeves, logo, brown boots, pose, backdrop, light, grade and grain. Change ONE thing only, the neckline: The neckline has two layers, like image 3: a separate snug ribbed crew-neck collar sits close around the base of her throat, and the hood is attached outside it, its two front edges crossing over each other in a soft overlap just below the crew-neck collar, the brown satin hood lining visible along its inner edge. The crew-neck collar is chocolate-brown ribbed knit. Image 2 gives the neckline construction only; the woman, her face and every other detail come from image 1. The logo panel stays untouched.
+Keep the supplied image 1 exactly: same three panels, same woman, same face, hair, skin, chocolate-brown hoodie dress, hood down, open sleeves, logo, brown boots, pose, backdrop, light, grade and grain. Change ONE thing only, the neckline. The neckline has two layers, like image 2: a separate snug ribbed crew-neck collar sits close around the base of her throat, and the hood is attached outside it, its two front edges crossing over each other in a soft overlap just below the crew-neck collar, the brown satin hood lining visible along its inner edge. The crew-neck collar is chocolate-brown ribbed knit. Image 2 gives the neckline construction only; the woman, her face and every other detail come from image 1. The logo panel stays untouched.
 ```
+
+### D2: black, hood DOWN + double collar (for segment 1)
+Segment 1 needs the black with the hood down, so black gets two sheets: D2 (hood down) and B2 (hood up).
+References: 1. `refs/sheet-black-v3.jpg`  2. `refs/double-collar-crop.jpg`
+```
+Keep the supplied image 1 exactly: same three panels, same woman, same face, hair, skin, black hoodie dress, hood down, open sleeves with teal satin lining, logo, black patent boots, pose, backdrop, light, grade and grain. Change ONE thing only, the neckline. The neckline has two layers, like image 2: a separate snug ribbed crew-neck collar sits close around the base of her throat, and the hood is attached outside it, its two front edges crossing over each other in a soft overlap just below the crew-neck collar, the teal satin hood lining visible along its inner edge. The crew-neck collar is black ribbed knit. Image 2 gives the neckline construction only; the woman, her face and every other detail come from image 1. The logo panel stays untouched.
+```
+
+### File names after the face is removed
+- D2 → `refs/sheet-black-collar-noface.jpg` (@image1 in the final video)
+- C2 → `refs/sheet-brown-collar-noface.jpg` (@image2)
+- A2 → `refs/sheet-blue-zip-noface.jpg` (@image3)
+- B2 → `refs/sheet-black-hood-noface.jpg` (@image4)
