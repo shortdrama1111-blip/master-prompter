@@ -18,3 +18,24 @@ Neutral mid-grey seamless studio backdrop applied uniformly across all three pan
 
 Hyperrealistic photography. Real human skin texture with visible pores, subtle subsurface scattering on the cheeks, nose bridge, and ears, fine peach fuzz catching light along the jawline and cheekbones, natural skin unevenness, unretouched. Hair rendered strand by strand with realistic flyaways, baby hairs at the hairline, individual strands catching light. Fleece rendered with real brushed texture, real weight and drape; satin lining with a real soft sheen; embroidery with real raised thread detail; zipper teeth with real metal surface detail. Eyes with real reflection, moisture, and depth in the iris. Fine film grain, neutral true-to-life color, soft lens vignette. Lived-in, photographic.
 ```
+
+## v2 — referencat flasin, përshkrimi minimal; logoja në të djathtë të kuadrit
+
+Feedback: "do not reexplain how it looks like, and it is in the right not in the left".
+Referencat në Banana Pro, në këtë rend:
+1. `refs/face-model-black-fit.jpg` (fytyra)
+2. foto flat-lay e hoodie-t të zi
+3. close-up i logos teal
+4. `refs/studio-pose-ref.webp` (poza, kuadri, sfondi, drita)
+
+```
+A 3-panel character reference sheet: three equal vertical panels side by side in one horizontal frame, separated by thin clean white gutters. The same woman in all three panels, with the face, hair and skin of reference image 1. She wears the black hoodie dress from reference image 2, both sleeve zippers open so the sleeves hang like a cape and show the teal satin lining, hood down on the shoulders, with knee-high black glossy patent leather boots with pointed toes and slim stiletto heels. The embroidered logo from reference image 3 sits on the lower front hem, on the right side of the garment as seen in the frame, just above the ribbed band.
+
+Panel 1 (left): Face close-up from the top of the head to the collarbone, face straight to camera, eyes to the lens, calm neutral expression.
+Panel 2 (center): Full body front, head to boot heels, with the stance, framing, backdrop and light of reference image 4; the logo visible on the right side of the lower hem as seen in the frame.
+Panel 3 (right): Logo close-up on the lower front hem, the embroidered logo from reference image 3 sharp and centered, raised thread texture and fleece weave visible.
+
+Reference image 4 sets pose, framing, backdrop and light only; the wardrobe comes from reference image 2. The backdrop and light of reference image 4 apply uniformly to all three panels. Identical face, hair, garment, boots and proportions in every panel.
+
+Hyperrealistic photography. Real skin texture with visible pores, subtle subsurface scattering, fine peach fuzz along the jawline. Hair strand by strand with natural flyaways and baby hairs. Fleece with real brushed texture and heavy drape, satin with a soft sheen, embroidery with raised thread, zipper teeth with real metal detail. Eyes with real moisture and depth. Fine film grain, neutral true-to-life color. Photographic, unretouched.
+```
