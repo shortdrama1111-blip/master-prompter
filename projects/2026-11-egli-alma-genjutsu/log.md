@@ -27,3 +27,7 @@
 ## 2026-11-19 — Montage v4 (struktura e klientit)
 - Përdoruesi: ngjyrat mbeten (klientit i pëlqejnë); problem vetëm kalimet (zoom-blur, split-screen) dhe veshja 2 që s'dukej.
 - `edit/montage_v4.py` → `results/firenze-v7-montage-v4.mp4` (21.5 s): veshja 1 = montage v2 0–8.11; veshja 2 = take 27 (7.6 s: wide, çizmet, 3/4, mesatar, vitrina); veshja 3 = take 27 portiku (wide, xhinset, menga, kolona). Kalimet e veshjeve: crash zoom out 0.3 s. Kohë reale kudo tjetër, pa ndryshim ngjyrash.
+
+## 2026-11-19 — Take 31 (poza, 16 s) + montage v6
+- `results/seedance-31-poses-take1.mp4`: 6 poza të pastra. Veshja 2: te muri 0.2–2.3, përballë 3.3–6.4, përkulur 7.3–8.15. Veshja 3: te kolona 8.3–9.6, krahu lart 11.9–12.9, ulur 14.6–16.0. Prerja te 8.21.
+- `edit/montage_v6.py` → `results/firenze-v8-montage-v6.mp4` (18.8 s): trick-u i references mbi pozat (bounce afër → crash zoom out → close → i plotë).
