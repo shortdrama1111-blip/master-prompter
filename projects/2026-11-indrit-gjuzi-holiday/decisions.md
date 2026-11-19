@@ -6,6 +6,11 @@
 - **Blender (2026-11-19): blockout i thjeshtë.** Forma, kamera, lëvizja dhe materiale bazë.
   Pamjen finale e jep modeli AI.
 
+- **Gjatësia (2026-11-19): A, rreth 16s, 6 shot-e**, me ritmin e referencës.
+- **Modeli (2026-11-19): Seedance 2.5 me video referencë** (videoja e Blender-it për lëvizjen,
+  fotot e produkteve për pamjen). **Një shot Blender = një gjenerim** (6 gjenerime), që gabimi
+  të rigjenerohet veç.
+
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |
 |---|---|---|
@@ -34,4 +39,9 @@
 | — | `refs/holiday-bag-red.jpg` | aksenti i kuq |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
-(ende pa vendim)
+Modeli është Seedance 2.5, ndaj ndiqet `seedance-clean` (2026-11-19):
+- Emra pajisjesh/filmi: asnjëherë.
+- Bllok NEGATIVE: jo, vetëm pohore.
+- Stili: i shpërndarë, jo në krye.
+- Gjatësia e shot-it: një shot i referencës për çdo gjenerim (rreth 2–4s).
+- Kamera: e motivuar, ndjek lëvizjen e Blender-it.

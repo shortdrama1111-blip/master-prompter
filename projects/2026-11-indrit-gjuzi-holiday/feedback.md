@@ -9,3 +9,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👍 | Zgjodhi sfondin B: pjeshkë e ngrohtë, e kuqja vetëm aksent | Pyetja e sfondit (A krem-ari / B pjeshkë / C e kuqe) | decisions.md |
 | 2026-11-19 | 👍 | Blender si blockout i thjeshtë ("mendoj se 1") | Pyetja e detajit të Blender-it | decisions.md; LESSONS.md nëse mjafton për modelin |
 | 2026-11-19 | 👍 | Harta e produkteve për 6 shot-et: "duket mirë" | Propozimi i hartës | decisions.md |
+| 2026-11-19 | 👍 | Gjatësia A: rreth 16s, si referenca | Pyetja 4 | decisions.md |
+| 2026-11-19 | 👍 | Shkroi "5-4a", e lexova si 5A: një shot = një gjenerim | Pyetja 5 | decisions.md |

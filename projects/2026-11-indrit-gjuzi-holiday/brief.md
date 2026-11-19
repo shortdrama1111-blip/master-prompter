@@ -40,11 +40,11 @@ në modelin AI → videoja finale.
 ## Portat
 | Porta | Përgjigja |
 |---|---|
-| Vendi | set studioje abstrakt (si referenca), sfondi ndryshon: **e hapur** |
+| Vendi | set studioje abstrakt, sfondi pjeshkë e ngrohtë |
 | Koha | dritë studioje, e butë |
-| Formati | 9:16 (si referenca), gjatësia: **e hapur** |
+| Formati | 9:16, rreth 16s, 6 shot-e |
 | Epoka | e sotmja |
 | Subjekti | produktet, pa njerëz |
 | Energjia | festive e qetë, si referenca |
 | Markimi | produktet reale + çanta e kuqe; teksti/logo në montim |
-| Modeli (Seedance 2.5 / Kling / tjetër) | **e hapur** (Seedance 2.5 me video referencë?) |
+| Modeli (Seedance 2.5 / Kling / tjetër) | Seedance 2.5 me video referencë, një gjenerim për shot |
