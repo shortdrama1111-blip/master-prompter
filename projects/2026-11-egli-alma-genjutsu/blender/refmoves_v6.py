@@ -54,31 +54,48 @@ def look(o,t): o.rotation_euler=(Vector(t)-o.location).to_track_quat('-Z','Y').t
 
 s=reset(); env(); fig=Fig()
 cd=bpy.data.cameras.new('c'); cd.clip_start=0.01; c=bpy.data.objects.new('cam',cd); bpy.context.collection.objects.link(c); s.camera=c
-DUR=2.5; N=round(DUR*FPS)
-# kohët (s): fisheye 0–0.85 · gjerë 0.85–1.35 · punch-in 1.35–1.53–1.71–1.9 · detaj 1.9–2.5
-markers=[]
+# Ref 1.23–2.95s, frame pas frame (30fps), zgjatur ~1.45x:
+# A 0.00–0.85 fisheye në tokë: ajo kalon mbi kamerë, kamera bën whip-tilt me blur, pastaj ajo ngre këmbën drejt lentes
+# B 0.85–1.40 plan i gjerë statik e ulët (gjuri), ajo pozon; në fund push-in i shpejtë me blur
+# C 1.40–1.95 një dolly-in i vazhdueshëm me speed-ramp: nga shumë larg (ajo e vogël) te low-angle i afërt, lente e gjerë
+# D 1.95–2.50 detaj me kamerë në dorë: profil 3/4, dora e djathtë tërheq xhaketën mbi sup
+# E 2.50–4.00 plan i gjerë statik: ajo ecën drejt kamerës (për minimumin 4s të Seedance; pritet në montim)
+DUR=4.0; N=round(DUR*FPS)
+def ease(x): x=max(0,min(1,x)); return x*x*(3-2*x)
 for i in range(N):
     t=i/FPS; f=i+1
-    if t<0.85:   # 1) fisheye në tokë; ajo afrohet, pastaj ngre këmbën e djathtë lart mbi lente
-        setcam(c,'fish'); c.location=(0.05,-0.15,0.07); look(c,(0,0.9,1.5))
-        y=max(0.45,1.5-1.6*t); k=max(0,(t-0.3)/0.55); kick=-math.sin(min(1,k)*math.pi*0.85)*2.0
-        fig.key(f,(0,y,0),0,legs=(0.25*math.sin(t*9),kick),arms=((0.3,0,0.2),(0.3,0,-0.2)))
-    elif t<1.35:  # 2) plan i gjerë statik, kamera në lartësi gjuri, ajo qëndron para qepenit
-        setcam(c,'p',47); c.location=(0.05*math.sin(t*5),-3.6,0.6); look(c,(0,1.6,1.05))
-        fig.key(f,(0,1.6,0),0)
-    elif t<1.9:   # 3) punch-in: tre hapa në të njëjtin aks
-        st=0 if t<1.53 else (1 if t<1.71 else 2)
-        fov,dist,h,tz=[(47,3.6,0.6,1.05),(29,3.0,0.75,1.1),(18,2.6,0.9,1.25)][st]
-        setcam(c,'p',fov); c.location=(0,1.6-dist,h); look(c,(0,1.6,tz))
-        fig.key(f,(0,1.6,0),0,arms=((0.1,0,0.1),(0.1,0,-0.1)))
-    else:         # 4) detaj: kamera në dorë afër supit; duart tërheqin xhaketën mbi sup
-        setcam(c,'p',29); k=(t-1.9)/0.6
-        c.location=(0.45+0.02*math.sin(t*9),1.6-0.95,1.42+0.015*math.sin(t*13)); look(c,(0.12,1.6,1.45))
-        fig.key(f,(0,1.6,0),math.radians(-15),arms=((-2.4*min(1,k*1.5),0,0.3),(-2.0*min(1,k*1.5),0,-0.4)))
+    if t<0.85:
+        c.location=(0.03,0,0.06)
+        if t<0.32:   # ajo ecën mbi kamerë; kamera sheh lart drejt barkut të saj
+            y=0.9-2.6*t; look(c,(0,max(y,0.15),1.6)); fig.key(f,(0,y,0),0,legs=(0.45*math.sin(t*11),-0.45*math.sin(t*11)))
+        elif t<0.42: # whip-tilt 150° me blur: kamera kthehet nga ana tjetër
+            k=ease((t-0.32)/0.1); ang=math.radians(15+150*k)
+            c.rotation_euler=(ang,0,0); fig.key(f,(0,1.4,0),math.pi,legs=(0.3,-0.3))
+        else:        # ajo, 1.4 m larg, me fytyrë nga kamera, ngre këmbën lart drejt lentes
+            look(c,(0,1.4,1.3)); k=ease((t-0.45)/0.4)
+            fig.key(f,(0,1.4,0),0,legs=(0.05,-1.9*k),arms=((0.2,0,0.25),(-0.4*k,0,-0.3)))
+    elif t<1.40:
+        k=ease((t-1.28)/0.12); c.location=(0.02*math.sin(t*4),-2.6+0.9*k,0.5+0.1*k); look(c,(0,1.6,1.0+0.15*k))
+        fig.key(f,(0,1.6,0),math.radians(5*math.sin(t*3)),legs=(0.08,-0.05),arms=((0.1,0,0.2),(0.1,0,-0.2)))
+    elif t<1.95:
+        k=ease((t-1.40)/0.55); k=k*k   # speed-ramp: nis ngadalë, mbaron shpejt
+        c.location=(0,-7.0+7.6*k,0.3+0.45*k); look(c,(0,1.6,0.9+0.5*k))
+        fig.key(f,(0,1.6,0),0,legs=(0.05,-0.05),arms=((0.15,0,0.3),(0.15,0,-0.3)))
+    elif t<2.50:
+        k=ease((t-1.95)/0.55)
+        c.location=(0.55+0.02*math.sin(t*9),1.05,1.35+0.06*k+0.01*math.sin(t*13)); look(c,(0.1,1.6,1.4))
+        fig.key(f,(0,1.6,0),math.radians(-55),arms=((-2.5*min(1,k*1.4),0,0.35),(0.1,0,-0.2)))
+    else:
+        y=5.5-1.25*(t-2.5); c.location=(0,-0.5,1.3); look(c,(0,4.5,1.0))
+        fig.key(f,(0,y,0),0,legs=(0.45*math.sin(t*11),-0.45*math.sin(t*11)),arms=((-0.3*math.sin(t*11),0,0.1),(0.3*math.sin(t*11),0,-0.1)))
     c.keyframe_insert('location',frame=f); c.keyframe_insert('rotation_euler',frame=f)
-    if c.data.type=='PERSP': c.data.keyframe_insert('lens',frame=f)
+    if t>=0.85:
+        fov=47 if t<1.40 else (round(84-40*(1-ease((t-1.40)/0.55))) if t<1.95 else (29 if t<2.5 else 47))
+        c.data.angle_y=math.radians(fov); c.data.keyframe_insert('lens',frame=f)
+s.render.use_motion_blur=True; s.render.motion_blur_shutter=0.6
 FISH_END=round(0.85*FPS)
 for a,b,kind in [(1,FISH_END,'fish'),(FISH_END+1,N,'p')]:
-    setcam(c,kind)
+    if kind=='fish': setcam(c,'fish')
+    else: c.data.type='PERSP'; c.data.sensor_fit='VERTICAL'
     s.frame_start,s.frame_end=a,b; s.render.filepath=os.path.join(OUT,'f_')
     bpy.ops.render.render(animation=True)
