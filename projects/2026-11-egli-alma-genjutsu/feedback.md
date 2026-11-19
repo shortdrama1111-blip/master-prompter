@@ -59,3 +59,7 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 👍 Përdoruesi: pjesa e parë e outfit 1 (nga video referencë e web-it, prompt 21) "look how professional it looks comparing to our parts" → 🔧 "redo the 2nd and 3rd outfit from scratch". Promptet 25 (kuadrata, butikët) dhe 26 (e zeza, portiku) me të njëjtën gramatikë shot-esh si outfit 1.
 - 🔧 "no need to add env 4 te ura for now": pa Arno/urën.
 - 💡 Kandidat për mësim: gjuha e shot-eve e marrë nga një video reale (tracking prapa/anash me ritmin e ecjes, 4.5 km/h) del më profesionale se lëvizjet ekstreme të shpikura (fisheye, whip, greybox).
+
+## 2026-11-19 — montimi zoom-cut mbi take 27
+- 👎 "totally useles tbh, i dont like it ... look how aesthetic the clip i shared that i croped look when u comparing to this". `results/outfit2-3-zoomcut-v3.mp4`.
+- 💡 Diagnoza: zoom-i nuk e bën estetikën. Klipi ref është estetik nga përmbajtja e kuadrit: poza editoriale që ndryshojnë në çdo prerje (përkulet, ulet, dora te fytyra, dora në ije), kuadrim i ngushtë, teleobjektiv (sfond i kompresuar), grade filmi i ngrohtë me kontrast dhe grain, buzë të kuqe/ngjyra të forta. Take 27 = ecje katalogu, dritë e sheshtë, poza të njëjta → zoom-i sipër duket bosh.
