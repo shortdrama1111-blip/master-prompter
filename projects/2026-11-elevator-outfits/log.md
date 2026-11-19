@@ -10,3 +10,13 @@
 - ❌ Same typing gesture in all 4 segments. Cause: the shared "PHONE ACTION, in every segment" block.
 - ❌ Seg 3 (blue): boots came out black instead of cream-white. Fix: separate lock in POSITIVE LOCKS.
 - → v4: only ACTION/PERFORMANCE/AUDIO/LOCKS change; everything else identical to v3.
+
+## Seedance v4 → hf_20261119_192123 (20.06 s)
+- ✅ Seg 1–3 perfect according to the user: typing / reflection with hand on hip / phone call, cream boots in blue.
+- Seg 4 (hood): replaced with v3's seg 4.
+- ⚠️ Grade: the v4 doors are dark (Y≈53 on closed doors), the v3 doors bright (Y≈117).
+
+## Montage A → montage/elevator-v4-v3-cut-A.mp4 (19.34 s, not in git)
+- v4 frames 0–360 (0–15.04 s, ends on closed doors) + v3 from frame 378 (15.75 s, 3 bright closed frames, then the doors open).
+- Hard cut on the closed doors; v4 audio up to 15.04, v3 audio after, with 0.05 s fades.
+- The door brightness jumps at the cut; it reads as a "new floor". If it bothers the user: grade v3 seg 4 to v4's tone, or v4 to v3.

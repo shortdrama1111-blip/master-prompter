@@ -21,3 +21,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 
 | 👍 | "its better is 90%" | Seedance v3 (hf_20261119_181513) | Full door cycles, colours, hood-up finale and sleeves are all correct. This is now the standard (lock what you got). |
 | 👎 | "in every shot she is typing and does almost the same movements, lets alternate" | Seedance v3, all 4 segments | One PHONE ACTION block for all segments → identical gesture. Each segment gets its own action. |
+| 👍 | "scene 1,2,3 are perfect, use the last scene from the previous video for the one with the hoodie on" | Seedance v4 (hf_20261119_192123) seg 1–3 + v3 seg 4 | Alternating actions work. The v3 hood-up finale (typing → phone down → look to the lens) beats the v4 one. |
