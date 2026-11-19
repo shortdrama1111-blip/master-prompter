@@ -15,6 +15,7 @@ Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota 
 |---|---|---|
 | `@Djali-GTA-Plastik` | djalë ~25 vjeç, i gjeneruar, lëkurë plastike GTA | `chars/djali_plastik_forte_pa-koke.png` (koka e mbuluar te paneli 3) → Higgsfield Element |
 | (karta) | karta fizike epara | `refs/epara-card_marketing.png` (rezolucion i ulët; foto më e mirë e kartës vetëm = më mirë) |
+| `@Atletet-Reja` | atlete të reja të bardha, pa logo, një shenjë e vogël vjollcë epara | `prompts/03-atletet-reja.md`; përjashtimi i vetëm nga aksenti |
 | (dyqani) | dyqan atletesh modern me neon, Tiranë | plate pa njerëz |
 
 ## HUD
