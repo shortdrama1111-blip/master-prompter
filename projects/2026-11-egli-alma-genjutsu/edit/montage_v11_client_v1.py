@@ -10,7 +10,7 @@ def load(p):
         fr.append(cv2.resize(f,(W,H),interpolation=cv2.INTER_AREA))
     return fr,fps
 SRC={k:load(v) for k,v in {'V2':'results/firenze-v5-montage-v2.mp4','T27':'results/seedance-27-outfit2-3-take1.mp4',
-     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4','R':'results/seedance-34-outfit3-take1.mp4','RT':sys.argv[3]}.items()}
+     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4','R':'results/seedance-34-outfit3-take1.mp4','PR':'results/seedance-35-profiles-take1.mp4','RT':sys.argv[3]}.items()}
 def ramp(segs):
     out=[]
     for a,b,v0,v1 in segs:
@@ -22,7 +22,9 @@ def real(a,b): return [(a+i/FPS,1/FPS) for i in range(round((b-a)*FPS))]
 # v11 = V1 për klienten: veshja 3 pas wipe-it nga take 34 (pa speed ramp); rripi rikthyer te veshja 2.
 # v10: pjesët më të mira të take 32 + 33; kalimi 2→3 me wipe-in natyral të kolonës (take 33, 7.9–9.3).
 PLAN=[
- ('V2', real(0.00,1.75)+real(3.875,5.33)+real(5.42,8.11)),   # veshja 1
+ ('V2', real(0.00,1.75)),                                    # veshja 1
+ ('PR', real(0.60,1.40)),                                    #   profili i ri (prompt 35)
+ ('V2', real(4.40,5.33)+real(5.42,8.11)),
  ('Q',  ramp([(0.20,1.20,1.4,1.4),(1.20,2.60,1.4,1.8)])),    # veshja 2: kapësja e çantës → kamera ngjitet te fytyra
  ('B',  real(10.20,11.50)),                                  #   duart te rripi (rikthyer, përdoruesi e pëlqen)
  ('P',  ramp([(1.95,2.30,1.5,3),(2.30,2.60,3,6),(2.60,3.80,6,6),(3.80,4.05,6,2.5)])),  # tërheqje te muri
