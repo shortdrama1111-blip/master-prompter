@@ -40,3 +40,5 @@
 - `results/firenze-v11-montage-v9.mp4` (12.8 s): ritmi i references mbi take 32 (pozat ~0.25 s, prerje mbi lëvizje, P32 i interpoluar në 72 fps).
 - `results/seedance-33-continuous-take1.mp4`: kapësja e çantës 0–1.2, ngjitja te fytyra 1.2–2.75, ulet 2.75–3.75, WIPE nga shtylla 3.75–4.25, ulur në shkallë 4.25–7.9, WIPE nga kolona 8.0–9.1, shpina + shikim mbi sup me dantellën te kolona 9.25–11.25, te kolona 11.5–12.75, ulur 13–16.
 - `edit/montage_v10.py` → `results/firenze-v12-montage-v10.mp4` (15.75 s): veshja 1 (v2) → çanta + ngjitja te fytyra (33) → ramp-et e 32 → ulur në shkallë (33) → WIPE me kolonën (33) → shpina/dantella (33) → menga (27) → ramp-et e 32 deri te ulur.
+- `edit/montage_v11_client_v1.py` → `results/CLIENT-V1-firenze.mp4` (15.7 s): si v10, por veshja 3 pas wipe-it pa speed ramp: shpina/dantella (33 9.4–10.9) → menga (27 12.85–14.2) → te kolona (27 14.35–16.0).
+- `results/CLIENT-V2-reel-origjinal-kalimet-fix.mp4` (16.75 s): video e parë (sheet-v3-test-video) me hequr vetëm zoom-blur (4.62–4.79) dhe split-screen + flash (6.38–6.92). Përdoruesi: V2 më vonë, pasi të mbyllim V1.
