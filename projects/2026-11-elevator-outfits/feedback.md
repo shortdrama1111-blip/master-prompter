@@ -28,3 +28,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 💡 | "look what it is created maybe we should generate her outfit reference and use that" | Extend v1 | Agreed: the sheet has to show the exact garment state (zipped sleeves / big hood); text plus a crop do not override the sheet. |
 | 🔧 | "it looks like it has two collars, the inner one up to the throat, then the hood over it" + "this applies to all the photos" | All sheets | Product: ribbed crew-neck collar + hood attached outside it, front edges crossing. Goes on all 3 colours. Refs: double-collar-crop.jpg, black-collar-detail.jpg |
 | 🔧 | "we need to redo them once more with this detail and make the final video" | All | 4 new sheets (black hood down, brown, blue zipped, black hood up), then the full final video. |
+| 👎 | "how does it look, why isn't it in the first photo?" | Sheet D2 black collar | The crew-neck collar is missing from the face panel. Edit prompts now name every panel. |

@@ -27,3 +27,9 @@
 - ❌ Hood: slightly bigger but close to the head. Cause: sheet-black has the hood down; the shape came from text plus a reference with a different face.
 - ❌ Seg 4: the face drifts and the doors turn bright again (like v3).
 - → New sheets: blue zipped, black with a big hood (prompts/06).
+
+## Sheet D2 (black, collar) → refs/sheet-black-collar-v1.jpg
+- ✅ Centre panel: the double collar is right, the face is consistent.
+- ❌ Left panel: no crew-neck collar (only the hood V). ❌ Right panel: a neckline close-up instead of the logo.
+- Cause: "change the neckline" with no panel named; the collar crop got copied as a panel. Fix: v3 panel locks (D3).
+- ⚠️ Centre logo reads "VIVANUS". The right panel gets restored from the original sheet.
