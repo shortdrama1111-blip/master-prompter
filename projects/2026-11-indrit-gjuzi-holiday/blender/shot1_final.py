@@ -42,7 +42,15 @@ except Exception:
 sc.render.resolution_x, sc.render.resolution_y, sc.render.resolution_percentage = W, H, 100
 sc.render.fps = FPS
 sc.render.image_settings.file_format = "PNG"
-sc.view_settings.view_transform = "AgX"
+sc.view_settings.view_transform = os.environ.get("SHOT1_VIEW", "AgX")
+for look in (os.environ.get("SHOT1_LOOK", "None"), "AgX - " + os.environ.get("SHOT1_LOOK", "None")):
+    try:
+        sc.view_settings.look = look
+        break
+    except Exception:
+        pass
+print("[shot1] view", sc.view_settings.view_transform, "| look", sc.view_settings.look, flush=True)
+sc.view_settings.exposure = float(os.environ.get("SHOT1_EXPOSURE", "0"))
 
 LED = (1.0, 0.68, 0.40)        # ~3200K
 KEY = (1.0, 0.80, 0.60)
@@ -334,7 +342,7 @@ def update(tt):
 
 
 n = round(DUR * FPS)
-frames = [0, n - 1] if MODE == "test" else range(n)
+frames = [0] if MODE == "still" else [0, n - 1] if MODE == "test" else range(n)
 os.makedirs(OUT, exist_ok=True)
 for f in frames:
     update(f / FPS)
