@@ -41,7 +41,7 @@ except Exception:
     pass
 bg = world.node_tree.nodes.get("Background")
 bg.inputs["Color"].default_value = (0.09, 0.065, 0.05, 1)
-bg.inputs["Strength"].default_value = 0.25
+bg.inputs["Strength"].default_value = 0.12
 
 
 def principled(name):
@@ -70,6 +70,7 @@ def textured(name, img, rough=0.5, alpha=False, base_rgb=None):
     t.image = bpy.data.images.load(os.path.join(TEX, img))
     t.extension = "EXTEND"
     if alpha:
+        m.surface_render_method = "BLENDED"
         b.inputs["Base Color"].default_value = (0.02, 0.02, 0.02, 1)
         nt.links.new(t.outputs["Alpha"], b.inputs["Alpha"])
     else:
@@ -78,25 +79,34 @@ def textured(name, img, rough=0.5, alpha=False, base_rgb=None):
     return m
 
 
-M_MOCHA = flat("mocha", (0.135, 0.095, 0.07), 0.75)
-M_INSIDE = flat("inside_taupe", (0.075, 0.055, 0.042), 0.85)
+M_MOCHA = flat("mocha", (0.07, 0.048, 0.035), 0.75)          # dark taupe
+M_INSIDE = flat("inside_taupe", (0.035, 0.025, 0.019), 0.85)  # a step darker than the wall
 M_CHAMP = flat("champagne", (0.80, 0.68, 0.50), 0.30, metal=1.0)
 M_LED = flat("led", (1, 1, 1), 0.5, emit=LED, strength=12.0)
 M_MASK = textured("mask_label", "mask.png", 0.45)
 M_COND = textured("cond_label", "cond.png", 0.45)
 M_BOX = textured("oilbox_print", "oilbox.png", 0.55)
-M_BOXSIDE = flat("oilbox_side", (0.93, 0.80, 0.62), 0.55)
+M_BOXSIDE = flat("oilbox_side", (0.92, 0.69, 0.43), 0.55)   # linear of the photo peach sRGB (0.965, 0.851, 0.69)
 M_DECAL = textured("oil_decal", "oil_decal.png", 0.3, alpha=True)
 M_CAPBLACK = flat("cap_black", (0.015, 0.015, 0.015), 0.12)
 M_CAPWHITE = flat("cap_white", (0.90, 0.89, 0.87), 0.22)
 M_TUBE = flat("dip_tube", (0.9, 0.9, 0.9), 0.4)
-m, b, _ = principled("glass")
-b.inputs["Base Color"].default_value = (1, 1, 1, 1)
-b.inputs["Roughness"].default_value = 0.03
-b.inputs["Transmission Weight"].default_value = 1.0
-b.inputs["IOR"].default_value = 1.5
-M_GLASS = m
-M_OILFILL = flat("oil_liquid", (0.95, 0.80, 0.45), 0.05)
+# Clear glass as alpha-blended gloss: EEVEE transmission over a dark set renders the bottle black.
+# Blending keeps the dip tube, the label and the shelf visible through it, like refs/hair-oil-with-box.jpg.
+def clear(name, rgb, alpha, rough):
+    m, b, _ = principled(name)
+    b.inputs["Base Color"].default_value = (*rgb, 1)
+    b.inputs["Roughness"].default_value = rough
+    b.inputs["Alpha"].default_value = alpha
+    b.inputs["Coat Weight"].default_value = 1.0
+    b.inputs["Coat Roughness"].default_value = 0.02
+    m.surface_render_method = "BLENDED"
+    m.use_backface_culling = False
+    return m
+
+
+M_GLASS = clear("glass", (0.95, 0.95, 0.95), 0.10, 0.02)
+M_OILFILL = clear("oil_liquid", (1.0, 0.93, 0.78), 0.08, 0.05)   # clear oil, faint warm body
 
 cam_data = bpy.data.cameras.new("Cam")
 cam_data.sensor_fit = "VERTICAL"
@@ -192,7 +202,7 @@ def oil_bottle(base, parent):
     e.parent, e.location = parent, base
     bm = bmesh.new(); cylinder(bm, 0.0185, 0.068, 0.0, r2=0.0165)
     mesh_obj("oil_glass", bm, M_GLASS, e)
-    bm = bmesh.new(); cylinder(bm, 0.0150, 0.020, 0.004, r2=0.0135)
+    bm = bmesh.new(); cylinder(bm, 0.0170, 0.060, 0.003, r2=0.0152)
     mesh_obj("oil_liquid", bm, M_OILFILL, e)
     bm = bmesh.new(); cylinder(bm, 0.0168, 0.044, 0.068)
     mesh_obj("oil_cap", bm, M_CAPBLACK, e)
@@ -209,9 +219,14 @@ def oil_bottle(base, parent):
 
 
 def oil_box(base, parent):
-    """Oil box, front face printed with the real box photo (aspect 360:497)."""
+    """Oil box, front face printed with the real box photo.
+    oilbox.png is 360x497 and the box face is only its right half (x 182..360, the left half is the
+    photo's white backdrop), so the UVs use u 0.505..1.0 and the face keeps the real 178:497 ratio.
+    Square section, like the real carton."""
     h = 0.135
-    w, d = h * 360 / 497, 0.05
+    U0, V0 = 182 / 360, 2 / 497            # skip the white backdrop and the 1-px shadow row
+    w = h * (1 - U0) * 360 / ((1 - V0) * 497)
+    d = w
     bm = bmesh.new()
     bmesh.ops.create_cube(bm, size=1.0)
     for v in bm.verts:
@@ -221,7 +236,8 @@ def oil_box(base, parent):
         front = f.normal.y < -0.9
         f.material_index = 0 if front else 1
         for l in f.loops:
-            l[uv].uv = ((l.vert.co.x + w / 2) / w, l.vert.co.z / h)
+            u = (l.vert.co.x + w / 2) / w
+            l[uv].uv = (U0 + u * (1 - U0), V0 + (l.vert.co.z / h) * (1 - V0))
     o = mesh_obj("oilbox", bm, [M_BOX, M_BOXSIDE], parent, smooth_sides=False)
     o.location = base
     return o
@@ -252,7 +268,7 @@ for c in range(cols):
         if 0.85 < z < 2.2:
             ld = bpy.data.lights.new("cubby", "AREA")
             ld.shape, ld.size, ld.size_y = "RECTANGLE", cw - 0.02, 0.012
-            ld.energy, ld.color = 1.6, LED
+            ld.energy, ld.color = 1.0, LED
             lo = link(bpy.data.objects.new("cubby_led", ld))
             lo.parent, lo.location = col, (xc, -depth + 0.02, z + h - 0.016)
         kind = kinds[k % 4]
