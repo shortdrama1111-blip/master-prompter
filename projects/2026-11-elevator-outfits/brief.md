@@ -28,9 +28,10 @@ Në foton on-body: me çizme llastiku të zeza deri në gju.
 |---|---|---|---|---|
 | 1 | E zezë | astar satin teal, zinxhir argjendi, logo e qëndisur teal | çizme llastiku të zeza, majë e mprehtë, takë stiletto | foto vetëm në bisedë (pa skedar) |
 | 2 | Kafe çokollatë | tegel/zinxhir bezhë në skajet e mëngëve, logo e qëndisur ton-mbi-ton kafe e errët; në foto: kapuçi i ngritur, mëngët të hapura | çizme lëkure kafe deri në gju, takë e trashë | `refs/outfit-brown-onbody.jpg` |
-| 3 | ❓ | | | |
+| 3 | Blu mbretërore (kobalt) | astar satin blu në kapuç, mëngët të mbyllura me zinxhir, manshetë të thurura; foto e prerë në kofshë: logo, gjatësia dhe këpucët nuk duken | ❓ | foto vetëm në bisedë (pa skedar) |
 
-Modelja në të dyja fotot on-body duket e njëjta: flokë të gjata, të drejta, kafe/gështenjë.
+Fotot e zezës dhe kafes kanë të njëjtën modele: flokë të gjata, të drejta, gështenjë.
+Foto blu ka modele tjetër: flokë mjaltë me kaçurrela të mëdha. ❓ Cila fytyrë mbetet për të tria.
 
 ## Portat
 | Porta | Përgjigja |
