@@ -19,7 +19,7 @@ rng = random.Random(11)
 for o in list(bpy.data.objects):
     bpy.data.objects.remove(o)
 sc = bpy.context.scene
-ENGINE = os.environ.get("SHOT1_ENGINE", "EEVEE").upper()
+ENGINE = os.environ.get("SHOT1_ENGINE", "CYCLES").upper()
 sc.render.engine = "CYCLES" if ENGINE == "CYCLES" else "BLENDER_EEVEE"
 if ENGINE == "CYCLES":
     sc.cycles.device = "GPU"
@@ -31,7 +31,7 @@ if ENGINE == "CYCLES":
             d.use = True
     except Exception as ex:
         print("[shot1] gpu:", ex)
-    sc.cycles.samples = int(os.environ.get("SHOT1_SAMPLES", "128"))
+    sc.cycles.samples = int(os.environ.get("SHOT1_SAMPLES", "64"))
     sc.cycles.use_denoising = True
     sc.cycles.max_bounces, sc.cycles.transmission_bounces, sc.cycles.glossy_bounces = 12, 12, 6
 sc.eevee.taa_render_samples = 32
@@ -42,7 +42,7 @@ except Exception:
 sc.render.resolution_x, sc.render.resolution_y, sc.render.resolution_percentage = W, H, 100
 sc.render.fps = FPS
 sc.render.image_settings.file_format = "PNG"
-sc.view_settings.view_transform = os.environ.get("SHOT1_VIEW", "AgX")
+sc.view_settings.view_transform = os.environ.get("SHOT1_VIEW", "Khronos PBR Neutral")
 for look in (os.environ.get("SHOT1_LOOK", "None"), "AgX - " + os.environ.get("SHOT1_LOOK", "None")):
     try:
         sc.view_settings.look = look
@@ -50,10 +50,10 @@ for look in (os.environ.get("SHOT1_LOOK", "None"), "AgX - " + os.environ.get("SH
     except Exception:
         pass
 print("[shot1] view", sc.view_settings.view_transform, "| look", sc.view_settings.look, flush=True)
-sc.view_settings.exposure = float(os.environ.get("SHOT1_EXPOSURE", "0"))
+sc.view_settings.exposure = float(os.environ.get("SHOT1_EXPOSURE", "-0.2"))
 
 LED = (1.0, 0.68, 0.40)        # ~3200K
-KEY = (1.0, 0.80, 0.60)
+KEY = tuple(float(v) for v in os.environ.get("SHOT1_KEY", "0.95,0.97,1.0").split(","))  # front key: near-neutral so products keep their photo colour
 
 world = bpy.data.worlds.new("W")
 sc.world = world
@@ -101,20 +101,23 @@ def textured(name, img, rough=0.5, alpha=False, base_rgb=None):
     return m
 
 
-# Cycles adds bounce light (~25% brighter walls than EEVEE), so the albedo drops to keep the
-# approved v2 dark taupe on screen.
+# v4 look (client: "kafe e butë, mocha"): Khronos PBR Neutral keeps the products in their photo
+# colour; the 3200K LED wash tints everything orange, so the interior albedo is a grey taupe that
+# lands on soft mocha on screen, and the white caps are a touch cool so they stay white.
+# Cycles adds bounce light (~25% brighter than EEVEE), hence DK.
 DK = 0.62 if ENGINE == "CYCLES" else 1.0
-M_MOCHA = flat("mocha", (0.07 * DK, 0.048 * DK, 0.035 * DK), 0.75)          # dark taupe
-M_INSIDE = flat("inside_taupe", (0.035 * DK, 0.025 * DK, 0.019 * DK), 0.85)  # a step darker
+MO = tuple(float(v) for v in os.environ.get("SHOT1_MOCHA", "0.30,0.31,0.36").split(","))
+M_MOCHA = flat("mocha", tuple(c * DK for c in MO), 0.75)                       # soft mocha
+M_INSIDE = flat("inside_taupe", tuple(c * DK * 0.7 for c in MO), 0.85)        # interior a step darker
 M_CHAMP = flat("champagne", (0.80, 0.68, 0.50), 0.30, metal=1.0)
-M_LED = flat("led", (1, 1, 1), 0.5, emit=LED, strength=12.0)
+M_LED = flat("led", (1, 1, 1), 0.5, emit=(1.0, 0.62, 0.32), strength=float(os.environ.get("SHOT1_LEDSTR", "0.7")))  # strip itself reads warm gold
 M_MASK = textured("mask_label", "mask.png", 0.45)
 M_COND = textured("cond_label", "cond.png", 0.45)
 M_BOX = textured("oilbox_print", "oilbox.png", 0.55)
 M_BOXSIDE = flat("oilbox_side", (0.92, 0.69, 0.43), 0.55)   # linear of the photo peach sRGB (0.965, 0.851, 0.69)
 M_DECAL = textured("oil_decal", "oil_decal.png", 0.3, alpha=True)
 M_CAPBLACK = flat("cap_black", (0.008, 0.008, 0.008), 0.08)
-M_CAPWHITE = flat("cap_white", (0.90, 0.89, 0.87), 0.22)
+M_CAPWHITE = flat("cap_white", (0.84, 0.88, 0.94), 0.22)   # a touch cool so it renders white under the 3200K wash
 M_TUBE = flat("dip_tube", (0.9, 0.9, 0.9), 0.4)
 # Clear glass: real refraction. EEVEE needs raytraced refraction on the material, otherwise the
 # transmission only sees the dark world probe and the bottle renders black. The bottle is full of
@@ -314,7 +317,7 @@ for c in range(cols):
         if 0.85 < z < 2.2:
             ld = bpy.data.lights.new("cubby", "AREA")
             ld.shape, ld.size, ld.size_y = "RECTANGLE", cw - 0.02, 0.012
-            ld.energy, ld.color = 1.0, LED
+            ld.energy, ld.color = float(os.environ.get("SHOT1_CUBBY", "0.5")), LED
             lo = link(bpy.data.objects.new("cubby_led", ld))
             lo.parent, lo.location = col, (xc, -depth + 0.02, z + h - 0.016)
         kind = kinds[k % 4]
