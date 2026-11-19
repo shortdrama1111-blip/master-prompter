@@ -19,7 +19,21 @@ rng = random.Random(11)
 for o in list(bpy.data.objects):
     bpy.data.objects.remove(o)
 sc = bpy.context.scene
-sc.render.engine = "BLENDER_EEVEE"
+ENGINE = os.environ.get("SHOT1_ENGINE", "EEVEE").upper()
+sc.render.engine = "CYCLES" if ENGINE == "CYCLES" else "BLENDER_EEVEE"
+if ENGINE == "CYCLES":
+    sc.cycles.device = "GPU"
+    try:
+        prefs = bpy.context.preferences.addons["cycles"].preferences
+        prefs.compute_device_type = "METAL"
+        prefs.get_devices()
+        for d in prefs.devices:
+            d.use = True
+    except Exception as ex:
+        print("[shot1] gpu:", ex)
+    sc.cycles.samples = int(os.environ.get("SHOT1_SAMPLES", "128"))
+    sc.cycles.use_denoising = True
+    sc.cycles.max_bounces, sc.cycles.transmission_bounces, sc.cycles.glossy_bounces = 12, 12, 6
 sc.eevee.taa_render_samples = 32
 try:
     sc.eevee.use_raytracing = True
@@ -79,8 +93,11 @@ def textured(name, img, rough=0.5, alpha=False, base_rgb=None):
     return m
 
 
-M_MOCHA = flat("mocha", (0.07, 0.048, 0.035), 0.75)          # dark taupe
-M_INSIDE = flat("inside_taupe", (0.035, 0.025, 0.019), 0.85)  # a step darker than the wall
+# Cycles adds bounce light (~25% brighter walls than EEVEE), so the albedo drops to keep the
+# approved v2 dark taupe on screen.
+DK = 0.62 if ENGINE == "CYCLES" else 1.0
+M_MOCHA = flat("mocha", (0.07 * DK, 0.048 * DK, 0.035 * DK), 0.75)          # dark taupe
+M_INSIDE = flat("inside_taupe", (0.035 * DK, 0.025 * DK, 0.019 * DK), 0.85)  # a step darker
 M_CHAMP = flat("champagne", (0.80, 0.68, 0.50), 0.30, metal=1.0)
 M_LED = flat("led", (1, 1, 1), 0.5, emit=LED, strength=12.0)
 M_MASK = textured("mask_label", "mask.png", 0.45)
@@ -88,25 +105,25 @@ M_COND = textured("cond_label", "cond.png", 0.45)
 M_BOX = textured("oilbox_print", "oilbox.png", 0.55)
 M_BOXSIDE = flat("oilbox_side", (0.92, 0.69, 0.43), 0.55)   # linear of the photo peach sRGB (0.965, 0.851, 0.69)
 M_DECAL = textured("oil_decal", "oil_decal.png", 0.3, alpha=True)
-M_CAPBLACK = flat("cap_black", (0.015, 0.015, 0.015), 0.12)
+M_CAPBLACK = flat("cap_black", (0.008, 0.008, 0.008), 0.08)
 M_CAPWHITE = flat("cap_white", (0.90, 0.89, 0.87), 0.22)
 M_TUBE = flat("dip_tube", (0.9, 0.9, 0.9), 0.4)
-# Clear glass as alpha-blended gloss: EEVEE transmission over a dark set renders the bottle black.
-# Blending keeps the dip tube, the label and the shelf visible through it, like refs/hair-oil-with-box.jpg.
-def clear(name, rgb, alpha, rough):
-    m, b, _ = principled(name)
-    b.inputs["Base Color"].default_value = (*rgb, 1)
-    b.inputs["Roughness"].default_value = rough
-    b.inputs["Alpha"].default_value = alpha
-    b.inputs["Coat Weight"].default_value = 1.0
-    b.inputs["Coat Roughness"].default_value = 0.02
-    m.surface_render_method = "BLENDED"
-    m.use_backface_culling = False
-    return m
-
-
-M_GLASS = clear("glass", (0.95, 0.95, 0.95), 0.10, 0.02)
-M_OILFILL = clear("oil_liquid", (1.0, 0.93, 0.78), 0.08, 0.05)   # clear oil, faint warm body
+# Clear glass: real refraction. EEVEE needs raytraced refraction on the material, otherwise the
+# transmission only sees the dark world probe and the bottle renders black. The bottle is full of
+# clear oil (IOR ~1.47), so a solid refracting body behaves like the real one: it bends the shelf
+# behind it, magnifies the dip tube and throws bright edges where it catches the LEDs.
+m, b, _ = principled("glass")
+b.inputs["Base Color"].default_value = (1, 1, 1, 1)
+b.inputs["Roughness"].default_value = 0.0
+b.inputs["IOR"].default_value = 1.47
+b.inputs["Transmission Weight"].default_value = 1.0
+for attr, val in (("surface_render_method", "DITHERED"), ("use_raytrace_refraction", True),
+                  ("thickness_mode", "SPHERE"), ("use_backface_culling", False)):
+    try:
+        setattr(m, attr, val)
+    except Exception as ex:
+        print("[shot1] glass:", attr, ex)
+M_GLASS = m
 
 cam_data = bpy.data.cameras.new("Cam")
 cam_data.sensor_fit = "VERTICAL"
@@ -196,25 +213,46 @@ def bottle150(label_mat, base, parent):
     return e
 
 
+def glass_body(r0, r1, h, bev, seg=64):
+    """Tapered solid glass with rounded rims: the bevels are what catch the thin bright edges."""
+    bm = bmesh.new()
+    cylinder(bm, r0, h, 0.0, r2=r1, seg=seg)
+    rims = [e for e in bm.edges if len(e.link_faces) == 2
+            and abs(e.link_faces[0].normal.z - e.link_faces[1].normal.z) > 0.5]
+    bmesh.ops.bevel(bm, geom=rims, offset=bev, segments=4, profile=0.5, affect="EDGES")
+    for f in bm.faces:
+        f.smooth = abs(f.normal.z) < 0.999
+    return bm
+
+
 def oil_bottle(base, parent):
-    """40 ml glass bottle (photo-matched): tapered glass, black cap, white dip tube, label decal."""
+    """40 ml bottle, matched to refs/hair-oil-with-box.jpg: clear tapered glass full of clear oil,
+    glossy black cap, white dip tube, black front print."""
     e = link(bpy.data.objects.new("oil", None))
     e.parent, e.location = parent, base
-    bm = bmesh.new(); cylinder(bm, 0.0185, 0.068, 0.0, r2=0.0165)
-    mesh_obj("oil_glass", bm, M_GLASS, e)
-    bm = bmesh.new(); cylinder(bm, 0.0170, 0.060, 0.003, r2=0.0152)
-    mesh_obj("oil_liquid", bm, M_OILFILL, e)
-    bm = bmesh.new(); cylinder(bm, 0.0168, 0.044, 0.068)
-    mesh_obj("oil_cap", bm, M_CAPBLACK, e)
-    bm = bmesh.new(); cylinder(bm, 0.0018, 0.064, 0.004, seg=12)
+    mesh_obj("oil_glass", glass_body(0.0185, 0.0165, 0.068, 0.0025), M_GLASS, e, smooth_sides=False)
+    bm = bmesh.new(); cylinder(bm, 0.0168, 0.044, 0.068, seg=64)
+    for f in bm.faces:
+        f.smooth = abs(f.normal.z) < 0.5
+    mesh_obj("oil_cap", bm, M_CAPBLACK, e, smooth_sides=False)
+    bm = bmesh.new(); cylinder(bm, 0.0018, 0.058, 0.010, seg=12)   # ends above the thick base
     mesh_obj("oil_tube", bm, M_TUBE, e)
-    # decal: the photo spans 0..0.112 m tall; text sits on the glass front
+    # front print: the photo spans 0..0.112 m tall; it sits just in front of the glass face
     dh, dw = 0.112, 0.112 * 123 / 404
     bm = bmesh.new()
-    verts = [bm.verts.new((x, -0.0190, z)) for x, z in ((-dw / 2, 0), (dw / 2, 0), (dw / 2, dh), (-dw / 2, dh))]
+    verts = [bm.verts.new((x, -0.0192, z)) for x, z in ((-dw / 2, 0), (dw / 2, 0), (dw / 2, dh), (-dw / 2, dh))]
     bm.faces.new(verts)
     front_uv(bm, dw / 2, dh)
     mesh_obj("oil_label", bm, M_DECAL, e, smooth_sides=False)
+    # two slim vertical LED strips on the cubby side walls: product-photo strip lights that draw
+    # the bright vertical edges down both sides of the glass
+    for sx in (-1, 1):
+        ld = bpy.data.lights.new("oil_strip", "AREA")
+        ld.shape, ld.size, ld.size_y = "RECTANGLE", 0.006, 0.10
+        ld.energy, ld.color, ld.spread = 0.35, LED, math.radians(35)   # narrow beam: edges, not walls
+        lo = link(bpy.data.objects.new("oil_strip", ld))
+        lo.parent, lo.location = e, (sx * 0.060, 0.005, 0.055)      # beside the glass, facing it
+        lo.rotation_euler = (math.radians(90), 0, math.radians(sx * 90))
     return e
 
 
@@ -279,7 +317,10 @@ for c in range(cols):
         elif kind == "cond":
             bottle150(M_COND, base, col)
         elif kind == "oil":
-            oil_bottle(base, col)
+            # bottle in front of its own carton, as in refs/hair-oil-with-box.jpg: the peach face
+            # behind the clear glass is what makes the black print and the glass itself read
+            oil_box((xc + 0.012, -0.032, z + t / 2), col)
+            oil_bottle((xc - 0.008, -0.081, z + t / 2), col)
         else:
             oil_box(base, col)
         z += h
