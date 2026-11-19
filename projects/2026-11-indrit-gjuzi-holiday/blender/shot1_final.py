@@ -350,5 +350,7 @@ os.makedirs(OUT, exist_ok=True)
 for f in frames:
     update(f / FPS)
     sc.render.filepath = os.path.join(OUT, f"f{f:04d}.png")
+    if os.environ.get("RESUME") and os.path.exists(sc.render.filepath):
+        continue                         # RESUME=1: keep frames already on disk
     bpy.ops.render.render(write_still=True)
     print(f"[shot1] frame {f}/{n - 1}", flush=True)
