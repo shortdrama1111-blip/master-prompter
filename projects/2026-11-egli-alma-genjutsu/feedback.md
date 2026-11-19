@@ -68,3 +68,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 👎 "skena 2 eshte ajo qe vetem ecen, nuk me pelqen dhe fakti qe kemi nje perseritje te se njejtes logjike, pamjen tek kembet and so on" · 💡 "ne nje nga klipet ... kishte disa detaje te burka beli ose rripi, mendoj se dhe ato mund te futen". 🔧 "rregullojme 2 njehere dhe pastaj shofim per 3".
 - Rregullimi (montage v5): pa këmbë, një plan i vetëm që ecën; shtuar detaji i duarve te rripi (B 10.2) dhe profili i afërt te vitrina (B 12.95).
 - 💡 Mësim: çdo veshje ka nevojë për ritëm të vetin; i njëjti rend shot-esh (ecje → këmbë → 3/4 …) i përsëritur për çdo veshje lexohet si monoton.
+- 👍 Veshja 3: "m pelqen hand thing dhe fundi qe rri ashtu, por asgje tjt". 👎 Veshja 2: pas detajit të rripit "ajo ecen prap" → 🔧 zëvendëso ecjen me material të ri. 🔧 Veshja 3: duart → kolona → 2–3 poza estetike me trick-un e referencës. Promptet 29, 30.
