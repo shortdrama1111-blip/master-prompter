@@ -42,3 +42,12 @@ Hyperrealistic photography. Real skin texture with visible pores, subtle subsurf
 
 ## v3 — fytyrë e re
 I njëjti tekst si v2, pa asnjë ndryshim. Ndryshon vetëm reference image 1 → `refs/face-model.jpg`.
+
+### Rezultati v3 → `refs/sheet-black-v3.jpg`
+Fytyra, flokët, mëngët me astar teal, çizmet dhe logoja te paneli 3 janë të sakta. Në panelin 2
+logoja del në të majtë të kuadrit, kurse e duam në të djathtë. Ndreqet me edit, pa rigjeneruar.
+
+## v3-edit — logoja në të djathtë te paneli 2 (Banana Pro edit, referenca: `refs/sheet-black-v3.jpg`)
+```
+Keep the supplied image exactly: same three panels, same woman, same face, hair, skin, hoodie dress, open sleeves, teal lining, boots, pose, backdrop, light, grade and grain. Change ONE thing only, in the center panel: the embroidered teal logo on the lower front hem moves from the left side of the garment to the right side of the garment as seen in the frame, at the same height just above the ribbed band, same size, same teal thread, same letters reading "VIVAMUS" left to right. The left side of the hem becomes plain black fleece. The left and right panels stay untouched.
+```
