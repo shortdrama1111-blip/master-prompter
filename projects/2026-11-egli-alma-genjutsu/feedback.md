@@ -86,3 +86,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 RREGULL (përdoruesi): "mbaj shenim qe mos te me japesh keshtu plain shots anymore se jane pa pike emocioni". Shot-et "ekspozitë" (rrotullim në vend, ecje e thjeshtë, qëndrim pa qëllim) nuk propozohen më. Çdo shot ka një moment/emocion: shikim, gjest, lëvizje kamere me paralaks, pozë editoriale. Kandidat për CLAUDE.md/skill te mbyllja.
 - 👎 Rrotullimi me speed ramp: "eshte shume i keq, s'do e perdorim" → hequr nga V1.
 - 👎 Take 36 (hapja e veshjes 3): "i dont like how her face looks so try to not include that". Përdorur vetëm 0.15–3.30 (nga pas: gishtat te kolonat, kolona kalon, fillon të kthejë kokën), pa fytyrën.
+- 🔧 V2: "ma bej crop kete daljen nga skena dhe ndoshta me shto ndonje skene tek kolonat" → hequr dalja nga kuadri (A 16.95–17.45); shtuar menga + e mbështetur te kolona (T27) në fund.

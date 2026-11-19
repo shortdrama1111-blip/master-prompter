@@ -32,7 +32,9 @@ PLAN=[
  ('T27',real(3.40,4.60)),                                    #   3/4 te vitrinat
  ('T27',real(4.75,6.30)),                                    #   plan mesatar, shikim te lentja
  ('PR', real(4.50,6.90)),                                    # veshja 3: profili i ri te Arno
- ('A',  real(11.40,17.45)),                                  #   pjesa tjetër e videos origjinale
+ ('A',  real(11.40,16.95)),                                  #   pjesa tjetër e origjinalit, pa daljen nga kuadri
+ ('T27',real(12.85,14.20)),                                  #   portiku: menga me dantella
+ ('T27',real(14.35,16.00)),                                  #   portiku: e mbështetur te kolona, mbyllja
 ]
 p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','bgr24','-s',f'{W}x{H}','-r',str(FPS),'-i','-',
   '-c:v','libx264','-crf','16','-pix_fmt','yuv420p',OUT],stdin=subprocess.PIPE)
