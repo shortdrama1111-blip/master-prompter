@@ -31,7 +31,11 @@ Në foton on-body: me çizme llastiku të zeza deri në gju.
 | 3 | Blu mbretërore (kobalt) | astar satin blu në kapuç, mëngët të mbyllura me zinxhir, manshetë të thurura; logo e qëndisur blu marin e errët (ton-mbi-ton), i njëjti vend poshtë majtas; gjatësia nuk duket në foto | çizme krem (shih decisions.md) | foto on-body vetëm në bisedë; logo: `refs/logo-blue.jpg` |
 
 Fotot e zezës dhe kafes kanë të njëjtën modele: flokë të gjata, të drejta, gështenjë.
-Foto blu ka modele tjetër: flokë mjaltë me kaçurrela të mëdha. ❓ Cila fytyrë mbetet për të tria.
+Foto blu ka modele tjetër: flokë mjaltë me kaçurrela të mëdha.
+
+**Vendim (2026-11-19):** fytyra për të tria = modelja te `refs/face-model-black-fit.jpg`
+(flokë të gjata të drejta, bazë gështenjë e lehtë me balayage biondë, sy blu-gri). E njëjta foto
+tregon si rri hoodie i zi në trup: mëngët të hapura bien si pelerinë, astari teal duket.
 
 ## Portat
 | Porta | Përgjigja |
