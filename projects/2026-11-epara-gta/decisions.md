@@ -10,6 +10,9 @@ Light: golden hour over Tirana, low sun from the west at 8° elevation, warm 320
 Aksenti i rezervuar = **violet-magenta e kartës epara** (hex nga logo SVG: magenta `#D2007F`, indigo `#312783`, blu `#0080C9`, koral `#E94C45`) (blu-indigo → vjollcë, me logon e bardhë vertikale).
 Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota pa vjollcë/magenta.
 
+## Referencat në Seedance: pa Element (rregull i përdoruesit, 2026-11-19)
+Asnjë Element i ngarkuar. Çdo prompt videoje përdor tag-e sipas rendit të ngarkimit: `@image1` = start frame (plate/frame-i), `@image2` = charsheet-i i djalit (identiteti), `@image3`... vetëm kur duhen (p.sh. karta). Maks 2–3 imazhe. Tabela më poshtë mbetet si listë e skedarëve referencë.
+
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
 |---|---|---|
