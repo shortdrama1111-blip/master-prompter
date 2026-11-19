@@ -81,3 +81,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 👎 "duket sikur eshte shume linear: leviz, ndalon, leviz". Krahasimi i ramp-eve: analysis-v7-ramps.md.
 - 👍 v10: "pjesa 2 eshte shume mire". Veshja 3: 👍 kalimi (wipe me kolonën) "shume mire", 👎 pjesa tjetër; 🔧 "nuk dua speed ramp ketu". Plani: V1 te klientja; V2 = reel-i i parë me vetëm kalimet e rregulluara, klientja zgjedh. "do na duhet nje gjenerim i ri" për veshjen 3.
 - 🔧 "tek veshja dy mungonte pjesa e belit qe mua me pelqeu, shtoje" → duart te rripi (B 10.2–11.5) rikthyer te montage_v11 pas çantës/fytyrës. Bashkohet kur të vijë videoja e veshjes 3 (prompt 34).
+- 💡 Klientja: profili anash nuk i pëlqeu sepse "i dukej veshi keq", edhe te veshja 1 (pallto, 3.875–4.79) edhe te veshja 3 (Arno 9.0–11.4). Prompt 35 v2 i rigjeneron të dyja; veshi i mbuluar pjesërisht nga fijet e flokëve.
