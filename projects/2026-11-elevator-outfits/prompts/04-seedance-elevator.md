@@ -241,7 +241,10 @@ The camera position, framing and lens are identical in all four segments. Every 
 
 ## v4 — alternating actions (typing → reflection → call → pose), cream boots in blue
 
-Feedback v3: "its better is 90SCENE CONTEXT
+Feedback v3: "its better is 90%... in every shot she is typing... lets alternate". Everything else = v3.
+
+```
+SCENE CONTEXT
 A woman stands alone inside a stainless-steel elevator cabin, seen from the landing through the elevator doorway. Each time the doors open she is caught in a different moment with her phone: typing, checking her reflection, on a call, and finally posing. Four times the doors slide fully open to reveal her in a new look of the same oversized zippered hoodie dress, and three times they slide fully shut in front of her. 20 seconds, vertical 9:16.
 
 ACTIVE REFERENCES
