@@ -1,0 +1,8 @@
+# 09 · Plate: dyqani i atleteve me neon, brenda (Seedream 5.5, 9:16)
+
+Version v1. image 1 = screenshot GTA 6 (vetëm ngjyra/render). Pa referencë dyqani: dizajn i ri. Neon i bardhë + cyan; asgjë vjollcë (rezervuar për kartën).
+
+```
+Vertical 9:16 interior of a modern sneaker store in Tirana, camera at 1.5 metres near the entrance, 30° field of view, looking toward the cash counter at the back, with image 1 used only for the colour grade and the real-time game render style. Polished light-grey concrete floor, a long wall on the left with floating white shelves holding rows of white, grey, black and sand-coloured sneakers, each shoe lit from below; a ceiling grid of thin cool white neon tubes and one long soft cyan neon line running along the right wall; a low pale-oak bench and a round mirror in the middle; at the back a white stone cash counter with a slim black card payment terminal standing on it; a tall glass shop front on the right lets in long warm stripes of sunlight across the floor and the shelves. The store is empty of people. Shelves and walls are plain with no signs. Next-gen open-world video game environment, real-time 3D game engine render, crisp HDR detail, saturated warm Mediterranean colours.
+Light: golden hour over Tirana, low sun from the west at 8° elevation, warm 3200 K key light, long soft shadows across the pavement, cool 7000 K skylight filling the shadows, warm rim light on hair and shoulders, light haze over the distant mountains. Indoors the same low 3200 K sun pours through the glass shop front and mixes with cool white 6500 K neon tubes and soft cyan neon accents.
+```

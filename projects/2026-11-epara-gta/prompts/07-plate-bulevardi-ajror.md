@@ -1,0 +1,8 @@
+# 07 · Plate: bulevardi + Piramida nga dron, 60° (Seedream 5.5, 9:16)
+
+Version v1. image 1 = `refs/tirana_bulevardi_piramida_ajrore.jpg` (vendosja e qytetit; është blue hour, ne e kthejmë në golden hour), image 2 = screenshot GTA 6 (vetëm ngjyra/render). Skena 2, udhëtimi.
+
+```
+Vertical 9:16 drone view of the same city layout as image 1, camera 150 metres above the ground tilted 60° down, looking along the long tree-lined central boulevard of Tirana toward the mountains, with image 2 used only for the colour grade and the real-time game render style. The wide boulevard with a green central strip and a narrow river channel with trees runs from the bottom of the frame toward the horizon; in the lower right the white concrete pyramid with its sloping ribs and terraced steps; on the right a tall dark glass skyscraper and a round tower with a coloured light band; on the left a curved glass-and-white-grid building and a small domed mosque with a slim minaret; dense blocks of pastel apartment buildings fill the city out to green and blue mountain ridges under a clear sky. Light traffic of small cars on the boulevard, pavements empty of people. Next-gen open-world video game environment, real-time 3D game engine render, crisp HDR detail, saturated warm Mediterranean colours.
+Light: golden hour over Tirana, low sun from the west at 8° elevation, warm 3200 K key light, long soft shadows across the pavement, cool 7000 K skylight filling the shadows, warm rim light on hair and shoulders, light haze over the distant mountains. Indoors the same low 3200 K sun pours through the glass shop front and mixes with cool white 6500 K neon tubes and soft cyan neon accents.
+```
