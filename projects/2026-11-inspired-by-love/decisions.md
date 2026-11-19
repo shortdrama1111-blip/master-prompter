@@ -20,3 +20,9 @@ Fleta sage e editiut të dytë (zemrat vertikale) është standardi. Çdo ngjyr�
 ## Pyetje të hapura për ngjyrat e tjera
 - Shkrimi/zemrat mbeten bardhë/blush në çdo ngjyrë?
 - Piping-u mbetet gri i errët apo ton më i errët i ngjyrës?
+
+## Ngjyrat e miratuara
+| # | Ngjyra | Hex | Shkrimi | Zemrat | Piping |
+|---|---|---|---|---|---|
+| 1 | Sage green | ~#A3AC9E | e bardhë | blush-white | gri e errët |
+| 2 | Heather grey melange | ~#B9B9B7 | e bardhë, tone-on-tone | blush-white | gri pak më e errët |
