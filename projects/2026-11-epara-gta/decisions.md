@@ -2,8 +2,9 @@
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
 ```
-(pa vendim ende)
+Light: golden hour over Tirana, low sun from the west at 8° elevation, warm 3200 K key light, long soft shadows across the pavement, cool 7000 K skylight filling the shadows, warm rim light on hair and shoulders, light haze over the distant mountains. Indoors the same low 3200 K sun pours through the glass shop front and mixes with cool white 6500 K neon tubes and soft cyan neon accents.
 ```
+(v1, draft. Neoni i dyqanit: i bardhë + cyan, jo vjollcë, sepse vjollca është e kartës.)
 
 ## Ngjyra: 60:30:10, aksenti i rezervuar
 Aksenti i rezervuar = **violet-magenta e kartës epara** (blu-indigo → vjollcë, me logon e bardhë vertikale).
@@ -12,9 +13,9 @@ Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota 
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
 |---|---|---|
-| (personazhi) | djalë ~25 vjeç, i gjeneruar, lëkurë plastike GTA | charsheet Seedream 5.5 → Element; prompti te `prompts/01-charsheet.md` |
+| `@Djali-GTA-Plastik` | djalë ~25 vjeç, i gjeneruar, lëkurë plastike GTA | `chars/djali_plastik_forte_pa-koke.png` (koka e mbuluar te paneli 3) → Higgsfield Element |
 | (karta) | karta fizike epara | `refs/epara-card_marketing.png` (rezolucion i ulët; foto më e mirë e kartës vetëm = më mirë) |
-| (dyqani) | dyqan atletesh, Tiranë | plate pa njerëz |
+| (dyqani) | dyqan atletesh modern me neon, Tiranë | plate pa njerëz |
 
 ## HUD
 - Lart djathtas: logo epara + bilanci në LEK (në vend të parave GTA).

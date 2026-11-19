@@ -11,3 +11,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "djali 25 vjec" | personazhi | projekt |
 | 2026-11-19 | 🔧 | "narratori shqip" | zëri | projekt |
 | 2026-11-19 | 🔧 | "HUD anglisht" | grafika | projekt (përputhet me STYLE.md) |
+| 2026-11-19 | 👍 | aprovoi edit-in e lëkurës plastike (vazhdoi pa vërejtje) | charsheet, Seedream 5.5 edit, prompts/02 | projekt |
+| 2026-11-19 | 🔧 | "golden hour" | blloku i dritës | projekt |
+| 2026-11-19 | 🔧 | "modern me neon" | dyqani i atleteve | projekt |
