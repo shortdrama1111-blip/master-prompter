@@ -14,7 +14,7 @@ Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota 
 | Tag | Çfarë është | Shënime |
 |---|---|---|
 | `@Djali-GTA-Plastik` | djalë ~25 vjeç, i gjeneruar, lëkurë plastike GTA | `chars/djali_plastik_forte_pa-koke.png` (koka e mbuluar te paneli 3) → Higgsfield Element |
-| `@Karta-epara` | karta fizike epara, **vertikale**, gradient magenta-vjollcë → indigo, çip, contactless, logo **lavandë** (jo e bardhë), Mastercard poshtë djathtas | `refs/epara-card_front_crop.png` → edit prompts/04 → Element. **Vetëm pjesa e parme.** |
+| `@Karta-epara` | karta fizike epara, **vertikale**, gradient magenta-vjollcë → indigo, çip, contactless, logo **lavandë** (jo e bardhë), Mastercard poshtë djathtas | `chars/karta-epara_clean_v1.jpg` ✅ (nga edit prompts/04) → Element. **Vetëm pjesa e parme.** |
 | `@Atletet-Reja` | atlete të reja të bardha, pa logo, një shenjë e vogël vjollcë epara | `prompts/03-atletet-reja.md`; përjashtimi i vetëm nga aksenti |
 | (dyqani) | dyqan atletesh modern me neon, Tiranë | plate pa njerëz |
 
