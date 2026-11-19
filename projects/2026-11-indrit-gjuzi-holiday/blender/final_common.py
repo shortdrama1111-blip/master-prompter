@@ -343,3 +343,74 @@ def oil_box_centred(parent=None):
         e.parent = parent
     oil_box((0, 0, -0.0675), e)
     return e
+
+
+# ---------------------------------------------------------------- shared for shots 5, 6: red holiday bag
+# Front printed straight from refs/holiday-bag-red.jpg (copied to tex/bag_photo.jpg). The photo is in
+# perspective, so the front face is a 24 x 24 grid whose UVs interpolate the four photo corners of the
+# front panel; the print lands square on the box. The front ribbon handle lies flat on the face in the
+# photo and stays part of the print; the back handle is a real satin ribbon arch.
+BAG_PX = (1456, 1080)
+BAG_CORNERS = {"tl": (232, 102), "tr": (1190, 107), "bl": (214, 958), "br": (1188, 1044)}
+M_BAGFRONT = textured("bag_print", "bag_photo.jpg", 0.55)
+M_BAGRED = flat("bag_red", (0.43, 0.020, 0.022), 0.55)          # linear of the photo red sRGB (0.69, 0.15, 0.16)
+M_SATIN_WHITE = flat("satin_white", (0.82, 0.84, 0.88), 0.25)
+M_SATIN_RED = flat("satin_red", (0.42, 0.012, 0.02), 0.28)
+for _m in (M_SATIN_WHITE, M_SATIN_RED):
+    try:
+        _m.node_tree.nodes["Principled BSDF"].inputs["Sheen Weight"].default_value = 0.6
+    except Exception:
+        pass
+
+
+def _bag_uv(s, t):
+    """s: 0 left -> 1 right, t: 0 bottom -> 1 top; bilinear over the photo corners."""
+    c = BAG_CORNERS
+    top = [c["tl"][i] + (c["tr"][i] - c["tl"][i]) * s for i in (0, 1)]
+    bot = [c["bl"][i] + (c["br"][i] - c["bl"][i]) * s for i in (0, 1)]
+    x = bot[0] + (top[0] - bot[0]) * t
+    y = bot[1] + (top[1] - bot[1]) * t
+    return x / BAG_PX[0], 1 - y / BAG_PX[1]
+
+
+def ribbon_strip(pts, width, mat, parent, name="ribbon"):
+    """Flat satin ribbon along a polyline; its width runs along local Y."""
+    bm = bmesh.new()
+    rows = [(bm.verts.new((p[0], p[1] - width / 2, p[2])), bm.verts.new((p[0], p[1] + width / 2, p[2]))) for p in pts]
+    for a, b in zip(rows, rows[1:]):
+        bm.faces.new((a[0], b[0], b[1], a[1]))
+    for f in bm.faces:
+        f.smooth = True
+    return mesh_obj(name, bm, mat, parent, smooth_sides=False)
+
+
+def bag(scale=1.0, parent=None, handle=True):
+    """Open-top gift bag on an empty at its base centre, front = local -Y. Real size 42 x 12 x 36 cm."""
+    w, d, h = 0.42 * scale, 0.12 * scale, 0.36 * scale
+    e = link(bpy.data.objects.new("bag", None))
+    if parent:
+        e.parent = parent
+    n = 24
+    bm = bmesh.new()
+    uv = bm.loops.layers.uv.verify()
+    grid = [[bm.verts.new((-w / 2 + w * i / n, -d / 2, h * j / n)) for i in range(n + 1)] for j in range(n + 1)]
+    for j in range(n):
+        for i in range(n):
+            f = bm.faces.new((grid[j][i], grid[j][i + 1], grid[j + 1][i + 1], grid[j + 1][i]))
+            for l, (si, tj) in zip(f.loops, ((i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1))):
+                l[uv].uv = _bag_uv(si / n, tj / n)
+    mesh_obj("bag_front", bm, M_BAGFRONT, e, smooth_sides=False)
+    bm = bmesh.new()                                          # back, sides, bottom; open top
+    P = lambda x, y, z: bm.verts.new((x, y, z))
+    quads = [((-w/2, d/2, 0), (w/2, d/2, 0), (w/2, d/2, h), (-w/2, d/2, h)),
+             ((-w/2, -d/2, 0), (-w/2, d/2, 0), (-w/2, d/2, h), (-w/2, -d/2, h)),
+             ((w/2, -d/2, 0), (w/2, d/2, 0), (w/2, d/2, h), (w/2, -d/2, h)),
+             ((-w/2, -d/2, 0), (w/2, -d/2, 0), (w/2, d/2, 0), (-w/2, d/2, 0))]
+    for q in quads:
+        bm.faces.new([P(*v) for v in q])
+    mesh_obj("bag_body", bm, M_BAGRED, e, smooth_sides=False)
+    if handle:                                                # back handle: satin arch above the opening
+        pts = [(-0.10 * scale + 0.20 * scale * i / 30, d / 2 - 0.006 * scale,
+                h - 0.02 * scale + 0.13 * scale * math.sin(math.pi * i / 30)) for i in range(31)]
+        ribbon_strip(pts, 0.022 * scale, M_SATIN_WHITE, e, "handle")
+    return e
