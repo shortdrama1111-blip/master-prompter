@@ -16,3 +16,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "modern me neon" | dyqani i atleteve | projekt |
 | 2026-11-19 | 🔧 | "asnjher mos gjenero vetn higgsfield, kt radhe do ti bej un" | të gjitha gjenerimet e projektit | rregull i përhershëm (është edhe në memorie); "gjenerojmë" = unë shkruaj promptin, ai gjeneron |
 | 2026-11-19 | 🔧 | "me nj shenj vjollce" | atletet e reja: të bardha + detaj i vogël vjollcë epara | projekt; përjashtim i qëllimshëm nga aksenti i rezervuar |
+| 2026-11-19 | 💡 | dërgoi foto të kartës (para + mbrapa) dhe logon SVG | karta reale: vertikale, logo lavandë | projekt; pjesa e pasme me të dhëna reale nuk u ruajt në repo |
