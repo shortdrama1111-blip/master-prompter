@@ -78,3 +78,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 
 ## 2026-11-19 — montage v7
 - 🔧 "hiq shotin te 3 qe eshte veshja e pare dhe ecen anesore" → hequr këmbët anash (v2 1.75–3.875). 🔧 Veshja 2: "hiq skenen qe eshte anesore tek sekonda 15" → hequr profili te vitrina. 👎 "Perpara se te nisi speed ramp duket sikur rri shume positioned" → pozat para ramp-it ~0.5 s, shpejtësia 1.3× që në pozë, ramp-i nis menjëherë. Montage v8 (15.8 s).
+- 👎 "duket sikur eshte shume linear: leviz, ndalon, leviz". Krahasimi i ramp-eve: analysis-v7-ramps.md.
