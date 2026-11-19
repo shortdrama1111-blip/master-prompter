@@ -22,3 +22,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "give me the prompts one by one, i create one then we move to the other when i give okay" | rrjedha e punës me promptet | projekt; kandidat për CLAUDE.md |
 | 2026-11-19 | 👍 | "Yes, approved" | skenari v2 (çdo ndalesë = një përdorim i epara) | projekt; kandidat për `cinematic-ai-video`: në reklamë, çdo lokacion lidhet me një funksion të produktit |
 | 2026-11-19 | 💡 | screenshot-et e ngjitura në chat nuk bëhen skedarë → i shkarkova nga rockstargames.com/VI (me leje) | refs GTA | projekt; shumica e imazheve zyrtare janë key art i ilustruar me logo → të papërdorshme; vetëm 3 janë render loje |
+| 2026-11-19 | 👍 | "si t mendosh ti q ehst m mri" → kyçur plate-i 60° | plate Blloku dron v4, Seedream 5.5, prompts/05 | projekt |
+| 2026-11-19 | 💡 | 90° nga lart s'del kur blloku i dritës përmend male në horizont dhe referencat janë të anuara | prompts/05 v4 | kandidat për LESSONS: për 90° të pastër, hiq rreshtat e horizontit dhe lër vetëm ref-in nga lart |
