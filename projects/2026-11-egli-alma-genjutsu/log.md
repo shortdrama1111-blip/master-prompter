@@ -17,3 +17,9 @@
 ## 2026-11-19 — Outfit 3 me lëvizjen e references në montim (pa gjenerim të ri)
 - `edit/zoomcut_v1.py` → `results/outfit3-zoomcut-v1.mp4` (4.25s): face A 11.80 bounce in/out (0.21s) → portik B 14.75 crash zoom out 2.43→1.0 + roll -5°→0 (0.30s) → detaj menge me dantella B 15.10 zoom 2.9→2.5 (0.25s) → portik wide ease-out 1.35→1.0 + roll -3°→0 (1.0s) → ura B 16.45 1.05→1.0 (2.5s). Motion blur 8 nën-frame.
 - `results/firenze-v6-montage-v3.mp4` = montage v2 0–13.75 + outfit3-zoomcut-v1 (18.0s).
+
+## 2026-11-19 — Seedance prompt 27 (veshjet 2+3, 16 s, pa video ref)
+- `results/seedance-27-outfit2-3-take1.mp4`: prerjet 1.83 3.33 4.67 6.38 7.88 9.67 11.17 12.71 14.29. Fytyra dhe veshjet shumë mirë.
+- Defekt: 11.17–12.71 (3/4 te kolonat) njëra këmbë e xhinseve portokalli + bluza kafe. Shkaku i mundshëm: rreshti "the warm stripes of light from between the columns sliding across her black knit". Hiqet në montim.
+- Defekt i vogël: te vitrina (6.4–7.9) kapëse e zezë në vend të topuzit.
+- `edit/zoomcut_v3_take27.py` → `results/outfit2-3-zoomcut-v3.mp4` (12.67 s).
