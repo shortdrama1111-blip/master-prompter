@@ -1,8 +1,11 @@
 # Vendimet e ngulitura
 
 ## Bota
-- **Sfondi (2026-11-19): B, pjeshkë e ngrohtë.** E kuqja e çantës është aksent, vetëm te fjongot
-  dhe te shot-i i fundit. Butësia e referencës mbetet, kurse rozëja-kadife e OUAI zëvendësohet.
+- **Sfondi (2026-11-19, ndryshuar me kërkesë të klientit): mocha / dark taupe** për gjithë videon.
+  Rafte minimaliste champagne, pjesa e brendshme e rafteve më e errët, LED të ngrohta 3200K, dritë e
+  butë përpara që etiketat të lexohen, kontrast i qartë shishe krem / sfond kafe. E kuqja mbetet
+  aksent te çanta dhe fjongot. Gjithçka rigjenerohet.
+  - (i zëvendësuar) B, pjeshkë e ngrohtë, 2026-11-19.
 - **Blender (2026-11-19): blockout i thjeshtë.** Forma, kamera, lëvizja dhe materiale bazë.
   Pamjen finale e jep modeli AI.
 
@@ -16,6 +19,10 @@
     rigjenerohen veç e veç (4s secili, `previz/solo/`, `prompts/v3_solo_s1_s3_s6.md`), sepse 1 prompt
     nuk i mbajti kohët e prerjeve në dy prova.
   - Shot 3: stolirat varen me fjongo të kuqe satin, që aksenti i kuq të shfaqet në mes të videos.
+  - **2026-11-19, mocha: të 6 shot-et ribëhen.** Shot 1 renderohet krejt në Blender me etiketa reale
+    nga fotot (modeli s'riprodhon tekst). Shot-et 2–6: Seedance veç e veç, 4s secili, me
+    `previz/solo/` dhe `prompts/v4_mocha_s2_s6.md`.
+  - **Etiketat dhe logoja:** lexueshmëria vjen nga foto reale (Blender ose montim), plus packshot në fund.
 
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |
@@ -28,14 +35,15 @@
 | 6 | Close-up çanta me kartë | Çanta e kuqe; teksti i kartës në montim |
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
-v2 (2026-11-19). Te v1 drita doli e sheshtë, prandaj u shtuan rim light dhe bloom.
+v3 mocha (2026-11-19, klienti). Zëvendëson v2 pjeshkë 4000K.
 ```
-Soft warm studio light: one large diffused key from camera-left at 45° height, 4000K, wrapping gently around bottles and boxes with soft contact shadows; a warm 3500K rim from behind camera-right outlines every product edge with a thin glowing line; warm peach bounce fill from the set at 30% of the key; the shelf cubbies glow evenly from behind at 3500K with a gentle bloom. White caps and the cream tag sit just below clipping, glass and gold catch one long soft highlight.
+Warm luxury studio light at 3200K: slim warm LED strips hidden along the top inside edge of every shelf, opening and ledge wash softly down over the products; one large soft front key from camera-left at 30° height evenly lights every product face so each label reads crisp; mocha walls and the darker shelf interiors receive only gentle spill and fall off into deep warm shadow; champagne metal edges catch thin bright highlights. Cream bottles and white caps glow just below clipping, standing out clearly against the dark taupe.
 ```
 
 ## Ngjyra: 60:25:5:10, aksenti i rezervuar
-- 60 pjeshkë (seti) · 25 krem-bezhë (produktet, rripat) · 5 ar i butë metalik (bordura, fije) · 10 e kuqe e çantës (aksent i rezervuar)
-- v2: u shtua ari, sepse te v1 produktet bezhë humbnin mbi sfondin pjeshkë.
+- 60 mocha / dark taupe (sfondi, brendësia e rafteve) · 25 krem-bardhë (produktet, kutitë) · 5 champagne metalik (raftet, bordurat) · 10 e kuqe e çantës dhe fjongove (aksent i rezervuar)
+- Kontrasti: produktet krem janë pjesa më e ndritshme e çdo kuadri; sfondi mbetet i errët.
+- (i zëvendësuar) 60 pjeshkë / 25 krem / 5 ar / 10 e kuqe.
 
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
