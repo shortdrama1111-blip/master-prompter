@@ -31,3 +31,6 @@ One source: the white ceiling light panel inside the cabin, 4500K, soft and even
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
 Provizore, pa vendim nga përdoruesi: video ndjek `seedance-clean` (pohore, pa emra pajisjesh, stil në fund).
 Kamera e fiksuar, sepse formati i reel-it e kërkon. Kartat (Banana Pro) ndjekin `banana-pro-director` pa emër filmi.
+
+## Neckline (2026-11-19)
+Double collar on all three colours: a ribbed crew-neck collar at the throat + the hood attached outside it, the front edges crossing below the collar. Ref: `refs/double-collar-crop.jpg`.
