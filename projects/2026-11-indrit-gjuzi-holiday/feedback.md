@@ -11,3 +11,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👍 | Harta e produkteve për 6 shot-et: "duket mirë" | Propozimi i hartës | decisions.md |
 | 2026-11-19 | 👍 | Gjatësia A: rreth 16s, si referenca | Pyetja 4 | decisions.md |
 | 2026-11-19 | 👍 | Shkroi "5-4a", e lexova si 5A: një shot = një gjenerim | Pyetja 5 | decisions.md |
+| 2026-11-19 | 🔧 | Dha metodën e vet për previz në Blender: grey-box pa GUI, vetëm kamera + blocking, ngarkohet si @video1 pranë referencave të produktit; lëvizje të buta e fizikisht të besueshme; 1 frame test për shot para renderit të plotë; asnjëherë video AI si @video1 | Previz për Seedance | skill (seedance-clean ose skill i ri previz) pas konfirmimit |
+| 2026-11-19 | 💡 | Blender 5.2 i instaluar mjafton pa GUI: `blender.exe -b --factory-startup --python previz.py -- OUT test|full` — s'ka nevojë për `pip install bpy` as për serverin MCP | Previz lokal në Windows | LESSONS.md |
