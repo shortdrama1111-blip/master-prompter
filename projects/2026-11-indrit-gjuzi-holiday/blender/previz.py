@@ -20,10 +20,13 @@ rng = random.Random(7)
 for o in list(bpy.data.objects):
     bpy.data.objects.remove(o)
 sc = bpy.context.scene
-sc.render.engine = "CYCLES"
+ENGINE = os.environ.get("PREVIZ_ENGINE", "EEVEE")  # EEVEE on this laptop (no CUDA GPU); CYCLES on servers
+sc.render.engine = "BLENDER_EEVEE" if ENGINE == "EEVEE" else "CYCLES"
+if ENGINE == "EEVEE":
+    sc.eevee.taa_render_samples = 16
 sc.cycles.device = "CPU"
-sc.cycles.samples = 4
-sc.cycles.use_denoising = False
+sc.cycles.samples = 12
+sc.cycles.use_denoising = True
 sc.cycles.max_bounces = 2
 sc.render.resolution_x, sc.render.resolution_y, sc.render.resolution_percentage = W, H, 100
 sc.render.fps = FPS
@@ -38,20 +41,25 @@ except Exception:
     pass
 bg = world.node_tree.nodes.get("Background")
 bg.inputs["Color"].default_value = (0.5, 0.5, 0.5, 1)
-bg.inputs["Strength"].default_value = 0.5
+bg.inputs["Strength"].default_value = 0.35
 
-sun_data = bpy.data.lights.new("Sun", "SUN")
-sun_data.energy = 3.0
-sun_data.angle = math.radians(15)
-sun = bpy.data.objects.new("Sun", sun_data)
-sun.rotation_euler = (math.radians(50), 0, math.radians(25))
-sc.collection.objects.link(sun)
 
 cam_data = bpy.data.cameras.new("Cam")
 cam_data.sensor_fit = "VERTICAL"
 cam = bpy.data.objects.new("Cam", cam_data)
 sc.collection.objects.link(cam)
 sc.camera = cam
+cam_data.dof.use_dof = True
+cam_data.dof.aperture_fstop = 2.8
+
+# soft key: 1.5 m square softbox riding with the camera, camera-left and 45 deg up
+key_data = bpy.data.lights.new("Key", "AREA")
+key_data.shape, key_data.size, key_data.energy = "SQUARE", 1.5, 35
+key = bpy.data.objects.new("Key", key_data)
+sc.collection.objects.link(key)
+key.parent = cam
+key.location = Vector((-1.1, 0.9, -0.2))
+key.rotation_euler = (Vector((0, 0, -1.4)) - key.location).to_track_quat("-Z", "Y").to_euler()
 
 
 # ---------------------------------------------------------------- helpers
@@ -195,6 +203,7 @@ def aim(loc, target, fov_deg):
     cam.location = Vector(loc)
     cam.rotation_euler = (Vector(target) - Vector(loc)).to_track_quat("-Z", "Y").to_euler()
     cam_data.angle_y = math.radians(fov_deg)
+    cam_data.dof.focus_distance = (Vector(target) - Vector(loc)).length
 
 
 def room(coll, back_y=2.5, w=8.0):
@@ -203,35 +212,40 @@ def room(coll, back_y=2.5, w=8.0):
 
 
 # ---------------------------------------------------------------- SHOT 1: lit shelf wall, camera rises
-# 0.00-1.67 s. Camera 1.10 m from the wall, FOV 46 deg, pedestal up 0.30 m (0.18 m/s), level.
+# 0.00-1.67 s. Camera locked 0.93 m from the wall, FOV 46 deg, three columns in frame.
+# Columns move like elevators: centre column rises 0.30 m (0.18 m/s), the two beside it sink 0.30 m.
 def shot1():
     C = newcoll("s1_shelf")
     box(C, (8, 8, 0.02), (0, 0, -0.01), M_WALL, name="floor")
-    cols, cw, depth, t = 7, 0.19, 0.14, 0.012
+    cols, cw, depth, t = 7, 0.15, 0.14, 0.012
     x0 = -cw * cols / 2
     kinds = ["mask", "cond", "oil", "oilbox", "mask", "oil"]
     for c in range(cols + 1):
         box(C, (t, depth, 3.2), (x0 + c * cw, -depth / 2, 1.6), M_SET, name="divider")
+    lifts = []  # each column is an elevator: centre column rises, its neighbours sink, alternating outward
     for c in range(cols):
         xc = x0 + c * cw + cw / 2
-        box(C, (cw, 0.01, 3.2), (xc, 0.005, 1.6), M_BACKLIT, name="backlight")
+        col = empty(C, f"column{c}")
+        lifts.append((col, 1 if (c - cols // 2) % 2 == 0 else -1))
+        box(C, (cw, 0.01, 3.2), (xc, 0.005, 1.6), M_BACKLIT, name="backlight", parent=col)
         z = 0.15 + rng.uniform(0, 0.12)
         while z < 3.0:
-            box(C, (cw, depth, t), (xc, -depth / 2, z), M_SET, name="board")
+            box(C, (cw, depth, t), (xc, -depth / 2, z), M_SET, name="board", parent=col)
             k = rng.choice(kinds)
             base = (xc + rng.uniform(-0.02, 0.02), -depth * 0.5, z + t / 2)
             if k in ("mask", "cond"):
-                bottle150(C, base)
+                bottle150(C, base, col)
             elif k == "oil":
-                oil_bottle(C, base)
+                oil_bottle(C, base, col)
             else:
-                oil_box(C, base)
+                oil_box(C, base, col)
             z += rng.uniform(0.22, 0.30)
 
     def update(t):
         s = smooth(t / 1.667)
-        z = 1.25 + 0.30 * s
-        aim((0.04, -1.10, z), (0.04, 0, z), 46)
+        for col, sign in lifts:
+            col.location.z = sign * 0.30 * (s - 0.5)
+        aim((0.0, -1.00, 1.45), (0.0, -0.07, 1.45), 46)
 
     return C, update, 40
 
@@ -306,7 +320,7 @@ def shot2():
             o.rotation_euler = (0, 0, th + math.pi / 2)  # front face points outward
         s = smooth(t / 3.0)
         x = 0.30 - 0.20 * s
-        aim((x, -1.75, 1.18), (x * 0.4, -0.45, 0.86), 38)
+        aim((x * 0.6 + 0.05, -1.45, 1.10), (x * 0.3, -0.50, 0.86), 38)
 
     return C, update, 72
 
@@ -325,14 +339,14 @@ def shot3():
 
     curve(C, [P(a_min + (a_max - a_min) * i / 299)[:] for i in range(300)], 0.022, M_GLASS, "rail")
     orns = []
-    n = 22
+    n = 30
     for i in range(n):
         piv = empty(C, "pivot")
-        cyl(C, 0.0015, 0.05, (0, 0, -0.05), M_SET, seg=8, parent=piv, name="string")
+        cyl(C, 0.0015, 0.025, (0, 0, -0.025), M_SET, seg=8, parent=piv, name="string")
         if i % 2:
-            box(C, (0.065, 0.065, 0.16), (0, 0, -0.13), M_PACK, 0.003, "orn_tall", piv)
+            box(C, (0.08, 0.06, 0.17), (0, 0, -0.11), M_PACK, 0.003, "orn_tall", piv)
         else:
-            box(C, (0.10, 0.05, 0.11), (0, 0, -0.105), M_TAG, 0.003, "orn_flat", piv)
+            box(C, (0.12, 0.05, 0.12), (0, 0, -0.085), M_TAG, 0.003, "orn_flat", piv)
         orns.append((piv, i * (a_max - a_min) / n, rng.uniform(0, 6.28)))
     span = a_max - a_min
     omega = 0.08 / 0.47
@@ -347,7 +361,7 @@ def shot3():
             piv.rotation_euler = (swing, 0, heading + math.radians(12) * math.sin(0.8 * t + ph))
         s = smooth(t / 3.0)
         ang = math.radians(-95 + 5 * s)
-        aim((0.95 * math.cos(ang), 0.95 * math.sin(ang), 1.00), (0.05, 0, 1.20), 44)
+        aim((1.05 * math.cos(ang), 1.05 * math.sin(ang), 1.00), (0.05, -0.10, 1.15), 44)
 
     return C, update, 72
 
@@ -364,7 +378,7 @@ def shot4():
     nrm = Vector((-math.sin(al), 0, math.cos(al)))
     belts = [  # (y, z0, u_from, u_to)
         (0.0, 0.70, -1.6, 1.6),
-        (0.55, 1.05, -0.35, 1.8),
+        (0.42, 0.95, -0.35, 1.8),
     ]
 
     def W(y, z0, u):
@@ -385,8 +399,8 @@ def shot4():
             s_ = box(C, (0.012, 0.30, 0.008), (0, 0, 0), M_RIBBON, name="slat", parent=root)
             s_.rotation_euler = (0, -al, 0)
             slats.append((s_, y, z0, u0, L, k * 0.05))
-        for k in range(int((L - 0.2) / 0.26)):
-            u = u0 + 0.30 + k * 0.26
+        for k in range(int((L - 0.2) / 0.22)):
+            u = u0 + 0.28 + k * 0.22
             if k % 2 == 0:
                 o, hh = duo_box(C, (0, 0, 0), parent=root), 0.095
             else:
@@ -402,7 +416,7 @@ def shot4():
         for o, y, z0, u, hh in items:
             o.location = W(y, z0, u - v * t) + nrm * (0.02 + hh)
         s = smooth(t / 2.667)
-        aim((0.55 - 0.06 * s, -0.95, 1.85), (0.02, 0.18, 0.95), 36)
+        aim((0.55 - 0.06 * s, -0.95, 1.80), (0.0, 0.0, 0.85), 29)
 
     return C, update, 64
 
@@ -418,27 +432,34 @@ def shot5():
         box(C, (0.035, size[1] + 0.004, size[2] + 0.004), (0, 0, 0), M_RIBBON, name="ribbon", parent=o)
         return o
 
-    def bag(base, scale=1.0):
+    def bag(base, scale=1.0, rz=0.0):
         w, d, h = 0.40 * scale, 0.12 * scale, 0.34 * scale
         o = box(C, (w, d, h), (base[0], base[1], base[2] + h / 2), M_BAG, 0.003, "bag")
         pts = [(-0.09 * scale + 0.18 * scale * i / 20, -d / 2 - 0.002,
-                h / 2 + 0.11 * scale * math.sin(math.pi * i / 20)) for i in range(21)]
-        hnd = curve(C, pts, 0.006, M_RIBBON, "handle")
+                h / 2 + 0.09 * scale * math.sin(math.pi * i / 20)) for i in range(21)]
+        hnd = curve(C, pts, 0.004, M_RIBBON, "handle")
         hnd.parent = o
+        o.rotation_euler = (0, 0, math.radians(rz))
         return o
 
-    # every layer rests on the one below: row0 tops at 0.30, row1 tops at 0.54
-    for x, w, d in [(-0.52, 0.36, 0.34), (-0.13, 0.42, 0.38), (0.27, 0.34, 0.32), (0.62, 0.30, 0.34)]:
-        gift((w, d, 0.30), (x, 0, 0))
-    for x, w in [(-0.34, 0.40), (0.08, 0.36), (0.45, 0.32)]:
-        gift((w, 0.28, 0.24), (x, 0.02, 0.30))
-    duo_box(C, (0.08, -0.17, 0.30 + 0.095))
-    gift((0.34, 0.26, 0.22), (-0.22, 0.03, 0.54))
-    bag((0.26, 0.03, 0.54), 0.75)
-    bag((-0.30, -0.30, 0), 0.85)
-    oil_box(C, (0.12, -0.30, 0))
-    oil_bottle(C, (0.21, -0.33, 0))
-    drop = gift((0.18, 0.18, 0.14), (-0.20, 0.03, 0.76), M_TAG)
+    def g(size, base, rz=0.0, m=M_PACK):
+        o = gift(size, base, m)
+        o.rotation_euler = (0, 0, math.radians(rz))
+        return o
+
+    # pyramid: each layer narrower and resting on the one below (tops at 0.30, 0.56, 0.78)
+    for x, w, d, rz in [(-0.50, 0.34, 0.34, -4), (-0.15, 0.36, 0.38, 3), (0.20, 0.34, 0.32, -2), (0.52, 0.30, 0.34, 5)]:
+        g((w, d, 0.30), (x, 0, 0), rz)
+    for x, w, rz in [(-0.27, 0.30, 6), (0.07, 0.32, -5), (0.37, 0.24, 8)]:
+        g((w, 0.28, 0.26), (x, 0.02, 0.30), rz)
+    g((0.28, 0.24, 0.22), (-0.10, 0.03, 0.56), -7)
+    bag((0.22, 0.03, 0.56), 0.6, 14)
+    bag((-0.42, -0.30, 0), 0.8, -16)
+    d = duo_box(C, (0.02, -0.25, 0.095))
+    d.rotation_euler = (math.radians(-10), 0, math.radians(6))
+    oil_box(C, (0.24, -0.32, 0))
+    oil_bottle(C, (0.32, -0.36, 0))
+    drop = gift((0.16, 0.16, 0.13), (-0.12, 0.03, 0.78), M_TAG)
     rest_z = drop.location.z
 
     def update(t):
@@ -448,7 +469,7 @@ def shot5():
         else:
             drop.location.z = rest_z + 0.012 * math.exp(-12 * (t - 0.40)) * abs(math.sin(25 * (t - 0.40)))
         s = smooth(t / 1.667)
-        aim((0.02, -2.30 + 0.15 * s, 0.62), (0.02, 0, 0.55), 34)
+        aim((0.0, -1.95 + 0.15 * s, 0.55), (0.0, 0, 0.50), 34)
 
     return C, update, 40
 
@@ -464,19 +485,19 @@ def shot6():
     box(C, (w, d, h), (0, 0, zb + h / 2), M_BAG, 0.003, "bag")
     for y in (-d / 2 - 0.002, d / 2 + 0.002):
         pts = [(-0.10 + 0.20 * i / 30, y, zb + h + 0.10 * math.sin(math.pi * i / 30)) for i in range(31)]
-        curve(C, pts, 0.007, M_RIBBON, "handle")
+        curve(C, pts, 0.004, M_RIBBON, "handle")
     for i in range(3):  # tissue paper
         tp = box(C, (0.16, 0.004, 0.12), (-0.10 + i * 0.09, 0.0, zb + h + 0.03), M_CAP, name="tissue")
         tp.rotation_euler = (math.radians(rng.uniform(-25, 25)), math.radians(rng.uniform(-30, 30)), math.radians(rng.uniform(-20, 20)))
     piv = empty(C, "tag_pivot", (0.03, -d / 2 - 0.012, zb + h + 0.02))
     box(C, (0.014, 0.002, 0.13), (0, 0, -0.065), M_RIBBON, name="tag_ribbon", parent=piv)
-    tag = box(C, (0.075, 0.003, 0.115), (0.0, -0.004, -0.115), M_TAG, 0.008, "tag", piv)
+    tag = box(C, (0.060, 0.003, 0.090), (0.0, -0.004, -0.10), M_TAG, 0.007, "tag", piv)
     tag.rotation_euler = (0, math.radians(-22), 0)
 
     def update(t):
         piv.rotation_euler = (math.radians(3) * math.sin(2 * math.pi * 0.4 * t), math.radians(14), 0)
         s = smooth(t / 3.833)
-        aim((0.05, -0.66 + 0.04 * s, zb + 0.40), (0.0, 0, zb + 0.27), 34)
+        aim((0.04, -0.52 + 0.04 * s, zb + 0.36), (0.03, -0.07, zb + 0.27), 34)
 
     return C, update, 92
 
@@ -486,11 +507,12 @@ SHOTS = [("s1_shelf", shot1), ("s2_helix", shot2), ("s3_garland", shot3),
          ("s4_diagonal", shot4), ("s5_pile", shot5), ("s6_tag", shot6)]
 built = [(name, *fn()) for name, fn in SHOTS]
 for name, coll, update, nframes in built:
-    if MODE.startswith("s") and not name.startswith(MODE):
+    only = MODE.split(":")[-1] if MODE.startswith(("s", "test:")) else ""
+    if only.startswith("s") and not name.startswith(only):
         continue
     for _, other, _, _ in built:
         other.hide_render = other is not coll
-    frames = [0, nframes - 1] if MODE == "test" else range(nframes)
+    frames = [0, nframes - 1] if MODE.startswith("test") else range(nframes)
     os.makedirs(os.path.join(OUT, name), exist_ok=True)
     for f in frames:
         update(f / FPS)

@@ -16,7 +16,7 @@
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |
 |---|---|---|
-| 1 | Raft me kuti të ndriçuara, kamera ngjitet | Peptide Mask, Leave-In Conditioner, Hair Oil |
+| 1 | Raft me kuti të ndriçuara; kolonat si ashensor (mesi lart, anët poshtë), kamera e fiksuar | Peptide Mask, Leave-In Conditioner, Hair Oil |
 | 2 | Rripa transportues spiralë | Kutia DreamDuo |
 | 3 | Stolira-kuti të varura nga tub i lakuar | Kuti të vogla bezhë (si kutia e vajit) |
 | 4 | Rrip diagonal | Hair Oil + DreamDuo |
@@ -24,12 +24,14 @@
 | 6 | Close-up çanta me kartë | Çanta e kuqe; teksti i kartës në montim |
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
+v2 (2026-11-19). Te v1 drita doli e sheshtë, prandaj u shtuan rim light dhe bloom.
 ```
-Soft warm studio light: one large diffused key from camera-left at 45° height, 4000K, wrapping gently around bottles and boxes with soft contact shadows; warm peach bounce fill from the set at 30% of the key; the shelf cubbies glow evenly from behind at 3500K. White caps and the cream tag sit just below clipping, glass catches one long soft highlight.
+Soft warm studio light: one large diffused key from camera-left at 45° height, 4000K, wrapping gently around bottles and boxes with soft contact shadows; a warm 3500K rim from behind camera-right outlines every product edge with a thin glowing line; warm peach bounce fill from the set at 30% of the key; the shelf cubbies glow evenly from behind at 3500K with a gentle bloom. White caps and the cream tag sit just below clipping, glass and gold catch one long soft highlight.
 ```
 
-## Ngjyra: 60:30:10, aksenti i rezervuar
-- 60 pjeshkë e ngrohtë (sfondi, seti) · 30 krem-bezhë (produktet, kutitë) · 10 e kuqe e çantës (aksenti i rezervuar)
+## Ngjyra: 60:25:5:10, aksenti i rezervuar
+- 60 pjeshkë (seti) · 25 krem-bezhë (produktet, rripat) · 5 ar i butë metalik (bordura, fije) · 10 e kuqe e çantës (aksent i rezervuar)
+- v2: u shtua ari, sepse te v1 produktet bezhë humbnin mbi sfondin pjeshkë.
 
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
