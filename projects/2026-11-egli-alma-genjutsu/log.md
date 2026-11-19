@@ -23,3 +23,7 @@
 - Defekt: 11.17–12.71 (3/4 te kolonat) njëra këmbë e xhinseve portokalli + bluza kafe. Shkaku i mundshëm: rreshti "the warm stripes of light from between the columns sliding across her black knit". Hiqet në montim.
 - Defekt i vogël: te vitrina (6.4–7.9) kapëse e zezë në vend të topuzit.
 - `edit/zoomcut_v3_take27.py` → `results/outfit2-3-zoomcut-v3.mp4` (12.67 s).
+
+## 2026-11-19 — Montage v4 (struktura e klientit)
+- Përdoruesi: ngjyrat mbeten (klientit i pëlqejnë); problem vetëm kalimet (zoom-blur, split-screen) dhe veshja 2 që s'dukej.
+- `edit/montage_v4.py` → `results/firenze-v7-montage-v4.mp4` (21.5 s): veshja 1 = montage v2 0–8.11; veshja 2 = take 27 (7.6 s: wide, çizmet, 3/4, mesatar, vitrina); veshja 3 = take 27 portiku (wide, xhinset, menga, kolona). Kalimet e veshjeve: crash zoom out 0.3 s. Kohë reale kudo tjetër, pa ndryshim ngjyrash.
