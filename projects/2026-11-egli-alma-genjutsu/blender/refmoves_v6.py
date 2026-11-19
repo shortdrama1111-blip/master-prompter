@@ -86,7 +86,7 @@ for i in range(N):
         c.location=(0.55+0.02*math.sin(t*9),1.05,1.35+0.06*k+0.01*math.sin(t*13)); look(c,(0.1,1.6,1.4))
         fig.key(f,(0,1.6,0),math.radians(-55),arms=((-2.5*min(1,k*1.4),0,0.35),(0.1,0,-0.2)))
     else:
-        y=5.5-1.25*(t-2.5); c.location=(0,-0.5,1.3); look(c,(0,4.5,1.0))
+        y=2.5-1.25*(t-2.5); c.location=(0,-2.6,1.3); look(c,(0,1.6,1.0))
         fig.key(f,(0,y,0),0,legs=(0.45*math.sin(t*11),-0.45*math.sin(t*11)),arms=((-0.3*math.sin(t*11),0,0.1),(0.3*math.sin(t*11),0,-0.1)))
     c.keyframe_insert('location',frame=f); c.keyframe_insert('rotation_euler',frame=f)
     if t>=0.85:
@@ -94,7 +94,11 @@ for i in range(N):
         c.data.angle_y=math.radians(fov); c.data.keyframe_insert('lens',frame=f)
 s.render.use_motion_blur=True; s.render.motion_blur_shutter=0.6
 FISH_END=round(0.85*FPS)
+RNG=os.environ.get('RANGE')
 for a,b,kind in [(1,FISH_END,'fish'),(FISH_END+1,N,'p')]:
+    if RNG:
+        lo,hi=map(int,RNG.split('-')); a,b=max(a,lo),min(b,hi)
+        if a>b: continue
     if kind=='fish': setcam(c,'fish')
     else: c.data.type='PERSP'; c.data.sensor_fit='VERTICAL'
     s.frame_start,s.frame_end=a,b; s.render.filepath=os.path.join(OUT,'f_')
