@@ -23,6 +23,15 @@ teal të errët; mëngë me zinxhir argjendi në gjithë gjatësinë, kur hapen 
 astarin teal. Logo e qëndisur teal (diell me rreze + "VIVAMUS") poshtë majtas, mbi brezin e thurur.
 Në foton on-body: me çizme llastiku të zeza deri në gju.
 
+## Tri ngjyrat
+| # | Ngjyra | Detaje | Këpucë | Ref |
+|---|---|---|---|---|
+| 1 | E zezë | astar satin teal, zinxhir argjendi, logo e qëndisur teal | çizme llastiku të zeza, majë e mprehtë, takë stiletto | foto vetëm në bisedë (pa skedar) |
+| 2 | Kafe çokollatë | tegel/zinxhir bezhë në skajet e mëngëve, logo e qëndisur ton-mbi-ton kafe e errët; në foto: kapuçi i ngritur, mëngët të hapura | çizme lëkure kafe deri në gju, takë e trashë | `refs/outfit-brown-onbody.jpg` |
+| 3 | ❓ | | | |
+
+Modelja në të dyja fotot on-body duket e njëjta: flokë të gjata, të drejta, kafe/gështenjë.
+
 ## Portat
 | Porta | Përgjigja |
 |---|---|
