@@ -1,7 +1,7 @@
-# 27 — Veshjet 2 + 3 në një video, 16 s, me greybox v7, v1
+# 27 — Veshjet 2 + 3 në një video, 16 s, pa video ref (si prompt 21), v1
 
 Përdoruesi: "mi jep ne nje video keto" · "video e blenderit t jet 1 video". Bashkon 25 + 26; struktura e outfit 1 (prompt 21). Pa Arno.
-Ngarkimi: @video1 = results/greybox-v7-clean.mp4 · @image1 = upload/15-sheets-v5/sheet-plaid-masked.jpg · @image2 = upload/15-sheets-v5/sheet-black-jeans-masked.jpg · @image3 = refs/v4/env-modele-1-boutiques.jpg · @image4 = refs/v4/env-modele-3-portico.jpg
+Ngarkimi: @image1 = upload/15-sheets-v5/sheet-plaid-masked.jpg · @image2 = upload/15-sheets-v5/sheet-black-jeans-masked.jpg · @image3 = refs/v4/env-modele-1-boutiques.jpg · @image4 = refs/v4/env-modele-3-portico.jpg
 Cilësimet: 16 s · 9:16 · 1080p nëse ka · audio OFF.
 
 ```
@@ -9,7 +9,6 @@ SCENE CONTEXT
 A 16-second vertical street-style fashion film in the centre of Florence, Italy, in late-afternoon autumn light. One woman in two outfits: first on a boutique street of rusticated stone arches, then in a Renaissance stone portico. Ten timed shots, each from a clearly different angle and distance, every shot moving with her walk; the outfit and location change only at 8.0s.
 
 ACTIVE REFERENCES
-@video1: a grey previz of this exact film. It is the reference for every camera position, height, lens width, camera move, speed and hard cut, and for her path and pose in each shot. Everything that is seen — the woman, her clothes, the city, the light — comes from the image references and the descriptions below.
 @image1 and @image2 are the same woman in two outfits: late twenties, slim, brown curtain bangs with long face-framing honey-blonde strands, a loose messy low bun with blonde twisted pieces, brown eyes, natural skin with fine freckles, gold hoop earrings. Her face is the front close-up panel and her profile is the side close-up panel of each reference; her outfit is the full-body panel. 100% matches the reference.
 @image3: boutique street, rusticated grey stone arches with warm-lit glass shop windows on the left, wide grey stone pavement. 100% matches the reference.
 @image4: Renaissance portico, a long row of slender grey stone columns, a white vaulted ceiling, a grey stone floor, the piazza with ochre palazzi beyond the arches. 100% matches the reference.
@@ -21,13 +20,13 @@ FIRST FRAME / BLOCKING
 Frame one: @image1 already in mid-stride in the centre of the @image3 pavement, 3 metres from the camera, walking straight toward the lens, her full figure filling two thirds of the frame height. She is in motion from the very first frame. Every shot opens with her already moving.
 
 FORMAT MODE
-Timed multishot, ten shots, hard cuts only at 2.0, 3.4, 5.0, 6.6, 8.0, 10.0, 11.4, 13.0 and 14.6 seconds, exactly where @video1 cuts; cuts only at the specified points, the camera does not cut on its own.
+Timed multishot, ten shots, hard cuts only at 2.0, 3.4, 5.0, 6.6, 8.0, 10.0, 11.4, 13.0 and 14.6 seconds; cuts only at the specified points, the camera does not cut on its own.
 
 OPTICS
 Each shot keeps its stated FOV with no drift mid-segment. Clean rectilinear perspective, gentle natural falloff, soft background separation on the closer shots.
 
 CAMERA
-Handheld gimbal feel at chest height, smooth with a 1 cm natural float. The camera moves backward or alongside at her walking pace, about 4.5 km/h, keeping her the same size in frame through each moving shot, exactly as in @video1. Focus stays on her face, or on her feet in the low shots. Rich tonal latitude, soft highlight roll-off on the sunlit stone, natural skin tones.
+Handheld gimbal feel at chest height, smooth with a 1 cm natural float. The camera moves backward or alongside at her walking pace, about 4.5 km/h, keeping her the same size in frame through each moving shot. Focus stays on her face, or on her feet in the low shots. Rich tonal latitude, soft highlight roll-off on the sunlit stone, natural skin tones.
 
 ACTION
 0.0s to 2.0s — @image1 in @image3, wide shot, 47° FOV, camera at chest height, walking backward at 4.5 km/h. She walks straight toward the camera along the stone arches with a confident runway walk, one foot crossing in front of the other, the warm-lit shop windows passing on her left, the small brown bag on her left shoulder, the tall brown riding boots striding over the grey stone.
