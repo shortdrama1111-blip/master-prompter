@@ -56,3 +56,4 @@
 ## 2026-11-19 — Finalet me muzikë
 - `edit/add_music.sh`: muzika e videos së klientes (0–17.86 s, ~108 bpm), loop në takt (0–15.83 → 9.14…), fade-out 1.5 s, loudnorm -14 LUFS.
 - `results/FINAL-CLIENT-V2-me-muzike.mp4` (23.3 s) → për klienten. `results/FINAL-BONUS-V1-me-muzike.mp4` (20.5 s) → klipi bonus.
+- Muzika v2: kënga e plotë "Timeless" (mp3 i përdoruesit, jo në repo). Videoja e klientes = kënga nga 105.876 s, slowed 0.90× (korrelacion valësh 0.63). `edit/add_music.sh VIDEO DALJA SONG.mp3`: e njëjta nisje/shpejtësi, pa loop, fade-out 1.5 s. Kontroll: audio e finalit vs klientes, corr 0.970, vonesë 2 ms.
