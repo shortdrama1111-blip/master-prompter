@@ -13,3 +13,7 @@
 | 2026-11-17 | final v3 | montazh | `results/egli-ashensor-final-v3-script.mp4`: Pinyon Script e bardhë, me hije | — | — | dorëzuar |
 | 2026-11-17 | final v4 | montazh | `results/egli-ashensor-final-v4-shein.mp4`: titull "SHEIN / 4 perfect / Autumn / looks 🍂" (Inter Display + Great Vibes, krem), 0.1–2.1s lart, pa ditë | — | — | dorëzuar |
 | 2026-11-19 | sheet v4 (3 panele, profil) | image (manual, prompt 13) | `refs/v3/sheet-v4-3panel.jpg`: përpara ✓, profil me hapësirë para fytyrës ✓, topuzi dhe balluket ✓ | sfondi i profilit pak më i çelët; paneli i trupit më i ngushtë | — | maskuar → `upload/12-sheet/sheet-v4-3panel-masked.jpg` |
+
+## 2026-11-19 — Outfit 3 me lëvizjen e references në montim (pa gjenerim të ri)
+- `edit/zoomcut_v1.py` → `results/outfit3-zoomcut-v1.mp4` (4.25s): face A 11.80 bounce in/out (0.21s) → portik B 14.75 crash zoom out 2.43→1.0 + roll -5°→0 (0.30s) → detaj menge me dantella B 15.10 zoom 2.9→2.5 (0.25s) → portik wide ease-out 1.35→1.0 + roll -3°→0 (1.0s) → ura B 16.45 1.05→1.0 (2.5s). Motion blur 8 nën-frame.
+- `results/firenze-v6-montage-v3.mp4` = montage v2 0–13.75 + outfit3-zoomcut-v1 (18.0s).
