@@ -1,6 +1,6 @@
 # 12 · Video: transferta te semafori → niset (Seedance 2.5, i2v, 6 s, 9:16)
 
-Version v1. Start frame = `plates/frame11_djali-makina_v1.jpg`. Element = `@Djali-GTA-Plastik`. Vetëm pohore (rregulli 3; vendimi për negative ende i hapur). Grafika e transfertës te Arbi shtohet në montim rreth 1–2 s (tap-i).
+Version v2. Start frame = `plates/frame11_djali-makina_v1.jpg`. Element = `@Djali-GTA-Plastik`. Version v2: me bllok NEGATIVE në fund (vendim i përdoruesit për këtë projekt). Grafika e transfertës te Arbi shtohet në montim rreth 1–2 s (tap-i).
 
 Struktura: blloqet e `seedance-clean` + nga Arcads: timestamp për veprimet, tag-u në çdo bllok, "take only his face, hair, skin and outfit from the reference".
 
@@ -49,4 +49,7 @@ Next-gen open-world crime video game cinematic in a real-time 3D game engine ren
 
 POSITIVE LOCKS
 @Djali-GTA-Plastik keeps his exact face, fade haircut, beard and olive-green shirt for the whole shot. The back of the phone faces the camera at every moment. The traffic light stays in the upper left. The round tower keeps its soft cyan band. One continuous take.
+
+NEGATIVE
+Phone screen facing the camera, readable screen or app interface, text, subtitles, logos, watermarks, brand badges on the car or phone, extra people inside the car, a passenger, duplicated character, face or hairstyle changing, realistic skin pores and wrinkles, extra fingers, warped hands, the door opening, the car moving before the light turns green, the traffic light turning green before 3.5s, camera cuts, zooms or angle jumps, purple or magenta lights, night, rain, music.
 ```

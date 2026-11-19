@@ -37,4 +37,4 @@ Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota 
 - Pa logo Rockstar, pa "GTA", pa "Vice City".
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
-(pa vendim ende)
+- **Bllok NEGATIVE: po.** Promptet e videos (Seedance 2.5) mbajnë trupin pohor dhe mbyllen me një bllok `NEGATIVE` si rrjetë sigurie (2026-11-19, "shtoji dhe negativet").
