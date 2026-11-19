@@ -27,3 +27,10 @@ Atlete, në një dyqan atletesh.
 2. Udhëtimi 5–14 s: bonnet cam, bulevardi, Skënderbej, Piramida; polici kalon, ai e përshëndet, yjet mbeten 0.
 3. Dyqani 14–26 s: hyrje si interior loje, zgjedh atletet, slow-mo ECU 18° tap i kartës te POS → -8,900 L, +178 L CASHBACK.
 4. Mbyllja 26–35 s: del me atletet, crane/dron pull-back, `mission passed!` + `respect +`, end card karta + "epara, Më mirë se para!".
+
+## Skenari draft v2 (pas feedback-ut: çdo ndalesë = një përdorim i epara)
+1. Blloku: blerja e atleteve me kartë (tap) → -8,900 L, +178 L cashback.
+2. Bulevardi/Piramida: në semafor i kthen shokut paratë me app (transfertë e menjëhershme, falas).
+3. ATM afër stadiumit: tërheq cash për gështenjat (shitësi pranon vetëm cash); polici shikon, yjet mbeten 0.
+4. Stadiumi Air Albania: me shokun në ndeshje, mission passed, end card.
+(në pritje të aprovimit)

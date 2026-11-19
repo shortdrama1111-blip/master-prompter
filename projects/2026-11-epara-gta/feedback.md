@@ -17,3 +17,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "asnjher mos gjenero vetn higgsfield, kt radhe do ti bej un" | të gjitha gjenerimet e projektit | rregull i përhershëm (është edhe në memorie); "gjenerojmë" = unë shkruaj promptin, ai gjeneron |
 | 2026-11-19 | 🔧 | "me nj shenj vjollce" | atletet e reja: të bardha + detaj i vogël vjollcë epara | projekt; përjashtim i qëllimshëm nga aksenti i rezervuar |
 | 2026-11-19 | 💡 | dërgoi foto të kartës (para + mbrapa) dhe logon SVG | karta reale: vertikale, logo lavandë | projekt; pjesa e pasme me të dhëna reale nuk u ruajt në repo |
+| 2026-11-19 | 👎 | "cs like this doesnt make sense how are we going to connect epara with going around tirana, lets fix the script first" | skenari v1: udhëtimi nëpër Tiranë s'kishte lidhje me epara | projekt; 💡 rregull kandidat: çdo lokacion = një përdorim i produktit |
+| 2026-11-19 | 💡 | "buy smth first then go again around tirana then go into an atm to withdraw" | struktura e re e skenarit | projekt |
+| 2026-11-19 | 🔧 | "give me the prompts one by one, i create one then we move to the other when i give okay" | rrjedha e punës me promptet | projekt; kandidat për CLAUDE.md |
