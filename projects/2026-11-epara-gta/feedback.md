@@ -37,3 +37,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 🔧 | "rishkruaj promtin me image1 image2 ... sdua ti ngarkoj si elemnt, mbaj kete rregull n vazhdim" | prompts/12 → v3; të gjitha promptet e videos | projekt (`decisions.md`) + memorie; propozim në mbyllje: CLAUDE.md rregulli 7 (frame-first pa Element) |
 | 2026-11-19 | 👍 | vazhdoi te lidhja ("now how are we going to connect this with the shop?") pa vërejtje | video 15, Seedance 2.5 | projekt |
 | 2026-11-19 | 💡 | kalimi lokacion → lokacion: Extend nga frame-i i fundit deri te dera + match cut te interiori | 15 → 15b → 16 | kandidat për `cinematic-ai-video` |
+| 2026-11-19 | 💡 | "si fute deren si reference image, ku ta di ai cila derë është e dyqanit" | Extend 15b pa referencë vitrine | projekt; 🔧 kandidat: çdo lokacion ku personazhi hyn/arrin ka nevojë për plate të jashtëm si referencë, jo vetëm përshkrim |
