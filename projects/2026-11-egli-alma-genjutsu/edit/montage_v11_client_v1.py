@@ -24,6 +24,7 @@ def real(a,b): return [(a+i/FPS,1/FPS) for i in range(round((b-a)*FPS))]
 PLAN=[
  ('V2', real(0.00,1.75)+real(3.875,5.33)+real(5.42,8.11)),   # veshja 1
  ('Q',  ramp([(0.20,1.20,1.4,1.4),(1.20,2.60,1.4,1.8)])),    # veshja 2: kapësja e çantës → kamera ngjitet te fytyra
+ ('B',  real(10.20,11.50)),                                  #   duart te rripi (rikthyer, përdoruesi e pëlqen)
  ('P',  ramp([(1.95,2.30,1.5,3),(2.30,2.60,3,6),(2.60,3.80,6,6),(3.80,4.05,6,2.5)])),  # tërheqje te muri
  ('P',  ramp([(4.45,4.80,1.5,1.5)])),                        #   poza te muri
  ('P',  ramp([(6.25,6.50,4,6),(6.50,7.30,6,6),(7.30,7.70,6,1.5),(7.70,8.10,1.5,1.2)])),  # afrim → e përkulur
