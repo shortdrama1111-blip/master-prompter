@@ -10,7 +10,7 @@ def load(p):
         fr.append(cv2.resize(f,(W,H),interpolation=cv2.INTER_AREA))
     return fr,fps
 SRC={k:load(v) for k,v in {'V2':'results/firenze-v5-montage-v2.mp4','T27':'results/seedance-27-outfit2-3-take1.mp4',
-     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4'}.items()}
+     'B':'results/seedance-v5-greybox-take1.mp4','P':P32_72,'Q':'results/seedance-33-continuous-take1.mp4','R':'results/seedance-34-outfit3-take1.mp4'}.items()}
 def ramp(segs):
     out=[]
     for a,b,v0,v1 in segs:
@@ -19,7 +19,7 @@ def ramp(segs):
             v=v0+(v1-v0)*(s-a)/(b-a); ds=v/FPS; out.append((s,ds)); s+=ds
     return out
 def real(a,b): return [(a+i/FPS,1/FPS) for i in range(round((b-a)*FPS))]
-# v11 = V1 për klienten: veshja 3 pa speed ramp, vetëm pjesët e pëlqyera pas wipe-it.
+# v11 = V1 për klienten: veshja 3 pas wipe-it nga take 34 (pa speed ramp); rripi rikthyer te veshja 2.
 # v10: pjesët më të mira të take 32 + 33; kalimi 2→3 me wipe-in natyral të kolonës (take 33, 7.9–9.3).
 PLAN=[
  ('V2', real(0.00,1.75)+real(3.875,5.33)+real(5.42,8.11)),   # veshja 1
@@ -30,9 +30,11 @@ PLAN=[
  ('P',  ramp([(6.25,6.50,4,6),(6.50,7.30,6,6),(7.30,7.70,6,1.5),(7.70,8.10,1.5,1.2)])),  # afrim → e përkulur
  ('Q',  ramp([(6.55,7.85,1.1,1.1)])),                        #   ulur në shkallë, dora te flokët
  ('Q',  ramp([(7.85,8.25,1.1,2.0),(8.25,9.05,2.5,2.5),(9.05,9.40,2.0,1.1)])),  # WIPE me kolonën → veshja 3
- ('Q',  real(9.40,10.90)),                                   # veshja 3: shpina, shikim mbi sup, dantella te kolona
- ('T27',real(12.85,14.20)),                                  #   menga me dantella (e pëlqyer)
- ('T27',real(14.35,16.00)),                                  #   e mbështetur te kolona, mbyllja (e pëlqyer)
+ ('R',  real(0.30,2.40)),                                   # veshja 3 (take 34): rrotullohet, veshja e plotë
+ ('R',  real(3.70,4.75)),                                    #   beli, dora në xhep
+ ('R',  real(5.10,6.25)),                                    #   menga me dantella
+ ('R',  real(6.70,7.85)),                                    #   xhinset mbi clogs, kryqëzon këmbët
+ ('R',  real(8.10,9.80)),                                    #   e mbështetur te kolona, mbyllja
 ]
 p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','bgr24','-s',f'{W}x{H}','-r',str(FPS),'-i','-',
   '-c:v','libx264','-crf','16','-pix_fmt','yuv420p',OUT],stdin=subprocess.PIPE)

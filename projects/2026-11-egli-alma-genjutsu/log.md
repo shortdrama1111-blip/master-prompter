@@ -42,3 +42,7 @@
 - `edit/montage_v10.py` → `results/firenze-v12-montage-v10.mp4` (15.75 s): veshja 1 (v2) → çanta + ngjitja te fytyra (33) → ramp-et e 32 → ulur në shkallë (33) → WIPE me kolonën (33) → shpina/dantella (33) → menga (27) → ramp-et e 32 deri te ulur.
 - `edit/montage_v11_client_v1.py` → `results/CLIENT-V1-firenze.mp4` (15.7 s): si v10, por veshja 3 pas wipe-it pa speed ramp: shpina/dantella (33 9.4–10.9) → menga (27 12.85–14.2) → te kolona (27 14.35–16.0).
 - `results/CLIENT-V2-reel-origjinal-kalimet-fix.mp4` (16.75 s): video e parë (sheet-v3-test-video) me hequr vetëm zoom-blur (4.62–4.79) dhe split-screen + flash (6.38–6.92). Përdoruesi: V2 më vonë, pasi të mbyllim V1.
+
+## 2026-11-19 — Take 34 (veshja 3) + CLIENT-V1 i ri
+- `results/seedance-34-outfit3-take1.mp4` (10 s): rrotullim 0–3.5, beli/xhepi 3.5–5.0, menga 5.0–6.29, clogs 6.29–8.0, te kolona 8.0–10.05.
+- `results/CLIENT-V1-firenze.mp4` (19.6 s): veshja 2 me rripin e rikthyer; veshja 3 = wipe me kolonën (33) → 5 shot-et e take 34. Profili i pallto-s te veshja 1 (~1.8 s) pret prompt 35.
