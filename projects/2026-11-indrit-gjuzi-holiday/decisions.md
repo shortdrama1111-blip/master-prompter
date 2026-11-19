@@ -8,8 +8,10 @@
 
 - **Gjatësia (2026-11-19): A, rreth 16s, 6 shot-e**, me ritmin e referencës.
 - **Modeli (2026-11-19): Seedance 2.5 me video referencë** (videoja e Blender-it për lëvizjen,
-  fotot e produkteve për pamjen). **Një shot Blender = një gjenerim** (6 gjenerime), që gabimi
-  të rigjenerohet veç.
+  fotot e produkteve për pamjen).
+  - 2026-11-19: fillimisht 5A, një gjenerim për shot.
+  - **2026-11-19, ndryshuar: provë me 1 prompt për gjithë videon** (`previz/previz_v2_full.mp4` si
+    @video1). Nëse dështon, kthehemi te 6 gjenerime me `previz/s1..s6.mp4`.
 
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |
@@ -23,7 +25,7 @@
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
 ```
-(ende i pashkruar — vjen pas zgjedhjes së modelit)
+Soft warm studio light: one large diffused key from camera-left at 45° height, 4000K, wrapping gently around bottles and boxes with soft contact shadows; warm peach bounce fill from the set at 30% of the key; the shelf cubbies glow evenly from behind at 3500K. White caps and the cream tag sit just below clipping, glass catches one long soft highlight.
 ```
 
 ## Ngjyra: 60:30:10, aksenti i rezervuar
