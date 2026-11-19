@@ -8,3 +8,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👍 | "tirana esht shum okay" | lokacioni | projekt |
 | 2026-11-19 | 👍 | "do jene atlete" | objekti i blerjes | projekt |
 | 2026-11-19 | 🔧 | STYLE.md "vetëm për referencë GTA 6" | stili, jo historia/personazhi i Vasilit | projekt |
+| 2026-11-19 | 🔧 | "djali 25 vjec" | personazhi | projekt |
+| 2026-11-19 | 🔧 | "narratori shqip" | zëri | projekt |
+| 2026-11-19 | 🔧 | "HUD anglisht" | grafika | projekt (përputhet me STYLE.md) |
