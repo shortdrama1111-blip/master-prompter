@@ -39,3 +39,4 @@
 ## 2026-11-19 — Montage v9 + take 33
 - `results/firenze-v11-montage-v9.mp4` (12.8 s): ritmi i references mbi take 32 (pozat ~0.25 s, prerje mbi lëvizje, P32 i interpoluar në 72 fps).
 - `results/seedance-33-continuous-take1.mp4`: kapësja e çantës 0–1.2, ngjitja te fytyra 1.2–2.75, ulet 2.75–3.75, WIPE nga shtylla 3.75–4.25, ulur në shkallë 4.25–7.9, WIPE nga kolona 8.0–9.1, shpina + shikim mbi sup me dantellën te kolona 9.25–11.25, te kolona 11.5–12.75, ulur 13–16.
+- `edit/montage_v10.py` → `results/firenze-v12-montage-v10.mp4` (15.75 s): veshja 1 (v2) → çanta + ngjitja te fytyra (33) → ramp-et e 32 → ulur në shkallë (33) → WIPE me kolonën (33) → shpina/dantella (33) → menga (27) → ramp-et e 32 deri te ulur.
