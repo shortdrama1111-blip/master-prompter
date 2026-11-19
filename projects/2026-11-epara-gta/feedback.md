@@ -39,3 +39,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | kalimi lokacion → lokacion: Extend nga frame-i i fundit deri te dera + match cut te interiori | 15 → 15b → 16 | kandidat për `cinematic-ai-video` |
 | 2026-11-19 | 💡 | "si fute deren si reference image, ku ta di ai cila derë është e dyqanit" | Extend 15b pa referencë vitrine | projekt; 🔧 kandidat: çdo lokacion ku personazhi hyn/arrin ka nevojë për plate të jashtëm si referencë, jo vetëm përshkrim |
 | 2026-11-19 | 💡 | "a sdo blej atletet ky iher?" | pas promptit 18 (tap) | projekt; blerja duhet të lexohet qartë: atletja mbi banak te 18 + shot 19 me atletet e reja në këmbë |
+| 2026-11-19 | 👎 | "the shop is empty in the sense of no seller" | video 16 / blerja | projekt; zgjidhje: shitës pa fytyrë (gjoks poshtë + duart me terminalin) te 18 v2; 💡 kandidat: personazhe dytësore pa fytyrë për të shmangur charsheet të ri |
