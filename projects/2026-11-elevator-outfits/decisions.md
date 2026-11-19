@@ -4,8 +4,8 @@
 1. Fytyra vjen në bisedë.
 2. Karta e karakterit (reference sheet) nga fytyra.
 3. E njëjta vajzë veshur me secilën nga 3 ngjyrat (outfit refs).
-4. Foto/plate në ashensor për secilën ngjyrë.
-5. Video (Seedance 2.5), image-to-video nga plate-t.
+4. ❓ Propozim: një plate i vetëm i ashensorit bosh (pa person), i përbashkët për të 3 videot.
+5. Video (Seedance 2.5): outfit ref + plate i ashensorit, një gjenerim për çdo ngjyrë.
 
 ## Këpucët (i propozon Claude)
 | Ngjyra | Këpucët |
