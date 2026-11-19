@@ -16,6 +16,7 @@
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
 ```
+One source: the white ceiling light panel inside the cabin, 4500K, soft and even from above, a gentle shadow under the chin and under the hem. The stainless-steel walls bounce the light back softly onto her front. The landing side is 1 stop darker than the cabin, so the open doorway glows. The same light and the same exposure in all three segments.
 ```
 
 ## Ngjyra: 60:30:10, aksenti i rezervuar
@@ -23,5 +24,10 @@
 ## Elementet / referencat
 | Tag | Çfarë është | Shënime |
 |---|---|---|
+| @image1 | `refs/sheet-black-noface.jpg` | fytyra vetëm te paneli majtas |
+| @image2 | `refs/sheet-brown-noface.jpg` | " |
+| @image3 | `refs/sheet-blue-noface.jpg` | " |
 
 ## Konflikte të zgjidhura për këtë projekt (shih CLAUDE.md)
+Provizore, pa vendim nga përdoruesi: video ndjek `seedance-clean` (pohore, pa emra pajisjesh, stil në fund).
+Kamera e fiksuar, sepse formati i reel-it e kërkon. Kartat (Banana Pro) ndjekin `banana-pro-director` pa emër filmi.
