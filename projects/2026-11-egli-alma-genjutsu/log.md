@@ -31,3 +31,7 @@
 ## 2026-11-19 — Take 31 (poza, 16 s) + montage v6
 - `results/seedance-31-poses-take1.mp4`: 6 poza të pastra. Veshja 2: te muri 0.2–2.3, përballë 3.3–6.4, përkulur 7.3–8.15. Veshja 3: te kolona 8.3–9.6, krahu lart 11.9–12.9, ulur 14.6–16.0. Prerja te 8.21.
 - `edit/montage_v6.py` → `results/firenze-v8-montage-v6.mp4` (18.8 s): trick-u i references mbi pozat (bounce afër → crash zoom out → close → i plotë).
+
+## 2026-11-19 — Take 32 (lëvizje reale) + montage v7 (speed ramp)
+- `results/seedance-32-realmoves-take1.mp4`: kamera tërhiqet/afrohet vërtet, pozat ndryshojnë gjatë lëvizjes. Prerja te 8.375. Veshja 2: close 0–2.4, tërheqje 2.4–4.0, wide 4.0–6.2, afrim poshtë 6.2–7.6, përkulur 7.6–8.37. Veshja 3: close me mëngën te nofulla 8.4–10.3, tërheqje 10.3–11.8, te kolona 11.8–13.6, afrim + ulur 13.6–15.3, ulur 15.3–16.
+- `edit/montage_v7.py` → `results/firenze-v9-montage-v7.mp4` (21.8 s): pa crop/zoom digital; speed ramp 1×→6× në lëvizje me mesatare frame-sh (shutter 180°).
