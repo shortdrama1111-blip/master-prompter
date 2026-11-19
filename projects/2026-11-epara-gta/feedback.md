@@ -21,3 +21,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | "buy smth first then go again around tirana then go into an atm to withdraw" | struktura e re e skenarit | projekt |
 | 2026-11-19 | 🔧 | "give me the prompts one by one, i create one then we move to the other when i give okay" | rrjedha e punës me promptet | projekt; kandidat për CLAUDE.md |
 | 2026-11-19 | 👍 | "Yes, approved" | skenari v2 (çdo ndalesë = një përdorim i epara) | projekt; kandidat për `cinematic-ai-video`: në reklamë, çdo lokacion lidhet me një funksion të produktit |
+| 2026-11-19 | 💡 | screenshot-et e ngjitura në chat nuk bëhen skedarë → i shkarkova nga rockstargames.com/VI (me leje) | refs GTA | projekt; shumica e imazheve zyrtare janë key art i ilustruar me logo → të papërdorshme; vetëm 3 janë render loje |
