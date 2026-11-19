@@ -22,6 +22,14 @@ try:
 except Exception:
     pass
 M_HOOK = F.flat("hook_champagne", (0.80, 0.68, 0.50), 0.25, metal=1.0)
+# hollow acrylic tube: a solid IOR 1.47 rod acts as a lens and throws white blobs, so the rail
+# takes a low IOR that reads as a thin-walled clear tube
+m, b, _ = F.principled("acrylic_tube")
+b.inputs["Roughness"].default_value = 0.02
+b.inputs["IOR"].default_value = 1.08
+b.inputs["Transmission Weight"].default_value = 1.0
+M_TUBE = m
+RAIL_R = 0.022
 
 
 def curve(pts, radius, mat, name):
@@ -49,21 +57,21 @@ def P(a):
 
 
 rail_pts = [P(a_min + (a_max - a_min) * i / 399)[:] for i in range(400)]
-curve(rail_pts, 0.022, F.M_GLASS, "rail")                       # clear acrylic tube
-curve([(x, y, z + 0.028) for x, y, z in rail_pts], 0.003, F.M_LED, "rail_led")   # warm LED line on top
+curve(rail_pts, RAIL_R, M_TUBE, "rail")                         # clear acrylic tube
+curve([(x, y, z + RAIL_R + 0.004) for x, y, z in rail_pts], 0.002, F.M_LED, "rail_led")   # warm LED line on top
 
 BOX_H = 0.135
 orns = []
 n = 30
 for i in range(n):
     piv = F.link(bpy.data.objects.new("pivot", None))
-    F.box("hook", (0.006, 0.006, 0.02), (0, 0, -0.01), M_HOOK, piv)
-    # ribbon loop: two satin bands from the hook down to the carton top
+    F.box("hook", (0.006, 0.006, 0.012), (0, 0, -0.006), M_HOOK, piv)   # clip under the tube
+    # ribbon loop: two short satin bands from the clip down to the carton top
     for sx in (-1, 1):
-        r = F.box("ribbon", (0.008, 0.0015, 0.07), (sx * 0.006, 0, -0.055), M_RIBBON, piv)
-        r.rotation_euler = (0, sx * math.radians(6), 0)
+        r = F.box("ribbon", (0.008, 0.0015, 0.034), (sx * 0.004, 0, -0.028), M_RIBBON, piv)
+        r.rotation_euler = (0, sx * math.radians(7), 0)
     e = F.link(bpy.data.objects.new("orn", None))
-    e.parent, e.location = piv, (0, 0, -0.09 - BOX_H)
+    e.parent, e.location = piv, (0, 0, -0.045 - BOX_H)
     F.oil_box((0, 0, 0), e)
     orns.append((piv, i * (a_max - a_min) / n, rng.uniform(0, 6.28)))
 span = a_max - a_min
@@ -80,14 +88,15 @@ def update(t):
     for piv, off, ph in orns:
         a = a_min + ((off + omega * t) % span)
         p, q = P(a), P(a + 0.01)
-        piv.location = p
+        piv.location = p - Vector((0, 0, RAIL_R))     # hangs from the underside of the tube
         heading = math.atan2(q.y - p.y, q.x - p.x)
         swing = math.radians(9) * math.sin(2 * math.pi * 0.55 * t + ph)
         piv.rotation_euler = (swing, 0, heading + math.radians(12) * math.sin(0.8 * t + ph))
     s = min(max(t / 3.0, 0), 1)
     s = s * s * (3 - 2 * s)
     ang = math.radians(-95 + 5 * s)
-    F.aim((0.92 * math.cos(ang), 0.92 * math.sin(ang), 1.00), (0.0, -0.25, 1.06), 44)
+    # previz path, aimed 12 cm lower so the rail sits in the top third and the cartons fill the middle
+    F.aim((0.92 * math.cos(ang), 0.92 * math.sin(ang), 0.98), (0.0, -0.25, 0.94), 44)
 
 
 F.render(update, N, "shot3")
