@@ -17,3 +17,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👍 | (v2 pranuar pa vërejtje te mëngët/kapuçi) | 04 v2: blloku WARDROBE për mëngët boshe funksionoi | mëso: ndërtimi i veshjes në fjalë > referencë vetëm |
 | 2026-11-19 | 🔧 | "she should be in the phone like chatting and typing" | 04 v3: chat/typing në vend të selfie-t | — |
 | 2026-11-19 | 🔧 | "the elevator should have a full close and a full open" | 04 v3: cikël i plotë dere, prerja vetëm mbi derë të mbyllur e të palëvizur | `seedance-clean` CUTS: tranzicion me objekt kërkon kohë mbajtjeje para/pas HARD CUT |
+| 2026-11-19 | 🔧 | "look this for her movements" (videoja referencë) | 04 v3: telefoni me dy duar poshtë gjoksit, trupi pothuajse i palëvizur, sytë lart-anash herë pas here | — |
