@@ -20,3 +20,10 @@
 - v4 frames 0–360 (0–15.04 s, ends on closed doors) + v3 from frame 378 (15.75 s, 3 bright closed frames, then the doors open).
 - Hard cut on the closed doors; v4 audio up to 15.04, v3 audio after, with 0.05 s fades.
 - The door brightness jumps at the cut; it reads as a "new floor". If it bothers the user: grade v3 seg 4 to v4's tone, or v4 to v3.
+
+## Extend v1 → hf_20261119_200522 (19.07 s)
+- ✅ Seg 1–2 kept, the blue call and the black finale are there, cream boots.
+- ❌ Blue: sleeves still open. Cause: @image1 = sheet-blue-noface shows the sleeves open; the sheet beats the text and the sleeve crop.
+- ❌ Hood: slightly bigger but close to the head. Cause: sheet-black has the hood down; the shape came from text plus a reference with a different face.
+- ❌ Seg 4: the face drifts and the doors turn bright again (like v3).
+- → New sheets: blue zipped, black with a big hood (prompts/06).
