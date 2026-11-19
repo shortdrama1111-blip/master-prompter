@@ -54,3 +54,8 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
   - 2.4–3.1: menga me dantella para fytyrës duket si dorezë e shkëputur.
   - Të përdorshme: 1.4–2.0 (wide te kolona) dhe 3.25–4.0 (wide, ecën drejt kamerës).
 - 💡 Mësim: lëvizjet e references janë zoom-e në montim, jo kamerë fizike → greybox Blender me lëvizje ekstreme ishte rruga e gabuar për këtë stil. Kamera e palëvizur në gjenerim + zoom në montim.
+
+## 2026-11-19 — rihapje e veshjeve 2 dhe 3
+- 👍 Përdoruesi: pjesa e parë e outfit 1 (nga video referencë e web-it, prompt 21) "look how professional it looks comparing to our parts" → 🔧 "redo the 2nd and 3rd outfit from scratch". Promptet 25 (kuadrata, butikët) dhe 26 (e zeza, portiku) me të njëjtën gramatikë shot-esh si outfit 1.
+- 🔧 "no need to add env 4 te ura for now": pa Arno/urën.
+- 💡 Kandidat për mësim: gjuha e shot-eve e marrë nga një video reale (tracking prapa/anash me ritmin e ecjes, 4.5 km/h) del më profesionale se lëvizjet ekstreme të shpikura (fisheye, whip, greybox).
