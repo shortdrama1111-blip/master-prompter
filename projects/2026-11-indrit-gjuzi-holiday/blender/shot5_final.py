@@ -12,26 +12,82 @@ import final_common as F
 from final_common import bpy, Vector
 
 N = 40
-PAPERS = [F.flat("paper_cream", (0.80, 0.72, 0.60), 0.55),
-          F.flat("paper_champagne", (0.62, 0.50, 0.34), 0.35, metal=0.6),
-          F.flat("paper_gold", (0.70, 0.52, 0.28), 0.30, metal=0.8)]
-M_DROP = F.flat("paper_drop", (0.85, 0.78, 0.66), 0.5)
+
+
+def paper(name, rgb, rough, metal=0.0, sheen=0.0):
+    """Wrapping paper: fine fibre bump so it reads as paper, not plastic."""
+    m, bsdf, nt = F.principled(name)
+    bsdf.inputs["Base Color"].default_value = (*rgb, 1)
+    bsdf.inputs["Roughness"].default_value = rough
+    bsdf.inputs["Metallic"].default_value = metal
+    try:
+        bsdf.inputs["Sheen Weight"].default_value = sheen
+    except Exception:
+        pass
+    noise = nt.nodes.new("ShaderNodeTexNoise")
+    noise.inputs["Scale"].default_value = 900.0
+    noise.inputs["Detail"].default_value = 6.0
+    bump = nt.nodes.new("ShaderNodeBump")
+    bump.inputs["Strength"].default_value = 0.12
+    bump.inputs["Distance"].default_value = 0.0004
+    nt.links.new(noise.outputs["Fac"], bump.inputs["Height"])
+    nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+    return m
+
+
+PAPERS = [paper("paper_cream", (0.86, 0.82, 0.76), 0.70),            # cool cream so it stays cream under 3200K
+          paper("paper_champagne", (0.62, 0.50, 0.34), 0.38, metal=0.55),
+          paper("paper_gold", (0.70, 0.52, 0.28), 0.32, metal=0.75)]
+M_DROP = paper("paper_drop", (0.88, 0.85, 0.80), 0.65)
 
 F.box("floor", (8, 8, 0.02), (0, 0, -0.01), F.M_ROOM)
 F.box("backwall", (8, 0.02, 4.0), (0, 1.6, 2.0), F.M_ROOM)
 
 
+def soft_box(name, size, loc, mat, parent, bevel=0.004):
+    """Box with rounded edges: wrapped corners catch a thin highlight instead of a hard CG edge."""
+    bm = F.bmesh.new()
+    F.bmesh.ops.create_cube(bm, size=1.0)
+    for v in bm.verts:
+        v.co = Vector((v.co.x * size[0], v.co.y * size[1], v.co.z * size[2]))
+    F.bmesh.ops.bevel(bm, geom=list(bm.edges), offset=bevel, segments=3, profile=0.5, affect="EDGES")
+    for f in bm.faces:
+        f.smooth = True
+    o = F.mesh_obj(name, bm, mat, parent, smooth_sides=False)
+    o.location = loc
+    try:
+        o.data.shade_auto_smooth()
+    except Exception:
+        pass
+    return o
+
+
+def bow(parent, z, size=1.0):
+    """Satin bow: two flat ribbon loops and two short tails, knot in the middle."""
+    for a in (30, -150):
+        pts = []
+        for i in range(25):
+            t = 2 * math.pi * i / 24
+            pts.append((0.045 * size * (1 - math.cos(t)) / 2, 0, z + 0.028 * size * math.sin(t) * 0.9 + 0.004))
+        lp = F.ribbon_strip(pts, 0.03 * size, F.M_SATIN_RED, parent, "bow_loop")
+        lp.rotation_euler = (math.radians(18), 0, math.radians(a))
+        lp.location.z = 0
+    for a in (60, -120):
+        pts = [(0.05 * size * i / 6, 0, z - 0.0005 * i) for i in range(7)]
+        tl = F.ribbon_strip(pts, 0.026 * size, F.M_SATIN_RED, parent, "bow_tail")
+        tl.rotation_euler = (0, 0, math.radians(a))
+    soft_box("bow_knot", (0.022 * size, 0.022 * size, 0.014 * size), (0, 0, z + 0.006), F.M_SATIN_RED, parent, 0.004)
+
+
 def gift(size, base, mat, rz=0.0):
-    """Wrapped gift on its base, crossed with red satin ribbon and a flat bow on top."""
+    """Wrapped gift on its base, crossed with red satin ribbon and a satin bow on top."""
     w, d, h = size
     e = F.link(bpy.data.objects.new("gift", None))
     e.location, e.rotation_euler = base, (0, 0, math.radians(rz))
-    F.box("paper", (w, d, h), (0, 0, h / 2), mat, e)
-    F.box("ribbon_x", (0.035, d + 0.004, h + 0.004), (0, 0, h / 2), F.M_SATIN_RED, e)
-    F.box("ribbon_y", (w + 0.004, 0.035, h + 0.004), (0, 0, h / 2), F.M_SATIN_RED, e)
-    for a in (35, -35):                                      # bow loops
-        loop = F.box("bow", (0.07, 0.03, 0.012), (0, 0, h + 0.012), F.M_SATIN_RED, e)
-        loop.rotation_euler = (math.radians(25), 0, math.radians(a))
+    soft_box("paper", (w, d, h), (0, 0, h / 2), mat, e)
+    soft_box("ribbon_x", (0.032, d + 0.003, h + 0.003), (0, 0, h / 2), F.M_SATIN_RED, e, 0.002)
+    soft_box("ribbon_y", (w + 0.003, 0.032, h + 0.003), (0, 0, h / 2), F.M_SATIN_RED, e, 0.002)
+    bow(e, h + 0.002, min(1.0, max(0.6, w / 0.2)))
     return e
 
 
