@@ -12,6 +12,10 @@
   - 2026-11-19: fillimisht 5A, një gjenerim për shot.
   - **2026-11-19, ndryshuar: provë me 1 prompt për gjithë videon** (`previz/previz_v2_full.mp4` si
     @video1). Nëse dështon, kthehemi te 6 gjenerime me `previz/s1..s6.mp4`.
+  - **2026-11-19, pas v2: hibrid.** Shot-et 2, 4, 5 nga gjenerimi v2 (i pëlqyer). Shot-et 1, 3, 6
+    rigjenerohen veç e veç (4s secili, `previz/solo/`, `prompts/v3_solo_s1_s3_s6.md`), sepse 1 prompt
+    nuk i mbajti kohët e prerjeve në dy prova.
+  - Shot 3: stolirat varen me fjongo të kuqe satin, që aksenti i kuq të shfaqet në mes të videos.
 
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |

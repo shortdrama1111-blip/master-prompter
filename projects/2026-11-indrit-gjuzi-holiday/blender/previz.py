@@ -89,7 +89,7 @@ M_DUO = mat("duo_box", 0.58)
 M_BAG = mat("bag_accent", 0.28)
 M_RIBBON = mat("ribbon", 0.88, 0.4)
 M_TAG = mat("tag", 0.80)
-M_BACKLIT = mat("backlit", 0.95, 0.8, emit=0.6)
+M_BACKLIT = mat("backlit", 0.95, 0.8, emit=1.6)  # cubbies read as light panels
 
 
 def newcoll(name):
@@ -361,7 +361,7 @@ def shot3():
             piv.rotation_euler = (swing, 0, heading + math.radians(12) * math.sin(0.8 * t + ph))
         s = smooth(t / 3.0)
         ang = math.radians(-95 + 5 * s)
-        aim((1.05 * math.cos(ang), 1.05 * math.sin(ang), 1.00), (0.05, -0.10, 1.15), 44)
+        aim((0.92 * math.cos(ang), 0.92 * math.sin(ang), 1.00), (0.0, -0.25, 1.06), 44)
 
     return C, update, 72
 
@@ -490,14 +490,14 @@ def shot6():
         tp = box(C, (0.16, 0.004, 0.12), (-0.10 + i * 0.09, 0.0, zb + h + 0.03), M_CAP, name="tissue")
         tp.rotation_euler = (math.radians(rng.uniform(-25, 25)), math.radians(rng.uniform(-30, 30)), math.radians(rng.uniform(-20, 20)))
     piv = empty(C, "tag_pivot", (0.03, -d / 2 - 0.012, zb + h + 0.02))
-    box(C, (0.014, 0.002, 0.13), (0, 0, -0.065), M_RIBBON, name="tag_ribbon", parent=piv)
-    tag = box(C, (0.060, 0.003, 0.090), (0.0, -0.004, -0.10), M_TAG, 0.007, "tag", piv)
+    box(C, (0.014, 0.002, 0.07), (0, 0, -0.035), M_RIBBON, name="tag_ribbon", parent=piv)
+    tag = box(C, (0.060, 0.003, 0.090), (0.0, -0.004, -0.075), M_TAG, 0.007, "tag", piv)
     tag.rotation_euler = (0, math.radians(-22), 0)
 
     def update(t):
         piv.rotation_euler = (math.radians(3) * math.sin(2 * math.pi * 0.4 * t), math.radians(14), 0)
         s = smooth(t / 3.833)
-        aim((0.04, -0.52 + 0.04 * s, zb + 0.36), (0.03, -0.07, zb + 0.27), 34)
+        aim((0.04, -0.50 + 0.03 * s, zb + 0.39), (0.03, -0.07, zb + 0.31), 29)  # wordmark stays below frame
 
     return C, update, 92
 
@@ -512,10 +512,14 @@ for name, coll, update, nframes in built:
         continue
     for _, other, _, _ in built:
         other.hide_render = other is not coll
-    frames = [0, nframes - 1] if MODE.startswith("test") else range(nframes)
+    # PREVIZ_SOLO=4 renders the shot alone stretched to 4 s (Seedance video input needs >= 4 s);
+    # the motion plays slower and gets sped back up in the edit.
+    solo = float(os.environ.get("PREVIZ_SOLO", "0"))
+    total = round(solo * FPS) if solo else nframes
+    frames = [0, total - 1] if MODE.startswith("test") else range(total)
     os.makedirs(os.path.join(OUT, name), exist_ok=True)
     for f in frames:
-        update(f / FPS)
+        update(f / FPS * nframes / total)
         sc.render.filepath = os.path.join(OUT, name, f"f{f:04d}.png")
         bpy.ops.render.render(write_still=True)
-        print(f"[previz] {name} frame {f}/{nframes - 1}", flush=True)
+        print(f"[previz] {name} frame {f}/{total - 1}", flush=True)
