@@ -20,3 +20,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👎 | "cs like this doesnt make sense how are we going to connect epara with going around tirana, lets fix the script first" | skenari v1: udhëtimi nëpër Tiranë s'kishte lidhje me epara | projekt; 💡 rregull kandidat: çdo lokacion = një përdorim i produktit |
 | 2026-11-19 | 💡 | "buy smth first then go again around tirana then go into an atm to withdraw" | struktura e re e skenarit | projekt |
 | 2026-11-19 | 🔧 | "give me the prompts one by one, i create one then we move to the other when i give okay" | rrjedha e punës me promptet | projekt; kandidat për CLAUDE.md |
+| 2026-11-19 | 👍 | "Yes, approved" | skenari v2 (çdo ndalesë = një përdorim i epara) | projekt; kandidat për `cinematic-ai-video`: në reklamë, çdo lokacion lidhet me një funksion të produktit |

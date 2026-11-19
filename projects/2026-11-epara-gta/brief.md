@@ -33,4 +33,4 @@ Atlete, në një dyqan atletesh.
 2. Bulevardi/Piramida: në semafor i kthen shokut paratë me app (transfertë e menjëhershme, falas).
 3. ATM afër stadiumit: tërheq cash për gështenjat (shitësi pranon vetëm cash); polici shikon, yjet mbeten 0.
 4. Stadiumi Air Albania: me shokun në ndeshje, mission passed, end card.
-(në pritje të aprovimit)
+✅ Aprovuar 2026-11-19 ("Yes, approved"). Hapur: drita e finales (1 apo 2 blloqe), Arbi si personazh apo vetëm mesazh.
