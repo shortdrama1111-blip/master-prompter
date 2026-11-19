@@ -60,9 +60,9 @@ markers=[]
 for i in range(N):
     t=i/FPS; f=i+1
     if t<0.85:   # 1) fisheye në tokë; ajo afrohet, pastaj ngre këmbën e djathtë lart mbi lente
-        setcam(c,'fish'); c.location=(0.15,-0.2,0.12); look(c,(0,1.4,1.6))
-        y=max(0.35,1.6-1.6*t); k=max(0,(t-0.35)/0.5); kick=math.sin(min(1,k)*math.pi)*1.9
-        fig.key(f,(0,y,0),0,legs=(-0.3*math.sin(t*9),kick),arms=((0.3,0,0.2),(0.3,0,-0.2)))
+        setcam(c,'fish'); c.location=(0.05,-0.15,0.07); look(c,(0,0.9,1.5))
+        y=max(0.45,1.5-1.6*t); k=max(0,(t-0.3)/0.55); kick=-math.sin(min(1,k)*math.pi*0.85)*2.0
+        fig.key(f,(0,y,0),0,legs=(0.25*math.sin(t*9),kick),arms=((0.3,0,0.2),(0.3,0,-0.2)))
     elif t<1.35:  # 2) plan i gjerë statik, kamera në lartësi gjuri, ajo qëndron para qepenit
         setcam(c,'p',47); c.location=(0.05*math.sin(t*5),-3.6,0.6); look(c,(0,1.6,1.05))
         fig.key(f,(0,1.6,0),0)
@@ -72,8 +72,8 @@ for i in range(N):
         setcam(c,'p',fov); c.location=(0,1.6-dist,h); look(c,(0,1.6,tz))
         fig.key(f,(0,1.6,0),0,arms=((0.1,0,0.1),(0.1,0,-0.1)))
     else:         # 4) detaj: kamera në dorë afër supit; duart tërheqin xhaketën mbi sup
-        setcam(c,'p',18); k=(t-1.9)/0.6
-        c.location=(0.35+0.02*math.sin(t*9),1.6-1.25,1.3+0.015*math.sin(t*13)); look(c,(0.08,1.6,1.32))
+        setcam(c,'p',29); k=(t-1.9)/0.6
+        c.location=(0.45+0.02*math.sin(t*9),1.6-0.95,1.42+0.015*math.sin(t*13)); look(c,(0.12,1.6,1.45))
         fig.key(f,(0,1.6,0),math.radians(-15),arms=((-2.4*min(1,k*1.5),0,0.3),(-2.0*min(1,k*1.5),0,-0.4)))
     c.keyframe_insert('location',frame=f); c.keyframe_insert('rotation_euler',frame=f)
     if c.data.type=='PERSP': c.data.keyframe_insert('lens',frame=f)
