@@ -24,3 +24,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | screenshot-et e ngjitura në chat nuk bëhen skedarë → i shkarkova nga rockstargames.com/VI (me leje) | refs GTA | projekt; shumica e imazheve zyrtare janë key art i ilustruar me logo → të papërdorshme; vetëm 3 janë render loje |
 | 2026-11-19 | 👍 | "si t mendosh ti q ehst m mri" → kyçur plate-i 60° | plate Blloku dron v4, Seedream 5.5, prompts/05 | projekt |
 | 2026-11-19 | 💡 | 90° nga lart s'del kur blloku i dritës përmend male në horizont dhe referencat janë të anuara | prompts/05 v4 | kandidat për LESSONS: për 90° të pastër, hiq rreshtat e horizontit dhe lër vetëm ref-in nga lart |
+| 2026-11-19 | 👍 | vazhdoi pa vërejtje pas plate-it të rrugës | plate rruga Blloku v2, prompts/06 | projekt |
+| 2026-11-19 | 💡 | plate-i i aprovuar si image 2 mban vazhdimësinë (pallati me shirita, makinat, xhami i dyqanit tregon rrugën e 06) | prompts/06 v2, 09 v2 | kandidat për `cinematic-ai-video`: zinxhir plate-sh, secili merr të aprovuarin e mëparshëm si ref |

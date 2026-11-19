@@ -1,6 +1,6 @@
 # 06 · Plate: rruga në Bllok, nivel trotuari (Seedream 5.5, 9:16)
 
-Version v2. Referenca: image 1 = `refs/tirana_blloku_rruga.jpg` (rruga reale), image 2 = `plates/blloku_dron-60_v4.jpg` (bota e aprovuar: fasadat me shirita, tendat, taksitë), image 3 = `refs/gta6-style_02_qytet-ajror-muzg.jpg` (vetëm ngjyra/render). Pa njerëz. Këtu del ai nga pallati dhe ecën.
+Version v2 ✅ → `plates/blloku_rruga_v2.jpg`. Referenca: image 1 = `refs/tirana_blloku_rruga.jpg` (rruga reale), image 2 = `plates/blloku_dron-60_v4.jpg` (bota e aprovuar: fasadat me shirita, tendat, taksitë), image 3 = `refs/gta6-style_02_qytet-ajror-muzg.jpg` (vetëm ngjyra/render). Pa njerëz. Këtu del ai nga pallati dhe ecën.
 
 Ndryshimet nga v1: plate-i i aprovuar si image 2 për vazhdimësi; rreshta më të fortë "game render" (05 doli pak si archviz); "Fiat 500" → "small hatchback" (pa markë).
 
