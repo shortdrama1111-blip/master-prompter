@@ -46,3 +46,8 @@
 ## 2026-11-19 — Take 34 (veshja 3) + CLIENT-V1 i ri
 - `results/seedance-34-outfit3-take1.mp4` (10 s): rrotullim 0–3.5, beli/xhepi 3.5–5.0, menga 5.0–6.29, clogs 6.29–8.0, te kolona 8.0–10.05.
 - `results/CLIENT-V1-firenze.mp4` (19.6 s): veshja 2 me rripin e rikthyer; veshja 3 = wipe me kolonën (33) → 5 shot-et e take 34. Profili i pallto-s te veshja 1 (~1.8 s) pret prompt 35.
+
+## 2026-11-19 — Take 35 (profilet) + V1/V2
+- `results/seedance-35-profiles-take1.mp4` (10 s): pallto 0–4.2, Arno 4.2–10.08; veshi i mbuluar nga fijet si te sheet-i.
+- `results/CLIENT-V1-firenze.mp4` (17.8 s): profili i ri i pallto-s (PR 0.6–1.4) në vend të të vjetrit.
+- `edit/client_v2.py` → `results/CLIENT-V2-reel-origjinal-kalimet-fix.mp4` (20.8 s): reel-i i parë; pa zoom-blur/split; dy profilet e reja; kuadratat 2 s → ~6 s (A 6.92–9.0 + rripi B + T27 3/4 + T27 mesatar).
