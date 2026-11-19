@@ -24,6 +24,10 @@
     `previz/solo/` dhe `prompts/v4_mocha_s2_s6.md`.
   - **Etiketat dhe logoja:** lexueshmëria vjen nga foto reale (Blender ose montim), plus packshot në fund.
 
+- **2026-11-19, mbrëmje: shot-et 1–4 në Blender** me etiketa reale nga fotot (`blender/shot1..4_final.py`,
+  montimi `renders/cut_s1-s4_v1.mp4`, 10.4s). **Shot-et 5–6: Seedance 2.5 extend** mbi këtë montim
+  ("më e thjeshtë", përdoruesi), `prompts/v5_extend_s5_s6.md`. Rezervë: shot 5 në Blender (`shot5_final.py`, testi gati).
+
 ## Harta e shot-eve (2026-11-19, e pranuar)
 | # | Shot-i | Produkti |
 |---|---|---|
@@ -35,7 +39,13 @@
 | 6 | Close-up çanta me kartë | Çanta e kuqe; teksti i kartës në montim |
 
 ## Blloku i dritës (fjalë për fjalë në çdo prompt)
-v3 mocha (2026-11-19, klienti). Zëvendëson v2 pjeshkë 4000K.
+**v4 (2026-11-19, "lock what you got"):** i rishkruar sipas render-ave të aprovuar të Blender-it
+(shot-et 1–4): mocha e butë, kapakë të bardhë, paketim në ngjyrën e vërtetë të printit, LED 3200K,
+dritë e përparme neutrale. Zëvendëson v3.
+```
+Warm luxury studio light: slim 3200K LED strips glow warm gold along the edges of the set and wash softly down over the products; one large soft neutral-white front key from camera-left at 30° height evenly lights every product face so each label reads crisp; soft mocha-brown walls take a gentle warm spill and fall off into deeper brown shadow; champagne metal edges catch thin bright highlights. White caps read pure white and the peach and cream packaging keeps its true printed colour, standing out clearly against the soft mocha.
+```
+(i zëvendësuar) v3 mocha (2026-11-19, klienti). Zëvendëson v2 pjeshkë 4000K.
 ```
 Warm luxury studio light at 3200K: slim warm LED strips hidden along the top inside edge of every shelf, opening and ledge wash softly down over the products; one large soft front key from camera-left at 30° height evenly lights every product face so each label reads crisp; mocha walls and the darker shelf interiors receive only gentle spill and fall off into deep warm shadow; champagne metal edges catch thin bright highlights. Cream bottles and white caps glow just below clipping, standing out clearly against the dark taupe.
 ```
