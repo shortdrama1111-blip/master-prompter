@@ -18,3 +18,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | "pse për videon e parë e mbarove më shpejt?" — pritja e gjatë e renderit u vu re | Previz v3 me Cycles 23s/frame | LESSONS.md: në laptop pa GPU, previz me EEVEE |
 | 2026-11-19 | 👍 | "now is better, I can see that is better, I really like it" | Gjenerimi v2 (prompt v2 + previz v3: kamera afër, softbox, DOF, rafti ashensor) | LESSONS.md: previz me dritë të butë + DOF + produkte të mëdha transferohet mirë |
 | 2026-11-19 | 👍 | "Po, bëji": pranoi hibridin (v2 + rigjenerim i shot-eve 1, 3, 6 veç e veç) | Pas krahasimit të v2 | decisions.md; LESSONS.md: 1 prompt me 5+ prerje s'mban kohët |
+| 2026-11-19 | 🔧 | "I want that to be readable that are my products and none else" | Shot 1 v3: etiketat e shpikura nga modeli | CLAUDE.md / skill: etiketat e markës s'lihen te modeli, vijnë nga foto reale (Blender ose montim) |
