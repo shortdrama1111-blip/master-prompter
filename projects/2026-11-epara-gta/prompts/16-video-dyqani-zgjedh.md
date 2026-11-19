@@ -1,6 +1,8 @@
 # 16 · Video: brenda dyqanit, zgjedh atletet (Seedance 2.5, i2v, 7 s, 9:16)
 
-**v2 (aktive):** me shitësen që del nga dera e pasme; ajo ka fytyrë vetëm në këtë shot (pa charsheet), te 18 duket nga gjoksi poshtë me të njëjtën bluzë të zezë. Teksti i plotë i v2 u dha në chat 2026-11-19. Arsyeja: "the shop is empty in the sense of no seller", "ta gjenerojm dhe njehere tamam me shites".
+**v3 (aktive):** 15 s multishot, 7 kënde: hyrja nga banaku, tracking te raftet, shelf cam (refuzon një atlete), insert i shenjës vjollcë, provon te stoli, pasqyra, te banaku me të vjetrat në dorë. Teksti i plotë në chat 2026-11-19. Pasojë: te 18 mbi banak janë atletet e vjetra.
+
+**v2 (gjeneruar, 👎 "lame"):** me shitësen që del nga dera e pasme; ajo ka fytyrë vetëm në këtë shot (pa charsheet), te 18 duket nga gjoksi poshtë me të njëjtën bluzë të zezë. Teksti i plotë i v2 u dha në chat 2026-11-19. Arsyeja: "the shop is empty in the sense of no seller", "ta gjenerojm dhe njehere tamam me shites".
 
 ## v1 (arkivë, u gjenerua: video 16 pa shitës)
 Version v1. @image1 = `plates/dyqani-neon_v2.jpg` (start frame), @image2 = `chars/djali_plastik_forte_pa-koke.png`, @image3 = `chars/atletet-reja_v1.jpg`. Shenja vjollcë e atletes = përjashtimi i vetëm nga aksenti.
