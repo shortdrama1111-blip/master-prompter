@@ -26,3 +26,7 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 💡 | 90° nga lart s'del kur blloku i dritës përmend male në horizont dhe referencat janë të anuara | prompts/05 v4 | kandidat për LESSONS: për 90° të pastër, hiq rreshtat e horizontit dhe lër vetëm ref-in nga lart |
 | 2026-11-19 | 👍 | vazhdoi pa vërejtje pas plate-it të rrugës | plate rruga Blloku v2, prompts/06 | projekt |
 | 2026-11-19 | 💡 | plate-i i aprovuar si image 2 mban vazhdimësinë (pallati me shirita, makinat, xhami i dyqanit tregon rrugën e 06) | prompts/06 v2, 09 v2 | kandidat për `cinematic-ai-video`: zinxhir plate-sh, secili merr të aprovuarin e mëparshëm si ref |
+| 2026-11-19 | 👍 | vazhdoi pa vërejtje pas edit-it të bulevardit | plate bulevardi edit, prompts/07 | projekt |
+| 2026-11-19 | 🔧 | "Në makinë" | skena 2: transferta te semafori ndodh brenda makinës | projekt |
+| 2026-11-19 | 🔧 | "si mesazh por kurre sdo duket celi personazhi thjsht do ta shofi por ti do e editosh n ekran" | Arbi = vetëm mesazh; ekrani i telefonit s'duket kurrë, transferta shtohet si grafikë në montim | projekt; përputhet me rregullin 9 të CLAUDE.md (teksti në montim) |
+| 2026-11-19 | 💡 | 3 plate-e me radhë dolën foto-reale edhe me rreshta "game render"; propozim: bota foto-reale golden hour, ndjesia GTA nga personazhi plastik + HUD + kamera | prompts/05, 06, 07, 09 | projekt, në pritje të konfirmimit; kandidat për LESSONS |

@@ -18,6 +18,18 @@ Shfaqet VETËM te karta, te ekrani i POS-it dhe te HUD-i epara. Rrobat dhe bota 
 | `@Atletet-Reja` | atlete të reja të bardha, pa logo, një shenjë e vogël vjollcë epara | `prompts/03-atletet-reja.md`; përjashtimi i vetëm nga aksenti |
 | (dyqani) | dyqan atletesh modern me neon, Tiranë | plate pa njerëz |
 
+## Skena 2 (bulevardi)
+- Transferta te semafori ndodh **brenda makinës** (hatchback i vogël gri i errët, pa logo; Element kur shfaqet nga jashtë).
+- **Arbi = vetëm mesazh.** Ekrani i telefonit nuk shihet kurrë nga kamera; djali vetëm e shikon. Transferta ("Sent … L to Arbi") shtohet si grafikë/HUD në montim.
+
+## Plate-et e kyçura
+| Plate | Skedari |
+|---|---|
+| Blloku nga dron 60° | `plates/blloku_dron-60_v4.jpg` |
+| Rruga e Bllokut | `plates/blloku_rruga_v2.jpg` |
+| Dyqani me neon | `plates/dyqani-neon_v2.jpg` |
+| Bulevardi nga dron 60° | `plates/bulevardi_dron-60_v2-edit.jpg` (upscale 2x) |
+
 ## HUD
 - Lart djathtas: logo epara + bilanci në LEK (në vend të parave GTA). Logo: `refs/epara-logo.svg` / `epara-logo_1600.png`. Logo është e errët (indigo) → mbi video i duhet kontur i bardhë ose sfond i butë.
 - Teksti i HUD-it: **anglisht** si në lojë.
