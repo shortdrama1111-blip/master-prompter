@@ -44,3 +44,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-19 | 👎 | "the second outfit from the long shot is really bad ... the 2nd is fine without the long shot; for the 3rd one can u implement the blender camera movements" | Montazh v1, kuadratat plani i gjerë (B 7.21–9.04) | Hiqet plani i gjerë i kuadratave; veshja 3 rigjenerohet me lëvizjet e ref (Blender v6) |
 | 2026-11-19 | 💡 | "from 1 to 3 here check frame more often to understand what is happening" | Ref kamere 1–3s | Analiza me 30fps: (A) fisheye, ajo kalon mbi kamerë + whip-tilt + ngre këmbën drejt lentes; (B) plan statik i ulët + push-in i shpejtë; (C) NJË dolly-in i vazhdueshëm me speed-ramp (jo jump-cuts); (D) detaj në dorë, dora tërheq xhaketën mbi sup |
 | 2026-11-19 | 🔧 | "menga me dantella" · "i want it to be in the 3rd place with the column, don't forget" | Veshja 3, prompt 23 | Detaji: dora rregullon mëngën me dantellë. Lokacioni: portiku me kolona (jo Arno) |
+
+## 2026-11-19 — klipi i prerë i referencës (0.9s)
+- 💡 Përdoruesi: "u need to check in more closes frame, bcs the camera is moving really faster". Analiza 27/27 frame me matje zoom-i: lëvizja e pëlqyer = zoom out që vazhdon përmes 4 prerjeve (match on motion), speed ramp 11%→2%/frame, shot-e 0.17–0.30s, zoom digital në montim. Shih analysis-v6-cut.md.
