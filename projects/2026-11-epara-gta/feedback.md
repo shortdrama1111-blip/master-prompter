@@ -66,3 +66,6 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-20 | 🔧 | "me mire flatted map dhe te levize ajo shigjeta kur levize njeriu ne video dhe germa N te jete brenda ne qender" | radari v4 (plate nga ajri, statik) | projekt; v5: hartë e sheshtë e vizatuar (Blloku / Bulevardi / stadiumi), shigjeta animuar sipas lëvizjes në video, N e qendërzuar |
 | 2026-11-20 | 🔧 | "tek pjesa qe ulet per atlete mos e shfaq qe nderron te vjetrat me te rejat, sapo te ulet eshte duke perfunduar te veshi te rejat" | 16 v3 segmenti i stolit | projekt; montim nis te 10.6 s (lidh lidhëset) |
 | 2026-11-20 | 🔧 | "duhet te behen disa shkurtime se eshte me te vertete shume e gjate" | montimi (75 s) | projekt; v6 63.5 s; kundërshton "gjatësia s'është problem" të mëparshëm → gjatësia: e shkurtër dhe e ngjeshur |
+| 2026-11-20 | 🔧 | "rivendose qe e fut karten dhe e ndjek, sepse ishte e mire, me pelqen shume si shot, pse e hoqe" | 21 v3 brenda ATM-së | projekt; u rivendos i plotë (logoja përmbys pranohet nga përdoruesi); 💡 mos heq në heshtje një pjesë spektakolare për një defekt të vogël: pyet |
+| 2026-11-20 | 🔧 | "kur ulet per atletet mos te duket asnje shenje e atleteve te vjetra" | 16a fundi (8.85–9.0 s) | projekt; 16a pritet te 8.84 s |
+| 2026-11-20 | 👍 | "perpos ketyre pjesa tjeter eshte shume nice" | montim v6 | projekt |
