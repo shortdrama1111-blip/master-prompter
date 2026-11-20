@@ -141,63 +141,117 @@ def toast(amount, label, color, name, y=164):
     save(im, name)
 
 
+FONTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "fonts")
+LUCKY = os.path.join(FONTS_DIR, "LuckiestGuy-Regular.ttf")
+
+
 def location(area, city, name):
+    """GTA style: bottom right, right aligned, above nothing (radar is bottom left)."""
     im = canvas()
-    ft = font(64, "Bold Condensed")
+    ft = font(60, "Bold Condensed")
     fc = font(20, "SemiBold")
-    x, ybase = 34, H - 230
+    right, ybase = W - 34, H - 210
+    aw = ft.getlength(area) / K
+    cw = text_w(fc, city, 6) / K
     sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
     sd = ImageDraw.Draw(sh)
-    draw_spaced(sd, ((x + 18) * K, ybase * K), city, fc, (0, 0, 0, 170), 6)
-    sd.text(((x + 18) * K, (ybase + 26) * K), area, font=ft, fill=(0, 0, 0, 170))
+    draw_spaced(sd, ((right - 18 - cw) * K, ybase * K), city, fc, (0, 0, 0, 170), 6)
+    sd.text(((right - 18 - aw) * K, (ybase + 26) * K), area, font=ft, fill=(0, 0, 0, 170))
     im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(9)))
-    gradient_bar(im, (x, ybase + 4, x + 5, ybase + 98))
+    gradient_bar(im, (right - 5, ybase + 4, right, ybase + 94))
     d = ImageDraw.Draw(im)
-    draw_spaced(d, ((x + 18) * K, ybase * K), city, fc, (255, 255, 255, 200), 6)
-    d.text(((x + 18) * K, (ybase + 26) * K), area, font=ft, fill=(255, 255, 255, 255))
+    draw_spaced(d, ((right - 18 - cw) * K, ybase * K), city, fc, (255, 255, 255, 200), 6)
+    d.text(((right - 18 - aw) * K, (ybase + 26) * K), area, font=ft, fill=(255, 255, 255, 255))
     save(im, name)
 
 
+def outlined_text(im, xy, text, f, fill, stroke, sw, grad=None, shadow=True):
+    x, y = xy
+    if shadow:
+        sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(sh).text((x + 6 * K, y + 8 * K), text, font=f, fill=(0, 0, 0, 160), stroke_width=sw, stroke_fill=(0, 0, 0, 160))
+        im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6)))
+    ImageDraw.Draw(im).text((x, y), text, font=f, fill=stroke, stroke_width=sw, stroke_fill=stroke)
+    if grad:
+        mask = Image.new("L", im.size, 0)
+        ImageDraw.Draw(mask).text((x, y), text, font=f, fill=255)
+        bb = mask.getbbox()
+        g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        gd = ImageDraw.Draw(g)
+        for yy in range(bb[1], bb[3]):
+            t = (yy - bb[1]) / max(1, bb[3] - bb[1] - 1)
+            gd.line([(bb[0], yy), (bb[2], yy)], fill=tuple(round(a + (b - a) * t) for a, b in zip(grad[0], grad[1])) + (255,))
+        g.putalpha(mask)
+        im.alpha_composite(g)
+    else:
+        ImageDraw.Draw(im).text((x, y), text, font=f, fill=fill)
+
+
 def mission(name):
+    """Classic GTA 'mission passed!' look: chunky orange letters, thick black outline, white respect line."""
     im = canvas()
-    cy = H * 0.42
-    band_h = 230
-    band = Image.new("RGBA", (W * K, band_h * K), (0, 0, 0, 0))
-    bd = ImageDraw.Draw(band)
-    for i in range(band_h * K):
-        t = abs(i / (band_h * K) - 0.5) * 2
-        bd.line([(0, i), (W * K, i)], fill=(0, 0, 0, round(175 * (1 - t ** 2))))
-    im.alpha_composite(band, (0, round((cy - band_h / 2) * K)))
-    fm = font(30, "SemiBold SemiCondensed")
-    fp = font(96, "Bold Condensed")
-    fr = font(22, "SemiBold")
-    d = ImageDraw.Draw(im)
-    s1 = "MISSION"
-    w1 = text_w(fm, s1, 10) / K
-    draw_spaced(d, ((W - w1) / 2 * K, (cy - 92) * K), s1, fm, (255, 255, 255, 230), 10)
-    s2 = "PASSED"
-    w2 = text_w(fp, s2, 4) / K
-    # gold gradient text
-    mask = Image.new("L", im.size, 0)
-    draw_spaced(ImageDraw.Draw(mask), ((W - w2) / 2 * K, (cy - 60) * K), s2, fp, 255, 4)
+    f1 = ImageFont.truetype(LUCKY, 74 * K)
+    f2 = ImageFont.truetype(LUCKY, 50 * K)
+    cy = H * 0.40
+    t1, t2 = "MISSION PASSED!", "RESPECT +"
+    w1 = f1.getlength(t1) / K
+    w2 = f2.getlength(t2) / K
+    outlined_text(im, ((W - w1) / 2 * K, (cy - 70) * K), t1, f1, None, (0, 0, 0, 255), 6 * K,
+                  grad=((255, 196, 64), (238, 132, 20)))
+    outlined_text(im, ((W - w2) / 2 * K, (cy + 22) * K), t2, f2, (255, 255, 255, 255), (0, 0, 0, 255), 5 * K)
+    save(im, name)
+
+
+def radar(plate, crop_box, name, route=None, pin=None, rotate=0):
+    """GTA VI style circular radar bottom left, filled with our own aerial plate."""
+    im = canvas()
+    D = 236
+    cx, cy = 34 + D / 2, H - 40 - D / 2
+    src = Image.open(plate).convert("RGB").crop(crop_box)
+    if rotate:
+        src = src.rotate(rotate, expand=False)
+    src = src.resize((D * K, D * K), Image.LANCZOS)
+    from PIL import ImageEnhance
+    src = ImageEnhance.Color(src).enhance(1.25)
+    src = ImageEnhance.Brightness(src).enhance(0.92).convert("RGBA")
+    # route + waypoint inside the map
+    md = ImageDraw.Draw(src)
+    if route:
+        pts = [(x * D * K, y * D * K) for x, y in route]
+        md.line(pts, fill=(0, 0, 0, 255), width=13 * K // 2, joint="curve")
+        md.line(pts, fill=(255, 158, 28, 255), width=9 * K // 2, joint="curve")
+    if pin:
+        px, py = pin[0] * D * K, pin[1] * D * K
+        r = 13 * K
+        md.ellipse((px - r, py - 2.2 * r, px + r, py), fill=(120, 40, 160, 255), outline=(0, 0, 0, 255), width=2 * K)
+        md.polygon([(px - r * 0.6, py - r * 0.6), (px + r * 0.6, py - r * 0.6), (px, py + r * 0.5)], fill=(120, 40, 160, 255))
+        md.ellipse((px - r * 0.38, py - 1.48 * r, px + r * 0.38, py - 0.72 * r), fill=(255, 255, 255, 255))
+    # player arrow at bottom centre
+    ax, ay = D * K / 2, D * K * 0.74
+    a = 17 * K
+    arrow = [(ax, ay - a), (ax + a * 0.75, ay + a * 0.8), (ax, ay + a * 0.35), (ax - a * 0.75, ay + a * 0.8)]
+    md.polygon(arrow, fill=(255, 255, 255, 255), outline=(20, 20, 20, 255), width=2 * K)
+    mask = Image.new("L", (D * K, D * K), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, D * K - 1, D * K - 1), fill=255)
+    x0, y0 = round((cx - D / 2) * K), round((cy - D / 2) * K)
     sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
-    sh.putalpha(mask.filter(ImageFilter.GaussianBlur(12)).point(lambda v: v * 0.7))
-    im.alpha_composite(sh)
-    gold = Image.new("RGBA", im.size, (0, 0, 0, 0))
-    gd = ImageDraw.Draw(gold)
-    top, bot = round((cy - 50) * K), round((cy + 50) * K)
-    for y in range(top, bot):
-        t = (y - top) / (bot - top)
-        c = (round(255 - 10 * t), round(226 - 60 * t), round(140 - 95 * t), 255)
-        gd.line([(0, y), (W * K, y)], fill=c)
-    gold.putalpha(mask)
-    im.alpha_composite(gold)
+    ImageDraw.Draw(sh).ellipse((x0 - 6 * K, y0 + 4 * K, x0 + D * K + 6 * K, y0 + D * K + 14 * K), fill=(0, 0, 0, 150))
+    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
+    im.paste(src, (x0, y0), mask)
     d = ImageDraw.Draw(im)
-    lw = 300
-    gradient_bar(im, ((W - lw) / 2, cy + 58, (W + lw) / 2, cy + 60), c0=(255, 210, 110), c1=(242, 179, 61), vertical=False)
-    s3 = "RESPECT +"
-    w3 = text_w(fr, s3, 6) / K
-    draw_spaced(d, ((W - w3) / 2 * K, (cy + 72) * K), s3, fr, (255, 255, 255, 235), 6)
+    ring = 9
+    box = (x0 - ring * K, y0 - ring * K, x0 + D * K + ring * K, y0 + D * K + ring * K)
+    d.ellipse((box[0] - 3 * K, box[1] - 3 * K, box[2] + 3 * K, box[3] + 3 * K), outline=(10, 10, 10, 255), width=3 * K)
+    d.arc(box, 90, 270, fill=(64, 214, 96, 255), width=ring * K)      # health, left half
+    d.arc(box, 270, 450, fill=(36, 132, 236, 255), width=ring * K)    # armour, right half
+    d.ellipse((x0 - 1 * K, y0 - 1 * K, x0 + D * K + 1 * K, y0 + D * K + 1 * K), outline=(10, 10, 10, 255), width=2 * K)
+    # N badge
+    nr = 21 * K
+    nx, ny = cx * K, (cy - D / 2 - ring / 2) * K
+    d.ellipse((nx - nr, ny - nr, nx + nr, ny + nr), fill=(14, 14, 14, 255), outline=(255, 255, 255, 230), width=2 * K)
+    fn = font(26, "Bold")
+    tw = fn.getlength("N")
+    d.text((nx - tw / 2, ny - 17 * K), "N", font=fn, fill=(255, 255, 255, 255))
     save(im, name)
 
 
@@ -213,4 +267,11 @@ location("BLLOKU", "TIRANA", "loc_blloku.png")
 location("BULEVARDI", "TIRANA", "loc_bulevardi.png")
 location("AIR ALBANIA", "STADIUMI", "loc_stadiumi.png")
 mission("mission.png")
+PL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "plates")
+radar(os.path.join(PL, "blloku_dron-60_v4.jpg"), (230, 620, 890, 1280), "radar_blloku.png",
+      route=[(0.5, 0.74), (0.5, 0.55), (0.33, 0.52)], pin=(0.33, 0.52))
+radar(os.path.join(PL, "bulevardi_dron-60_v2-edit.jpg"), (120, 560, 620, 1060), "radar_bulevardi.png",
+      route=[(0.5, 0.74), (0.52, 0.45), (0.58, 0.2)], pin=(0.58, 0.2))
+radar(os.path.join(PL, "frame_23_fundi_ajrore.png"), (40, 380, 680, 1020), "radar_stadiumi.png",
+      route=[(0.5, 0.74), (0.46, 0.5), (0.38, 0.4)], pin=(0.38, 0.4))
 print("ok")
