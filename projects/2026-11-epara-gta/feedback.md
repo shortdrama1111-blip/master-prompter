@@ -63,3 +63,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-20 | 🔧 | "me duhet te kem harten ne cep poshte majtas si gta style map" + foto e radarit GTA VI | HUD | projekt; radar rrethor me plate-et tona nga ajri (sipas skenës), unaza jeshile/blu, N, shigjeta, rruga portokalli; vendet kaluan poshtë djathtas |
 | 2026-11-20 | 🔧 | foto "mission passed! respect +" klasike GTA | HUD | projekt; Luckiest Guy (Google Fonts, Apache) portokalli me kontur të zi |
 | 2026-11-20 | 💡 | rreshti i ri i fundit: "Misioni i radhës? Shkarkoje falas." | narratori | projekt; mbi logon, frame-i i fundit mbahet +1.5 s |
+| 2026-11-20 | 🔧 | "me mire flatted map dhe te levize ajo shigjeta kur levize njeriu ne video dhe germa N te jete brenda ne qender" | radari v4 (plate nga ajri, statik) | projekt; v5: hartë e sheshtë e vizatuar (Blloku / Bulevardi / stadiumi), shigjeta animuar sipas lëvizjes në video, N e qendërzuar |
