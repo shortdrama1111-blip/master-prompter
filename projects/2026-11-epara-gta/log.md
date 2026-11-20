@@ -42,3 +42,4 @@
 | 2026-11-20 | montim v7 | ffmpeg + PIL | `montim/epara_montim_v7.mp4` (66.7 s): 21 v3 i plotë (karta hyn, bota brenda ATM-së); 16a pritet para kuadrove me atletet e vjetra | logoja e kartës përmbys brenda ATM-së mbetet | — | build: `montim/hud/build_v7.py` |
 | 2026-11-20 | video 18 v3 karta vertikale | Seedream edit + Seedance i2v | `Downloads/hf_20261120_013144_a3911bcf-...mp4` (5 s): karta vertikale identike me origjinalen, shitësja pa fytyrë, dritat jeshile | pak e ngadaltë | — | ✅ përshpejtuar 1.5x → 3.4 s |
 | 2026-11-20 | montim v8 | ffmpeg + PIL | `montim/epara_montim_v8.mp4` (65.3 s): 18 v3 me kartën vertikale (1.5x), HUD i pagesës te prekja | — | — | build: `montim/hud/build_v8.py` |
+| 2026-11-20 | montim final | ffmpeg + PIL | `montim/epara_GTA_final.mp4` (65.3 s): si v8 + cashback +8.90 L dhe bilancet me decimale | — | — | build: `montim/hud/build_v9.py` |

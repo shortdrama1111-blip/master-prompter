@@ -255,12 +255,12 @@ def radar(plate, crop_box, name, route=None, pin=None, rotate=0):
     save(im, name)
 
 
-hud_base("25,000", "hud_25000.png")
-hud_base("16,278", "hud_16278.png")
-hud_base("14,278", "hud_14278.png")
-hud_base("12,278", "hud_12278.png")
+hud_base("25,000.00", "hud_25000.png")
+hud_base("16,108.90", "hud_16108.png")
+hud_base("14,108.90", "hud_14108.png")
+hud_base("12,108.90", "hud_12108.png")
 toast("-8,900 L", "CARD PAYMENT", (255, 92, 96), "toast_pay.png")
-toast("+178 L", "CASHBACK", (64, 224, 150), "toast_cashback.png", y=252)
+toast("+8.90 L", "CASHBACK", (64, 224, 150), "toast_cashback.png", y=252)
 toast("-2,000 L", "SENT TO ARBI", (255, 92, 96), "toast_sent.png")
 toast("-2,000 L", "ATM WITHDRAWAL", (255, 92, 96), "toast_atm.png")
 location("BLLOKU", "TIRANA", "loc_blloku.png")
