@@ -1,0 +1,14 @@
+# Log i gjenerimeve
+
+| Data | Shot | Modeli | Rezultati | Problemi | Shkaku | Veprimi |
+|---|---|---|---|---|---|---|
+| 2026-11-20 | plate v1 | image | 👍 zyra me pasqyrë ovale, aplikë alabastri, banak bordo | doli 16:9 jo 9:16 | modeli injoroi formatin | mbahet si ref lokacioni |
+| 2026-11-20 | telefoni v1 | image | 👍 telefon i kuq me disk, kordon spiral | numrat e diskut gabim (pa 7, 1–6 dyfish) | modeli shpik shifra | edit opsional i diskut |
+| 2026-11-20 | gen A v2 (13 s) | Seedance 2.5 | 👍 shumica: wide, buzët me "Po", profili, disku, shkrimi | prerjet: 0–2.6 / 2.6–4.3 / 4.3–5.6 letra / 5.6–6.7 kordoni / 6.7–7.9 / 7.9–9.0 / 9.0–10.7 / 10.7–13 (modeli i zhvendosi pak) | dora te letrat dhe gishtat te kordoni statikë | prompti: "presses flat" / "twist the cord" = veprime pa ritëm | insert i ri 5 s (prompts/08), zëvendëson 4.3–6.7 në montim |
+| 2026-11-20 | insert duart v1 (5 s) | Seedance 2.5 | 👍 letra (0.2–1.8 s), e gjallë, por nga anash jo top-down | kordoni: spiralet si unaza të veçanta që fluturojnë; duart duken më të moshuara | rreshti "winds it around itself in three quick full turns... unspools... bouncing in the air" — pa e lidhur kordonin në të dy skajet | kordoni v2: kabllo e vetme e lidhur në të dy anët, stretch + release |
+| 2026-11-20 | montim A | ffmpeg | genA-v2-montuar.mp4: letra 0.4–1.65 + kordoni 3.75–4.95 (me shkëputjen e spiraleve) nga insert-duart-v1 në vend të 4.29–6.67; audio nga A | — | — | 👍 përdoruesi pranoi kordonin v1 |
+| 2026-11-20 | gen B v2 (15 s) | Seedance 2.5 | 👎 | prerjet 6.0/8.6/11.7 (jo 4.9/8.9/12.0); shot-et 2–4 nga i njëjti aks frontal; shot 1 përmes kornizës së pasqyrës; zëri i shpikur — flet 1.1–2.6, 4.9–5.8, 6.5–11.5 ku @video1 ka heshtje | prompti: 3 shot-e "47° frontal" me pasqyrën pas; mp4 i zi me audio nuk e detyron Seedance-in për fjali të gjata shqip | B v3: 4 pozicione kamere të emërtuara + buzë të mbyllura jashtë replikave; audio ElevenLabs në montim; lipsync pass nëse duhet |
+| 2026-11-20 | rough cut v1 | ffmpeg | renders/aura-v1-rough.mp4 (28 s): A-montuar 0–13.04 + B v2 13.04–28.04; audio: A origjinal + zëri ElevenLabs i saj për B + VO telefonuesi me filtër 300–3400 Hz | B ka këndet e njëjta + lipsync i keq | — | B v3 në pritje |
+| 2026-11-20 | pjesa 1 audio v2 | ffmpeg | pyetjet ri-pozicionuar mes përgjigjeve të Seedance; 'E menaxhova' → 4.28, 'E kemi' → 5.86, 'Po' (disku) → 9.70 (të gjitha off-screen) | — | Seedance i dha përgjigjet më herët se plani | renders/aura-v2-pjesa1*.{mp4,wav} |
+| 2026-11-20 | pjesa 1 final | ffmpeg | aura-v2-pjesa1-final.mp4: audio v2 + glow (screen 18%, sigma 14) + të zeza të ngritura 5% + vinjetë PI/5 + grain 9 | — | — | pjesa 2 pret B v3 + shot-in e zilës |
+| 2026-11-20 | pjesa 1 v2 (montim) | ffmpeg | 👎 | përgjigjet e Seedance të ngjeshura, pyetjet s'kishin vend | @video1 kishte vetëm zërin e saj; Seedance zhvendosi kohët | A v3: @video1 = biseda e plotë 14 s me pauza 0.3 s (audio/black-v3-genA-14s-bisede.mp4) |
