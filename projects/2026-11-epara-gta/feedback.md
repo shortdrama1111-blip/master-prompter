@@ -64,3 +64,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-20 | 🔧 | foto "mission passed! respect +" klasike GTA | HUD | projekt; Luckiest Guy (Google Fonts, Apache) portokalli me kontur të zi |
 | 2026-11-20 | 💡 | rreshti i ri i fundit: "Misioni i radhës? Shkarkoje falas." | narratori | projekt; mbi logon, frame-i i fundit mbahet +1.5 s |
 | 2026-11-20 | 🔧 | "me mire flatted map dhe te levize ajo shigjeta kur levize njeriu ne video dhe germa N te jete brenda ne qender" | radari v4 (plate nga ajri, statik) | projekt; v5: hartë e sheshtë e vizatuar (Blloku / Bulevardi / stadiumi), shigjeta animuar sipas lëvizjes në video, N e qendërzuar |
+| 2026-11-20 | 🔧 | "tek pjesa qe ulet per atlete mos e shfaq qe nderron te vjetrat me te rejat, sapo te ulet eshte duke perfunduar te veshi te rejat" | 16 v3 segmenti i stolit | projekt; montim nis te 10.6 s (lidh lidhëset) |
+| 2026-11-20 | 🔧 | "duhet te behen disa shkurtime se eshte me te vertete shume e gjate" | montimi (75 s) | projekt; v6 63.5 s; kundërshton "gjatësia s'është problem" të mëparshëm → gjatësia: e shkurtër dhe e ngjeshur |
