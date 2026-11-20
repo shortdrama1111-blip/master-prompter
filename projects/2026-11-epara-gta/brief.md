@@ -12,7 +12,7 @@ kamera, kënde, ritëm. STYLE.md (vasil.ai, "Me in GTA 6: Miami") përdoret **ve
 |---|---|
 | Vendi | Tirana (Blloku, bulevardi, sheshi Skënderbej, Piramida) |
 | Koha | e hapur (propozim: golden hour) |
-| Formati | 9:16, ~35 s, Reel |
+| Formati | 9:16, Reel; gjatësia e lirë (2026-11-20: "gjatësia s'është problem") |
 | Epoka | sot, 2026 |
 | Subjekti | personazh **krejt i gjeneruar** (jo fytyrë reale) |
 | Energjia | GTA trailer: prerje të shpejta, kamera që lëviz, 1 slow-mo (tap-i i kartës) |
