@@ -69,3 +69,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-20 | 🔧 | "rivendose qe e fut karten dhe e ndjek, sepse ishte e mire, me pelqen shume si shot, pse e hoqe" | 21 v3 brenda ATM-së | projekt; u rivendos i plotë (logoja përmbys pranohet nga përdoruesi); 💡 mos heq në heshtje një pjesë spektakolare për një defekt të vogël: pyet |
 | 2026-11-20 | 🔧 | "kur ulet per atletet mos te duket asnje shenje e atleteve te vjetra" | 16a fundi (8.85–9.0 s) | projekt; 16a pritet te 8.84 s |
 | 2026-11-20 | 👍 | "perpos ketyre pjesa tjeter eshte shume nice" | montim v6 | projekt |
+| 2026-11-20 | 🔧 | "duhet rregulluar qe karta te jete ekzakt si origjinalja, vetem ky eshte problemi kur ai paguan me karte, pjesa tjeter eshte shume lart" | 18 v2 (karta horizontale) | projekt; 18 v3 frame-first; 👍 pjesa tjetër e montimit v7 |
