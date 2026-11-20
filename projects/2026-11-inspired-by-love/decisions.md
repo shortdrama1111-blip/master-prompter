@@ -33,3 +33,22 @@ Fleta sage e editiut të dytë (zemrat vertikale) është standardi. Çdo ngjyr�
 - Bjonde, leje e konfirmuar nga përdoruesi. Fleta e karakterit: prompts/05.
 - Për veshjen: identiteti vetëm nga close-up i fytyrës, silueta nga refs/fit-ref-sage-neck-down.jpg,
   ngjyra/detajet nga fleta e ngjyrës. Një shot për imazh, format 4:5 nga UI.
+
+## 🔒 Fit-i (LOCKED 2026-11-19)
+refs/fit-ref-black-blonde-locked.jpg (bjondja, seti i zi, pas edit 08) është standardi i fit-it:
+bluza oversized deri te ijët, supe të rëna, mëngë të mbledhura te manshetat; pantallona wide-leg
+të drejta, hem-i mbi këpucë pa grumbullim. Çdo modele e re vishet me këtë siluetë.
+
+## Modelja 2
+- Burimi i identitetit (2026-11-20): refs/model-2-identity-source.jpg → char sheet prompts/11. Flokët: të gjata, të drejta, ndarje në mes.
+- (I vjetër: refs/model-2-brunette-source.jpg, u zëvendësua.)
+- Leje e konfirmuar nga përdoruesi (2026-11-20).
+
+## 🔒 Modelja 2 + fit final (LOCKED 2026-11-20)
+- Identiteti: refs/char-sheet-model2-locked.jpg → prerja refs/model-2-face-closeup-sheet.jpg (vetëm kjo hyn në shot-e).
+- Fit-i + gjatësia: refs/result-10-black-length-locked.jpg → prerja refs/fit-ref-black-final-neck-down.jpg.
+  Pantallonat mbulojnë këpucën deri te maja, hem-i prek dyshemenë mbrapa, pa pala.
+
+## 🔒 Metoda për ngjyrat (2026-11-20)
+Front: 3 referenca: fytyra + seti i zi mbi trup (vetëm forma) + fleta e ngjyrës (prompts/14).
+Kënde të tjera: 2 referenca: rezultati front i asaj ngjyre + portreti; shablloni prompts/13, ndërrohen vetëm rreshtat e ngjyrës (prompts/15 = gri).
