@@ -10,6 +10,17 @@ Shto mësimet më të rejat sipër. Format:
 
 ---
 
+## 2026-11-20 — Inspired by Love (Nano Banana Pro · imazhe e-commerce)
+Set loungewear në 4 ngjyra (sage, heather grey, olive, black): fleta produkti, modele, photoshoot e-commerce.
+- [funksionoi] Identiteti vetëm nga **close-up i prerë i fytyrës**, silueta nga **veshja e prerë nga qafa poshtë**. Me fletën e plotë të karakterit, trupi i fletës diktoi siluetën (veshja doli e ngushtë 3 herë). Statusi: i ri.
+- [funksionoi] Ngjyrat e reja me 3 referenca: fytyra + seti i zi mbi trup (vetëm forma) + fleta e ngjyrës. Gri doli në provën e parë. Këndet e tjera: front-i i asaj ngjyre + portreti. Statusi: i ri.
+- [funksionoi] Teksti në veshje me gjerësi në cm ("14 cm wide, clear uppercase letters") → "INSPIRED BY LOVE." i lexueshëm për herë të parë. Statusi: i ri.
+- [funksionoi / dështoi] Edit-i ruan siluetën: s'e ndryshon dot fit-in, por është ideal për ngjyrë, fytyrë, gjatësi. Statusi: i ri (konfirmon rregullin 8).
+- [dështoi] Edit "each leg is 2 cm longer" → asnjë ndryshim (2 cm ≈ 10 px në kadër të plotë). Me pika referimi ("hem touches the floor, only the toe tip shows") funksionoi. Statusi: i ri.
+- [dështoi] "pool / gathering where the hem meets the floor" → pala poshtë që s'pëlqyen. Statusi: i ri.
+- [dështoi] Detaj me duar të varura = statik. Çdo detaj ka nevojë për veprim me duar (flokë pas veshit, mansheta mbi gishta, hap). Statusi: i ri.
+- [funksionoi] Logo me gjeometri të prerë ("two equal hearts stacked vertically with a small gap") pas dështimit me "offset a little to the left". Statusi: i ri.
+
 ## 2026-11-14 — egli-SINDI-CAR (Seedance 2.5 Flash · Nano Banana Pro · Soul · ElevenLabs Music)
 Reel 9:16 ~29 s për étos (Black Friday), rikrijim i një video reference: vajzë në sediljen e pasme hap çantat dhe produktet.
 - [funksionoi] 3 akte + mbyllje me **extend** zinxhir → kontinuitet i plotë i fytyrës, dritës, çantave. Statusi: kaluar te seedance-clean (konfirmuar nga përdoruesi).

@@ -100,8 +100,8 @@ shënoje **menjëherë** te `projects/<emri>/feedback.md`, pa pritur fundin. Sh�
 - kontekstin (shot-i, prompti, modeli);
 - llojin: 👍 pëlqen / 👎 s'pëlqen / 💡 zbulim / 🔧 rregull i ri.
 
-Bëj commit dhe push në branch-in e projektit pas çdo shënimi ose grupi shënimesh. Container-i
-mund të zhduket, kurse branch-i mbetet. Gjatë projektit **mos prek** `CLAUDE.md`, `LESSONS.md`
+Commit dhe push **vetëm kur përdoruesi miraton një rezultat ose në mbyllje**, jo pas çdo
+shënimi. Shënimet ruhen lokalisht ndërkohë. Gjatë projektit **mos prek** `CLAUDE.md`, `LESSONS.md`
 dhe skill-et: gjithçka qëndron te folderi i projektit.
 
 ### 3. Mbyllja: kur përdoruesi thotë "kam mbaruar"
