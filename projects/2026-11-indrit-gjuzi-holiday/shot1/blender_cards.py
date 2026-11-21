@@ -118,12 +118,20 @@ def lathe(name, radii, height, img_half_w_units, segs=64):
 def build_bottle(kind):
     tex = img(os.path.join(A, f'{kind}_tex.png'))
     r_px = np.load(os.path.join(A, f'{kind}_radius.npy'))
+    # profil i paster: mediane 31 rreshta (heq gropat nga shkrimi), pastaj buze te rrumbullakosura
+    n = len(r_px); k = 15
+    pad = np.pad(r_px, k, mode='edge')
+    r_px = np.array([np.median(pad[i:i + 2 * k + 1]) for i in range(n)])
+    rr = int(n * 0.012)
+    for i in range(rr):
+        f = math.sqrt(1 - (1 - (i + 0.5) / rr) ** 2)
+        r_px[i] = r_px[rr] * (0.85 + 0.15 * f)
+        r_px[n - 1 - i] = r_px[n - 1 - rr] * (0.85 + 0.15 * f)
     H = HEIGHT[kind]
     scale = H / len(r_px)                      # njesi per px te fotos
-    idx = np.linspace(0, len(r_px) - 1, 160).astype(int)
+    idx = np.linspace(0, len(r_px) - 1, 260).astype(int)
     radii = np.maximum(r_px[idx] * scale, 0.02)
     # buzet e rrumbullakosura lart/poshte
-    radii[0] *= 0.92; radii[-1] *= 0.92
     half_w = tex.size[0] / 2 * scale
     ob = lathe(kind, list(radii), H, half_w)
     ob.data.materials.append(mat_principled(kind, tex=tex, rough=0.38, spec=0.45, coat=0.15))
