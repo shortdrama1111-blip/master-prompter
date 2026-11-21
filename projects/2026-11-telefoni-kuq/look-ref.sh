@@ -1,0 +1,3 @@
+# usage: look.sh IN OUT   — ngjyra ulli si referenca + grain i referencës
+GRADE="curves=r='0/0.03 0.5/0.47 1/0.85':g='0/0.02 0.5/0.5 1/0.86':b='0/0.03 0.5/0.42 1/0.70'"
+ffmpeg -v error -y -i "$1" -f lavfi -i "color=c=0x808080:s=720x1280:r=24,format=gray,noise=alls=13:allf=t,gblur=sigma=0.75" -filter_complex "[0:v]scale=720:1280,$GRADE,format=yuv420p,extractplanes=y+u+v[y][u][v];[y]split[y1][y2];[y2]lut=c0='255*pow(max(4*(clip(val,0,255)/255)*(1-clip(val,0,255)/255),0),1.8)'[w];[1:v][w]blend=all_expr='128+(A-128)*B/255'[nw];[y1][nw]blend=all_expr='A+(B-128)'[yg];[yg][u][v]mergeplanes=0x001020:yuv420p[out]" -map "[out]" -map 0:a? -c:v libx264 -crf 16 -preset slow -c:a copy -shortest "$2"

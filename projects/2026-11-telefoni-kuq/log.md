@@ -12,3 +12,5 @@
 | 2026-11-20 | pjesa 1 audio v2 | ffmpeg | pyetjet ri-pozicionuar mes përgjigjeve të Seedance; 'E menaxhova' → 4.28, 'E kemi' → 5.86, 'Po' (disku) → 9.70 (të gjitha off-screen) | — | Seedance i dha përgjigjet më herët se plani | renders/aura-v2-pjesa1*.{mp4,wav} |
 | 2026-11-20 | pjesa 1 final | ffmpeg | aura-v2-pjesa1-final.mp4: audio v2 + glow (screen 18%, sigma 14) + të zeza të ngritura 5% + vinjetë PI/5 + grain 9 | — | — | pjesa 2 pret B v3 + shot-in e zilës |
 | 2026-11-20 | pjesa 1 v2 (montim) | ffmpeg | 👎 | përgjigjet e Seedance të ngjeshura, pyetjet s'kishin vend | @video1 kishte vetëm zërin e saj; Seedance zhvendosi kohët | A v3: @video1 = biseda e plotë 14 s me pauza 0.3 s (audio/black-v3-genA-14s-bisede.mp4) |
+| 2026-11-21 | grade + grain A | ffmpeg | renders/genA-v2-montuar-look-ref.mp4: curves ulli + grain mono i peshuar te tonet e mesme (alls 13, gblur 0.75) | — | — | 👍 grain; ngjyra në pritje të vlerësimit |
+| 2026-11-21 | zëri origjinal (WhatsApp) | ffmpeg | audio/zeri-origjinal/: highpass 80 + afftdn me profil nga pauza 2.3–4.7 s + gate; zhurma −51 → −75 dB; 9 fraza | — | — | pa transkriptim ende |
