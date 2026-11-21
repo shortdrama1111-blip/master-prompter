@@ -73,3 +73,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 "ta nisim me treshin, un t jap start frame dhe ti ben fiziken": përdoruesi jep start frame-in, Claude bën lëvizjen/fizikën në Blender (si Shot 5).
 - 🔧 Start frame = vetëm sfondi (muri mocha + kolona champagne), pa spirale dhe pa produkte. Spiralja akrilike, varëset dhe produktet bëhen 3D në Blender.
 - 🔧 Varëset: zinxhir i hollë champagne-gold me grep (zëvendëson fjongot e bardha "cheap").
+- 🔧 Shot 3: "rrëshqitje si te referenca, me 3D": produktet rrëshqasin përgjatë spirales dhe dalin nga kuadri; jo lëkundje në vend nga një start frame me produkte.
