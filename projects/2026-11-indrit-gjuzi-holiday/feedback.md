@@ -77,3 +77,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 👍 Shot 3 v7 (Blender, preview 540p): "perfekte shkojm t skena tj" → renderi i plotë 1080×1920 në sfond.
 - 🔧 Shot 6: "Happy holidays esht teksti final" → teksti mbi etiketë bëhet "Happy Holidays" (zëvendëson "Gëzuar Festat xx").
 - 🔧 Shot 5: përdoruesi dha start frame-in e ri më afër (1116×2000) → refs/shot5-startframe-closer.jpg. ⚠️ Logo e gabuar nga AI: "INORIT GJUZI" në të dy qeset dhe te kutia DreamDuo (e sakta: "INDRIT GJUZI®", refs/christmas-bag.jpg, refs/dreamduo.jpg).
+- 🔧 Shot 5: "e rregulloj un dhe t jap foton e sakt": përdoruesi e korrigjon vetë logon dhe sjell frame-in e saktë.
