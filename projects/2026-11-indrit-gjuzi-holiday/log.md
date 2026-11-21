@@ -83,3 +83,9 @@
 - Spirale akrilike R 27 cm, hap 46 cm, tub 3 cm; kamera 1.6 m, VFOV 32°. 56 produkte çdo 18 cm, rrëshqasin poshtë me 0.12 m/s konstante dhe dalin nga kuadri (pa modulo). Varëse: grep unazë + zinxhir 5 cm champagne-gold. Lëkundja: lavjerrës i simuluar (2.5–6°, shuarje 0.35) + rrotullim i lehtë rreth fijes.
 - v1 i still-it: Glass/Transmission në Eevee del i zi (s'thyen plate-in) → xham = transparent + glossy sipas fresnel. Dritat ishin 4× shumë (produktet të djegura) → key 60, LED 45, fill 18. VFOV 45° → 32° që produktet të lexohen.
 - Renderi: ~7 s/frame në gjysmë rezolucioni (14 min për 120 frame) në Intel UHD.
+
+## Shot 5 v4 (kuadri më afër) → shot5/shot5-v4.mp4 (1080×1920, 24 fps, 3 s), 11/21
+- Plate: refs/shot5-startframe-closer-v2.jpg (1116×2000; logo "INDRIT GJUZI" e korrigjuar nga përdoruesi pasi v1 kishte "INORIT GJUZI").
+- Kutia: Blender/Eevee (shot5/box_blender.py), kamera ortografike 1 u = 100 px. Faqja përpara nga foto reale refs/dreamduo-v2.jpg, e drejtuar me perspektivë dhe me dritën e kutisë së plate-it (raport low-pass σ70) → shot5/assets/dreamduo_front.png. Shkrimet te shishet tani janë të saktat (te plate-i ishin të deformuara nga AI).
+- Fizika: g reale (qesja 513 px ≈ 32 cm → 157 u/s²), v0 3 u/s, goditje te frame 12.5, kërcime 2 cm + 0.5 cm, anim 14°→0 dhe rrotullim 8°→0, lëkundje e shuar pas goditjes. Kutia 280×385 px, 42% e saj poshtë buzës.
+- Kompozimi (shot5/make_shot5.py): holdout i qeses (poligoni i buzës + fjongoja mbi buzë), hije te buza mbi kutinë pas goditjes (0.55, σ 26 px), dridhje kamere 4 px që shuhet për ~0.25 s.
