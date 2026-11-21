@@ -1,4 +1,4 @@
-"""Shot 1 v5: raftet-ashensor, animim 2D pa gjenerim video.
+"""Shot 1 v5-v7 (v7: produktet nga kartat 3D te blender_cards.py; --2d = v6): raftet-ashensor, animim 2D pa gjenerim video.
 
 Plate: refs/shot1-plate-empty.webp (1116x2000, raftet bosh, Nano Banana Pro).
 Produktet: fotot reale te refs/ (etiketa te sakta), te ngjyrosura sipas frame-it te klientit.
@@ -140,7 +140,52 @@ def resize(arr, w, h):
     return np.stack(ch, -1)
 
 
-def build_strip(col, products):
+# v7: kartat 3D nga blender_cards.py (RGBA, 1.806 px per px plate-i, produkti + hije mbi mur)
+CARD_W, CARD_H, CARD_BASE = 354.0, 559.0, 509.0     # plate px; baza e produktit 509 px nga maja e kartes
+USE_CARDS = '--2d' not in sys.argv
+SHADOW_2D = {'mask', 'cond'}                         # kartat Eevee (pa shadow catcher): hija shtohet ketu
+
+
+def load_cards():
+    C = {}
+    for n in ('box', 'oil', 'mask', 'cond'):
+        p = os.path.join(HERE, 'assets', f'card_{n}.png')
+        if not os.path.exists(p):
+            continue
+        a = np.asarray(Image.open(p).convert('RGBA'), np.float32)
+        al = a[..., 3:] / 255.0
+        C[n] = (a[..., :3] * al, al[..., 0])            # e paraprakisht shumezuar per resize pa buze
+    return C
+
+
+def paste_card(dst, card, cx, base_y, shadow=False):
+    pm, al = card
+    w, h = int(round(CARD_W * S)), int(round(CARD_H * S))
+    pm = resize(pm, w, h); al = np.clip(resize(al, w, h), 0, 1)
+    x0, y0 = int(round(cx - w / 2)), int(round(base_y - CARD_BASE * S))
+    H, W = dst.shape[:2]
+    if shadow:
+        # si te composite(): hije e bute mbi murin + hije kontakti eliptike ne baze
+        sh = np.asarray(Image.fromarray((al * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(14)), np.float32) / 255
+        def mul(arr, ox, oy, k):
+            ys_, xs_ = slice(max(0, oy), min(H, oy + arr.shape[0])), slice(max(0, ox), min(W, ox + arr.shape[1]))
+            if ys_.stop > ys_.start and xs_.stop > xs_.start:
+                dst[ys_, xs_] *= (1 - k * arr[ys_.start - oy:ys_.stop - oy, xs_.start - ox:xs_.stop - ox])[..., None]
+        mul(sh, x0 + 6, y0 + 18, 0.45)
+        cols = np.nonzero(al.max(0) > 0.5)[0]
+        pw = (cols[-1] - cols[0] + 1) if len(cols) else w // 2
+        cw, ch = int(pw * 1.3), 26
+        yy, xx = np.mgrid[0:ch, 0:cw]
+        e = np.clip(1 - (((xx - cw / 2) / (cw / 2)) ** 2 + ((yy - ch / 2) / (ch / 2)) ** 2), 0, 1) ** 1.5
+        mul(e.astype(np.float32), int(round(cx - cw / 2)), int(round(base_y - ch / 2)), 0.55)
+    ys, xs = slice(max(0, y0), min(H, y0 + h)), slice(max(0, x0), min(W, x0 + w))
+    if ys.stop <= ys.start or xs.stop <= xs.start:
+        return
+    sy, sx = slice(ys.start - y0, ys.stop - y0), slice(xs.start - x0, xs.stop - x0)
+    dst[ys, xs] = dst[ys, xs] * (1 - al[sy, sx][..., None]) + pm[sy, sx]
+
+
+def build_strip(col, products, cards=None):
     """shirit vertikal i kolones ne shkallen e daljes, me shtrirje lart/poshte (perseritje me hapin PERIOD)."""
     x0, x1 = COLS[col]
     ext = int(PERIOD)
@@ -165,6 +210,9 @@ def build_strip(col, products):
         lip = LIP0[col] + k * PERIOD
         depth = float(np.clip((lip - EXT - 700) * 0.02, 0, 25))
         base = lip - depth
+        if cards and name in cards:
+            paste_card(out, cards[name], (CENTER[col] - x0) * S, (base + ext) * S, name in SHADOW_2D)
+            continue
         p = products[name]
         h = HEIGHT[name] * S
         w = h * p['rgb'].shape[1] / p['rgb'].shape[0]
@@ -235,7 +283,8 @@ def composite(dst, rgb, al, x0, y0, kind):
 def main():
     still = '--still' in sys.argv
     products = load_products()
-    strips = {c: build_strip(c, products) for c in COLS}
+    cards = load_cards() if USE_CARDS else None
+    strips = {c: build_strip(c, products, cards) for c in COLS}
     base = resize(plate, int(round(PW * S)), int(round(PH * S)))
     ox, oy = int(round(CX0 * S)), int(round(CY0 * S))
     nframes = 1 if still else int(round(DUR * FPS))
@@ -260,7 +309,7 @@ def main():
         Image.fromarray(img).save(os.path.join(HERE, 'frames', f'f{f:03d}.png'))
     if still:
         return
-    out = os.path.join(HERE, 'shot1-v6.mp4')
+    out = os.path.join(HERE, 'shot1-v7.mp4' if USE_CARDS else 'shot1-v6.mp4')
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', os.path.join(HERE, 'frames', 'f%03d.png'),
                     '-c:v', 'libx264', '-crf', '14', '-preset', 'slow', '-pix_fmt', 'yuv420p', out], check=True)
     print(out)

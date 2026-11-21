@@ -22,6 +22,8 @@ PX_PER_UNIT = float(os.environ.get('PXU', 180.6))   # 2x shkalla e daljes (0.903
 SAMPLES = int(os.environ.get('SPP', 96))
 KEY = float(os.environ.get('KEY', 560))
 LED = float(os.environ.get('LED', 90))
+# ENGINE=EEVEE: shpejt ne GPU te integruar; pa shadow catcher -> hijet i shton make_shot1.py ne 2D
+EEVEE = os.environ.get('ENGINE', 'CYCLES').upper() == 'EEVEE'
 
 
 def kelvin(k):
@@ -33,11 +35,41 @@ def kelvin(k):
     return tuple(max(0, min(255, c)) / 255 for c in (r, g, b))
 
 
+def bilateral(r, k=12, tol=2.5, it=3):
+    """mesatare vetem me fqinjet me diference < tol px: heq dridhjen 0.5 px, ruan shkallet."""
+    r = np.asarray(r, np.float64)
+    for _ in range(it):
+        pad = np.pad(r, k, mode='edge'); out = np.empty_like(r)
+        for i in range(len(r)):
+            w = pad[i:i + 2 * k + 1]; sel = np.abs(w - r[i]) < tol
+            out[i] = w[sel].mean()
+        r = out
+    return r
+
+
 def reset():
     bpy.ops.wm.read_factory_settings(use_empty=True)
     sc = bpy.context.scene
     sc.render.engine = 'CYCLES'
     sc.cycles.device = 'CPU'
+    # GPU lokal nese ka (OPTIX/CUDA/HIP/ONEAPI), perndryshe CPU
+    try:
+        prefs = bpy.context.preferences.addons['cycles'].preferences
+        for dt in ('OPTIX', 'CUDA', 'HIP', 'ONEAPI'):
+            try:
+                prefs.compute_device_type = dt
+            except TypeError:
+                continue
+            prefs.get_devices()
+            devs = [d for d in prefs.devices if d.type == dt]
+            if devs:
+                for d in prefs.devices:
+                    d.use = d.type == dt
+                sc.cycles.device = 'GPU'
+                print('device', dt, [d.name for d in devs])
+                break
+    except Exception as e:
+        print('GPU off:', e)
     sc.cycles.samples = SAMPLES
     sc.cycles.use_denoising = True
     sc.render.film_transparent = True
@@ -45,6 +77,17 @@ def reset():
     sc.cycles.film_transparent_roughness = 0.1
     sc.view_settings.view_transform = 'Standard'
     sc.view_settings.look = 'None'
+    if EEVEE:
+        for eng in ('BLENDER_EEVEE', 'BLENDER_EEVEE_NEXT'):
+            try:
+                sc.render.engine = eng; break
+            except TypeError:
+                continue
+        sc.eevee.taa_render_samples = 64
+        try:
+            sc.eevee.use_raytracing = True
+        except AttributeError:
+            pass
     sc.render.image_settings.file_format = 'PNG'
     sc.render.image_settings.color_mode = 'RGBA'
     w = bpy.data.worlds.new('W'); sc.world = w
@@ -121,7 +164,7 @@ def build_bottle(kind):
     # profil i paster: mediane 31 rreshta (heq gropat nga shkrimi), pastaj buze te rrumbullakosura
     n = len(r_px); k = 15
     pad = np.pad(r_px, k, mode='edge')
-    r_px = np.array([np.median(pad[i:i + 2 * k + 1]) for i in range(n)])
+    r_px = bilateral(np.array([np.median(pad[i:i + 2 * k + 1]) for i in range(n)]))
     rr = int(n * 0.012)
     for i in range(rr):
         f = math.sqrt(1 - (1 - (i + 0.5) / rr) ** 2)
@@ -230,6 +273,8 @@ def stage():
     wall = bpy.context.active_object; wall.scale = (COL_W, PERIOD + 2, 1); wall.is_shadow_catcher = True
     for m_ob in (shelf, wall):
         m_ob.data.materials.append(mat_principled('catch', color=(0.30, 0.22, 0.17), rough=0.6))
+        if EEVEE:
+            m_ob.visible_camera = False          # Eevee s'ka shadow catcher
     warm = kelvin(3200); key = kelvin(float(os.environ.get('KEYK', 7500)))
     # rripi LED nen buzen e raftit siper (perpara), drejtuar poshte
     bpy.ops.object.light_add(type='AREA', location=(0, -0.9, PERIOD - 0.08))
@@ -259,7 +304,8 @@ def stage():
 
 
 def main():
-    names = [a for a in sys.argv[1:] if not a.startswith('-')] or ['box', 'oil', 'mask', 'cond']
+    args = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else sys.argv[1:]
+    names = [a for a in args if not a.startswith('-')] or ['box', 'oil', 'mask', 'cond']
     for n in names:
         sc = reset()
         stage()

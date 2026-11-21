@@ -71,3 +71,9 @@
 - Shot 1 v7 (në punë): produktet si objekte 3D në Blender (bpy 5.0.1 në cloud, CPU) → shot1/blender_cards.py → karta RGBA shot1/assets/card_*.png (produkt + dritë LED 3200K + dritë përpara 7500K + reflektim nga muret anësore + kapje hijesh). Xhami i vajit del real. Mbetet: vija horizontale te shishet mask/cond (zhurmë te profili i rrezes) dhe ngjyra krem del pak gri.
 - Shot 1 v7, ndalur për kalim lokal: blender_cards.py tani pastron profilin e rrezes (mediane 31 rreshta + buzë të rrumbullakosura, 260 unaza) që të hiqen vijat horizontale; teksturat mask/cond u ngrohën (×1.0/0.965/0.92). Kartat mask/cond duhen renderuar sërish me këtë version. Mbetet: lidhja e kartave te make_shot1.py (zëvendëson produktet 2D) dhe renderi i v7.
 - Për ta nisur lokalisht: Blender 5.x → `blender -b -P shot1/blender_cards.py -- mask cond` (ose python me bpy). Variablat KEY/LED/KEYK/SPP/PXU ndryshojnë dritën dhe cilësinë.
+
+## Shot 1 v7 → shot1/shot1-v7.mp4 (lokal, 11/21)
+- Kompjuteri lokal ka vetëm Intel UHD: Cycles punon me CPU (~1–2 min për kartë). Kartat mask/cond u renderuan me **Eevee** (`ENGINE=EEVEE`, 17 s për të dyja); box/oil mbeten kartat Cycles të mëparshme.
+- Vijat horizontale te mask/cond vinin nga **tekstura** (piksele të zeza/të përsëritura anash), jo nga gjeometria. → `shot1/make_tex.py` rindërton teksturat nga fotot origjinale: çdo rresht shtrihet mbi gjerësinë e profilit të zbutur (pa 2 px buzë). Profili: mediane 31 + zbutje bilaterale (tol 2.5 px), heq dridhjen 0.5 px te kapakët dhe ruan shkallën kapak/trup.
+- Eevee s'ka shadow catcher → muri/rafti fshihen nga kamera dhe hija (mur + kontakt) shtohet në 2D te `make_shot1.py` (`SHADOW_2D`).
+- `make_shot1.py`: produktet tani janë kartat 3D (`--2d` = v6). Etiketat lexohen qartë; mask/cond dalin pak më të ftohta/gri se kutia.
