@@ -16,7 +16,7 @@ Komunikimi me përdoruesin: **shqip**. Promptet për modelet: **gjithmonë angli
 | Film me histori, shumë skena, të njëjtët personazhe | `ai-narrative-film`: kontinuiteti, karta e karakterit, QC |
 | Skenë me gjeografi (3+ shot-e, drejtim në ekran, shkallë) | `blender-blockout`: blockout → kamera → storyboard → prompt |
 | "Shto SFX" / zë / tingull, ose projekti ka nevojë për to (propozoji vetë) | `tools/sfx/README.md`: Openverse, real-sfx, earshot |
-| Tekst, logo, çmim, numërues ose kartë fundi në montim (propozoji vetë) | `tools/motion-graphics/README.md`: Remotion me kod |
+| Tekst, logo, çmim, numërues ose kartë fundi në montim (propozoji vetë) | `tools/motion-graphics/README.md`: HyperFrames + Remotion |
 | Një gjenerim doli keq | `cinematic-ai-video` §7 Kurthet + `ai-narrative-film` QC |
 
 Kur një projekt kërkon më shumë se një skill, `cinematic-ai-video` vendos **rendin e punës**

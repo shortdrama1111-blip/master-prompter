@@ -1,4 +1,4 @@
-# Motion graphics me kod (Remotion), për tekstin, logon, numrat dhe kartat e fundit
+# Motion graphics me kod (HyperFrames + Remotion), për tekstin, logon, numrat dhe kartat e fundit
 
 Regjistruar më 2026-11-21. Burimi: ultra-skills.com, "Claude Code Animation Prompts" (30 prompte).
 Faqja i ngarkon promptet me JavaScript, ndaj përdoruesi i ngjiti në chat. Këtu ruhen ato që na hyjnë në punë.
@@ -9,6 +9,32 @@ logo e animuar. Nuk zëvendësojnë Seedance.
 
 **Propozo vetë** kur një projekt ka: ofertë ose çmim në ekran, numër që rritet, logo në fund, ose një
 objekt "produkt" që del më mirë i pastër me kod (si fatura e Black Friday te `clever-faraday`).
+
+## Dy rrugë: HyperFrames (kryesore) dhe Remotion (për efekte të veçanta)
+
+**HyperFrames** (open source nga HeyGen, `hyperframes-kit/`) është rruga kryesore. Animacioni bëhet si faqe web
+(`index.html`), Chrome bën foto çdo frame dhe ffmpeg i bashkon. Kjo është e njëjta mënyrë që përdorëm me dorë
+te fatura e Black Friday. Kit-i (Damiano Caudullo) ka 15 prompte të testuara, 4 stile, fontet (OFL, falas edhe
+për klientë) dhe 9 SFX UI. Promptet më të vlefshme për ne:
+
+| Prompti | Na shërben për |
+|---|---|
+| **11** Grafika mbi videon tonë | Videoja nga Seedance/montimi mbetet e paprekur. Whisper e transkripton dhe çdo grafikë (numërues, checklist, krahasim) nis te fjala e saktë. Për reklama me voiceover si Krenar ose epara |
+| **14** Eksport transparent (ProRes 4444) | Kartë ose tekst mbi footage në çdo program montimi |
+| **08** Video vetëm me tekst | Hook ose reel pa footage |
+| **09** Video produkti | Lansim produkti, kartë fundi me CTA |
+| **13** SFX | Me `hyperframes-kit/sfx/`, ose me `tools/sfx/` (real-sfx e njeh HyperFrames direkt) |
+| **04–07** Stilet: Kinetic Type, Liquid Glass, Editorial Grain, Pop Bold | Blloku STYLE nën promptin. **Ngjyrat dhe fontet merren nga `decisions.md` e projektit**, stili jep vetëm lëvizjen |
+
+Kujdes te **15** (spec ad për çdo markë): merr maskotën dhe asetet nga faqet e markës. E përdorim vetëm për
+marka që janë klientët tanë dhe na i kanë dhënë asetet.
+
+Përgatitja një herë për kompjuter: Prompti 01 (Node 22+, FFmpeg, whisper-cpp, `npx hyperframes skills`).
+Para çdo projekti: kopjo `hyperframes-kit/fonts/` (dhe `sfx/` nëse duhet) në folderin e projektit.
+Kit-i origjinal kishte edhe `clip.mp4` (18 s, burrë i gjeneruar me AI) dhe screenshot-e prove: s'u ruajtën.
+
+**Remotion** (`prompts.md`) mbetet për efektet 3D që HyperFrames s'i ka gati: fatura, paratë, njoftimet,
+kalendari, logo nga pluhuri.
 
 ## Pse funksionojnë
 
