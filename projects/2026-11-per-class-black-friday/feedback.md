@@ -8,3 +8,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-21 | 💡 | "have a printing sound, give me without the printing sound and with the printing sound" | v2 | Dorëzo gjithmonë dy versione: pa zë dhe me SFX |
 | 2026-11-21 | 💡 | Pyeti nëse duheshin Remotion/HyperFrames; e pranoi render-in me HTML | v1 | `LESSONS.md`: motion graphic me tekst → render me kod, jo model AI |
 | 2026-11-21 | 👎 | "ule pak zerin e printerit" | v2 me zë: peak −3 dB, mesatare −21 dB → v3: −8 dB | Zëri i printerit si SFX në sfond, rreth −11 dB peak |
+| 2026-11-21 | 👎 | "ule dhe pak" | v3 −8 dB ende i lartë → v4: −13 dB (peak ≈ −16 dB) | SFX printeri rreth −16 dB peak |
