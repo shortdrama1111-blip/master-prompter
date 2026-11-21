@@ -66,3 +66,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Shot 1 v5: "duhet pak me larg qe te duket tamam 3 kolonat sepse kolonat anesore nuk kan borderat anesore": kuadri duhet të përfshijë kornizat e jashtme të kolonave anësore. 1.35× ishte shumë afër.
 - 👎 Shot 1 v6: "si m duket sikur nuk jan reale, sikur jan edited, se di ca mungon": produktet duken të ngjitura mbi plate.
 - 💡 "blenderi me mcp lokalisht është më mirë": përdoruesi preferon Blender lokal me MCP (GPU, viewport live, skedari .blend te ai) në vend të bpy në cloud.
+- 💡 Kompjuteri lokal ka vetëm Intel UHD: Cycles është po aq i ngadaltë sa në web (CPU). "pse po zgjat kaq shume" → kartat u bënë me Eevee (17 s), "ok bëje me eevee aman".
+- 👍 Shot 1 v7 aprovuar: "Aprovohet" → shot1/shot1-v7.mp4 (kartat 3D Blender, mask/cond me Eevee, teksturat e pastra).
