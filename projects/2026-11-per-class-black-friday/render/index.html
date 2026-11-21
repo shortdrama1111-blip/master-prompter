@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: 'Doto'; src: url(fonts/Doto.ttf); font-weight: 100 900; }
+@font-face { font-family: 'SpaceMono'; src: url(fonts/SpaceMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: 'SpaceMono'; src: url(fonts/SpaceMono-Bold.ttf); font-weight: 700; }
+:root { --ink: #ebe4d2; --paper: #2a2a29; --bg: #e7e0cf; }
+html, body { margin: 0; padding: 0; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  background: radial-gradient(ellipse 120% 60% at 50% 0%, #ece6d7 0%, var(--bg) 55%, #ddd5c2 100%); }
+#bgnoise, #grain { position: absolute; inset: 0; pointer-events: none; }
+#bgnoise { opacity: .35; mix-blend-mode: multiply; }
+#grain { opacity: .10; mix-blend-mode: overlay; }
+#shadow { position: absolute; left: 22px; width: 1036px; height: 2600px;
+  background: rgba(60,50,35,.35); filter: blur(18px); }
+#receipt { position: absolute; left: 27px; width: 1026px; height: 2600px; color: var(--ink); }
+#paper { position: absolute; inset: 0; }
+#content { position: absolute; inset: 0; }
+#logo { position: absolute; top: 92px; left: 50%; transform: translateX(-50%); width: 360px; }
+.title { position: absolute; left: 0; right: 0; text-align: center; font-family: 'Doto'; font-weight: 900;
+  line-height: 1; letter-spacing: 0; }
+.mono { font-family: 'SpaceMono'; text-transform: uppercase; }
+#head { position: absolute; top: 805px; left: 58px; right: 58px; display: flex; justify-content: space-between;
+  font-size: 27px; letter-spacing: 1px; opacity: .92; }
+.rule { position: absolute; left: 58px; right: 58px; height: 0; border-top: 3px dotted rgba(235,228,210,.75); }
+#rows { position: absolute; top: 885px; left: 58px; right: 58px; }
+.row { display: flex; justify-content: space-between; align-items: baseline; height: 104px; }
+.row .name { font-size: 45px; letter-spacing: .5px; }
+.row .off { font-size: 54px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+.row .off small { font-size: 24px; font-weight: 400; margin-right: 14px; letter-spacing: 1px; position: relative; top: -3px; }
+#foot { position: absolute; top: 1600px; left: 58px; right: 58px; display: flex; justify-content: space-between;
+  align-items: baseline; }
+#foot .k { font-size: 27px; letter-spacing: 1px; opacity: .92; }
+#foot .v { font-family: 'SpaceMono'; font-size: 42px; font-weight: 700; }
+#texture { position: absolute; inset: 0; mix-blend-mode: multiply; opacity: .55; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bgnoise" width="1080" height="1920"></canvas>
+  <div id="shadow"></div>
+  <div id="receipt">
+    <canvas id="paper" width="1026" height="2600"></canvas>
+    <div id="content">
+      <img id="logo" src="logo.png">
+      <canvas id="title" width="1026" height="480" style="position:absolute;left:0;top:340px"></canvas>
+      <div id="head" class="mono"><span>Shërbimi</span><span>Oferta</span></div>
+      <div class="rule" style="top:850px"></div>
+      <div id="rows" class="mono">
+        <div class="row"><span class="name">Makeup</span><span class="off">−30%</span></div>
+        <div class="row"><span class="name">Shërbimet për flokët</span><span class="off">−50%</span></div>
+        <div class="row"><span class="name">Laminimi i vetullave</span><span class="off">−50%</span></div>
+        <div class="row"><span class="name">Manikyr, pedikyr</span><span class="off">−50%</span></div>
+        <div class="row"><span class="name">Trajtimet e fytyrës</span><span class="off">−50%</span></div>
+        <div class="row"><span class="name">LPG</span><span class="off">−50%</span></div>
+      </div>
+      <div class="rule" style="top:1540px"></div>
+      <div id="foot" class="mono"><span class="k">Instagram</span><span class="v" style="text-transform:none">@class_beauty_house</span></div>
+    </div>
+    <canvas id="texture" width="1026" height="2600"></canvas>
+  </div>
+  <canvas id="grain" width="540" height="960" style="width:1080px;height:1920px"></canvas>
+</div>
+<script>
+// seeded RNG
+function rng(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed);
+  t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+
+const W=1026, H=2600, TOP_FINAL=96;
+
+// torn top edge path
+const r=rng(7); const edge=[]; let y=10;
+for(let x=0;x<=W;x+=3){ y+= (r()-.5)*3.2; y=Math.max(4,Math.min(16,y)); edge.push([x,y]); }
+
+function drawPaper(){
+  const c=document.getElementById('paper').getContext('2d');
+  c.fillStyle='#2a2a29'; c.beginPath(); c.moveTo(0,H);
+  edge.forEach(([x,y])=>c.lineTo(x,y)); c.lineTo(W,H); c.closePath(); c.fill();
+}
+function drawTexture(){
+  const cv=document.getElementById('texture'), c=cv.getContext('2d');
+  const id=c.createImageData(W,H), d=id.data, r=rng(3);
+  for(let i=0;i<d.length;i+=4){ const v=200+r()*55|0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
+  c.putImageData(id,0,0);
+  // fold creases: light line + dark line
+  const folds=[[440,.9],[1110,.6],[1720,1],[2350,.8]];
+  folds.forEach(([fy,s])=>{
+    for(let x=0;x<W;x+=2){
+      const yy=fy+Math.sin(x*0.011+fy)*3+Math.sin(x*0.047)*1.2;
+      c.fillStyle=`rgba(0,0,0,${0.35*s})`; c.fillRect(x,yy+2,2,3);
+      c.fillStyle=`rgba(255,255,255,${0.9})`; c.fillRect(x,yy,2,2);
+    }
+  });
+  // clip to torn edge
+  c.globalCompositeOperation='destination-in'; c.beginPath(); c.moveTo(0,H);
+  edge.forEach(([x,y])=>c.lineTo(x,y)); c.lineTo(W,H); c.closePath(); c.fill();
+}
+function drawBgNoise(){
+  const c=document.getElementById('bgnoise').getContext('2d'); const id=c.createImageData(1080,1920), d=id.data, r=rng(11);
+  for(let i=0;i<d.length;i+=4){ const v=225+r()*30|0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
+  c.putImageData(id,0,0);
+}
+function drawGrain(f){
+  const c=document.getElementById('grain').getContext('2d'); const id=c.createImageData(540,960), d=id.data, r=rng(1000+f);
+  for(let i=0;i<d.length;i+=4){ const v=r()*255|0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
+  c.putImageData(id,0,0);
+}
+function fitTitle(){
+  for(const [id,top] of [['t1',290],['t2',505]]){
+    const el=document.getElementById(id); el.style.top=top+'px';
+  }
+  // size so that FRIDAY spans 880px
+  const t2=document.getElementById('t2'); let fs=200; t2.style.fontSize=fs+'px';
+  const span=document.createElement('span'); span.textContent='FRIDAY'; span.style.cssText='font-family:Doto;font-weight:900;font-size:200px;position:absolute;visibility:hidden;white-space:nowrap';
+  document.body.appendChild(span); fs=200*900/span.getBoundingClientRect().width; span.remove();
+  document.querySelectorAll('.title').forEach(e=>e.style.fontSize=fs+'px');
+}
+
+const G={B:['11110','10001','10001','11110','10001','10001','11110'],L:['10000','10000','10000','10000','10000','10000','11111'],
+A:['01110','10001','10001','11111','10001','10001','10001'],C:['01110','10001','10000','10000','10000','10001','01110'],
+K:['10001','10010','10100','11000','10100','10010','10001'],F:['11111','10000','10000','11110','10000','10000','10000'],
+R:['11110','10001','10001','11110','10100','10010','10001'],I:['01110','00100','00100','00100','00100','00100','01110'],
+D:['11110','10001','10001','10001','10001','10001','11110'],Y:['10001','10001','01010','00100','00100','00100','00100']};
+function drawTitle(){
+  const c=document.getElementById('title').getContext('2d'), r=rng(5), P=23.5, gapRow=2.2*P;
+  c.fillStyle='#ebe4d2';
+  [['BLACK',0],['FRIDAY',7*P+gapRow-P]].forEach(([word,oy])=>{
+    const cols=word.length*6-1, ox=(1026-cols*P)/2+P/2;
+    [...word].forEach((ch,i)=>G[ch].forEach((row,ry)=>[...row].forEach((b,rx)=>{ if(b!=='1')return;
+      const x=ox+(i*6+rx)*P+(r()-.5)*1.2, y=P/2+10+oy+ry*P+(r()-.5)*1.2, rad=P*0.47*(0.93+r()*0.1);
+      c.beginPath(); c.arc(x,y,rad,0,Math.PI*2); c.fill(); })));
+  });
+}
+// motion: rise with ease-out + small thermal-printer steps
+const START=1560, RISE=3.0;
+function easeOutQuart(x){ return 1-Math.pow(1-x,4); }
+window.setFrame=function(f,fps){
+  const t=f/fps; const p=Math.min(1,t/RISE);
+  let top=START+(TOP_FINAL-START)*easeOutQuart(p);
+  // printer micro-steps while moving
+  if(p<1){ const step=6*(1-p); top=Math.round(top/step)*step || top; }
+  const rec=document.getElementById('receipt'), sh=document.getElementById('shadow');
+  rec.style.top=top+'px'; sh.style.top=(top+14)+'px';
+  drawGrain(f);
+};
+window.ready=(async()=>{
+  await document.fonts.ready; await new Promise(r=>{const i=document.getElementById('logo'); i.complete?r():i.onload=r;});
+  drawPaper(); drawTexture(); drawBgNoise(); drawTitle(); window.setFrame(0,24); return true;
+})();
+</script>
+</body>
+</html>
