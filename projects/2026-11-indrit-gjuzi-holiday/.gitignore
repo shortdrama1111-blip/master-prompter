@@ -3,3 +3,4 @@ blender/render/
 shot6/*.png
 shot6/*.jpg
 shot1/frames/
+__pycache__/
