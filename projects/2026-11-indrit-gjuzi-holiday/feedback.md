@@ -60,3 +60,5 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Përdoruesi dha start frame-in e ri (768×1376) → refs/shot1-client-frame-v2.jpg: "une mendoj qe te jap nje start frame dhe ti te handlesh the rest sepse ngelen shume me te qarta se cfare produkte jane". Animimi bëhet pa gjenerim video, që produktet të mbeten të qarta.
 - 🔧 "etiketat i ben shume me te mira ti?": etiketat duhet të jenë të lexueshme (në frame, teksti AI është i deformuar: "INORIT GJUZI", "NOURISHCHING").
 - 🔧 "duhet qe te jete pak me afer shoti qe te lexohet qarte": kuadër më i afërt.
+- 🔧 Shot 1: "shiko sa zgjat videoja e references ... e dua njësoj" → kohëzgjatja dhe shpejtësia si te ref-shot1: 1.67 s, lëvizje konstante; anësoret ~0.33 kat/s, mesi ~0.41 kat/s (matje: 120 px/s dhe 150 px/s në 720×1280, kati ~355 px).
+- 🔧 Shot 1: zoom 1.35×, "dua të duken të tre kolonat dhe gjithashtu të lexohen mirë etiketat".
