@@ -315,4 +315,5 @@ def main():
         print('ok', n, sc.render.filepath)
 
 
-main()
+if __name__ == '__main__':
+    main()

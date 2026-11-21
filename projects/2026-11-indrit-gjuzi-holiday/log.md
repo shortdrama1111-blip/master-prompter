@@ -77,3 +77,9 @@
 - Vijat horizontale te mask/cond vinin nga **tekstura** (piksele të zeza/të përsëritura anash), jo nga gjeometria. → `shot1/make_tex.py` rindërton teksturat nga fotot origjinale: çdo rresht shtrihet mbi gjerësinë e profilit të zbutur (pa 2 px buzë). Profili: mediane 31 + zbutje bilaterale (tol 2.5 px), heq dridhjen 0.5 px te kapakët dhe ruan shkallën kapak/trup.
 - Eevee s'ka shadow catcher → muri/rafti fshihen nga kamera dhe hija (mur + kontakt) shtohet në 2D te `make_shot1.py` (`SHADOW_2D`).
 - `make_shot1.py`: produktet tani janë kartat 3D (`--2d` = v6). Etiketat lexohen qartë; mask/cond dalin pak më të ftohta/gri se kutia.
+
+## Shot 3 v7 (Blender, Eevee) → shot3/shot3-v7-preview.mp4 (540×960, 4 s), 11/21
+- Plate: refs/shot3-plate-empty.jpg (Nano Banana edit nga përdoruesi, vetëm muri + kolona), si plan emission i hartuar në kuadrin e kamerës. Skripti: shot3/make_shot3.py (përdor gjeometrinë e produkteve nga shot1/blender_cards.py).
+- Spirale akrilike R 27 cm, hap 46 cm, tub 3 cm; kamera 1.6 m, VFOV 32°. 56 produkte çdo 18 cm, rrëshqasin poshtë me 0.12 m/s konstante dhe dalin nga kuadri (pa modulo). Varëse: grep unazë + zinxhir 5 cm champagne-gold. Lëkundja: lavjerrës i simuluar (2.5–6°, shuarje 0.35) + rrotullim i lehtë rreth fijes.
+- v1 i still-it: Glass/Transmission në Eevee del i zi (s'thyen plate-in) → xham = transparent + glossy sipas fresnel. Dritat ishin 4× shumë (produktet të djegura) → key 60, LED 45, fill 18. VFOV 45° → 32° që produktet të lexohen.
+- Renderi: ~7 s/frame në gjysmë rezolucioni (14 min për 120 frame) në Intel UHD.
