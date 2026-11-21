@@ -2,6 +2,9 @@
 
 Regjistruar më 2026-11-21 me kërkesë të përdoruesit: "mendoj se na duhen".
 **Kur përdoruesi thotë "shto SFX", "zë", "zile", "tingull" ose diçka të ngjashme, merren nga këtu.**
+**Propozo vetë** (pa pritur kërkesën), një rresht, kur projekti ka nevojë: video pa zë, një objekt që duhet
+dëgjuar (zile, printer, makinë, krahë), ose zëri i Seedance del i dobët. Kur kalojnë në `main`, thuaji
+përdoruesit që janë gati për përdorim.
 Testuar në cloud (Python 3.13, ffmpeg 6.1, node 22): të treja funksionojnë.
 
 | Vegla | Çfarë bën | Kur |
