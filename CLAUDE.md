@@ -15,6 +15,7 @@ Komunikimi me përdoruesin: **shqip**. Promptet për modelet: **gjithmonë angli
 | Shkruhet një prompt për Seedance 2.5 | `seedance-clean`: struktura e blloqeve, FOV, prerjet |
 | Film me histori, shumë skena, të njëjtët personazhe | `ai-narrative-film`: kontinuiteti, karta e karakterit, QC |
 | Skenë me gjeografi (3+ shot-e, drejtim në ekran, shkallë) | `blender-blockout`: blockout → kamera → storyboard → prompt |
+| Përdoruesi thotë "shto SFX" / zë / tingull në montim | `tools/sfx/README.md`: Openverse, real-sfx, earshot |
 | Një gjenerim doli keq | `cinematic-ai-video` §7 Kurthet + `ai-narrative-film` QC |
 
 Kur një projekt kërkon më shumë se një skill, `cinematic-ai-video` vendos **rendin e punës**
