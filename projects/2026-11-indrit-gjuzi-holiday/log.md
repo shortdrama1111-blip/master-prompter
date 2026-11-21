@@ -64,3 +64,6 @@
 ## Shot 1 v5 (animim 2D mbi frame-in e klientit), 11/21
 - Gjeometria e frame-it (768×1376): shtyllat champagne x≈0, 250, 506, 760. Raftet: L y≈127/483/845/1229, M y≈208/555/921/1306 (mesi i zhvendosur ~80 px), R y≈131/488/856/1189. Kati ≈ 360 px.
 - Plate pa produkte, Nano Banana Pro 4K: job 500bae6c-a219-4f7a-bf3e-8688e748b019 (nisur automatikisht; pas kësaj, gjenerimet i bën përdoruesi me dorë).
+- Plate pa produkte, i marrë nga përdoruesi → refs/shot1-plate-empty.webp (1116×2000). Buzët e rafteve me hap identik 559 px në të tria kolonat (L 107, M 219, R 115 + k·559), kështu që përsëritja s'ka qepje të dukshme.
+- ✅ Shot 1 v5 → shot1/shot1-v5.mp4 (1080×1920, 30 fps, 2.0 s; në montim 1.67 s). Skripti shot1/make_shot1.py: kolonat zhvendosen si shirita (anësoret poshtë 0.33 kat/s, mesi lart 0.41 kat/s), shtyllat champagne statike, zoom 1.35×, motion blur me 4 nën-frame. Produktet janë foto reale nga refs/ (etiketa të sakta), ngjyrosur me raportin klient/foto për çdo kanal, me hije kontakti + hije të butë mbi mur. Vaji: xham transparent (sfondi × transmetim) + vija të bardha anësore.
+- ⚠️ Etiketa e vajit lexohet, por është e butë: foto burimore e shishes ka vetëm 122 px gjerësi (refs/image1-hair-oil.jpg). Duhet foto me rezolucion më të lartë.
