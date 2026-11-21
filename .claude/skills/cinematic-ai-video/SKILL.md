@@ -82,6 +82,31 @@ për projekt me markë ose lokacion.
   `"Keep the supplied image exactly — same camera, framing, crowd, lighting, grade and
   grain. Change ONE thing only: X. Everything else untouched."`
 - Ngjyrën mes plate-ve rregulloje me pass në Lightroom, jo me rigjenerim.
+- **Një editim po, edit mbi edit jo.** Çdo editim zinxhir e zbut dhe e njollos imazhin, dhe ajo
+  turbullirë kalon në video. Nga editimi i dytë e tutje kthehu te gjenerimi i pastër më i hershëm
+  dhe bëje ndryshimin me maskë me dorë. (Burimi: Nexus LENS, nëntor 2026.)
+- **Testo asetin në lëvizje** para se ta miratosh: 1–2 gjenerime të shkurtra Seedance. Rreth
+  gjysma e aseteve që duken mirë si foto prishen në lëvizje (përmasat, tekstura e turbullt).
+
+### Plate-t e dritës (kundër sheshimit)
+
+Seedance i tërheq të gjitha shot-et drejt të njëjtës ekspozim të barabartë. Me tekst
+("darker") arrin pak. Bëj plate ku drita s'mund të keqlexohet:
+
+- një key dominant me drejtim të qartë dhe buzë të fortë;
+- backlight/rim që ndan subjektin nga sfondi;
+- hije e thellë që **ruan teksturë**;
+- praktikë të motivuara (llamba, zjarr, ekran) si theksa të vegjël;
+- kontrast i ngrohtë/i ftohtë mes key dhe fill (ose key dhe qiell);
+- plate qielli/bote: çfarë duket jashtë dritares, që brenda dhe jashtë të kenë një dritë;
+- **ana e hijes:** key-ja përtej subjektit, kamera nga ana pa dritë, që plate-i ta tregojë
+  vetë rënien e dritës.
+
+**Blloku i dritës testohet:** përshkruaj në një bllok atë që kanë të përbashkët plate-t (burimi
+dhe drejtimi i key-t, Kelvin, kontrasti, thellësia e hijes, rim, haze, praktikët) dhe drejtimin ku
+drita **qëndron** në pohore (`"the light stays cold 6500K, shadows stay deep and textured"`), jo
+listë "NEVER". Testoje në 5–10 gjenerime, shtrëngo atë që rrëshqet, pastaj e përsërit fjalë për
+fjalë (rregulli #4).
 
 ---
 
@@ -182,6 +207,16 @@ Pa këtë, modeli e tërheq kamerën te fytyra dhe ambienti humbet.
 | Videoja duket reklamë e lokacionit | Godina e dekoruar si skenë | Godinat vetëm kontur drite |
 | Ngjyra ndryshon mes kuadrove | Plate-t veç e veç | Rregull i vetëm drite + pass ngjyre |
 | Sfondi ngrin me video reference | Videoja burim ka sfond statik | Lëvizjen e sfondit si shot i veçantë image-to-video |
+| Gjithçka e mprehtë, pa thellësi | S'ka pikë fokusi | Emërto pikën e fokusit, kamera 1–3 m prej saj, "wide open" |
+| Bokeh i rrumbullakët (kur duam anamorfik) | S'u përshkrua forma | "elongated vertical oval highlights" + mbi çfarë ndodhen |
+| Flare e djeg kuadrin | Shumë burime / pa kufi | Një burim i vetëm, "restrained", ul shkëlqimin e burimit |
+| Pamje fisheye | FOV shumë i gjerë | "rectilinear" + ul në 63° |
+| Fytyrë e shtrirë | Personi në 84° (24mm) | Fytyrat vetëm në 47° ose 29° |
+| Shot-et dalin të sheshta, ekspozim i barabartë | Blloku i dritës mungon ose është i butë | Emërto drejtimin + "deep shadow on the [side]"; plate drite nga ana e hijes; blloku SHADOW SIDE |
+| Fytyrat të zeza krejt | Kontrasti i tepruar | "shadows hold texture, faces readable, gentle bounce on the shadow side" |
+| Drita ngrohet mes shot-eve | Blloku i dritës s'e fikson temperaturën | Shto rreshtin pohor "the light stays [K]" |
+| Aset i butë, me njolla | Shumë editime zinxhir | Kthehu te gjenerimi i pastër më i hershëm |
+| Del markë/logo | Emër produkti në prompt | Zëvendësoje me përshkrim të pamjes |
 
 ---
 

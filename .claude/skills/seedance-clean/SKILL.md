@@ -61,6 +61,15 @@ State critical details (small text, logos, color) in words even if they appear o
 
 Never place an `@tag` in a shot where that object is not present; the model will try to force it into frame.
 
+**Reference slicing.** Seedance copies what it SEES in a reference far more than what it READS. Give every reference ONE scoped line saying which slice to take — in positive form, naming where the rest comes from:
+```
+@image1 — [character]: face and costume identical throughout.
+@image2 — location plate: set design and lens character only; framing comes from the shot text.
+@image3 — lighting plate: light direction, colour and contrast only; composition comes from the shot text.
+@image4 — storyboard page: camera position, framing and screen direction only; every look comes from the other references and this text.
+```
+You rarely need a whole frame: take just the blocking, just the light, or just the lens.
+
 ---
 
 ## CONTEXT ISOLATION
@@ -270,8 +279,65 @@ In the prompt text use **FOV in degrees** from the table below, not millimeters.
 
 Use only the discrete steps from the table. Not "23°" — use 18° or 29°. In a multishot, set FOV per segment and add `"no drift mid-segment"`.
 
+**Faces live at 47° or narrower** (29° / 18° for close-ups). 84° and wider stretch a face — keep wides for places and full figures.
+
+### Optional look modules
+
+**LENS LOCK (anamorphic look)** — only when the project chooses this look. Write each trait as visible evidence:
+```
+LENS LOCK
+2.39:1 vintage anamorphic character: elongated vertical oval bokeh on [named highlights]; one named
+focus point at [1–3] m, lens wide open, [foreground] and [background] melting into soft blur, motivated
+rack focus; soft focus fall-off and a slight bend toward the frame edges; one restrained horizontal
+[blue / warm-orange] streak flare off [one named source]; organic film grain.
+```
+Bake the same traits into the location plates first — the plate carries the look, the text backs it up.
+
+**SHADOW SIDE** — for hero close-ups, dialogue, night, interiors, tension. Soften or skip for comedy, wides where several faces must read, daylight exteriors and fast action.
+```
+SHADOW SIDE
+Key light from beyond the subject, camera on the unlit side of the face. High contrast, strong falloff
+from light to shadow, rim light separating subject from background. Shadows hold texture and faces
+stay readable.
+```
+Always keep the last sentence: Seedance overshoots contrast on faces.
+
 ### Camera placement in the prompt
 Place the CAMERA block in the **3rd position** of the prompt's core layers (subject → action → camera → style → constraints). Moved to the end, FOV gets ignored; moved to the front, it conflicts with identity.
+
+---
+
+## SPATIAL LOCK — COMPASS + CAM FACING (multi-shot geography)
+
+For any multi-shot scene where screen direction or "who is where" matters, fix the world's
+orientation once and name each camera's facing. Best built from a Blender blockout (skill
+`blender-blockout`); works in text alone too.
+
+**COMPASS block** (after LOCATION MAP): one recognisable backdrop per direction, so every camera
+reads unambiguously.
+```
+COMPASS (fixed backdrop)
+N: [what fills the frame looking north]. E: [...]. S: [...]. W: [...].
+```
+
+**GEOGRAPHY block:** who moves which way in compass terms ("the riders travel east; the pursuer
+follows from the west, also facing east").
+
+**Per shot header:**
+```
+SHOT 2: [NAME] (CAM FACING: W) (PANELS 4 TO 6)
+Size: [...]. Placement: [who is where, left/right from camera]. Angle: [height + angle].
+Lens: [FOV]°, about [X] meters away. Mount: [...]. Focus: [...].
+```
+Inside the shot, give each subject's facing in frame terms ("facing frame right").
+
+**STORYBOARD block** (when board pages are attached as references):
+```
+STORYBOARD
+Follow panels 1 to N in order, each a key frame: match camera position, framing, screen direction
+and action; cut only where the shot number changes. The panels are grey previz stand-ins; every
+look comes from the references and this text.
+```
 
 ---
 

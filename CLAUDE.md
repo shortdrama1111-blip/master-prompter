@@ -14,6 +14,7 @@ Komunikimi me përdoruesin: **shqip**. Promptet për modelet: **gjithmonë angli
 | Vjen një brief i ri (reklamë, klient, markë, lokacion) | `cinematic-ai-video`: pyetjet, bota, plate-t, Elementet |
 | Shkruhet një prompt për Seedance 2.5 | `seedance-clean`: struktura e blloqeve, FOV, prerjet |
 | Film me histori, shumë skena, të njëjtët personazhe | `ai-narrative-film`: kontinuiteti, karta e karakterit, QC |
+| Skenë me gjeografi (3+ shot-e, drejtim në ekran, shkallë) | `blender-blockout`: blockout → kamera → storyboard → prompt |
 | Një gjenerim doli keq | `cinematic-ai-video` §7 Kurthet + `ai-narrative-film` QC |
 
 Kur një projekt kërkon më shumë se një skill, `cinematic-ai-video` vendos **rendin e punës**
