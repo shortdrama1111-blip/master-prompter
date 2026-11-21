@@ -79,3 +79,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Shot 5: përdoruesi dha start frame-in e ri më afër (1116×2000) → refs/shot5-startframe-closer.jpg. ⚠️ Logo e gabuar nga AI: "INORIT GJUZI" në të dy qeset dhe te kutia DreamDuo (e sakta: "INDRIT GJUZI®", refs/christmas-bag.jpg, refs/dreamduo.jpg).
 - 🔧 Shot 5: "e rregulloj un dhe t jap foton e sakt": përdoruesi e korrigjon vetë logon dhe sjell frame-in e saktë.
 - 👍 Shot 5 v4 aprovuar: "Aprovohet" → shot5/shot5-v4.mp4 (kuadër më afër, kutia nga foto reale, Blender).
+- 👍 Shot 6 v3 aprovuar: "Aprovohet" → shot6/shot6-v3.mp4 ("Happy Holidays"); mospërputhja e vogël e kutisë DreamDuo në cep pranohet.

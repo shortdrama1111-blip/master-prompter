@@ -11,14 +11,14 @@ Klipet e aprovuara janë te `approved-clips/`:
 | 3 Girlanda | shot3_garland.mp4 | 1.0–4.0 s | Seedance i2v (10 s) |
 | 4 Rënia e dy kutive | shot4_tumble.mp4 | 0–3.75 s | Nano Banana edit + Seedance i2v |
 | 5 DreamDuo në qese | shot5_bag_closer_v4.mp4 (v4, aprovuar 11/21) | 0.2–2.95 s | Kuadër më afër (refs/shot5-startframe-closer-v2.jpg). Kutia në Blender/Eevee me teksturë nga foto reale + kompozim me holdout (`shot5/box_blender.py`, `shot5/make_shot5.py`) |
-| 6 "Gëzuar Festat xx" | shot6_tag.mp4 | 0–4.0 s | `shot6/make_shot6.py`: shkrim me dorë (Ink Free) mbi etiketën + afrim kamere |
+| 6 "Happy Holidays" | shot6_happy_holidays_v3.mp4 (v3, aprovuar 11/21) | 0–4.0 s | `shot6/make_shot6.py`: shkrim me dorë (Ink Free) mbi etiketën + afrim kamere |
 
 ## Feedback-u i klientit që mbetet për t'u zbatuar
 1. ~~**Shot 1**~~: ✅ v7 aprovuar (shot1/shot1-v7.mp4). Montazhi final duhet ribërë me këtë klip.
 2. ~~**Shot 3**~~: ✅ v7 në Blender me zinxhirë champagne-gold, lëvizja aprovuar (preview); renderi 1080×1920 → shot3/shot3-v7.mp4.
 3. ~~**Shot 5**~~: ✅ v4 aprovuar (shot5/shot5-v4.mp4).
 
-3b. **Shot 6**: teksti final "Happy Holidays" (në vend të "Gëzuar Festat xx").
+3b. ~~**Shot 6**~~: ✅ v3 "Happy Holidays" aprovuar.
 
 ## Pastaj
 4. Muzika: ElevenLabs me promptin te `prompts/music-elevenlabs.md` (18 s, 120 BPM). SFX opsionale: rrotullat, whoosh + goditja e kutive, stilolapsi.
