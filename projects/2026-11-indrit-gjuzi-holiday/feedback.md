@@ -55,3 +55,8 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Shot 1: klienti dha start frame të ri (raftet mocha, 3 kolona); kërkon ashensorët që lëvizin. → refs/shot1-client-frame-screenshot.jpg (screenshot, rezolucion i ulët).
 - 👎 Shot 3: "keto si fjongo duken shume cheap, sikur jane ne garze etj" → zëvendësim i fjongove/fjongëve.
 - 🔧 Shot 5: "pak me afer" → kuadër më i afërt i kullës.
+
+## Shot 1 ribërje (11/21, pas montazhit v2)
+- 🔧 Përdoruesi dha start frame-in e ri (768×1376) → refs/shot1-client-frame-v2.jpg: "une mendoj qe te jap nje start frame dhe ti te handlesh the rest sepse ngelen shume me te qarta se cfare produkte jane". Animimi bëhet pa gjenerim video, që produktet të mbeten të qarta.
+- 🔧 "etiketat i ben shume me te mira ti?": etiketat duhet të jenë të lexueshme (në frame, teksti AI është i deformuar: "INORIT GJUZI", "NOURISHCHING").
+- 🔧 "duhet qe te jete pak me afer shoti qe te lexohet qarte": kuadër më i afërt.
