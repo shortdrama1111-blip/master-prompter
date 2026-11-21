@@ -68,3 +68,8 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 💡 "blenderi me mcp lokalisht është më mirë": përdoruesi preferon Blender lokal me MCP (GPU, viewport live, skedari .blend te ai) në vend të bpy në cloud.
 - 💡 Kompjuteri lokal ka vetëm Intel UHD: Cycles është po aq i ngadaltë sa në web (CPU). "pse po zgjat kaq shume" → kartat u bënë me Eevee (17 s), "ok bëje me eevee aman".
 - 👍 Shot 1 v7 aprovuar: "Aprovohet" → shot1/shot1-v7.mp4 (kartat 3D Blender, mask/cond me Eevee, teksturat e pastra).
+
+## Shot 3 ribërje në Blender (11/21)
+- 🔧 "ta nisim me treshin, un t jap start frame dhe ti ben fiziken": përdoruesi jep start frame-in, Claude bën lëvizjen/fizikën në Blender (si Shot 5).
+- 🔧 Start frame = vetëm sfondi (muri mocha + kolona champagne), pa spirale dhe pa produkte. Spiralja akrilike, varëset dhe produktet bëhen 3D në Blender.
+- 🔧 Varëset: zinxhir i hollë champagne-gold me grep (zëvendëson fjongot e bardha "cheap").
