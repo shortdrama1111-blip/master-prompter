@@ -62,3 +62,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 "duhet qe te jete pak me afer shoti qe te lexohet qarte": kuadër më i afërt.
 - 🔧 Shot 1: "shiko sa zgjat videoja e references ... e dua njësoj" → kohëzgjatja dhe shpejtësia si te ref-shot1: 1.67 s, lëvizje konstante; anësoret ~0.33 kat/s, mesi ~0.41 kat/s (matje: 120 px/s dhe 150 px/s në 720×1280, kati ~355 px).
 - 🔧 Shot 1: zoom 1.35×, "dua të duken të tre kolonat dhe gjithashtu të lexohen mirë etiketat".
+- 🔧 "mos me gjenero me me higgsfield ... do ti bej un manuale": Claude nuk gjeneron më vetë në Higgsfield. Jep promptin gati për kopjim; gjenerimet i bën përdoruesi me dorë. (Një gjenerim plate-i, job 500bae6c, ishte nisur para mesazhit.)

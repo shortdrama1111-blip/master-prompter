@@ -60,3 +60,7 @@
 
 ## Montazhi final v2 (pa zë) → indrit-gjuzi_final_v2_silent.mp4, 18.0 s
 - S1 0–2.0 | S2 1.5–4.0 | S3 1.0–4.0 | S4 0–3.75 | S5 Blender 0.2–2.95 | S6 0–4.0. Prerjet në rrjetë 120 BPM.
+
+## Shot 1 v5 (animim 2D mbi frame-in e klientit), 11/21
+- Gjeometria e frame-it (768×1376): shtyllat champagne x≈0, 250, 506, 760. Raftet: L y≈127/483/845/1229, M y≈208/555/921/1306 (mesi i zhvendosur ~80 px), R y≈131/488/856/1189. Kati ≈ 360 px.
+- Plate pa produkte, Nano Banana Pro 4K: job 500bae6c-a219-4f7a-bf3e-8688e748b019 (nisur automatikisht; pas kësaj, gjenerimet i bën përdoruesi me dorë).
