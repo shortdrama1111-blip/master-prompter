@@ -19,13 +19,15 @@ CLIPS = [
     (A('shot6_happy_holidays_v3.mp4'),   0.0, 4.0),
 ]
 MUSIC = os.path.join(P, 'audio', 'music-winter-glow.wav')
+SFX = os.path.join(P, 'audio', 'sfx-pen-writing.wav')       # stilolapsi te Shot 6 (audio/make_pen_sfx.py)
+SFX_VOL = float(os.environ.get('SFX_VOL', 0.6))
 
 silent = '--silent' in sys.argv
 cmd = ['ffmpeg', '-v', 'error', '-y']
 for f, _, _ in CLIPS:
     cmd += ['-i', f]
 if not silent:
-    cmd += ['-i', MUSIC]
+    cmd += ['-i', MUSIC, '-i', SFX]
 parts = []
 for i, (_, ss, d) in enumerate(CLIPS):
     parts.append(f'[{i}:v]trim=start={ss}:duration={d},setpts=PTS-STARTPTS,fps={FPS},'
@@ -34,7 +36,10 @@ parts.append(''.join(f'[v{i}]' for i in range(len(CLIPS))) + f'concat=n={len(CLI
 total = sum(d for _, _, d in CLIPS)
 maps = ['-map', '[v]']
 if not silent:
-    parts.append(f'[{len(CLIPS)}:a]atrim=0:{total},apad=whole_dur={total},afade=t=out:st={total - 0.4}:d=0.4[a]')
+    n = len(CLIPS)
+    parts.append(f'[{n}:a]atrim=0:{total},apad=whole_dur={total},afade=t=out:st={total - 0.4}:d=0.4[m]')
+    parts.append(f'[{n + 1}:a]atrim=0:{total},volume={SFX_VOL}[s]')
+    parts.append('[m][s]amix=inputs=2:duration=first:normalize=0[a]')
     maps += ['-map', '[a]', '-c:a', 'aac', '-b:a', '256k']
 out = os.path.join(P, 'indrit-gjuzi_final_v3_silent.mp4' if silent else 'indrit-gjuzi_final_v3.mp4')
 cmd += ['-filter_complex', ';'.join(parts)] + maps + ['-c:v', 'libx264', '-crf', '16', '-preset', 'slow',
