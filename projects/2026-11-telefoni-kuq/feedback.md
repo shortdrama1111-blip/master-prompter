@@ -31,3 +31,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-21 | 👍 | "videoja kryesore qe t enisa si reference ka nje grain shume te lezetshem" | Grain i referencës i kopjuar te genA (mono, i fortë te tonet e mesme, ~1.5–2 px) — `grain-ref.sh` | cinematic-ai-video: grain i matur nga referenca, jo me sy |
 | 2026-11-21 | 💡 | "ajo origjinalja ka dicka si me jeshile" | Referenca ka ngjyrë ulli (R≈G, B shumë poshtë, dritat e forta te ~215); e jona ishte krem-roze — `look-ref.sh` (curves për kanal + grain) | vetëm projekti; ndoshta blloku i dritës duhet të thotë "sage/olive" |
 | 2026-11-21 | 💡 | "mund te perdoresh dhe audio to text apo nuk eshte menyra e mire" | Prerja e audios bëhet nga pauzat; transkriptimi vetëm për emërtim/kontroll | — |
+| 2026-11-21 | 🔧 | "ne kete bbised do ti krkijoj une manualisht sdo krijsoh gj ti" | Thread-i i ri: përdoruesi gjeneron vetë; unë shkruaj promptet, analizoj rezultatet, montoj | vetëm projekti |
