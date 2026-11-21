@@ -1,4 +1,4 @@
-"""Shot 6: handwritten "Gëzuar Festat" written onto the gift tag + slow push-in.
+"""Shot 6: handwritten "Happy Holidays" (v1-v2: "Gëzuar Festat xx") written onto the gift tag + slow push-in.
 Usage: python -I make_shot6.py <project_dir>
 """
 import sys, os, math
@@ -23,14 +23,13 @@ FONT = "C:/Windows/Fonts/Inkfree.ttf"
 INK = np.array([28, 22, 20], np.float32) / 255.0   # near-black brown, BGR-ish neutral
 
 # --- lines: (text, font size, x offset, y offset) in tag-local px, baseline layout
-LINES = [
-    ("Gëzuar", 112, -12, -105),
-    ("Festat", 112, 18, 15),
-    ("xx",      72, 105, 125),
+LINES = [                          # v3: teksti final "Happy Holidays" (feedback 11/21)
+    ("Happy",    104, -30, -62),
+    ("Holidays", 104, 12, 58),
 ]
 # timing (seconds): start, then per-line durations with small pauses
 T0 = 0.45
-LINE_DUR = [1.05, 0.95, 0.40]
+LINE_DUR = [1.0, 1.3]
 GAP = 0.18
 
 S = 900  # local canvas size

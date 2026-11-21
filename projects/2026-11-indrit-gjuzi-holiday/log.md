@@ -89,3 +89,7 @@
 - Kutia: Blender/Eevee (shot5/box_blender.py), kamera ortografike 1 u = 100 px. Faqja përpara nga foto reale refs/dreamduo-v2.jpg, e drejtuar me perspektivë dhe me dritën e kutisë së plate-it (raport low-pass σ70) → shot5/assets/dreamduo_front.png. Shkrimet te shishet tani janë të saktat (te plate-i ishin të deformuara nga AI).
 - Fizika: g reale (qesja 513 px ≈ 32 cm → 157 u/s²), v0 3 u/s, goditje te frame 12.5, kërcime 2 cm + 0.5 cm, anim 14°→0 dhe rrotullim 8°→0, lëkundje e shuar pas goditjes. Kutia 280×385 px, 42% e saj poshtë buzës.
 - Kompozimi (shot5/make_shot5.py): holdout i qeses (poligoni i buzës + fjongoja mbi buzë), hije te buza mbi kutinë pas goditjes (0.55, σ 26 px), dridhje kamere 4 px që shuhet për ~0.25 s.
+
+## Shot 6 v3 → shot6/shot6-v3.mp4 (720×1280, 24 fps, 4 s), 11/21
+- Teksti final "Happy Holidays" (feedback i përdoruesit), Ink Free 104, dy rreshta, shkruhet 0.45–3.1 s; e njëjta plate dhe afrim kamere si v2.
+- ⚠️ Kontinuiteti: plate-i i Shot 6 është nga kuadri i vjetër i Shot 5; kutia DreamDuo lart-majtas është ajo e AI-së, ndërsa te Shot 5 v4 kutia vjen nga foto reale.
