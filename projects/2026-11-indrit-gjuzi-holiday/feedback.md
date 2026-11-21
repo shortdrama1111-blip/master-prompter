@@ -75,3 +75,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Varëset: zinxhir i hollë champagne-gold me grep (zëvendëson fjongot e bardha "cheap").
 - 🔧 Shot 3: "rrëshqitje si te referenca, me 3D": produktet rrëshqasin përgjatë spirales dhe dalin nga kuadri; jo lëkundje në vend nga një start frame me produkte.
 - 👍 Shot 3 v7 (Blender, preview 540p): "perfekte shkojm t skena tj" → renderi i plotë 1080×1920 në sfond.
+- 🔧 Shot 6: "Happy holidays esht teksti final" → teksti mbi etiketë bëhet "Happy Holidays" (zëvendëson "Gëzuar Festat xx").
