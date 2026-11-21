@@ -65,3 +65,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 "mos me gjenero me me higgsfield ... do ti bej un manuale": Claude nuk gjeneron më vetë në Higgsfield. Jep promptin gati për kopjim; gjenerimet i bën përdoruesi me dorë. (Një gjenerim plate-i, job 500bae6c, ishte nisur para mesazhit.)
 - 🔧 Shot 1 v5: "duhet pak me larg qe te duket tamam 3 kolonat sepse kolonat anesore nuk kan borderat anesore": kuadri duhet të përfshijë kornizat e jashtme të kolonave anësore. 1.35× ishte shumë afër.
 - 👎 Shot 1 v6: "si m duket sikur nuk jan reale, sikur jan edited, se di ca mungon": produktet duken të ngjitura mbi plate.
+- 💡 "blenderi me mcp lokalisht është më mirë": përdoruesi preferon Blender lokal me MCP (GPU, viewport live, skedari .blend te ai) në vend të bpy në cloud.
