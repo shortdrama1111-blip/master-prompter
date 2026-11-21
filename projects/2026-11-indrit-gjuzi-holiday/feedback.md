@@ -74,3 +74,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 - 🔧 Start frame = vetëm sfondi (muri mocha + kolona champagne), pa spirale dhe pa produkte. Spiralja akrilike, varëset dhe produktet bëhen 3D në Blender.
 - 🔧 Varëset: zinxhir i hollë champagne-gold me grep (zëvendëson fjongot e bardha "cheap").
 - 🔧 Shot 3: "rrëshqitje si te referenca, me 3D": produktet rrëshqasin përgjatë spirales dhe dalin nga kuadri; jo lëkundje në vend nga një start frame me produkte.
+- 👍 Shot 3 v7 (Blender, preview 540p): "perfekte shkojm t skena tj" → renderi i plotë 1080×1920 në sfond.
