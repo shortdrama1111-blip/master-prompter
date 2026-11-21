@@ -18,6 +18,11 @@
 - Rreshtat (renditja e briefit): Makeup −30%, pastaj 5 shërbimet me −50%.
 - Fundi: INSTAGRAM  @class_beauty_house
 
-## Lëvizja
-- Fatura ngjitet nga y=1560 në y=96 për 3.0 s (easeOutQuart), me hapa të vegjël si printer
-  termik gjatë lëvizjes; pastaj qëndron deri në 9 s.
+## Lëvizja (v2)
+- Printim i ngadaltë si printer termik: fatura ngjitet nga y=1720 në y=96 me shpejtësi 400 px/s,
+  në breshëri 0.32–0.62 s me pauza 0.07–0.16 s mes tyre, dhe ngadalësohet në 60 px e fundit.
+  Printimi mbaron te 5.2 s, pastaj fatura qëndron deri në 10 s.
+- Lëvizja dhe zëri dalin nga i njëjti timeline (`render/gen_motion.py`), prandaj janë gjithmonë në sinkron.
+
+## Formati (v2)
+- 10 s. Dy versione: pa zë, dhe me zë printeri të sintetizuar (motor stepper + kokë termike + klik ndalimi).

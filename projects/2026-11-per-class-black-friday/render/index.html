@@ -63,6 +63,7 @@ html, body { margin: 0; padding: 0; }
   </div>
   <canvas id="grain" width="540" height="960" style="width:1080px;height:1920px"></canvas>
 </div>
+<script src="motion.js"></script>
 <script>
 // seeded RNG
 function rng(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed);
@@ -133,16 +134,11 @@ function drawTitle(){
       c.beginPath(); c.arc(x,y,rad,0,Math.PI*2); c.fill(); })));
   });
 }
-// motion: rise with ease-out + small thermal-printer steps
-const START=1560, RISE=3.0;
-function easeOutQuart(x){ return 1-Math.pow(1-x,4); }
+// motion: precomputed by gen_motion.py (printer bursts), shared with the sound
 window.setFrame=function(f,fps){
-  const t=f/fps; const p=Math.min(1,t/RISE);
-  let top=START+(TOP_FINAL-START)*easeOutQuart(p);
-  // printer micro-steps while moving
-  if(p<1){ const step=6*(1-p); top=Math.round(top/step)*step || top; }
-  const rec=document.getElementById('receipt'), sh=document.getElementById('shadow');
-  rec.style.top=top+'px'; sh.style.top=(top+14)+'px';
+  const top=window.MOTION[Math.min(f,window.MOTION.length-1)];
+  document.getElementById('receipt').style.top=top+'px';
+  document.getElementById('shadow').style.top=(top+14)+'px';
   drawGrain(f);
 };
 window.ready=(async()=>{
