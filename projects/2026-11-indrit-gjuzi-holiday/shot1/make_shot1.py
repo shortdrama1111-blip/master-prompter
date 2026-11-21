@@ -16,23 +16,66 @@ PROJ = os.path.dirname(HERE)
 R = lambda p: os.path.join(PROJ, p)
 
 OUT_W, OUT_H, FPS, DUR = 1080, 1920, 30, 2.0
-ZOOM = 1.35
+ZOOM = 1.0                           # v5 ishte 1.35; v6: tre kolonat me kornizat e jashtme
 PERIOD = 559.0                       # hapi i rafteve ne plate (px)
 SPEED = {'L': +0.33, 'M': -0.41, 'R': +0.33}   # kate/s, + = poshte
 SUBSAMPLES = 4                       # motion blur (shutter 180)
 
-plate = np.asarray(Image.open(R('refs/shot1-plate-empty.webp')).convert('RGB'), np.float32)
+_plate = np.asarray(Image.open(R('refs/shot1-plate-empty.webp')).convert('RGB'), np.float32)
+_PH, _PW = _plate.shape[:2]
+
+
+def extend_rows(src, ext, bw=60):
+    """zgjat lart/poshte me perseritje me hapin PERIOD; qepje e bute bw px."""
+    H = src.shape[0]
+    out = np.zeros((H + 2 * ext,) + src.shape[1:], np.float32)
+    out[ext:ext + H] = src
+    out[:ext] = src[0:ext]
+    out[ext + H:] = src[H - ext:H]
+    for y in range(bw):
+        w = y / bw
+        out[ext + y] = (1 - w) * src[y + ext] + w * src[y]
+        yb = H - 1 - y
+        out[ext + yb] = (1 - w) * src[yb - ext] + w * src[yb]
+    return out
+
+
+# bota: plate-i i zgjatur vertikalisht + korniza te plota champagne te jashtme + sfond i erret anash
+MX, EXT = 40, int(PERIOD)
+_E = extend_rows(_plate, EXT)
+plate = np.zeros((_E.shape[0], _PW + 2 * MX, 3), np.float32)
+_dark = np.array([34, 24, 19], np.float32)
+plate[:] = _dark
+plate[:, MX:MX + _PW] = _E
+_post = _E[:, 363:380]                                  # tekstura e shtylles se brendshme
+
+
+def _put_post(x0, x1):
+    w = x1 - x0
+    tex = np.stack([np.asarray(Image.fromarray(_post[..., i], 'F').resize((w, _post.shape[0]), Image.LANCZOS)) for i in range(3)], -1)
+    plate[:, x0:x1] = tex
+    # hije e bute ne sfondin e erret prane shtylles
+    for d in range(1, 18):
+        k = 1 - 0.5 * (1 - d / 18)
+        if x0 - d >= 0 and x0 - d < MX - 15:
+            plate[:, x0 - d] = _dark * k
+        if x1 - 1 + d < plate.shape[1] and x1 - 1 + d >= MX + _PW + 10:
+            plate[:, x1 - 1 + d] = _dark * k
+
+
+_put_post(MX - 15, MX + 9)
+_put_post(MX + 1103, MX + 1127)
 PH, PW = plate.shape[:2]
 CROP_W = PW / ZOOM
 CROP_H = CROP_W * OUT_H / OUT_W
 CX0 = (PW - CROP_W) / 2
-CY0 = (PH - CROP_H) / 2
-S = OUT_W / CROP_W                   # plate px -> output px
+CY0 = EXT + _PH / 2 - CROP_H / 2
+S = OUT_W / CROP_W                   # bota px -> output px
 
-# kolonat levizese (midis shtyllave champagne), plate x
-COLS = {'L': (9, 363), 'M': (380, 733), 'R': (742, 1104)}
-LIP0 = {'L': 107.0, 'M': 219.0, 'R': 115.0}      # buza e pare e raftit
-CENTER = {'L': 196.0, 'M': 556.0, 'R': 918.0}
+# kolonat levizese (midis shtyllave champagne), koordinata te botes
+COLS = {'L': (MX + 9, MX + 363), 'M': (MX + 380, MX + 733), 'R': (MX + 742, MX + 1103)}
+LIP0 = {'L': EXT + 107.0, 'M': EXT + 219.0, 'R': EXT + 115.0}      # buza e pare e raftit
+CENTER = {'L': MX + 196.0, 'M': MX + 556.0, 'R': MX + 918.0}
 
 # renditja e produkteve sipas frame-it te klientit, k = indeksi i raftit
 LAYOUT = {
@@ -40,7 +83,7 @@ LAYOUT = {
     'M': {-1: 'oil', 0: 'box', 1: 'box', 2: 'mask', 3: 'box', 4: 'oil', 5: 'box'},
     'R': {-1: 'box', 0: 'oil', 1: 'oil', 2: 'cond', 3: 'box', 4: 'cond'},
 }
-HEIGHT = {'oil': 300, 'box': 375, 'mask': 410, 'cond': 410}   # plate px
+HEIGHT = {'oil': 340, 'box': 405, 'mask': 450, 'cond': 450}   # plate px
 
 # ngjyra: frame-i i klientit / foto e produktit (per kanal)
 GAIN = {
@@ -120,7 +163,7 @@ def build_strip(col, products):
     # produktet
     for k, name in LAYOUT[col].items():
         lip = LIP0[col] + k * PERIOD
-        depth = float(np.clip((lip - 700) * 0.02, 0, 25))
+        depth = float(np.clip((lip - EXT - 700) * 0.02, 0, 25))
         base = lip - depth
         p = products[name]
         h = HEIGHT[name] * S
@@ -217,7 +260,7 @@ def main():
         Image.fromarray(img).save(os.path.join(HERE, 'frames', f'f{f:03d}.png'))
     if still:
         return
-    out = os.path.join(HERE, 'shot1-v5.mp4')
+    out = os.path.join(HERE, 'shot1-v6.mp4')
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', os.path.join(HERE, 'frames', 'f%03d.png'),
                     '-c:v', 'libx264', '-crf', '14', '-preset', 'slow', '-pix_fmt', 'yuv420p', out], check=True)
     print(out)
