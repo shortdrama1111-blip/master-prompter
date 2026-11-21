@@ -49,3 +49,14 @@ Warm tungsten light at 3200K from frosted wall sconces and a soft overhead sourc
 ## Skripti v2 (2026-11-20) — ajo përgjigjet në çdo shot
 Aura. / Strategji? → Po. / Rrjete sociale? → E menaxhova. / Përmbajtje? → E kemi. / Produksion? → Edhe këtë. / AI? → Po. / Influencerë? → Po. / Reklama me pagesë? → Gati. / Edhe në anglisht? → Natyrisht. / Po cilësia? → E pakrahasueshme. / Pra… pa ju, humbas klientë. → qesh / Na kontaktoni për të parë punën tonë.
 Promptet 04/05 v1 dhe black-genA/B janë të vjetra — rindërtohen pas audios së re.
+
+## Ambienti v2 — 2026-11-21 (ZËVENDËSON zyrën vintage dhe bllokun e dritës 3200K)
+- Gjithë videoja kalon në ambientin e ri; A rigjenerohet (promptet dhe audioja e A mbeten).
+- Referencat: refs/env-v2/1–4.jpg. Banak çeliku i lakuar, mur i bardhë, hark me dritë blu në vend të pasqyrës ovale.
+- Telefoni i kuq me disk (refs/telefoni-v1.jpg) mbetet i vetmi aksent i ngopur.
+- Grade "ulli" (look-ref.sh) s'vlen më për këtë dritë; grain-i (grain-ref.sh) mbetet.
+
+### Blloku i dritës v2 — fjalë për fjalë në çdo prompt (pret plate v2 për t'u ngulur)
+```
+Daylight at 5600K: hard afternoon sun entering from a tall window outside frame right at a 30° downward angle, casting crisp window-frame shadows and soft leaf shadows across the white wall and floor; the shade side filled by bright bounce from the white plaster to 1.5 stops under; whites held clean with a faint cool blue tint in the shade; muted palette of white plaster, brushed steel and pale grey, with the red telephone as the only saturated colour.
+```

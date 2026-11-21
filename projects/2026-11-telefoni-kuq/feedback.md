@@ -33,3 +33,4 @@ Shëno menjëherë, me fjalët e përdoruesit. 👍 pëlqen · 👎 s'pëlqen ·
 | 2026-11-21 | 💡 | "mund te perdoresh dhe audio to text apo nuk eshte menyra e mire" | Prerja e audios bëhet nga pauzat; transkriptimi vetëm për emërtim/kontroll | — |
 | 2026-11-21 | 🔧 | "ne kete bbised do ti krkijoj une manualisht sdo krijsoh gj ti" | Thread-i i ri: përdoruesi gjeneron vetë; unë shkruaj promptet, analizoj rezultatet, montoj | vetëm projekti |
 | 2026-11-21 | 💡🔧 | "dua nje env q t ngjaj si keto" + 4 referenca (refs/env-v2/): studio e bardhë minimaliste, tavolinë e thjeshtë, telefon i kuq mbi çelik, dritë dite me hije dritaresh | Ambienti v2, zëvendëson zyrën vintage krem/bordo/ari me pasqyrë ovale | vetëm projekti; prek bllokun e dritës |
+| 2026-11-21 | 🔧 | "ms gjenero gje he do i gjenroj une" | Përsëritje: asnjë gjenerim nga unë, vetëm promptet | vetëm projekti |
